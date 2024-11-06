@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbarlayout from "@/component/Navbarlayout";
 
+
 export const metadata: Metadata = {
   title: "UIC Games",
   description: "Games ishlab chiqaruvchi O'zbekistonda Yagona IT Company",
