@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import styles from '@/component/style.module.css'
 
 
-const NavBarLayout = () => {
+const NavbarLayout = () => {
 
     const [isscrolled, setScrolled] = useState(false)
 
@@ -54,4 +54,4 @@ const NavBarLayout = () => {
   );
 };
 
-export default NavBarLayout;
+export default NavbarLayout;
