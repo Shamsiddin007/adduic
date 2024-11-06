@@ -2,20 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+::-webkit-scrollbar{
+  width: 3px;
+  background-color: rgb(75, 74, 74);
+}
+::-webkit-scrollbar-thumb{
+  width: 2px;
+  background-color: #3375F6;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+@font-face {
+  font-family: 'Custom Font';
+  src: url('/fonts/Euclid\ Circular\ A\ Bold.woff2') format('woff2'),
+       url('/fonts/Euclid\ Circular\ A\ Light.woff2') format('woff2'),
+       url('/fonts/Euclid\ Circular\ A\ Medium.woff2') format('woff2'),
+       url('/fonts/Euclid\ Circular\ A\ Regular.woff2') format('woff2'),
+       url('/fonts/Euclid\ Circular\ A\ SemiBold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+body{
+  font-family: 'Custom Font', sans-serif;
+  background-color: #1E1E1E;
+}
+
+h1{
+  font-size: 40px;
+  color: white;
 }

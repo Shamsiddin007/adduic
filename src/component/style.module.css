@@ -1,0 +1,5 @@
+.activeScrolled{
+    transform: translateY(-20px);
+    background-color: black;
+    padding: 0px 0px 20px 0px;
+}
