@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavbarLayout from "@/component/navbarlayout";
+import NavBarLayout from "@/component/Navbarlayout";
 
 export const metadata: Metadata = {
   title: "UIC Games",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NavbarLayout/>
+        <NavBarLayout/>
         <div className="mt-24">
           {children}
         </div>
