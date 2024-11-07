@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import Navbarlayout from "@/components/Navbarlayout";
 
+import './globals.css'
 
 
 
