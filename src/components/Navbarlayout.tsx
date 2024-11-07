@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import styles from '@/component/style.module.css'
+import styles from '@/components/style.module.css'
 
 
 const Navbarlayout = () => {
