@@ -46,8 +46,10 @@ const config: Config = {
         xl: "1200px",
       },
     },
+     
+    }
   },
-  plugins: [],
+  plugins: []
 };
 
 export default config;

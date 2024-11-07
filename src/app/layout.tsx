@@ -4,6 +4,7 @@ import Navbarlayout from "@/components/Navbarlayout";
 
 
 
+
 export const metadata: Metadata = {
   title: "UIC Games",
   description: "Games ishlab chiqaruvchi O'zbekistonda Yagona IT Company",
