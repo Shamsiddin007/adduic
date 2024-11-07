@@ -3,15 +3,36 @@
 import Windowslogo from "../../public/icons/Windowslogo.png";
 import elementlogo from "../../public/icons/Element.png";
 import secondelementlogo from "../../public/icons/fi_10781896.png";
-import backlogo from "../../public/icons/Logos.png";
-// import videoplay from "../../public/icons/Vector.png";
+import backlogo from '../../public/icons/Logos.png'
 import Image from "next/image";
-const videolayout = () => {
+import { useState, useEffect } from "react";
+
+const Videolayout = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+
+  const handleVideoOpen = () => {
+    setIsVideoOpen(true);
+  };
+
+  const handleVideoClose = () => {
+    setIsVideoOpen(false);
+  };
+
+  useEffect(() => {
+    if (isVideoOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isVideoOpen]);
+  
   return (
     <div className="container-xl">
-      <div className=" w-[100%] h-full text-white bg-[url('../..//public/icons/coverimage.png')] bg-no-repeat bg-cover rounded-[30px] ">
-        {/* <div className=" before: w-full -z-10  h-full bg-gradient-to-t from-[#B42809] to bg-[#B42809] relative top-0 left-0 bottom-0 right-0 -z-1">
-      </div> */}
+      <div className="w-[100%] h-full text-white bg-[url('../..//public/icons/coverimage.png')] bg-no-repeat bg-cover rounded-[30px] ">
         <div className="flex items-center justify-between">
           <div>
             <div className="text1">
@@ -49,7 +70,7 @@ const videolayout = () => {
                 <div className="flex select-none cursor-pointer gap-2 pt-[10px] pb-[10px] pl-[20px] pr-[20px] bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] active:translate-y-1 duration-200">
                   <Image
                     src={secondelementlogo}
-                    alt=" video page small img item third img"
+                    alt="video page small img item third img"
                     width={24}
                     height={24}
                   />
@@ -70,29 +91,53 @@ const videolayout = () => {
             <Image
               className="w-[500px]"
               src={backlogo}
-              alt="videolayout  page back logo"
+              alt="videolayout page back logo"
             />
             <div className="relative -top-[30px] right-[225px] ">
-            <div className="relative top-10 flex items-center justify-center w-28 h-28 bg-opacity-50 bg-[#FFFFFF1F] rounded-full">
-            <div className="relative flex items-center justify-center w-24 h-24 bg-opacity-50 bg-[#FFFFFF1F] rounded-full">
-              <div className="absolute inset-1 bg-red-500 opacity-75 rounded-full animate-ping"></div>
-              <div className="relative flex items-center justify-center w-[70px] h-[70px] bg-opacity-70 bg-white rounded-full cursor-pointer">
-                <svg
-                  className="w-8 h-8 text-red-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M6 4l10 6-10 6V4z"></path>
-                </svg>
+              <div
+                onClick={handleVideoOpen}
+                className="relative top-10 flex items-center justify-center w-28 h-28 bg-opacity-50 bg-[#FFFFFF1F] rounded-full cursor-pointer"
+              >
+                <div className="relative flex items-center justify-center w-24 h-24 bg-opacity-50 bg-[#FFFFFF1F] rounded-full">
+                  <div className="absolute inset-1 bg-red-500 opacity-75 rounded-full animate-ping"></div>
+                  <div className="relative flex items-center justify-center w-[70px] h-[70px] bg-opacity-70 bg-white rounded-full">
+                    <svg
+                      className="w-8 h-8 text-red-500"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M6 4l10 6-10 6V4z"></path>
+                    </svg>
+                  </div>
+                </div>
               </div>
-            </div>
-            </div>
             </div>
           </div>
         </div>
+
+        {/* Video Overlay */}
+        {isVideoOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
+            <div className="relative w-[90%] h-[90vh] bg-[#14141411] rounded-lg flex items-center justify-center">
+              {/* Close button */}
+              <button
+                onClick={handleVideoClose}
+                className="absolute top-1 right-2 text-white text-6xl hover:text-gray-400 "
+              >
+                &times;
+              </button>
+              <video
+                src="https://www.youtube.com/watch?v=dyeFF5VHIa0" // Update the path to your actual video file
+                controls
+                autoPlay
+                className="w-[50%] h-[50%] rounded-lg "
+              ></video>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default videolayout;
+export default Videolayout;
