@@ -12,5 +12,6 @@ export default function Home() {
       <Story/>
       <OurProjct/>
       <Video/>
-      )
+    </div>
+   )
 }
