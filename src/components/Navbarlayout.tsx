@@ -13,7 +13,7 @@ const Navbarlayout = () => {
 
     useEffect(()=> {
         const handleScrolled = () => {
-            if(window.scrollY > 400){
+            if(window.scrollY > 50){
                 setScrolled(true)
             }else{
                 setScrolled(false)
@@ -30,7 +30,8 @@ const Navbarlayout = () => {
 
   return (
 
-    <div className={`fixed top-0 left-0 right-0 z-9999999999 transition-all duration-300 ${isscrolled ? styles.activeScrolled : ''}`}>
+    <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isscrolled ? styles.activeScrolled : ''}`}>
+      main
         <nav className='container mx-auto max-w-screen-xl flex justify-between items-center pt-10'>
             <Link href="/"><Image width={parseInt("160px")} height={parseInt("16px")} src="/logo.png" alt='Logo UIC Games'/></Link>
             <ul className='flex items-center gap-[22px]'>
