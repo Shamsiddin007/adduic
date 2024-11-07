@@ -127,7 +127,7 @@ const Videolayout = () => {
                 &times;
               </button>
               <video
-                src="../../public/icons/Coverimage.png" // Update the path to your actual video file
+                src="../../public/icons/logo.png" // Update the path to your actual video file
                 controls
                 autoPlay
                 className="w-[50%] h-[50%] rounded-lg "
