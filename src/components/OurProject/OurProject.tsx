@@ -23,6 +23,7 @@ const Projects = () => {
             <p className="text-gray-300 pb-14 group-hover:pb-2  duration-300">2020</p>
             <Image
               src={Logo}
+              alt=""
               className="inset-0 z-0 opacity-100"
             />
           </div>
@@ -35,6 +36,7 @@ const Projects = () => {
             <h3 className="text-xl font-bold">O‘ynar kamera</h3>
             <p className="text-gray-300 pb-14 group-hover:pb-2  duration-300">2020</p>
             <Image
+              alt=""
               src={Logo1}
               className="inset-0 z-0 opacity-100"
             />
@@ -48,6 +50,7 @@ const Projects = () => {
             <h3 className="text-xl font-bold">Block Runner</h3>
             <p className="text-gray-300 pb-14 group-hover:pb-2  duration-300">2020</p>
             <Image
+              alt=""
               src={Logo2}
               className="inset-0 z-0 opacity-100"
             />
