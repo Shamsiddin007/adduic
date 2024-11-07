@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Fire from "../../public/icons/🔥.png";
+import Fire from "/public/icons/🔥.png";
 import soldier from "/nextjs/games/public/games_img/askar.svg";
 
 export default function Mani() {

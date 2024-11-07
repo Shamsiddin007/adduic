@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Vio from "../../../../nextjs/games/public/games_img/Vio.png";
+import Vio from "/nextjs/games/public/games_img/Vio.png";
 export default function Story() {
   return (
     <div className="bg-black">
