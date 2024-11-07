@@ -16,10 +16,10 @@ const config: Config = {
         md: '728px',
         lg: '984px',
         xl: '1200px',
-      },
-    },
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 };
 
 export default config;
