@@ -7,7 +7,7 @@ import Video from '../components/videolayout'
 
 export default function Home() {
   return (
-    <div className="sm:p-10 font-[family-name:var(--font-geist-sans)]">
+    <div className="container">
       <Main/>
       <Story/>
       <OurProjct/>
