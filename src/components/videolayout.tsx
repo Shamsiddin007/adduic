@@ -1,9 +1,9 @@
 "use client";
 //import img
-import Windowslogo from "../../public/icons/Windowslogo.png";
-import elementlogo from "../../public/icons/Element.png";
-import secondelementlogo from "../../public/icons/fi_10781896.png";
-import backlogo from '../../public/icons/Logos.png'
+import Windowslogo from "/public/icons/Windowslogo.png";
+import elementlogo from "/public/icons/Element.png";
+import secondelementlogo from "/public/icons/fi_10781896.png";
+import backlogo from '/public/icons/Logos.png'
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
