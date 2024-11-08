@@ -8,7 +8,7 @@ export default function Story() {
         <div className="flex items-center justify-center">
           <div>
             <p className="text-[#FFFFFF] text-xl pt-[64px] font-sans pb-[12px] opacity-80">
-              Let’s talk about who we are.
+              Let&apos;s talk about who we are.
             </p>
             <h1 className="text-6xl font-bold text-white">
               We are <span className="text-[#3375F6]">UIC GAMES!</span>
@@ -22,7 +22,7 @@ export default function Story() {
             </p>
             <p className="w-1/2 pb-[40px] text-base leading-5 font-sans text-white opacity-80">
               Our team of talented developers, designers, and creatives come
-              together to push the boundaries of what's possible, delivering
+              together to push the boundaries of what&apos;s possible, delivering
               games that resonate with players around the globe. Join us on this
               journey as we redefine the future of interactive entertainment.
             </p>
