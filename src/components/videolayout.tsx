@@ -1,9 +1,8 @@
 "use client";
-//import img
-import Windowslogo from "/public/icons/Windowslogo.png";
-import elementlogo from "/public/icons/Element.png";
-import secondelementlogo from "/public/icons/fi_10781896.png";
-import backlogo from '/public/icons/Logos.png'
+import Windowslogo from "../../public/icons/Windowslogo.png";
+import elementlogo from "../../public/icons/Element.png";
+import secondelementlogo from "../../public/icons/fi_10781896.png";
+import backlogo from "../../public/icons/Logos.png";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -19,27 +18,30 @@ const Videolayout = () => {
   };
 
   useEffect(() => {
-    if (isVideoOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  
+    document.body.style.overflow = isVideoOpen ? "hidden" : "auto";
     return () => {
       document.body.style.overflow = "auto";
     };
   }, [isVideoOpen]);
-  
+
   return (
     <div className="container-xl">
-      <div className="w-[100%] h-full text-white bg-[url('../..//public/icons/coverimage.png')] bg-no-repeat bg-cover rounded-[30px] ">
-        <div className="flex items-center justify-between">
-          <div>
+      <div
+        className="w-full h-full text-white bg-no-repeat bg-cover rounded-[40px] mt-20 mb-20"
+        style={{
+          backgroundImage:
+            "linear-gradient(to left,#3c1d1b, transparent,transparent,#3d1c1b), url('/icons/coverimg.png')",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="flex items-center justify-between ">
+          <div className="p-12">
             <div className="text1">
               <h1 className="uppercase text-[44px] text-white">
                 mangu <p className="uppercase text-orange-600">sarkarda</p>
               </h1>
-              <p className="w-[80%] text-[1rem] mt-4 text-white mb-8">
+              <p className="w-[95%] text-[1rem] mt-4 text-white mb-8">
                 The gamification of great historical campaigns and tipping
                 points, which played the key destinies of mankind for the Great
                 Commander and statesman, will blow up the tapes of your everyday
@@ -50,18 +52,13 @@ const Videolayout = () => {
               <h2 className="mb-4 text-[16px]">Available:</h2>
               <div className="flex items-center gap-4">
                 <div className="flex select-none cursor-pointer gap-2 pt-[10px] pb-[10px] pl-[20px] pr-[20px] bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] active:translate-y-1 duration-200">
-                  <Image
-                    src={elementlogo}
-                    alt="video page small img item first img"
-                    width={24}
-                    height={24}
-                  />
+                  <Image src={elementlogo} alt="Steam" width={24} height={24} />
                   <p className="text-[14px]">Steam</p>
                 </div>
                 <div className="flex select-none cursor-pointer gap-2 pt-[10px] pb-[10px] pl-[20px] pr-[20px] bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] active:translate-y-1 duration-200">
                   <Image
                     src={Windowslogo}
-                    alt="video page small img item second img"
+                    alt="Desktop app"
                     width={24}
                     height={24}
                   />
@@ -70,7 +67,7 @@ const Videolayout = () => {
                 <div className="flex select-none cursor-pointer gap-2 pt-[10px] pb-[10px] pl-[20px] pr-[20px] bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] active:translate-y-1 duration-200">
                   <Image
                     src={secondelementlogo}
-                    alt="video page small img item third img"
+                    alt="VR"
                     width={24}
                     height={24}
                   />
@@ -82,18 +79,14 @@ const Videolayout = () => {
               <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#FFFFFF1A] rounded-[30px] hover:bg-[#EB5739] transition-all duration-300 active:translate-y-1">
                 About game
               </button>
-              <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#EB5739] rounded-[30px] hover:bg-[#EB5739] active:translate-y-1 duration-200">
+              <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#FFFFFF1A] rounded-[30px] hover:bg-[#EB5739] active:translate-y-1 duration-200">
                 Download
               </button>
             </div>
           </div>
           <div className="mr-52 flex items-center">
-            <Image
-              className="w-[500px]"
-              src={backlogo}
-              alt="videolayout page back logo"
-            />
-            <div className="relative -top-[30px] right-[225px] ">
+            <Image className="w-[500px]" src={backlogo} alt="Back logo" />
+            <div className="relative -top-[30px] right-[190px] ">
               <div
                 onClick={handleVideoOpen}
                 className="relative top-10 flex items-center justify-center w-28 h-28 bg-opacity-50 bg-[#FFFFFF1F] rounded-full cursor-pointer"
@@ -119,18 +112,17 @@ const Videolayout = () => {
         {isVideoOpen && (
           <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
             <div className="relative w-[90%] h-[90vh] bg-[#14141411] rounded-lg flex items-center justify-center">
-              {/* Close button */}
               <button
                 onClick={handleVideoClose}
-                className="absolute top-1 right-2 text-white text-6xl hover:text-gray-400 "
+                className="absolute top-1 right-10 text-white text-6xl hover:text-gray-400"
               >
                 &times;
               </button>
               <video
-                src="../../public/icons/logo.png" // Update the path to your actual video file
+                src="../../public/icons/logo.png"
                 controls
                 autoPlay
-                className="w-[50%] h-[50%] rounded-lg "
+                className="w-[50%] h-[50%] rounded-lg"
               ></video>
             </div>
           </div>
