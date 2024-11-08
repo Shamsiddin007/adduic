@@ -7,7 +7,7 @@ import Chevron from "public/Imgs/chevron-right.png";
 
 const Projects = () => {
   return (
-    <div className="container mx-auto max-w-screen-xl mb-8">
+    <div className="container mb-8">
       <div className="flex items-center justify-between mb-4 gap-10">
         <h2 className="font-bold text-5xl text-white">
           OUR <span className="text-blue-600">PROJECTS</span>

@@ -4,14 +4,19 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
- 
+
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
-      dropShadow:{
-          'custom-yellow': '1px 1px 15px #FB7041',
+      boxShadow: {
+        "spread-purple": "0 0 50px 20px #30125A",
+      },
+      dropShadow: {
+        "custom-yellow": "1px 1px 1px #FB7041",
+
+
       },
       zIndex: {
         0: "0",
@@ -36,18 +41,18 @@ module.exports = {
         19: "19",
         20: "20",
       },
-  },
-  container: {
-    center: true,
-    padding: "10px",
-    screens: {
-      sm: "600px",
-      md: "728px",
-      lg: "984px",
-      xl: "1200px",
+    },
+    container: {
+      center: true,
+      padding: "10px",
+      screens: {
+        sm: "600px",
+        md: "728px",
+        lg: "984px",
+        xl: "1200px",
+        xxl: "1280px",
+      },
     },
   },
-   
-  },
   plugins: [],
-}
+};
