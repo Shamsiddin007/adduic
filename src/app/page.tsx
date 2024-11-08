@@ -1,7 +1,7 @@
 import Main from "@/components/Main";
 import Story from "@/components/Story";
-import OurProjct from "@/components/OurProject/OurProject"
-import Video from '@/components/videolayout.tsx'
+import OurProjct from "@/components/OurProject"
+import Video from '@/components/videolayout'
 
 export default function Home() {
   return (
