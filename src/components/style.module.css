@@ -1,5 +1,32 @@
-.activeScrolled{
-    transform: translateY(-20px);
-    background-color: #081420;
-    padding: 0px 0px 20px 0px;
+    .activeScrolled {
+  transform: translateY(-20px);
+  background-color: #081420;
+  padding: 0px 0px 20px 0px;
+}
+
+.solder {
+  position: absolute;
+  bottom: 25px;
+  right: 0px;
+  background-image: url("/Imgs/askar.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 550px;
+  height: 650px;
+  margin-left: auto;
+  z-index: -1;
+}
+.vio {
+  position: absolute;
+  right: 0;
+  bottom: 80px;
+  background-image: url("/Imgs/Vio.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 550px;
+  height: 290px;
+  z-index: -1;
+  /* transform: scale(1.4); */
 }
