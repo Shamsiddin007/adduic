@@ -15,8 +15,9 @@ module.exports = {
       },
       dropShadow: {
         "custom-yellow": "1px 1px 1px #FB7041",
-
-
+      },
+      backgroundImage: {
+        'custom-radial': "radial-gradient(circle at bottom, #14274d, rgba(255, 0, 0, 0) 60%)",
       },
       zIndex: {
         0: "0",
