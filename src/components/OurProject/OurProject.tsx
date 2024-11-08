@@ -10,7 +10,7 @@ const Projects = () => {
     <div className="w-[1110px] m-auto">
       <div className="flex items-center justify-between mb-4 mr-8">
         <h2 className="font-bold text-5xl text-white">
-          OUR <span className="text-blue-600">PROJECTS</span>
+          OUR <span className="text-blue-600">p</span>
         </h2>
         <button className="flex items-center justify-center rounded-[140px] bg-[#FFFFFF1A] w-[152px] h-[44px] text-white">
           All projects <Image src={Chevron} alt="" />
