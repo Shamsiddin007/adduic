@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Logo from "public/Imgs/fullphone2.png";
-import Logo1 from "public/Imgs/fullphone1.png";
-import Logo2 from "public/Imgs/fullphone.png";
+import Logo from "public/Imgs/img.png";
+import Logo1 from "public/Imgs/img1.png";
+import Logo2 from "public/Imgs/img2.png";
 import Logo3 from "public/Imgs/LOGO.png";
 import Chevron from "public/Imgs/chevron-right.png";
 
