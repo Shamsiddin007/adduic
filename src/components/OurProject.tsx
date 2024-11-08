@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Logo from "public/Imgs/fullphone.png";
 import Logo1 from "public/Imgs/fullphone1.png";
-import Logo2 from "public/Imgs/fullphone2.png";
+import Logo2 from "public/Imgs/fullphone.png";
 import Logo3 from "public/Imgs/LOGO.png";
 import Chevron from "public/Imgs/chevron-right.png";
 import Link from "next/link";
@@ -38,7 +38,7 @@ const Projects = () => {
         </div>
         <div className="cursor-pointer relative w-[281px] h-96 overflow-hidden rounded-[24px] flex flex-col items-center bg-gradient-to-b from-black to-gray-800 p-5 text-white text-center shadow-md shadow-black/50 group">
           <div className="absolute inset-0 flex flex-col items-center pt-6 text-center">
-            <h3 className="text-xl font-bold">O'ynar kamera</h3>
+            <h3 className="text-xl font-bold">O‘ynar kamera</h3>
             <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
               2020
             </p>
@@ -68,8 +68,6 @@ const Projects = () => {
             Learn more <Image src={Chevron} alt="Logo" />
           </button>
         </div>
-
-
         <div className="relative w-[281px] h-96 overflow-hidden rounded-[24px] shadow-md shadow-black/50 p-6 text-center text-white group">
           <div
             className="absolute inset-0 flex flex-col items-center pt-6 text-center"
