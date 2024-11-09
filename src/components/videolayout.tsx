@@ -25,7 +25,7 @@ const Videolayout = () => {
   }, [isVideoOpen]);
 
   return (
-    <div className="container-xl">
+    <div className="container">
       <div
         className="w-full h-full text-white bg-no-repeat bg-cover rounded-[40px] mt-20 mb-20"
         style={{
