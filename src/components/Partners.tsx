@@ -9,51 +9,56 @@ import Partnersimg4 from "public/Imgs/partnersimg4.png";
 
 const Partners = () => {
   return (
+    <>
     <div className="container mb-4 mt-4">
       <h1 className="font-bold text-6xl text-white text-center pb-8">
         OUR <span className="text-blue-600">PARTNERS</span>
       </h1>
-      <div className="grid grid-cols-6 gap-[48px]">
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A] duration-1000">
+      <div className="grid grid-cols-6 gap-[48px] mb-8">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A] duration-1000">
           <Image src={Partnersimg} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg1} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg2} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg3} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg4} alt="partnersimg" />
         </div>
       </div>
       <div className="grid grid-cols-6 gap-[48px]">
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg2} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg4} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg3} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg2} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg1} alt="partnersimg" />
         </div>
-        <div className="cursor-pointer h-[150px] rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
           <Image src={Partnersimg} alt="partnersimg" />
         </div>
       </div>
     </div>
+    <div className="">
+
+    </div>
+    </>
   );
 };
 

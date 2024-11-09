@@ -5,7 +5,7 @@ import Game1 from "public/Imgs/positionimg.png"
 
 const Partners = () => {
   return (
-    <div className="container mb-4 mt-4 flex gap-[200px] relative mb-12">
+    <div className="container mt-4 flex gap-[200px] relative mb-12">
       <div>
         <h1 className="font-bold text-6xl text-white text-start pb-8">
           OUR <span className="text-blue-600">SERVICES</span>
