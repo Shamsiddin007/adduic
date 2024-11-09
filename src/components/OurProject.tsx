@@ -38,7 +38,7 @@ const Projects = () => {
         </div>
         <div className="cursor-pointer relative w-[281px] h-96 overflow-hidden rounded-[24px] flex flex-col items-center bg-gradient-to-b from-black to-gray-800 p-5 text-white text-center shadow-md shadow-black/50 group">
           <div className="absolute inset-0 flex flex-col items-center pt-6 text-center">
-            <h3 className="text-xl font-bold">O‘ynar kamera</h3>
+            <h3 className="text-xl font-bold">O&apos;ynar kamera</h3>
             <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
               2020
             </p>
