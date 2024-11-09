@@ -4,7 +4,7 @@ import soldier from "/public/Imgs/askar.svg";
 
 export default function Mani() {
   return (
-    <div className="bg-white">
+    <div className="">
       <div className="container">
         <div className="flex">
           <div className="pt-40">
