@@ -29,7 +29,7 @@ const Projects = () => {
             <Image
               src={Logo}
               alt="Logo"
-              className="inset-0 z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
+              className="object-cover inset-0 z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
             />
           </div>
           <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800  duration-1000 rounded-[140px] flex items-center justify-center">
