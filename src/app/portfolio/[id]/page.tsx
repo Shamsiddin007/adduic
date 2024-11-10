@@ -26,7 +26,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjMzNjM1LCJleHAiOjE3NjI3Njk2MzV9.fQtXBjhOh6s_HknmxmExSjru-sEIlMvUHoMoG5Dm-pE&t=2024-11-10T10%3A13%3A55.385Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjYzNDQ0LCJleHAiOjE3NjI3OTk0NDR9.LR1i1jdY-dZ1LUdenb9T8oKsJa_dtJNQ6pcmg2njGZM&t=2024-11-10T18%3A30%3A45.640Z"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -42,14 +42,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <>
       <div
-        className="w-full pt-[200px] pb-[50px]"
+        className="w-full h-[800px] pt-[200px] pb-[50px] "
         style={{
           backgroundImage: `url(${post.backgroundCover})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <img src={post.logo} alt="Logo" className="m-auto" />
+        <img src={post.logo} alt="Logo" className="m-auto w-[300px] h-[300px]" />
         <h1 className="text-4xl font-bold text-center mb-4 mt-4 text-white">
           {post.titlegame}
         </h1>

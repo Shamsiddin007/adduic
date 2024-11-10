@@ -15,7 +15,7 @@ const Partners = () => {
         OUR <span className="text-blue-600">PARTNERS</span>
       </h1>
       <div className="grid grid-cols-6 gap-[48px] mb-8">
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A] duration-1000">
+        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A] duration-1000 ease-in-out">
           <Image src={Partnersimg} alt="partnersimg" />
         </div>
         <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
