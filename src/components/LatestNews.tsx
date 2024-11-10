@@ -1,10 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Chevron from "public/Imgs/chevron-right.png";
-import News from "/public/Imgs/KattaYangiliklar.png";
-import GameDev from "/public/Imgs/GameDev.png";
-import Team from "../../public/Imgs/JamoamizgaQushiling.png";
-import Coming from "../../public/Imgs/ComingSoon.png";
+import News from "public/Imgs/KattaYangiliklar.png";
+import GameDev from "public/Imgs/GameDev.png";
+import Team from "public/Imgs/JamoamizgaQushiling.png";
+import Coming from "public/Imgs/ComingSoon.png";
 
 export default function LatestNews() {
   return (
@@ -83,6 +83,7 @@ export default function LatestNews() {
           </div>
         </div>
 
+
         <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
           <Image
             src={Team}
@@ -145,3 +146,4 @@ export default function LatestNews() {
     </div>
   );
 }
+

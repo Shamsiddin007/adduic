@@ -6,7 +6,7 @@
 
 .solder {
   position: absolute;
-  bottom: 25px;
+  bottom: 65px;
   right: 0px;
   background-image: url("/Imgs/askar.svg");
   background-repeat: no-repeat;
@@ -41,7 +41,7 @@
 }
 
 .space {
-  	 position: absolute;
+   position: absolute;
 	 width: 400vw;
 	 height: 400vh;
 	 top: 50%;
