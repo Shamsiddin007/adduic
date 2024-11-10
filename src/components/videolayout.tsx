@@ -27,7 +27,7 @@ const Videolayout = () => {
   return (
     <div className="container">
       <div
-        className="w-full h-full text-white bg-no-repeat bg-cover rounded-[40px] mt-20 mb-20"
+        className="w-full h-full text-white bg-no-repeat bg-cover rounded-[40px] mt-20 mb-20 "
         style={{
           backgroundImage:
             "linear-gradient(to left,#3c1d1b, transparent,transparent,#3d1c1b), url('/icons/coverimg.png')",
@@ -76,10 +76,10 @@ const Videolayout = () => {
               </div>
             </div>
             <div className="flex gap-6 group">
-              <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#FFFFFF1A] rounded-[30px] hover:bg-[#EB5739] transition-all duration-300 active:translate-y-1">
+              <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#FFFFFF1A] rounded-[30px] hover:bg-[#EB5739] transition-all duration-1000 active:translate-y-1">
                 About game
               </button>
-              <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#FFFFFF1A] rounded-[30px] hover:bg-[#EB5739] active:translate-y-1 duration-200">
+              <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#FFFFFF1A] rounded-[30px] hover:bg-[#EB5739] active:translate-y-1 duration-1000">
                 Download
               </button>
             </div>
@@ -114,7 +114,7 @@ const Videolayout = () => {
             <div className="relative w-[90%] h-[90vh] bg-[#14141411] rounded-lg flex items-center justify-center">
               <button
                 onClick={handleVideoClose}
-                className="absolute top-1 right-10 text-white text-6xl hover:text-gray-400"
+                className="absolute top-1 right-10 text-white text-6xl font-mono hover:text-blue-700 duration-1000"
               >
                 &times;
               </button>
