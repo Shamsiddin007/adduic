@@ -20,7 +20,7 @@ function page() {
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3Byb2plY3RzLmpzb24iLCJpYXQiOjE3MzEwMDM2ODAsImV4cCI6MTc2MjUzOTY4MH0.-1a1XQuXDJt2EddHs-DHPpVg8Ulwgs6E0Qi9SKwq3wY&t=2024-11-07T18%3A21%3A17.873Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjMzNjM1LCJleHAiOjE3NjI3Njk2MzV9.fQtXBjhOh6s_HknmxmExSjru-sEIlMvUHoMoG5Dm-pE&t=2024-11-10T10%3A13%3A55.385Z"
     )
       .then((response) => response.json())
       .then((data) => {

@@ -4,6 +4,7 @@ import Image from "next/image";
 import elementLogo from "public/Imgs/elementLogo.png";
 import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
+import Highlights from "public/Imgs/highlights.png"
 import { useEffect, useState } from "react";
 
 type Post = {
@@ -98,6 +99,19 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <p className="text-[#FFFFFFCC] w-[782px] m-auto">
             {post.moredescription}
           </p>
+        </div>
+        <div className="container pb-20">
+          <h2 className="font-bold text-5xl text-white">
+            OUR <span className="text-blue-600">PROJECTS</span>
+          </h2>
+          <div className="grid grid-cols-3 grid-rows-2 gap-8 m-8">
+            <Image src={Highlights} alt="Highlights" className="rounded-lg"/>
+            <Image src={Highlights} alt="Highlights" className="rounded-lg"/>
+            <Image src={Highlights} alt="Highlights" className="rounded-lg"/>
+            <Image src={Highlights} alt="Highlights" className="rounded-lg"/>
+            <Image src={Highlights} alt="Highlights" className="rounded-lg"/>
+            <Image src={Highlights} alt="Highlights" className="rounded-lg"/>
+          </div>
         </div>
       </div>
     </>
