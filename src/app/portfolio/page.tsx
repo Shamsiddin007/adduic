@@ -6,16 +6,24 @@ import { useEffect, useState } from "react";
 
 import Chevron from "public/Imgs/chevron-right.png";
 
-function page() {
-  const [posts, setPosts] = useState([]);
+type Post = {
+  id: number;
+  title: string;
+  date: string;
+  imgLogo: string;
+};
+
+function Page() {
+  const [posts, setPosts] = useState<Post[]>([]);
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3Byb2plY3RzLmpzb24iLCJpYXQiOjE3MzEwMDM2ODAsImV4cCI6MTc2MjUzOTY4MH0.-1a1XQuXDJt2EddHs-DHPpVg8Ulwgs6E0Qi9SKwq3wY&t=2024-11-07T18%3A21%3A17.873Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjMzNjM1LCJleHAiOjE3NjI3Njk2MzV9.fQtXBjhOh6s_HknmxmExSjru-sEIlMvUHoMoG5Dm-pE&t=2024-11-10T10%3A13%3A55.385Z"
     )
       .then((response) => response.json())
       .then((data) => {
-        setPosts(data.ourprojects);
+        const limitedProjects = data.ourprojects.slice(0, 8);
+        setPosts(limitedProjects);
       });
   }, []);
 
@@ -27,15 +35,15 @@ function page() {
         </h1>
       </div>
       <div className="grid grid-cols-4 grid-rows-2 ">
-        {posts.map((user, id) => (
-          <Link href={`/portfolio/${user.id}`} key={id}>
+        {posts.map((post) => (
+          <Link href={`/portfolio/${post.id}`} key={post.id}>
             <div className="cursor-pointer relative w-[281px] h-96 overflow-hidden rounded-[24px] flex flex-col items-center bg-gradient-to-b from-black to-gray-800 p-5 text-white text-center shadow-md shadow-black/50 mb-8 group">
-              <h3 className="text-xl font-bold">{user.title}</h3>
+              <h3 className="text-xl font-bold">{post.title}</h3>
               <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
-                {user.date}
+                {post.date}
               </p>
               <img
-                src={user.imgLogo}
+                src={post.imgLogo}
                 alt="Logo"
                 className="inset-0 z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
               />
@@ -53,4 +61,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

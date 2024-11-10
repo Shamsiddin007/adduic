@@ -7,13 +7,14 @@ import OurServices from "@/components/OurServices"
 
 export default function Home() {
   return (
-    <div className="container">
+    <div>
       <Main/>
       <Story/>
       <OurProjct/>
       <Video/>
       <OurServices/>
       <Partner/>
+      {/* <LatestNews/> */}
     </div>
    )
 }
