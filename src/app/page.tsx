@@ -6,7 +6,6 @@ import Partner from "@/components/Partners";
 import OurServices from "@/components/OurServices"
 import Somestats from "@/components/Somestats";
 import LatestNews from "@/components/LatestNews";
-import Forma from "@/components/Forma/Forma";
 export default function Home() {
   return (
     <div>
@@ -18,7 +17,6 @@ export default function Home() {
       <Partner/>
       <Somestats/>
       <LatestNews/>
-      <Forma/>
     </div>
    )
 }

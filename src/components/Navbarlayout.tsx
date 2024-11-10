@@ -35,12 +35,12 @@ const Navbarlayout = () => {
         <nav className='container mx-auto max-w-screen-xl flex justify-between items-center pt-10'>
             <Link href="/"><Image width={parseInt("160px")} height={parseInt("16px")} src={Logo} alt='Logo UIC Games'/></Link>
             <ul className='flex items-center gap-[22px]'>
-                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="home">Home</Link></li>
-                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="about">About us</Link></li>
-                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="portfolio">Portfolio</Link></li>
-                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="praktikum">Praktikum</Link></li>
-                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="service-us">Services</Link></li>
-                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="blog">Blogs</Link></li>
+                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/home" replace>Home</Link></li>
+                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/about" replace>About us</Link></li>
+                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/portfolio" replace>Portfolio</Link></li>
+                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/praktikum" replace>Praktikum</Link></li>
+                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/service-us" replace>Services</Link></li>
+                <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/blog" replace>Blogs</Link></li>
             </ul>
             <article className='flex items-center gap-4'>
                 <button className='py-[8px] px-[13px] bg-[#3375F6] rounded-[140px] text-[14px] text-[#FFFFFF] font-medium'>Contact us</button>
