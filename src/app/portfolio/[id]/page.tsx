@@ -36,7 +36,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       });
   }, [id]);
 
-  if (!post) return <div>Loading...</div>;
+  if (!post) return <div>Loading</div>;
 
   return (
     <>
