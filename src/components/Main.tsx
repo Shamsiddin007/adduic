@@ -8,8 +8,6 @@ export default function Mani() {
       <div className="relative">
         <div className={`${styles.solder}`}></div>
         <div className="w-[50%] h-[30%] absolute -z-2 bottom-[25px] opacity-[60%] bg-custom-radial"></div>
-
-        {/* <div className="w-[105%] h-[30%] absolute -z-2 bottom-[25px]  opacity-[60%] bg-custom-radial"></div> */}
         <div className="container">
           <div className="pt-36">
             <span className="flex gap-2 items-center bg-[#202123] w-[380px] rounded-full text-white text-sm py-2 px-3 font-sans">

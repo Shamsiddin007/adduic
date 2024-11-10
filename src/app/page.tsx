@@ -9,7 +9,7 @@ import LatestNews from "@/components/LatestNews";
 import Forma from "@/components/Forma/Forma";
 export default function Home() {
   return (
-    <div >
+    <div>
       <Main/>
       <Story/>
       <OurProjct/>

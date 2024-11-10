@@ -83,6 +83,7 @@ export default function LatestNews() {
           </div>
         </div>
 
+
         <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
           <Image
             src={Team}
@@ -145,3 +146,4 @@ export default function LatestNews() {
     </div>
   );
 }
+
