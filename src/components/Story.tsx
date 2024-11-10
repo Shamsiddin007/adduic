@@ -29,10 +29,10 @@ export default function Story() {
                 entertainment.
               </p>
               <article className="flex gap-6 pb-16">
-                <button className="bg-[#3375F6] px-16 py-[10px] rounded-full text-white">
+                <button className="bg-[#1F2022] px-16 py-[10px] rounded-full text-white hover:bg-[#3375F6] transition-all duration-500">
                   Contact us
                 </button>
-                <button className="bg-[#1F2022] px-16 py-[10px] rounded-full text-white">
+                <button className="bg-[#1F2022] px-16 py-[10px] rounded-full text-white hover:bg-[#3375F6] transition-all duration-500">
                   Learn more
                 </button>
               </article>
