@@ -8,7 +8,6 @@ import Somestats from "@/components/Somestats";
 import LatestNews from "@/components/LatestNews";
 import WorkOpportunities from "@/components/WorksOpportunite/WorkOpportunities";
 import Forma from "@/components/Forma/Forma";
-
 export default function Home() {
   return (
     <div>
