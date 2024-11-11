@@ -1,12 +1,28 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Chevron from "public/Imgs/chevron-right.png";
-import News from "public/Imgs/KattaYangiliklar.png";
-import GameDev from "public/Imgs/GameDev.png";
-import Team from "public/Imgs/JamoamizgaQushiling.png";
-import Coming from "public/Imgs/ComingSoon.png";
+
 
 export default function LatestNews() {
+    const [trips, setTrips] = useState([]);
+
+    useEffect(() => {
+        fetch(
+          "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMxMjM1MDM4LCJleHAiOjE3NjI3NzEwMzh9.4cOiyxDSL4rSMbgbGYvgbN3sTHPLACdcMf0HPWx9poE&t=2024-11-10T10%3A37%3A18.316Z"
+        )
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return res.json();
+          })
+          .then((dat) => {
+            setTrips(dat.allnews);
+          })
+          .catch((error) => console.error("Fetch error:", error));
+      }, []);
   return (
     <div className="container">
       <p className="text-[#FFFFFF] text-xl pt-[64px] font-sans pb-[12px] opacity-30 mt-16">
@@ -23,127 +39,25 @@ export default function LatestNews() {
         </Link>
       </div>
 
+
+
       <div className="grid grid-cols-4 gap-y-7 justify-between mb-16">
-        <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
-          <Image
-            src={News}
-            alt="NewsImage"
-            className="rounded-xl object-cover border border-transparent"
-          />
-          <div>
-            <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
-              8.10.2024
-            </p>
-            <h4 className="pb-4 font-medium">
-              UIC Games is back in the business once again!
-            </h4>
-          </div>
+          {trips.map((link, id) => (
+              <Link href={`/blog/${link.id}`} key={id}>
+                <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] h-[377px] pt-[12px] px-[12px]">
+                  <img
+                    src={link.imgPost}
+                    alt="NewsImage"
+                    className="rounded-xl object-cover border border-transparent"
+                  />
+                  <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
+                    {link.postdate}
+                  </p>
+                  <h4 className="pb-4 font-medium">{link.titlePost}</h4>
+                </div>
+              </Link>
+            ))}
         </div>
-        <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
-          <Image
-            src={GameDev}
-            alt="NewsImage"
-            className="rounded-xl object-cover border border-transparent"
-          />
-          <div>
-            <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
-              8.10.2024
-            </p>
-            <h4 className="pb-4 font-medium">GameDev Goethe 2024</h4>
-          </div>
-        </div>
-        <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
-          <Image
-            src={Team}
-            alt="NewsImage"
-            className="rounded-xl object-cover border border-transparent"
-          />
-          <div>
-            <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
-              8.10.2024
-            </p>
-            <h4 className="pb-4 font-medium">
-              UIC Games is looking talented game devlopers
-            </h4>
-          </div>
-        </div>
-        <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
-          <Image
-            src={Coming}
-            alt="NewsImage"
-            className="rounded-xl object-cover border border-transparent"
-          />
-          <div>
-            <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
-              8.10.2024
-            </p>
-            <h4 className="pb-4 font-medium">
-              Huge news are about to pe announced very soon
-            </h4>
-          </div>
-        </div>
-
-
-        <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
-          <Image
-            src={Team}
-            alt="NewsImage"
-            className="rounded-xl object-cover border border-transparent"
-          />
-          <div>
-            <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
-              8.10.2024
-            </p>
-            <h4 className="pb-4 font-medium">
-              UIC Games is looking talented game devlopers
-            </h4>
-          </div>
-        </div>
-        <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
-          <Image
-            src={Coming}
-            alt="NewsImage"
-            className="rounded-xl object-cover border border-transparent"
-          />
-          <div>
-            <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
-              8.10.2024
-            </p>
-            <h4 className="pb-4 font-medium">
-              Huge news are about to pe announced very soon
-            </h4>
-          </div>
-        </div>
-        <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
-          <Image
-            src={News}
-            alt="NewsImage"
-            className="rounded-xl object-cover border border-transparent"
-          />
-          <div>
-            <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
-              8.10.2024
-            </p>
-            <h4 className="pb-4 font-medium">
-              UIC Games is back in the business once again!
-            </h4>
-          </div>
-        </div>
-        <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] pt-[12px] px-[12px]">
-          <Image
-            src={GameDev}
-            alt="NewsImage"
-            className="rounded-xl object-cover border border-transparent"
-          />
-          <div>
-            <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
-              8.10.2024
-            </p>
-            <h4 className="pb-4 font-medium">GameDev Goethe 2024</h4>
-          </div>
-        </div>
-      </div>
     </div>
   );
 }
-
