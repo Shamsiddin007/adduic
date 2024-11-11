@@ -10,7 +10,7 @@ import Partnersimg4 from "public/Imgs/partnersimg4.png";
 const Partners = () => {
   return (
     <>
-    <div className="container mb-4 mt-4">
+    <div className="container mb-10 mt-4">
       <h1 className="font-bold text-6xl text-white text-center pb-8">
         OUR <span className="text-blue-600">PARTNERS</span>
       </h1>

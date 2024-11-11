@@ -20,7 +20,7 @@ function page() {
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjMzNjM1LCJleHAiOjE3NjI3Njk2MzV9.fQtXBjhOh6s_HknmxmExSjru-sEIlMvUHoMoG5Dm-pE&t=2024-11-10T10%3A13%3A55.385Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjYzNDQ0LCJleHAiOjE3NjI3OTk0NDR9.LR1i1jdY-dZ1LUdenb9T8oKsJa_dtJNQ6pcmg2njGZM&t=2024-11-10T18%3A30%3A45.640Z"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -30,8 +30,8 @@ function page() {
   }, []);
 
   return (
-    <div className="container">
-      <div className="flex items-center justify-between mb-4 gap-10">
+    <div className="container mt-12">
+      <div className="flex items-center justify-between mb-10 gap-10">
         <h2 className="font-bold text-5xl text-white">
           OUR <span className="text-blue-600">PROJECTS</span>
         </h2>
