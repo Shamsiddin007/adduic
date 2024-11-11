@@ -27,7 +27,7 @@ const Videolayout = () => {
   return (
     <div className="container">
       <div
-        className="w-full h-full text-white bg-no-repeat bg-cover rounded-[40px] mt-20 mb-20 "
+        className="w-full h-full text-white bg-no-repeat bg-cover rounded-[40px] mt-28 mb-36 "
         style={{
           backgroundImage:
             "linear-gradient(to left,#3c1d1b, transparent,transparent,#3d1c1b), url('/icons/coverimg.png')",

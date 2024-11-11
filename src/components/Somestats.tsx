@@ -16,7 +16,8 @@ const Somestats = () => {
   }, []);
 
   return (
-    <div className="w-full h-screen overflow-hidden bg-black relative p-4">
+<div>
+<div className="w-full h-screen overflow-hidden bg-black relative p-4 mt-[80px]">
       {/* Top Background stars animation and gradient */}
       <div className={`${styles.space} h-1/2 w-full relative`}></div>
 
@@ -72,17 +73,27 @@ const Somestats = () => {
       <div
         ref={parallaxRef}
         className="w-[120vw] h-[50%] absolute -bottom-8 z-1 -ml-40 mt-9"
-        style={{
-          boxShadow: "90px 80px 30px rgba(239, 94, 9, 0.2)", // Adds a shadow effect
-          background: "linear-gradient(to top, black, trannsparent)", // Adds gradient fade
-        }}
       >
         <div
           data-depth="0.111111111111111111111111111111111"
           className="bg-[url('../../public/icons/Mountainimage.png')] brightness-50 w-full h-full bg-no-repeat bg-cover bg-center"
         ></div>
       </div>
+      <div
+          className="w-full h-[200px] left-0 right-0 absolute z-2 -bottom-1 brightness-[.9]"
+          style={{
+            background:
+              "linear-gradient(180deg, transparent 27%, rgba(0, 144, 254, 0.2) 84%)",
+          }}
+        ></div>
     </div>
+        <div
+          className="w-full h-[70px] relative -top-0 z- "
+          style={{
+            background: 'linear-gradient( rgba(0, 144, 254, 0.2) 10%, transparent 60%, transparent 90%)',
+          }}
+        ></div>
+</div>
   );
 };
 

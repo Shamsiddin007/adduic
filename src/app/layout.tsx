@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Navbarlayout from "@/components/Navbarlayout";
-
+import Footerlayout from "@/components/Footerlayout";
 import './globals.css'
 
 
@@ -22,6 +22,7 @@ export default function RootLayout({
         <div className="mt-24">
           {children}
         </div>
+        <Footerlayout/>
       </body>
     </html>
   );
