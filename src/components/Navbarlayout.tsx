@@ -6,9 +6,12 @@ import { useEffect, useState } from 'react';
 import styles from './style.module.css'
 import Logo from '/public/icons/logo.svg'
 
+import JoinUsModal from '@/components/JoinUs';
+
 
 const Navbarlayout = () => {
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [isscrolled, setScrolled] = useState(false);
     const [isactive, setActive] = useState(false);
 
@@ -33,7 +36,6 @@ const Navbarlayout = () => {
 
     }, [])
 
-
     return (
 
         <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isscrolled ? styles.activeScrolled : ''}`}>
@@ -50,6 +52,7 @@ const Navbarlayout = () => {
                 <article className='flex items-center gap-4'>
                     <button className='py-[8px] px-[13px] bg-[#3375F6] rounded-[140px] text-[14px] text-[#FFFFFF] font-medium'>Contact us</button>
                     <button className='py-[8px] px-[15px] bg-[#2b2c2d] rounded-[140px] text-[14px] text-[#FFFFFF]'>Join us</button>
+                    {isModalOpen && <JoinUsModal onClose={() => setIsModalOpen(false)} />}
                     <article className='flex gap-2 items-center cursor-pointer' onClick={handleActiveLang}>
                         <p className='text-[14px] text-[white] font-medium uppercase '>eng</p>
                         <Image className={`${isactive ? 'rotate-180' : 'rotate-0'} transition-all duration-300`} width={parseInt("12px")} height={parseInt("6px")} src="/icons/arrow.png" alt='Arrow icons' />
