@@ -1,7 +1,7 @@
 import Image from "next/image";
 
-import Game from "public/Imgs/games1.png"
-import Game1 from "public/Imgs/positionimg.png"
+import Game from "public/Imgs/games1.png";
+import Game1 from "public/Imgs/positionimg.png";
 
 const Partners = () => {
   return (
@@ -26,12 +26,15 @@ const Partners = () => {
         </div>
       </div>
       <div className="w-[600px] h-[248px] rounded-[20px] bg-[#3375F60D] p-4 relative">
-        <Image src={Game1} alt="" className="absolute top-[1px] right-0"/>
+        <Image src={Game1} alt="" className="absolute top-[1px] right-0" />
         <div className="bg-[#3375F6] w-[76px] h-[76px] flex items-center justify-center rounded-[50%] mb-8">
-            <Image src={Game} alt="" />
+          <Image src={Game} alt="" />
         </div>
         <h1 className="text-[28px]">Game development</h1>
-        <p className="text-[#FFFFFF66] w-[518px]">We constantly push the boundaries of creativity and technology to deliver groundbreaking experiences that captivate and inspire.</p>
+        <p className="text-[#FFFFFF66] w-[518px]">
+          We constantly push the boundaries of creativity and technology to
+          deliver groundbreaking experiences that captivate and inspire.
+        </p>
       </div>
     </div>
   );

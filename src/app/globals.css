@@ -34,3 +34,27 @@ h1{
   font-size: 40px;
   color: white;
 }
+
+.bg-custom {
+  @apply bg-cover bg-center;
+  background-image: url('/Imgs/bgimg1.png');
+}
+
+/* styles/globals.css */
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.animate-scroll {
+  animation: scroll 1.5s infinite ease-in-out;
+}

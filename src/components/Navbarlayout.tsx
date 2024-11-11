@@ -6,10 +6,14 @@ import { useEffect, useState } from 'react';
 import styles from './style.module.css'
 import Logo from '/public/icons/logo.png'
 
+import JoinUsModal from '@/components/JoinUs';
+
 
 const Navbarlayout = () => {
 
     const [isscrolled, setScrolled] = useState(false)
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
 
 
     useEffect(()=> {
@@ -44,7 +48,8 @@ const Navbarlayout = () => {
             </ul>
             <article className='flex items-center gap-4'>
                 <button className='py-[8px] px-[13px] bg-[#3375F6] rounded-[140px] text-[14px] text-[#FFFFFF] font-medium'>Contact us</button>
-                <button className='py-[8px] px-[15px] bg-[#2b2c2d] rounded-[140px] text-[14px] text-[#FFFFFF]'>Join us</button>
+                <button className='py-[8px] px-[15px] bg-[#2b2c2d] rounded-[140px] text-[14px] text-[#FFFFFF]' onClick={() => setIsModalOpen(true)}>Join Us</button>
+                {isModalOpen && <JoinUsModal onClose={() => setIsModalOpen(false)} />}
                 <article className='flex gap-2 items-center'>
                     <p className='text-[14px] text-[white] font-medium uppercase '>eng</p>
                     <Image width={parseInt("12px")} height={parseInt("6px")} src="/icons/arrow.png" alt='Arrow icons'/>

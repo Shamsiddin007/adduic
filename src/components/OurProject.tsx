@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import Link from "next/link";
@@ -17,6 +15,7 @@ type User = {
 
 function page() {
   const [posts, setPosts] = useState<User[]>([]);
+
 
   useEffect(() => {
     fetch(
@@ -44,7 +43,7 @@ function page() {
       <div className="grid grid-cols-4 grid-rows-1">
         {posts.map((user, id) => (
           <Link href={`/portfolio/${user.id}`} key={id}>
-            <div className="cursor-pointer relative w-[281px] h-96 overflow-hidden rounded-[24px] flex flex-col items-center bg-gradient-to-b from-black to-gray-800 p-5 text-white text-center shadow-md shadow-black/50 mb-8 group">
+            <div className="cursor-pointer relative w-[281px] h-96 overflow-hidden rounded-[24px] flex flex-col items-center bg-gradient-to-b from-black to-gray-800 p-5 text-white text-center shadow-md shadow-black/50 mb-8 group ease-in-out duration-300">
               <h3 className="text-xl font-bold">{user.title}</h3>
               <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
                 {user.date}
