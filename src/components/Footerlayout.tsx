@@ -30,6 +30,7 @@ const Footerlayout = () => {
           <div className="w-full h-[500px] text-white mt-32 relative z-1">
             <div className="mt-16 flex">
               <div className="flex w-2/3 flex-col gap-16 text-xl">
+
                 <Link href="/">
                   <Image
                     src={uiclogo}
@@ -74,7 +75,7 @@ const Footerlayout = () => {
                   </ul>
                 </article>
                 <article className="flex gap-32">
-                  <div className="flex h-11 gap-4">
+                  <div className="flex h-12 gap-4">
                     <span className="p-3 rounded-lg bg-[#3375F6]">
                       <Image src={phone} alt="phone img" />
                     </span>
