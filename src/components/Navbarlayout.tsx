@@ -42,7 +42,6 @@ const Navbarlayout = () => {
             <nav className='container mx-auto max-w-screen-xl flex justify-between items-center pt-10 relative top-0 left-0'>
                 <Link href="/"><Image width={parseInt("160px")} height={parseInt("16px")} src={Logo} alt='Logo UIC Games' /></Link>
                 <ul className='flex items-center gap-[22px]'>
-                    <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/home" replace>Home</Link></li>
                     <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/about" replace>About us</Link></li>
                     <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/portfolio" replace>Portfolio</Link></li>
                     <li className='text-[12px] font-medium text-[#FFFFFF]'><Link href="/praktikum" replace>Praktikum</Link></li>
