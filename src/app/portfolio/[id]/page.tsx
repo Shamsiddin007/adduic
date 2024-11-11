@@ -49,7 +49,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           backgroundPosition: "center",
         }}
       >
-        <img src={post.logo} alt="Logo" className="m-auto w-[300px] h-[300px]" />
+        <img src={post.logo} alt="Logo" className="m-auto w-auto h-[300px]" />
         <h1 className="text-4xl font-bold text-center mb-4 mt-4 text-white">
           {post.titlegame}
         </h1>
