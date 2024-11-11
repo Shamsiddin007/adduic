@@ -1,4 +1,4 @@
-import uiclogo from "../../public/icons/logo.png";
+import uiclogo from "../../public/icons/logo.svg";
 import phone from "../../public/icons/phone.png";
 import email from "../../public/icons/email.png";
 import telegram from "../../public/icons/telegram.png";
