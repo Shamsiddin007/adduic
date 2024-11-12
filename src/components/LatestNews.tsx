@@ -42,7 +42,7 @@ export default function LatestNews() {
       <div className="grid grid-cols-4 gap-y-7 justify-between mb-16">
           {trips.slice(0, 8).map((link, id) => (
               <Link href={`/blog/${link.id}`} key={id}>
-                <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] h-[377px] pt-[12px] px-[12px]">
+                <div className="text-white rounded-lg flex flex-col border-[0.03px] bg-[#10131A] w-[281px] h-[377px] pt-[12px] px-[12px] border-[#FFFFFF1A] hover:scale-[1.1] transition-all duration-500">
                   <img
                     src={link.imgPost}
                     alt="NewsImage"

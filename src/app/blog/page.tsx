@@ -50,7 +50,7 @@ function AllNews() {
           {Array.isArray(trips) &&
             trips.slice(0, visibleTrips).map((link, id) => (
               <Link href={`/blog/${link.id}`} key={id}>
-                <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] h-[377px] pt-[12px] px-[12px]">
+                <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] h-[377px] pt-[12px] px-[12px] hover:scale-[1.1] transition-all duration-500">
                   <img
                     src={link.imgPost}
                     alt="NewsImage"
