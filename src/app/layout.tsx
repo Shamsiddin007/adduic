@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Navbarlayout/>
-        <div className="mt-24">
+        <div>
           {children}
         </div>
         <Footerlayout/>
