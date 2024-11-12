@@ -18,7 +18,6 @@ module.exports = {
       },
       backgroundImage: {
        'custom-radial': "linear-gradient(to right, rgba(20, 39, 77, 0) 100%, rgba(20, 39, 77, 0.5) 50%, rgba(20, 39, 77, 0.5) 80%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(to bottom, rgba(20, 39, 77, 0) 0%, rgba(20, 39, 77, 0.5) 70%, rgba(20, 39, 77, 0.5) 80%, rgba(0, 0, 0, 0.8) 100%)",
-       
       },
       zIndex: {
         0: "0",

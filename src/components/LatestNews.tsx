@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Chevron from "public/Imgs/chevron-right.png";
 
-
 export default function LatestNews() {
     const [trips, setTrips] = useState([]);
 
@@ -23,6 +22,7 @@ export default function LatestNews() {
           })
           .catch((error) => console.error("Fetch error:", error));
       }, []);
+
   return (
     <div className="container">
       <p className="text-[#FFFFFF] text-xl pt-[64px] font-sans pb-[12px] opacity-30 mt-16">
@@ -39,10 +39,8 @@ export default function LatestNews() {
         </Link>
       </div>
 
-
-
       <div className="grid grid-cols-4 gap-y-7 justify-between mb-16">
-          {trips.map((link, id) => (
+          {trips.slice(0, 8).map((link, id) => (
               <Link href={`/blog/${link.id}`} key={id}>
                 <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] h-[377px] pt-[12px] px-[12px]">
                   <img
