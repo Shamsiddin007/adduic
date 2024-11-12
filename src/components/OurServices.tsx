@@ -5,7 +5,7 @@ import Game1 from "public/Imgs/positionimg.png";
 
 const Partners = () => {
   return (
-    <div className="container mt-4 flex gap-[200px] relative mb-20">
+    <div className="container mt-4 grid grid-cols-2 gap-[100px] mb-20">
       <div>
         <h1 className="font-bold text-6xl text-white text-start pb-8">
           OUR <span className="text-blue-600">SERVICES</span>
@@ -25,13 +25,13 @@ const Partners = () => {
           </button>
         </div>
       </div>
-      <div className="w-[600px] h-[248px] rounded-[20px] bg-[#3375F60D] p-4 relative">
+      <div className="w-[480px] h-[248px] rounded-[20px] bg-[#3375F60D] p-4 relative">
         <Image src={Game1} alt="" className="absolute top-[1px] right-0" />
         <div className="bg-[#3375F6] w-[76px] h-[76px] flex items-center justify-center rounded-[50%] mb-8">
           <Image src={Game} alt="" />
         </div>
         <h1 className="text-[28px]">Game development</h1>
-        <p className="text-[#FFFFFF66] w-[518px]">
+        <p className="text-[#FFFFFF66] w-[480px]">
           We constantly push the boundaries of creativity and technology to
           deliver groundbreaking experiences that captivate and inspire.
         </p>
