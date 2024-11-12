@@ -30,7 +30,7 @@ const JobCard: React.FC<JobCardProps> = ({ jobs }) => {
             {jobs.map((job, index) => (
               <div
                 key={index}
-                className="px-10 py-5 w-[30%] rounded-[24px] "
+                className="px-10 py-5 w-[30%] rounded-[24px]"
                 style={{
                   backgroundImage: "linear-gradient(110deg, #3375F61C,transparent,transparent,#3375F61C)",
                   border: "0.03px solid #FFFFFF1A",
@@ -52,11 +52,13 @@ const JobCard: React.FC<JobCardProps> = ({ jobs }) => {
                       </article>
                       <article>{job.salaryRange}</article>
                     </div>
+                    <p className=" relative -left-3">
                     <Image
                       src={strelka}
                       alt="strelka"
                       className="w-4 h-4 pr-2 opacity-1"
                     />
+                    </p>
                   </div>
                 </Link>
               </div>

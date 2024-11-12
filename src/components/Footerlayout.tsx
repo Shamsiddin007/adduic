@@ -1,4 +1,4 @@
-import uiclogo from "../../public/icons/logo.png";
+import uiclogo from "../../public/icons/logo.svg";
 import phone from "../../public/icons/phone.png";
 import email from "../../public/icons/email.png";
 import telegram from "../../public/icons/telegram.png";
@@ -8,6 +8,8 @@ import instagram from "../../public/icons/instagram.png";
 import facebook from "../../public/icons/facebook.png";
 import Image from "next/image";
 import Link from "next/link";
+import styles from "../components/style.module.css"
+import stylesss from "../components/style.module.css"
 
 const Footerlayout = () => {
   return (
@@ -38,37 +40,37 @@ const Footerlayout = () => {
                     className="w-56 cursor-pointer"
                   />
                 </Link>
-                <article className="flex items-center gap-36 font-thin text-gray-600">
+                <article className="flex items-center gap-24 font-thin text-gray-600">
                   <ul className="list-nonex">
                     <Link href="/about">
-                      <li className="pb-4 pt-3 cursor-pointer active:translate-y-1 active:duration-300 hover:list-disc hover:ml-6 transition-all hover:text-[#3375F6] duration-1000">
+                      <li className={styles.item}>
                         Our projects
                       </li>
                     </Link>
                     <Link href="/workopportunite">
-                      <li className="pb-4 pt-3 cursor-pointer active:translate-y-1 active:duration-300 hover:list-disc hover:ml-6 transition-all hover:text-[#3375F6] duration-1000">
+                      <li className={styles.item}>
                         Work values
                       </li>
                     </Link>
                     <Link href="/praktikum">
-                      <li className="pb-4 pt-3 cursor-pointer active:translate-y-1 active:duration-300 hover:list-disc hover:ml-6 transition-all hover:text-[#3375F6] duration-1000">
+                      <li className={styles.item}>
                         The team
                       </li>
                     </Link>
                   </ul>
                   <ul className="list-none">
                     <Link href="/service-us">
-                      <li className="pb-4 pt-3 cursor-pointer active:translate-y-1 active:duration-300 hover:list-disc hover:ml-6 transition-all hover:text-[#3375F6] duration-1000">
+                      <li className={styles.item}>
                         Contact us
                       </li>
                     </Link>
                     <Link href="portfolio">
-                      <li className="pb-4 pt-3 cursor-pointer active:translate-y-1 active:duration-300 hover:list-disc hover:ml-6 transition-all hover:text-[#3375F6] duration-1000">
+                      <li className={styles.item}>
                         Vacancies
                       </li>
                     </Link>
                     <Link href="/blog">
-                      <li className="pb-4 pt-3 cursor-pointer active:translate-y-1 active:duration-300 hover:list-disc hover:ml-6 transition-all hover:text-[#3375F6] duration-1000">
+                      <li className={styles.item}>
                         Results
                       </li>
                     </Link>
@@ -106,43 +108,23 @@ const Footerlayout = () => {
                 </p>
                 <div className="flex w-2/4 justify-between mt-6">
                   <span
-                    className="p-3 bg-transparent rounded-xl cursor-pointer duration-1000 hover:bg-[#3375F6]"
-                    style={{
-                      border: "1px solid #FFFFFF0A",
-                    }}
-                  >
+                    className={stylesss.items}>
                     <Image src={linkidin} alt="linkidin img" />
                   </span>
                   <span
-                    className="p-3 bg-transparent rounded-xl cursor-pointer duration-1000 hover:bg-[#3375F6]"
-                    style={{
-                      border: "1px solid #FFFFFF0A",
-                    }}
-                  >
+                    className={stylesss.items}>
                     <Image src={facebook} alt="facebook img" />
                   </span>
                   <span
-                    className="p-3 bg-transparent rounded-xl cursor-pointer duration-1000 hover:bg-[#3375F6]"
-                    style={{
-                      border: "1px solid #FFFFFF0A",
-                    }}
-                  >
+                    className={stylesss.items}>
                     <Image src={instagram} alt="instagram img" />
                   </span>
                   <span
-                    className="p-3  bg-transparent rounded-xl cursor-pointer duration-1000 hover:bg-[#3375F6]"
-                    style={{
-                      border: "1px solid #FFFFFF0A",
-                    }}
-                  >
+                    className={stylesss.items}>
                     <Image src={telegram} alt="telegram img" />
                   </span>
                   <span
-                    className="p-3 bg-transparent rounded-xl cursor-pointer duration-1000 hover:bg-[#3375F6]"
-                    style={{
-                      border: "1px solid #FFFFFF0A",
-                    }}
-                  >
+                    className={stylesss.items}>
                     <Image src={youTube} alt="youtube img" />
                   </span>
                 </div>

@@ -47,7 +47,7 @@ function Page() {
         {Array.isArray(posts) &&
           posts.slice(0, visibleTrips).map((post) => (
             <Link href={`/portfolio/${post.id}`} key={post.id}>
-              <div className="cursor-pointer relative w-[281px] h-96 overflow-hidden rounded-[24px] flex flex-col items-center bg-gradient-to-b from-black to-gray-800 p-5 text-white text-center shadow-md shadow-black/50 mb-8 group hover:border-slate-400	hover:border-[1px] hover:border-solid ease-in-out duration-300">
+              <div className="cursor-pointer relative w-[281px] h-96 overflow-hidden rounded-[24px] flex flex-col items-center bg-gradient-to-b from-black to-gray-800 p-5 text-white text-center shadow-md shadow-black/50 mb-8 group hover:border-slate-400	hover:border-2 hover:border-solid ease-in-out duration-300">
                 <h3 className="text-xl font-bold">{post.title}</h3>
                 <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
                   {post.date}
@@ -55,7 +55,7 @@ function Page() {
                 <img
                   src={post.imgLogo}
                   alt="Logo1"
-                  className="inset-0 z-0 opacity-100 group-hover:scale-[1.07] duration-300"
+                  className="inset-0 z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                 />
                 <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center">
                   Learn more <Image src={Chevron} alt="Logo" />
