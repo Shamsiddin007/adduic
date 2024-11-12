@@ -30,20 +30,96 @@
   z-index: -1;
   /* transform: scale(1.4); */
 }
-.item{
-  cursor: pointer;
-  padding-bottom: 12px;
-  padding-top: 16px;
+.item_home{
+  list-style: none;
+  position: relative;
+  background-color: aqua;
+  height: 130px;
+  transition: all 1000ms ease-in-out;
 }
-.item:hover{
+.item1 {
+  cursor: pointer;
+  width: max-content;
+  position: absolute;
+  top: -3px;
+  left: 0px; /* Boshlang'ich qiymat qo'shildi */
+  transition: all 1000ms ease;
+}
+
+.item1:hover {
   color: #3375F6;
-  margin-left: 24px;
+  left: 24px;
+  list-style-type: disc;
+}
+
+.item2 {
+  cursor: pointer;
+  width: max-content;
+  position: absolute;
+  top: 40px;
+  left: 0px; /* Boshlang'ich qiymat qo'shildi */
+  transition: all 1000ms ease;
+}
+
+.item2:hover {
+  color: #3375F6;
+  left: 24px;
+  list-style-type: disc;
+}
+
+.item3 {
+  cursor: pointer;
+  width: max-content;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  transition: all 1000ms ease;
+}
+
+.item3:hover {
+  color: #3375F6;
+  left: 24px;
+  list-style-type: disc;
+}
+
+.item4{
+  cursor: pointer;
+  width: max-content;
+  position: absolute;
+  top: 140px;
+  left: 200px;
+}
+.item4:hover{
+  color: #3375F6;
+  left: 224px;
   list-style-type: disc;
   transition: all 1000ms ease;
 }
-.item:active{
-  transition: all 300ms ease;
-  transform: translateY(4px);
+.item5{
+  cursor: pointer;
+  width: max-content;
+  position: absolute;
+  top: 185px;
+  left: 200px;
+}
+.item5:hover{
+  color: #3375F6;
+  left: 224px;
+  list-style-type: disc;
+  transition: all 1000ms ease;
+}
+.item6{
+  cursor: pointer;
+  width: max-content;
+  position: absolute;
+  top: 230px;
+  left: 200px;
+}
+.item6:hover{
+  color: #3375F6;
+  left: 224px;
+  list-style-type: disc;
+  transition: all 1000ms ease;
 }
 .items{
   background:transparent ;
