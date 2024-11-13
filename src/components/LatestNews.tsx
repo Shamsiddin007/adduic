@@ -46,25 +46,23 @@ export default function LatestNews() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-y-7 justify-between mb-16">
-        {trips.slice(0, 8).map((link, id) => (
-          <Link href={`/blog/${link.id}`} key={id}>
-            <div className="text-white rounded-lg flex flex-col border border-[#FFFFFF1A] bg-[#10131A] w-full h-[377px] pt-3 px-3 md:px-[12px] border-[#FFFFFF1A] hover:scale-[1.05] transition-transform duration-500">
-              <img
-                src={link.imgPost}
-                alt="NewsImage"
-                className="rounded-xl object-cover border border-transparent h-[180px] md:h-auto"
-              />
-              <p className="text-sm md:text-[14px] font-sans opacity-30 pt-3 md:pt-[14px] pb-2 md:pb-[8px]">
-                {link.postdate}
-              </p>
-              <h4 className="text-base md:text-lg pb-2 md:pb-4 font-medium">
-                {link.titlePost}
-              </h4>
-            </div>
-          </Link>
-        ))}
-      </div>
+      <div className="grid grid-cols-4 gap-y-7 justify-between mb-16">
+          {trips.slice(0, 8).map((link, id) => (
+              <Link href={`/blog/${link.id}`} key={id}>
+                <div className="text-white rounded-lg flex flex-col border-[0.03px] bg-[#10131A] w-[281px] h-[377px] pt-[12px] px-[12px] border-[#FFFFFF1A] hover:scale-[1.1] transition-all duration-500">
+                  <img
+                    src={link.imgPost}
+                    alt="NewsImage"
+                    className="rounded-xl object-cover border border-transparent"
+                  />
+                  <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
+                    {link.postdate}
+                  </p>
+                  <h4 className="pb-4 font-medium">{link.titlePost}</h4>
+                </div>
+              </Link>
+            ))}
+        </div>
     </div>
   );
 }
