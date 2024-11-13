@@ -8,9 +8,9 @@ export default function Mani() {
       <div className="relative">
         <div className={`${styles.solder}`}></div>
         <div className="w-[100%] h-[30%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
-        <div className="container">
-          <div className="pt-36">
-            <span className="flex gap-2 items-center bg-[#202123] w-[300px] rounded-full text-white text-sm py-2 px-3 font-sans">
+        <div className="container h-screen">
+          <div className="absolute bottom-0">
+            <span className="mb-6 flex gap-2 items-center bg-[#202123] w-[400px] rounded-full text-white text-sm py-2 px-3 font-sans">
               <Image
                 src={Fire}
                 alt="FireLogo"
@@ -18,7 +18,7 @@ export default function Mani() {
               />{" "}
               Working day & night to bring out the best results
             </span>
-            <h1 className="text-6xl font-bold uppercase pt-[19px] text-white tracking-wider">
+            <h1 className="mb-[268px] text-6xl font-bold uppercase pt-[19px] text-white tracking-wider">
               YOUR{" "}
               <span className="relative text-blue-500 border border-blue-500 inline-block mb-2">
                 IDEAS
@@ -36,7 +36,7 @@ export default function Mani() {
                 <span className="absolute w-2 h-2 bg-white rounded-full -bottom-1 -right-1"></span>
               </span>
             </h1>
-            <p className="text-white font-sans text-base pb-14 pt-48">
+            <p className=" text-white font-sans text-base pb-14 ">
               UIC Games is a game development company founded in 2018. It
               focuses on creating engaging and immersive video games,
               <br />

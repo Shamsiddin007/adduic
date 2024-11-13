@@ -38,8 +38,8 @@ function Page() {
 
   return (
     <div className="container m-auto">
-      <div className="">
-        <h1 className="font-bold text-6xl text-white text-center pt-10 pb-16">
+      <div className="mt-[150px]">
+        <h1 className="font-bold text-6xl text-white text-center pb-16">
           OUR <span className="text-blue-600">PROJECTS</span>
         </h1>
       </div>

@@ -39,7 +39,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <>
       <div className="container">
-        <div className="w-[782px] m-auto ">
+        <div className="w-[782px] m-auto pt-32">
           <h1 className="text-[32px] font-extralight pb-5 border-b-2 border-[#FFFFFF1F] border-opacity-10">
             {single.titlePost}
           </h1>

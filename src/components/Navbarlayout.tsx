@@ -30,12 +30,8 @@ const Navbarlayout = () => {
   }, []);
 
   return (
-    <div
-      className={`sticky top-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? `${styles.activeScrolled} shadow-lg` : ""
-      }`}
-    >
-      <nav className="container mx-auto max-w-screen-xl flex justify-between items-center px-4 pt-8 mb-4 relative">
+    <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? styles.activeScrolled : ''}`}>
+    <nav className='container mx-auto max-w-screen-xl flex justify-between items-center pt-10 relative top-0 left-0'>
         {/* Mobile Menu Button */}
         <button 
           className="lg:hidden p-2" 
