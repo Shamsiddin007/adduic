@@ -4,28 +4,28 @@ import Books from "public/icons/booksIcon.png";
 function WhatisPracticum() {
   return (
     <div className="container">
-      <h2 className="font-bold text-center text-5xl text-white font-sans uppercase pb-10">
+      <h2 className="font-bold md:text-5xl text-3xl text-center text-white font-sans uppercase md:leading-[50px] md:pb-10 pb-5">
         What is <span className="text-blue-600">Practicum</span>
       </h2>
-      <p className="text-[18px] font-medium text-white text-center pb-6">
+      <p className="md:text-[18px] sm:text-[14px] text-[12px] font-medium text-white leading-4 md:leading-7 text-center md:pb-6 pb-3">
         At UIC Games, we are passionate storytellers, visionary artists, and
         technical wizards dedicated to creating unforgettable gaming
         experiences. With a relentless commitment to innovation, we craft
         immersive worlds where players can lose themselves in epic adventures
         and compelling narratives.
       </p>
-      <p className="text-white text-[14px] text-center opacity-80 w-8/12 leading-5 font-sans m-auto pb-[25px]">
+      <p className="text-white md:text-[14px] text-[10px] text-center opacity-80 md:w-8/12 sm:leading-5 font-sans m-auto pb-[25px]">
         Our team of talented developers, designers, and creatives come together
         to push the boundaries of what's possible, delivering games that
         resonate with players around the globe. Join us on this journey as we
         redefine the future of interactive entertainment.
       </p>
-      <div className="pt-16 pb-16">
+      <div className="md:pt-16 pb-16">
         <div className="flex items-center justify-between bg-black text-white">
           <div className="w-full">
-            <h1 className="font-bold text-5xl text-white font-sans uppercase">
+            <h2 className="font-bold md:text-5xl text-3xl sm:text-start text-center text-white font-sans uppercase md:leading-[50px]">
               12-MONTH <span className="text-blue-500">CURRICULUM</span>
-            </h1>
+            </h2>
 
             <div className="mt-10 flex flex-col md:flex-row justify-between gap-8">
               <div className="p-6  rounded-xl bg-bg-practicum border border-[#FFFFFF33] flex-1 shadow-lg">
