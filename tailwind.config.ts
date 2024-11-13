@@ -18,6 +18,9 @@ module.exports = {
       },
       backgroundImage: {
        'custom-radial': "linear-gradient(to right, rgba(20, 39, 77, 0) 100%, rgba(20, 39, 77, 0.5) 50%, rgba(20, 39, 77, 0.5) 80%, rgba(0, 0, 0, 0.8) 100%), linear-gradient(to bottom, rgba(20, 39, 77, 0) 0%, rgba(20, 39, 77, 0.5) 70%, rgba(20, 39, 77, 0.5) 80%, rgba(0, 0, 0, 0.8) 100%)",
+       "practicum-bgBook":
+          "linear-gradient(180deg, rgba(51, 117, 246, 0.32) 0%, rgba(51, 117, 246, 0.052) 100%)",
+          "bg-practicum": "linear-gradient(135deg, #1a1a2e, #16213e);"
       },
       zIndex: {
         0: "0",
