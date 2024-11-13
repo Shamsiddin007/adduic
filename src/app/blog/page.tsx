@@ -39,17 +39,17 @@ function AllNews() {
     <div>
         <Levelup/>
       <div className="container">
-        <p className="text-[#FFFFFF] text-center text-xl font-sans pb-[12px] opacity-30 mt-16">
+        <p className="text-[#FFFFFF] text-center text-xl font-sans pb-[12px] opacity-30 md:mt-16 mt-8">
           Stay updated about everything
         </p>
         <h2 className="font-bold text-center text-5xl text-white uppercase pb-10">
           All <span className="text-blue-600">news</span>
         </h2>
-        <div className="grid grid-cols-4 gap-y-7 justify-between mb-16">
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-7 justify-between sm:mb-16 mb-8">
           {Array.isArray(trips) &&
             trips.slice(0, visibleTrips).map((link, id) => (
               <Link href={`/blog/${link.id}`} key={id}>
-                <div className="text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] w-[281px] h-[377px] pt-[12px] px-[12px] hover:scale-[1.02] transition-all duration-500">
+                <div className="h-full text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] pt-[12px] px-[12px] hover:scale-[1.02] transition-all duration-500">
                   <img
                     src={link.imgPost}
                     alt="NewsImage"
@@ -78,7 +78,6 @@ function AllNews() {
               <Image src={Arrow} alt="ArrowIcons" />
             </button>
           ))}
-
       </div>
     </div>
   );

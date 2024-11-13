@@ -6,7 +6,7 @@ import rounded1 from "public/icons/rounded1.png";
 import rounded2 from "public/icons/rounded2.png";
 import rounded3 from "public/icons/rounded3.png";
 import Basics from "public/icons/learnBasics.png";
-import Make from "../../public/icons/makePortfolio.png";
+import Make from "public/icons/makePortfolio.png";
 import Professional from "public/icons/professional.png";
 import workIn from "public/icons/workintime.png";
 
@@ -16,7 +16,7 @@ export default function Features() {
       <h2 className="font-bold text-5xl text-white font-sans uppercase pb-10">
         Features
       </h2>
-      <div className="grid grid-cols-2 justify-between gap-5 pb-16">
+      <div className="grid xl:grid-cols-2 justify-between gap-5 pb-16">
         <div className="">
           <div className="p-9 bg-[#0A3EA5] rounded-[20px] border-[1px] border-[#FFFFFF0D] border-opacity-5 cursor-pointer mb-5">
             <h5 className="text-[#FFFFFF] text-[48px] font-semibold">
@@ -32,8 +32,8 @@ export default function Features() {
               </button>
             </div>
           </div>
-          <div className="w-full flex gap-5 justify-between items-center">
-            <div className="w-1/2 border rounded-[20px] border-[#FFFFFF0D] border-opacity-5 bg-[#10131A] relative h-[270px]">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5 justify-between items-center">
+            <div className=" border rounded-[20px] border-[#FFFFFF0D] border-opacity-5 bg-[#10131A] relative h-[270px]">
               <div className="px-[32px] pt-[32px]">
                 <h6 className="text-[28px] font-medium text-[#FFFFFF] font-sans pb-[16px]">
                   Globalization
@@ -49,7 +49,7 @@ export default function Features() {
                 className="ml-auto rounded-r-[20px] absolute right-0 bottom-0"
               />
             </div>
-            <div className="flex flex-col items-center w-1/2 border rounded-[20px] border-[#FFFFFF0D] border-opacity-5 bg-[#10131A] relative h-[270px] shadow-lg text-center overflow-hidden">
+            <div className="flex flex-col items-center border rounded-[20px] border-[#FFFFFF0D] border-opacity-5 bg-[#10131A] relative h-[270px] shadow-lg text-center overflow-hidden">
               <div className="px-[32px] pt-[32px]">
                 <h3 className="text-[28px] leading-8 font-medium text-[#FFFFFF] font-sans pb-2">
                   Employment contract

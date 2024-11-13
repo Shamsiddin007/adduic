@@ -4,20 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Chevron from "public/Imgs/chevron-right.png";
 
-type NewsItem = {
-  id: number;
-  title: string;
-  date: string;
-  imgLogo: string;
-  imgPost: string;
-  postdate: string;
-  titlePost: string;
-};
-
 export default function LatestNews() {
-  const [news, setNews] = useState<NewsItem[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const [trips, setTrips] = useState([]);
 
   useEffect(() => {
     fetch(
@@ -25,102 +13,49 @@ export default function LatestNews() {
     )
       .then((res) => {
         if (!res.ok) {
-          throw new Error("Failed to fetch news");
+          throw new Error("Network response was not ok");
         }
         return res.json();
       })
-      .then((data) => {
-        setNews(data.allnews);
-        setIsLoading(false);
+      .then((dat) => {
+        setTrips(dat.allnews);
       })
-      .catch((error) => {
-        console.error("Fetch error:", error);
-        setError(error.message);
-        setIsLoading(false);
-      });
+      .catch((error) => console.error("Fetch error:", error));
   }, []);
 
-  if (error) {
-    return (
-      <div className="container px-4 py-8">
-        <div className="text-white text-center">
-          <p>Failed to load news. Please try again later.</p>
-        </div>
-      </div>
-    );
-  }
-
   return (
-    <section className="container mx-auto px-4 sm:px-6 lg:px-8">
-      {/* Header Section */}
-      <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
-        <p className="text-[#FFFFFF] text-sm md:text-xl font-sans opacity-30 mt-8 md:mt-16">
-          Stay updated about everything
-        </p>
-        
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <h2 className="font-bold text-3xl sm:text-4xl md:text-5xl text-white uppercase">
-            latest <span className="text-blue-600">news</span>
-          </h2>
-          
-          <Link href="/blog">
-            <button className="flex items-center justify-center gap-2 rounded-full bg-[#FFFFFF1A] px-6 py-3 text-white hover:bg-[#3375F6] transition-all duration-300 w-full sm:w-auto">
-              All news
-              <Image 
-                src={Chevron} 
-                alt="Chevron right" 
-                className="w-4 h-4"
-              />
-            </button>
-          </Link>
-        </div>
+    <div className="container">
+      <p className="text-[#FFFFFF] text-xl pt-[64px] font-sans pb-[12px] opacity-30 mt-16">
+        Stay updated about everything
+      </p>
+      <div className="flex items-center justify-between pb-10 gap-10">
+        <h2 className="font-bold text-5xl text-white uppercase">
+          latest <span className="text-blue-600">news</span>
+        </h2>
+        <Link href="blog">
+          <button className="flex items-center justify-center rounded-[140px] bg-[#FFFFFF1A] w-[152px] h-[44px] text-white">
+            All projects <Image src={Chevron} alt="Logo" />
+          </button>
+        </Link>
       </div>
 
-      {/* News Grid */}
-      {isLoading ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {[...Array(8)].map((_, index) => (
-            <div 
-              key={index}
-              className="animate-pulse bg-[#10131A] rounded-lg h-[377px]"
-            />
-          ))}
-        </div>
-      ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
-          {news.slice(0, 8).map((item) => (
-            <Link 
-              href={`/blog/${item.id}`} 
-              key={item.id}
-              className="block group"
-            >
-              <article className="bg-[#10131A] border border-[#FFFFFF1A] rounded-lg overflow-hidden h-full transition-transform duration-300 hover:scale-105">
-                <div className="p-3">
-                  {/* Image Container */}
-                  <div className="aspect-video relative overflow-hidden rounded-xl">
-                    <img
-                      src={item.imgPost}
-                      alt={item.titlePost}
-                      className="object-cover"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                    />
-                  </div>
-
-                  {/* Content */}
-                  <div className="mt-4 space-y-2">
-                    <time className="text-sm text-white/30">
-                      {item.postdate}
-                    </time>
-                    <h3 className="text-white font-medium line-clamp-2 group-hover:text-blue-400 transition-colors">
-                      {item.titlePost}
-                    </h3>
-                  </div>
-                </div>
-              </article>
-            </Link>
-          ))}
-        </div>
-      )}
-    </section>
+      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-7 justify-between sm:mb-16 mb-8">
+        {trips.slice(0, 8).map((link, id) => (
+          <Link href={`/blog/${link.id}`} key={id}>
+            <div className="h-full text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] pt-[12px] px-[12px] hover:scale-[1.02] transition-all duration-500">
+              <img
+                src={link.imgPost}
+                alt="NewsImage"
+                className="rounded-xl object-cover border border-transparent"
+              />
+              <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
+                {link.postdate}
+              </p>
+              <h4 className="pb-4 font-medium">{link.titlePost}</h4>
+            </div>
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
