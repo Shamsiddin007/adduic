@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Arrow from "/public/icons/arrow.png";
 import { useEffect, useState } from "react";
-import Forma from "@/app/forma/forma";
 import Levelup from "@/components/Levelup";
 
 function AllNews() {
@@ -80,7 +79,6 @@ function AllNews() {
             </button>
           ))}
 
-        <Forma />
       </div>
     </div>
   );

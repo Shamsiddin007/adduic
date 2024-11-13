@@ -1,42 +1,73 @@
 import Image from "next/image";
-
 import Game from "public/Imgs/games1.png";
 import Game1 from "public/Imgs/positionimg.png";
 
 const Partners = () => {
   return (
-    <div className="container mt-4 grid grid-cols-2 gap-[100px] mb-20">
-      <div>
-        <h1 className="font-bold text-6xl text-white text-start pb-8">
-          OUR <span className="text-blue-600">SERVICES</span>
-        </h1>
-        <p className="w-[503px] text-[#FFFFFF66]">
-          We provide comprehensive development solutions focused on creating
-          engaging, interactive experiences that enhance user engagement,
-          learning, and entertainment across a variety of platforms and
-          applications
-        </p>
-        <div className="m-8 flex gap-4">
-          <button className="cursor-pointer w-[200px] rounded-[140px] pt-[10px] pb-[10px] pl-[32px] pr-[32px] bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] duration-1000">
-            More about us
-          </button>
-          <button className="cursor-pointer w-[200px] rounded-[140px] pt-[10px] pb-[10px] pl-[32px] pr-[32px] bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] duration-1000">
-            Contact us
-          </button>
+    <section className="w-full py-12 sm:py-16 lg:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+          {/* Left Content */}
+          <div className="space-y-6">
+            <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-white">
+              OUR <span className="text-blue-600">SERVICES</span>
+            </h1>
+            
+            <p className="text-[#FFFFFF66] text-sm sm:text-base lg:text-lg max-w-xl">
+              We provide comprehensive development solutions focused on creating
+              engaging, interactive experiences that enhance user engagement,
+              learning, and entertainment across a variety of platforms and
+              applications.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+              <button className="px-6 py-3 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base">
+                More about us
+              </button>
+              <button className="px-6 py-3 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base">
+                Contact us
+              </button>
+            </div>
+          </div>
+
+          {/* Right Content */}
+          <div className="relative w-full">
+            <div className="bg-[#3375F60D] rounded-2xl p-6 sm:p-8 h-full">
+              <div className="relative z-10">
+                <div className="bg-[#3375F6] w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 flex items-center justify-center rounded-full mb-6">
+                  <Image 
+                    src={Game} 
+                    alt="Game icon"
+                    className="w-8 h-8 sm:w-10 sm:h-10"
+                  />
+                </div>
+                
+                <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-semibold mb-4">
+                  Game development
+                </h2>
+                
+                <p className="text-[#FFFFFF66] text-sm sm:text-base lg:text-lg max-w-lg relative z-10">
+                  We constantly push the boundaries of creativity and technology to
+                  deliver groundbreaking experiences that captivate and inspire.
+                </p>
+              </div>
+
+              <div className="absolute top-0 right-0">
+                <Image
+                  src={Game1}
+                  alt="Game development illustration"
+                  className="object-cover object-right-top"
+                  style={{
+                    maxWidth: '100%',
+                    height: 'auto'
+                  }}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="w-[600px] h-[248px] rounded-[20px] bg-[#3375F60D] p-4 relative">
-        <Image src={Game1} alt="" className="absolute top-[1px] right-0" />
-        <div className="bg-[#3375F6] w-[76px] h-[76px] flex items-center justify-center rounded-[50%] mb-8">
-          <Image src={Game} alt="" />
-        </div>
-        <h1 className="text-[28px]">Game development</h1>
-        <p className="text-[#FFFFFF66] w-[518px]">
-          We constantly push the boundaries of creativity and technology to
-          deliver groundbreaking experiences that captivate and inspire.
-        </p>
-      </div>
-    </div>
+    </section>
   );
 };
 

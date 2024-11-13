@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import SingleImg from "public/Imgs/singleImage.png";
-import Forma from "@/app/forma/forma";
 
 type Post = {
   id: number;
@@ -71,7 +70,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             {single.description2}
           </p>
         </div>
-        <Forma />
       </div>
     </>
   );

@@ -1,21 +1,16 @@
 "use client";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 import Windowslogo from "../../public/icons/Windowslogo.png";
 import elementlogo from "../../public/icons/Element.png";
 import secondelementlogo from "../../public/icons/fi_10781896.png";
 import backlogo from "../../public/icons/Logos.png";
-import Image from "next/image";
-import { useState, useEffect } from "react";
 
 const Videolayout = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-  const handleVideoOpen = () => {
-    setIsVideoOpen(true);
-  };
-
-  const handleVideoClose = () => {
-    setIsVideoOpen(false);
-  };
+  const handleVideoOpen = () => setIsVideoOpen(true);
+  const handleVideoClose = () => setIsVideoOpen(false);
 
   useEffect(() => {
     document.body.style.overflow = isVideoOpen ? "hidden" : "auto";
@@ -24,10 +19,16 @@ const Videolayout = () => {
     };
   }, [isVideoOpen]);
 
+  const platforms = [
+    { icon: elementlogo, name: "Steam" },
+    { icon: Windowslogo, name: "Desktop app" },
+    { icon: secondelementlogo, name: "VR" },
+  ];
+
   return (
-    <div className="container">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
       <div
-        className="w-full h-full text-white bg-no-repeat bg-cover rounded-[40px] mt-28 mb-36 "
+        className="w-full h-full text-white bg-no-repeat bg-cover rounded-[20px] sm:rounded-[40px] mt-16 sm:mt-28 mb-20 sm:mb-36 overflow-hidden"
         style={{
           backgroundImage:
             "linear-gradient(to left,#3c1d1b, transparent,transparent,#3d1c1b), url('/icons/coverimg.png')",
@@ -35,67 +36,74 @@ const Videolayout = () => {
           backgroundSize: "cover",
         }}
       >
-        <div className="flex items-center justify-between ">
-          <div className="p-12">
-            <div className="text1">
-              <h1 className="uppercase text-[44px] text-white">
-                mangu <p className="uppercase text-orange-600">sarkarda</p>
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
+          {/* Left Content */}
+          <div className="p-6 sm:p-12 w-full lg:w-1/2">
+            <div className="space-y-4">
+              <h1 className="text-3xl sm:text-4xl lg:text-[44px] uppercase font-bold">
+                mangu <span className="text-orange-600">sarkarda</span>
               </h1>
-              <p className="w-[95%] text-[1rem] mt-4 text-white mb-8">
+              <p className="text-sm sm:text-base text-white/90 max-w-xl">
                 The gamification of great historical campaigns and tipping
                 points, which played the key destinies of mankind for the Great
                 Commander and statesman, will blow up the tapes of your everyday
                 life!
               </p>
             </div>
-            <div className="mb-20">
-              <h2 className="mb-4 text-[16px]">Available:</h2>
-              <div className="flex items-center gap-4">
-                <div className="flex select-none cursor-pointer gap-2 pt-[10px] pb-[10px] pl-[20px] pr-[20px] bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] active:translate-y-1 duration-200">
-                  <Image src={elementlogo} alt="Steam" width={24} height={24} />
-                  <p className="text-[14px]">Steam</p>
-                </div>
-                <div className="flex select-none cursor-pointer gap-2 pt-[10px] pb-[10px] pl-[20px] pr-[20px] bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] active:translate-y-1 duration-200">
-                  <Image
-                    src={Windowslogo}
-                    alt="Desktop app"
-                    width={24}
-                    height={24}
-                  />
-                  <p className="text-[14px]">Desktop app</p>
-                </div>
-                <div className="flex select-none cursor-pointer gap-2 pt-[10px] pb-[10px] pl-[20px] pr-[20px] bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] active:translate-y-1 duration-200">
-                  <Image
-                    src={secondelementlogo}
-                    alt="VR"
-                    width={24}
-                    height={24}
-                  />
-                  <p className="text-[14px]">VR</p>
-                </div>
+
+            {/* Platforms */}
+            <div className="mt-8 sm:mt-12 mb-8 sm:mb-20">
+              <h2 className="mb-4 text-sm sm:text-base">Available:</h2>
+              <div className="flex flex-wrap gap-3 sm:gap-4">
+                {platforms.map((platform) => (
+                  <button
+                    key={platform.name}
+                    className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 bg-white/10 rounded-lg hover:bg-white/20 active:translate-y-0.5 transition-all duration-200"
+                  >
+                    <Image 
+                      src={platform.icon} 
+                      alt={platform.name} 
+                      width={20} 
+                      height={20}
+                      className="w-5 h-5 sm:w-6 sm:h-6" 
+                    />
+                    <span className="text-xs sm:text-sm">{platform.name}</span>
+                  </button>
+                ))}
               </div>
             </div>
-            <div className="flex gap-6 group">
-              <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#FFFFFF1A] rounded-[30px] hover:bg-[#EB5739] transition-all duration-1000 active:translate-y-1">
+
+            {/* Action Buttons */}
+            <div className="flex gap-4 sm:gap-6">
+              <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                 About game
               </button>
-              <button className="pt-[10px] pb-[10px] pr-[24px] pl-[24px] bg-[#FFFFFF1A] rounded-[30px] hover:bg-[#EB5739] active:translate-y-1 duration-1000">
+              <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                 Download
               </button>
             </div>
           </div>
-          <div className="mr-52 flex items-center">
-            <Image className="w-[500px]" src={backlogo} alt="Back logo" />
-            <div className="relative -top-[30px] right-[190px] ">
-              <div
+
+          {/* Right Content */}
+          <div className="relative w-full lg:w-1/2 p-6 sm:p-12 flex justify-center lg:justify-end">
+            <div className="relative">
+              <Image 
+                src={backlogo} 
+                alt="Back logo"
+                className="w-[280px] sm:w-[400px] lg:w-[500px] h-auto" 
+              />
+              
+              {/* Play Button */}
+              <button
                 onClick={handleVideoOpen}
-                className="relative top-10 flex items-center justify-center w-28 h-28 bg-opacity-50 bg-[#FFFFFF1F] rounded-full cursor-pointer"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group"
               >
-                <div className="relative flex items-center justify-center w-24 h-24 bg-opacity-50 bg-[#FFFFFF1F] rounded-full">
+                <div className="relative flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24">
+                  <div className="absolute inset-0 bg-white/20 rounded-full"></div>
                   <div className="absolute inset-1 bg-red-500 opacity-75 rounded-full animate-ping"></div>
-                  <div className="relative flex items-center justify-center w-[70px] h-[70px] bg-opacity-70 bg-white rounded-full">
+                  <div className="relative flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/70 rounded-full group-hover:bg-white transition-colors duration-300">
                     <svg
-                      className="w-8 h-8 text-red-500"
+                      className="w-6 h-6 sm:w-8 sm:h-8 text-red-500"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -103,27 +111,30 @@ const Videolayout = () => {
                     </svg>
                   </div>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>
 
-        {/* Video Overlay */}
+        {/* Video Modal */}
         {isVideoOpen && (
-          <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-            <div className="relative w-[90%] h-[90vh] bg-[#14141411] rounded-lg flex items-center justify-center">
+          <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
+            <div className="relative w-full max-w-6xl aspect-video bg-black/20 rounded-lg">
               <button
                 onClick={handleVideoClose}
-                className="absolute top-1 right-10 text-white text-6xl font-mono hover:text-blue-700 duration-1000"
+                className="absolute -top-12 right-0 text-white text-4xl sm:text-5xl hover:text-blue-500 transition-colors duration-300"
+                aria-label="Close video"
               >
                 &times;
               </button>
               <video
-                src="../../public/icons/logo.png"
                 controls
                 autoPlay
-                className="w-[50%] h-[50%] rounded-lg"
-              ></video>
+                className="w-full h-full rounded-lg"
+                src="../../public/icons/logo.png"
+              >
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         )}

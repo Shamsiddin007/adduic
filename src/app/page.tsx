@@ -15,12 +15,11 @@ export default function Home() {
       <Story/>
       <OurProjct/>
       <Video/>
+      <LatestNews/>
+      <Somestats/>
       <OurServices/>
       <Partner/>
-      <Somestats/>
-      <LatestNews/>
       <WorkOpportunities/>
-      <Forma/>
     </div>
    )
 }

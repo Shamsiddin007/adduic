@@ -14,7 +14,7 @@ export default function Story() {
               <h1 className="text-6xl font-bold text-white">
                 We are <span className="text-[#3375F6]">UIC GAMES!</span>
               </h1>
-              <p className="w-1/2 pt-[40px] pb-4 text-base font-sans leading-5 text-white opacity-80">
+              <p className="w-1/2 pt-[40px] md:pt-[60px] pb-4 text-base font-sans leading-5 text-white opacity-80">
                 At UIC Games, we are passionate storytellers, visionary artists,
                 and technical wizards dedicated to creating unforgettable gaming
                 experiences. With a relentless commitment to innovation, we

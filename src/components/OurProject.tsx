@@ -3,19 +3,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-
 import Chevron from "public/Imgs/chevron-right.png";
 
-type User = {
+type Project = {
   id: number;
   title: string;
   date: string;
   imgLogo: string;
 };
 
-function page() {
-  const [posts, setPosts] = useState<User[]>([]);
-
+function ProjectsPage() {
+  const [projects, setProjects] = useState<Project[]>([]);
 
   useEffect(() => {
     fetch(
@@ -24,44 +22,57 @@ function page() {
       .then((response) => response.json())
       .then((data) => {
         const limitedProjects = data.ourprojects.slice(0, 4);
-        setPosts(limitedProjects);
+        setProjects(limitedProjects);
       });
   }, []);
 
   return (
-    <div className="container mt-12">
-      <div className="flex items-center justify-between mb-10 gap-10">
-        <h2 className="font-bold text-5xl text-white">
-          OUR <span className="text-blue-600">PROJECTS</span>
-        </h2>
-        <Link href="portfolio">
-          <button className="flex items-center justify-center rounded-[140px] bg-[#FFFFFF1A] w-[152px] h-[44px] text-white">
-            All projects <Image src={Chevron} alt="Logo" />
-          </button>
-        </Link>
-      </div>
-      <div className="grid grid-cols-4 grid-rows-1">
-        {posts.map((user, id) => (
-          <Link href={`/portfolio/${user.id}`} key={id}>
-            <div className="cursor-pointer relative w-[281px] h-96 overflow-hidden rounded-[24px] flex flex-col items-center bg-gradient-to-b from-black to-gray-800 p-5 text-white text-center shadow-md shadow-black/50 mb-8 group ease-in-out duration-300">
-              <h3 className="text-xl font-bold">{user.title}</h3>
-              <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
-                {user.date}
-              </p>
-              <img
-                src={user.imgLogo}
-                alt="Logo"
-                className="inset-0 z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
-              />
-              <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center">
-                Learn more <Image src={Chevron} alt="Logo" />
-              </button>
-            </div>
+    <section className="w-full py-12 sm:py-16 lg:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-10">
+          <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-white">
+            OUR <span className="text-blue-600">PROJECTS</span>
+          </h2>
+          <Link href="/portfolio">
+            <button className="flex items-center justify-center gap-2 rounded-full bg-[#FFFFFF1A] px-6 py-3 text-white hover:bg-[#3375F6] transition-all duration-300">
+              All projects
+              <Image src={Chevron} alt="Chevron right" className="w-4 h-4" />
+            </button>
           </Link>
-        ))}
+        </div>
+
+        {/* Projects Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-y-7 justify-between mb-16">
+          {projects.map((project) => (
+            <Link href={`/portfolio/${project.id}`} key={project.id}>
+              <div className="group relative h-[400px] w-full overflow-hidden rounded-2xl bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg transition-all duration-300 hover:shadow-xl">
+                <div className="relative z-10 flex h-full flex-col items-center text-center">
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                  <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
+                    {project.date}
+                  </p>
+
+                  <div className="flex-grow relative w-full">
+                    <img
+                      src={project.imgLogo}
+                      alt={project.title}
+                      className="inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
+                    />
+                  </div>
+
+                  {/* Learn More Button */}
+                  <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center">
+                    Learn more <Image src={Chevron} alt="Logo" />
+                  </button>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default page;
+export default ProjectsPage;
