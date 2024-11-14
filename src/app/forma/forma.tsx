@@ -60,9 +60,9 @@ export default function Forma() {
     if (isFormValid) {
       setNotificationVisible(true);
       setTimeout(() => setNotificationVisible(false), 3000);
-      setName("");
-      setContact("");
-      setMessage("");
+        setName("");
+        setContact("");
+        setMessage("");
     }
   };
 
@@ -175,8 +175,8 @@ export default function Forma() {
         </div>
       </div>
       {notificationVisible && (
-        <div className="flex items-center gap-2 fixed bottom-4 right-4 bg-[#1E1E1E] text-white py-2 px-4 rounded shadow-lg z-50">
-          <Image src={check} alt="CheckIcons" className=" size-[35px]" />
+        <div className="flex items-center gap-2 fixed bottom-4 right-4 bg-[#1E1E1E] text-white py-2 px-4 rounded shadow-sm shadow-blue-400 z-50 animate-slide-in-out">
+          <Image src={check} alt="CheckIcons" className="w-6 h-6" />
           Your question has been sent successfully
         </div>
       )}
