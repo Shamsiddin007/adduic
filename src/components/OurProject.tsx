@@ -25,7 +25,7 @@ function ProjectsPage() {
       {" "}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {" "}
-        {" "}
+        {/* Header */}{" "}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-6 mb-10">
           {" "}
           <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-white">

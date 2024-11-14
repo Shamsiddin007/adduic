@@ -58,3 +58,9 @@ h1{
 .animate-scroll {
   animation: scroll 1.5s infinite ease-in-out;
 }
+
+/* Hover effektini qo'shish uchun border va background */
+.group:hover {
+  border: 2px solid #007bff; /* Hover holatida border rangi */
+  background-color: rgba(0, 123, 255, 0.2); /* Hover holatidagi background */
+}
