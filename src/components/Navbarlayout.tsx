@@ -32,7 +32,6 @@ const Navbarlayout = () => {
   return (
     <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? styles.activeScrolled : ''}`}>
     <nav className='container mx-auto max-w-screen-xl flex justify-between items-center pt-10 relative top-0 left-0'>
-        {/* Mobile Menu Button */}
         <button 
           className="lg:hidden p-2" 
           onClick={() => setMenuOpen(!isMenuOpen)}
@@ -40,7 +39,6 @@ const Navbarlayout = () => {
           <Image src={BurgerIcon} alt="Menu" width={24} height={24} />
         </button>
 
-        {/* Logo */}
         <Link href="/" className="py-2">
           <Image 
             width={160} 
@@ -51,7 +49,6 @@ const Navbarlayout = () => {
           />
         </Link>
 
-        {/* Desktop Navigation */}
         <ul className="hidden lg:flex items-center gap-8">
           <li>
             <Link 
@@ -95,7 +92,6 @@ const Navbarlayout = () => {
           </li>
         </ul>
 
-        {/* Right Side Actions */}
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center gap-4">
             <button className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
@@ -109,7 +105,6 @@ const Navbarlayout = () => {
             </button>
           </div>
           
-          {/* Language Selector */}
           <div className="relative">
             <div
               className="flex items-center gap-2 cursor-pointer py-2"
@@ -126,7 +121,6 @@ const Navbarlayout = () => {
               </div>
             </div>
 
-            {/* Language Dropdown */}
             {isActive && (
               <div className="absolute right-0 top-full mt-2 w-20 bg-gray-800 rounded-lg overflow-hidden">
                 <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
@@ -140,7 +134,6 @@ const Navbarlayout = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="lg:hidden fixed inset-0 bg-black bg-opacity-95 z-50">
             <div className="flex flex-col items-center pt-20 gap-8">

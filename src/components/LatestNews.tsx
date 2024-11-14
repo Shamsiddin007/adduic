@@ -28,10 +28,11 @@ export default function LatestNews() {
       <p className="text-[#FFFFFF] text-xl pt-[64px] font-sans pb-[12px] opacity-30 mt-16">
         Stay updated about everything
       </p>
-      <div className="flex items-center justify-between pb-10 gap-10">
-        <h2 className="font-bold text-5xl text-white uppercase">
+      <div className="flex items-center justify-between pb-10">
+        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white uppercase">
           latest <span className="text-blue-600">news</span>
         </h2>
+
         <Link href="blog">
           <button className="flex items-center justify-center rounded-[140px] bg-[#FFFFFF1A] w-[152px] h-[44px] text-white">
             All projects <Image src={Chevron} alt="Logo" />
