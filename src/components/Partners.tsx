@@ -11,7 +11,7 @@ const Partners = () => {
   return (
     <>
     <div className="container mb-10 mt-4">
-      <h1 className="font-bold text-6xl text-white text-center pb-8">
+      <h1 className="font-bold text-white text-center pb-8  text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
         OUR <span className="text-blue-600">PARTNERS</span>
       </h1>
       <div className="grid grid-cols-6 gap-[48px] mb-8">
