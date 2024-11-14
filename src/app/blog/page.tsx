@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Arrow from "/public/icons/arrow.png";
+import Arrow from "public/icons/arrow.png";
 import { useEffect, useState } from "react";
 import Levelup from "@/components/Levelup";
 

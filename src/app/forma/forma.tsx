@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import send from "/public/icons/send.png";
+import send from "public/icons/send.png";
 import check from "public/icons/check.png";
 
 export default function Forma() {
@@ -78,11 +78,11 @@ export default function Forma() {
           border: "0.03px solid #FFFFFF1A",
         }}
       >
-        <div className="flex flex-col items-center justify-center w-7/12">
-          <h4 className="pb-6 pt-11 text-start text-[32px] font-bold text-white">
+        <div className="flex flex-col items-center justify-center xl:w-7/12 w-10/12">
+          <h4 className="pb-6 pt-11 text-start md:text-[32px] text-[26px] font-bold text-white">
             Any questions
           </h4>
-          <form onSubmit={handleSubmit} className="w-10/12">
+          <form onSubmit={handleSubmit} className="w-full">
             <label
               htmlFor="name"
               className="text-[#FFFFFF] text-[16px] pb-2 font-sans"
