@@ -4,10 +4,11 @@ import Vio from "public/icons/vioPractikum.png";
 
 export default function PractikumShadow() {
   return (
-    <div className="relative w-full h-[100vh]">
-      <div className="absolute inset-0 bottom-0 bg-[url('/icons/vioBottom.png')] bg-no-repeat bg-cover pt-[15 0px]"></div>
+    <div className="relative w-full h-[650px]">
+      <div className="absolute inset-0 bg-[url('/icons/vioBottom.png')] bg-no-repeat bg-cover"></div>
       <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-b from-transparent to-black"></div>
 
+        {/* <div className="bg-[url('/icons/vioPractikum.png')]  bg-no-repeat bg-cover"></div> */}
 
       <Image
         src={Vio}

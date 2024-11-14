@@ -20,7 +20,7 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-50">
       <Image className="cursor-pointer absolute top-[80px] right-[350px] text-white text-2xl hover:text-gray-300" onClick={onClose} src={CloseBtn} alt="Logo"/>
-      <div className="relative bg-gray-900 p-8 rounded-lg text-center w-[694.56px] h-[444.6px]">        
+      <div className="relative bg-gray-900 p-8 rounded-lg text-center w-[694.56px] h-[444.6px]">
         <h2 className="text-white text-lg mb-12 pt-[50px]">Join Us</h2>
         <form onSubmit={handleSubmit}>
           <input
