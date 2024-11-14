@@ -1,3 +1,5 @@
+
+import CloseBtn from "/public/Imgs/close-428 1.png";
 import React, { useState } from "react";
 import Image from "next/image";
 import send from "/public/icons/send.png";
@@ -73,7 +75,7 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
   return (
     <div className="container">
       <div
-        className="w-[700px] mx-auto my-[150px] rounded-[20px] bg-sky-600 flex flex-col items-center"
+        className="w-[700px] mx-auto my-[150px] rounded-[20px] bg-sky-400 flex flex-col items-center"
         style={{
           border: "0.03px solid #FFFFFF1A",
         }}
