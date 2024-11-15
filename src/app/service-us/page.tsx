@@ -7,8 +7,8 @@ import Game1 from "public/Imgs/positionimg.png";
 
 function page() {
   return (
-    <>
-      <div className="bg-custom w-full flex flex-col items-center h-[700px] justify-center">
+    <div className="pb-[500px]">
+      <div className="bg-custom w-full flex flex-col items-center h-[700px] justify-center ">
         <span className="flex gap-2 items-center bg-[#202123] w-[380px] rounded-full text-white text-sm py-2 px-3 font-sans mb-4">
           <Image
             src={Fire}
@@ -92,7 +92,7 @@ function page() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

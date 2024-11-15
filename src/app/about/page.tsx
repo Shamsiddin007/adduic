@@ -230,7 +230,7 @@ function page() {
           </div>
         </div>
 
-        <div className="pb-32">
+        <div className="pb-[50px]">
           <Portfolio />
         </div>
       </div>

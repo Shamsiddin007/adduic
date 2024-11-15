@@ -36,7 +36,7 @@ function AllNews() {
   };
 
   return (
-    <div>
+    <div className="pb-[450px]">
         <Levelup/>
       <div className="container">
         <p className="text-[#FFFFFF] text-center text-xl font-sans pb-[12px] opacity-30 md:mt-16 mt-8">

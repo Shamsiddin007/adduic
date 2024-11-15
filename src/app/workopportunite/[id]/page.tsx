@@ -46,7 +46,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   };
 
   return (
-    <>
+    <div className="pb-[500px]">
       <div className="container">
         <div className="md:w-8/12 m-auto pt-32">
           <h1 className="xl:text-[32px] lg:text-[26px] md:text-[24px] sm:text-[22px] text-[18px] font-extralight pb-5 border-b-2 border-[#FFFFFF1F] border-opacity-10">
@@ -104,6 +104,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

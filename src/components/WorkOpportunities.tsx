@@ -35,7 +35,7 @@ const Workopportunite  = () => {
 
   return (
     <div className="container select-none mx-auto">
-      <div className="h-[max-content] w-full text-white pb-24 pt-20 mb-10">
+      <div className="h-[max-content] w-full text-white pb-[450px] pt-20 mb-10">
         <p className="text-[18px] text-center font-thin text-[#FFFFFF66]">
           Feel free to reach out and join our team
         </p>
@@ -68,7 +68,7 @@ const Workopportunite  = () => {
                   <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-1000 active:translate-x-3">
                     <div className="flex items-center gap-3">
                       <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A] ">
-                        <Image src={calendar} alt="calendar" />
+                        <Image src={calendar} alt="calendar" width={22} height={22} />
                       </article>
                       <article>{job.jobPrice}</article>
                     </div>
