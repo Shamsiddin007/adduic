@@ -6,7 +6,7 @@ import Partner from "@/components/Partners";
 import OurServices from "@/components/OurServices"
 import Somestats from "@/components/Somestats";
 import LatestNews from "@/components/LatestNews";
-import WorkOpportunities from "@/components/WorksOpportunite/WorkOpportunities";
+import WorkOpportunities from "@/components/WorkOpportunities";
 export default function Home() {
   return (
     <div>

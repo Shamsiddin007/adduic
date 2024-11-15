@@ -3,7 +3,7 @@ import Navbarlayout from "@/components/Navbarlayout";
 import Footerlayout from "@/components/Footerlayout";
 import FormaLayout from "@/app/forma/forma"
 import './globals.css'
-import Forma from "@/app/forma/forma";
+// import Forma from "@/app/forma/forma";
 
 
 

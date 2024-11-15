@@ -39,6 +39,33 @@ h1{
   @apply bg-cover bg-center;
   background-image: url('/Imgs/bgimg1.png');
 }
+.about-child{
+  width: 380px;
+  height: 275px;
+  background-color: #FFFFFF0A; /* #3375F60D in rgba */
+  border-radius: 1rem; /* rounded-xl */
+  padding: 1rem; /* p-4 */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+    transition: all 2s ease;
+  }
+ 
+}
+.about-child-circle{
+  background-color: rgba(255, 255, 255, 0.075);
+  border: 1px solid #FFFFFF0A; /* #FFFFFF0A in rgba */
+  width: 76px;
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%; /* rounded-[50%] */
+  margin-bottom: 2rem; /* mb-8 */
+}
 
 /* styles/globals.css */
 @keyframes scroll {
@@ -58,8 +85,329 @@ h1{
 .animate-scroll {
   animation: scroll 1.5s infinite ease-in-out;
 }
+/* .part2-about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  justify-content: center;
+} */
+.about-child {
+  flex: 1 1 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 1rem;
+  transition: background 0.3s ease;
+}
+@media (min-width: 640px) {
+  .about-child {
+    flex: 1 1 48%;
+  }
+}
+@media (min-width: 768px) {
+  .about-child {
+    flex: 1 1 32%;
+  }
+}
+@media (min-width: 1024px) {
+  .about-child {
+    flex: 1 1 22%;
+  }
+}
+.part2-about {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  margin-top: 80px;
+}
 
-.group:hover {
-  border: 2px solid #007bff;
-  background-color: rgba(0, 123, 255, 0.2); 
+@media (max-width: 985px) {
+  .part2-about {
+    display: flex;
+    overflow-x: auto; 
+    gap: 16px;
+    padding: 10px;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory; 
+    -webkit-overflow-scrolling: touch; 
+    scrollbar-width: thin; 
+  }
+
+  /* Style the scrollbar (Webkit browsers like Chrome, Safari) */
+  .part2-about::-webkit-scrollbar {
+    height: 8px;
+  }
+
+  .part2-about::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  }
+
+  .part2-about::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .about-child {
+    display: inline-block;
+    width: 250px; /* Adjust width of each item */
+    flex-shrink: 0; /* Prevent shrinking */
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 10px; /* Rounded corners for aesthetic */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth hover effect */
+    scroll-snap-align: start; /* Snap to the start of each item */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  }
+
+  .about-child:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  }
+
+  .about-child-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3375F6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease; /* Smooth hover effect for circle */
+  }
+
+  .about-child:hover .about-child-circle {
+    background-color: #0a2346; /* Change color on hover */
+  }
+
+  .about-child h1 {
+    color: #fff;
+    font-size: 22px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+
+  .p {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    text-align: start;
+    padding: 0 10px;
+    width: 80%;
+  }
+}
+
+
+
+
+/* Part 3 About Section */
+.part3-about {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  margin-top: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+@media (min-width: 768px) {
+  .part3-about {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    margin-top: 5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .part3-about {
+    gap: 6.25rem;
+    margin-top: 8rem;
+  }
+}
+
+/* Header */
+.header {
+  font-weight: bold;
+  font-size: 1.875rem;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+  text-align: start;
+}
+
+.header span {
+  color: #3375F6;
+}
+
+@media (min-width: 768px) {
+  .header {
+    font-size: 3.125rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    font-size: 3.125rem;
+    padding-bottom: 2rem;
+    text-align: start;
+  }
+}
+
+/* Paragraph */
+.paragraph {
+  color: #FFFFFF66;
+  font-size: 0.75rem;
+  text-align: start;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .paragraph {
+    font-size: 0.875rem;
+    max-width: 25rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .paragraph {
+    font-size: 1rem;
+    max-width: 31.4375rem;
+    text-align: start;
+  }
+}
+
+/* Button Container */
+.button-container {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.button {
+  cursor: pointer;
+  width: 100%;
+  border-radius: 140px;
+  padding: 0.625rem 2rem;
+  background-color: #FFFFFF1A;
+  color: white;
+  transition: background-color 1s;
+}
+
+.button:hover {
+  background-color: #3375F6;
+}
+
+@media (min-width: 768px) {
+  .button-container {
+    flex-direction: row;
+    margin-top: 2rem;
+  }
+
+  .button {
+    width: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .button {
+    width: 12.5rem;
+  }
+}
+
+/* Game Development Card */
+.card {
+  width: 100%;
+  background-color: #3375F60D;
+  border-radius: 20px;
+  padding: 10px 15px;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 31.25rem;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    width: 37.5rem;
+    height: 15.5rem;
+  }
+}
+
+/* Card Image */
+.card-image {
+  position: absolute;
+  top: 0.25rem;
+  right: 0;
+}
+
+/* Icon */
+.icon {
+  background-color: #3375F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 3.125rem;
+  height: 3.125rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    width: 3.75rem;
+    height: 3.75rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .icon {
+    width: 4.75rem;
+    height: 4.75rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.card-title {
+  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-title {
+    font-size: 1.75rem;
+  }
+}
+
+.card-text {
+  color: #FFFFFF66;
+  font-size: 0.875rem;
+  width: 100%;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .card-text {
+    font-size: 1rem;
+    max-width: 25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card-text {
+    font-size: 1.125rem;
+    max-width: 32.375rem;
+  }
 }
