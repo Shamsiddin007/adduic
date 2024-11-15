@@ -1,65 +1,72 @@
+"use client";
+
 import Image from "next/image";
+import "./style.module.css"
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
-import Partnersimg from "public/Imgs/partnersimg.png";
-import Partnersimg1 from "public/Imgs/partnersimg1.png";
-import Partnersimg2 from "public/Imgs/partnersimg2.png";
-import Partnersimg3 from "public/Imgs/partnersimg3.png";
-import Partnersimg4 from "public/Imgs/partnersimg4.png";
+import ProjectImg1 from "public/Imgs/partnersimg.png";
+import ProjectImg2 from "public/Imgs/partnersimg1.png";
+import ProjectImg3 from "public/Imgs/partnersimg2.png";
+import ProjectImg4 from "public/Imgs/partnersimg3.png";
+import ProjectImg5 from "public/Imgs/partnersimg4.png";
 
-
-const Partners = () => {
+const Projects = () => {
   return (
-    <>
     <div className="container mb-10 mt-4">
-      <h1 className="font-bold text-white text-center pb-8  text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-        OUR <span className="text-blue-600">PARTNERS</span>
+      <h1 className="font-bold text-white text-center pb-8 text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
+        OUR <span className="text-blue-600">PROJECTS</span>
       </h1>
-      <div className="grid grid-cols-6 gap-[48px] mb-8">
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A] duration-1000 ease-in-out">
-          <Image src={Partnersimg} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg1} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg2} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg3} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg4} alt="partnersimg" />
-        </div>
-      </div>
-      <div className="grid grid-cols-6 gap-[48px]">
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg2} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg4} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg3} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg2} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg1} alt="partnersimg" />
-        </div>
-        <div className="cursor-pointer rounded-[12px] bg-[#FFFFFF0A] hover:bg-[#3375F61A]">
-          <Image src={Partnersimg} alt="partnersimg" />
-        </div>
-      </div>
-    </div>
-    <div className="">
 
+      <Swiper
+        loop={true}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: false,
+        }}
+        breakpoints={{
+          800: {
+            slidesPerView: 6,
+          },
+          0: {
+            slidesPerView: 2,
+          },
+        }}
+      >
+        <SwiperSlide>
+          <div className="group1 cursor-pointer rounded-[12px]">
+            <Image src={ProjectImg1} alt="project image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="group1 cursor-pointer rounded-[12px]">
+            <Image src={ProjectImg2} alt="project image" />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className="group1 cursor-pointer rounded-[12px]">
+            <Image src={ProjectImg3} alt="project image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="group1 cursor-pointer rounded-[12px]">
+            <Image src={ProjectImg4} alt="project image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="group1 cursor-pointer rounded-[12px]">
+            <Image src={ProjectImg5} alt="project image" />
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className="group1 cursor-pointer rounded-[12px]">
+            <Image src={ProjectImg1} alt="project image" />
+          </div>
+        </SwiperSlide>
+      </Swiper>
     </div>
-    </>
   );
 };
 
-export default Partners;
+export default Projects;
