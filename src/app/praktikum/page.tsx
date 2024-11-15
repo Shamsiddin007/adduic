@@ -6,7 +6,7 @@ import PractikumShadow from "@/components/PractikumShadow"
 
 function page() {
     return (
-      <div>
+      <div className="pb-[450px]">
         <PractikumShadow/>
         <WhatisPracticum/>
         <Features/>

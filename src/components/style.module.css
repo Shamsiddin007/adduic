@@ -93,7 +93,7 @@
   cursor: pointer;
   width: max-content;
   position: absolute;
-  top: 140px;
+  top: 125px;
   left: 200px;
 }
 .item4:hover{
@@ -106,7 +106,7 @@
   cursor: pointer;
   width: max-content;
   position: absolute;
-  top: 185px;
+  top: 170px;
   left: 200px;
 }
 .item5:hover{
@@ -119,7 +119,7 @@
   cursor: pointer;
   width: max-content;
   position: absolute;
-  top: 230px;
+  top: 218px;
   left: 200px;
 }
 .item6:hover{
@@ -151,7 +151,39 @@
     transform: rotate(360deg);
  }
 }
-
+.form{
+  /* absolute w-3/5 top-[-400px] left-[300px] z-5  */
+  position: absolute;
+  width: 60%;
+  top: -400px;
+  left: 300px;
+  z-index: 5;
+}
+@media(max-width:1200px){
+  .form{
+    left: 210px;
+  }
+}
+@media(max-width:880px){
+  .form{
+    left: 160px;
+  }
+}
+@media(max-width:680px){
+  .form{
+    left: 130px;
+  }
+}
+@media(max-width:460px){
+  .form{
+    left: 80px;
+  }
+}
+@media(max-width:380px){
+  .form{
+    left: 50px;
+  }
+}
 .space {
    position: absolute;
 	 width: 400vw;

@@ -122,6 +122,7 @@ function Page() {
   };
 
   return (
+    <div className="pb-[450px]">
     <div className="container m-auto px-4 sm:px-6 lg:px-8">
       <div className="mt-[100px] sm:mt-[150px]">
         <h1 className="font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center pb-8 sm:pb-16">
@@ -130,7 +131,7 @@ function Page() {
       </div>
 
       {/* Responsiv grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-8 ">
         {Array.isArray(posts) &&
           posts.slice(0, visibleTrips).map((post) => (
             <Link href={`/portfolio/${post.id}`} key={post.id}>
@@ -177,6 +178,7 @@ function Page() {
             Load more
           </button>
         ))}
+    </div>
     </div>
   );
 }

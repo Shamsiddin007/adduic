@@ -160,7 +160,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   if (!post) return <div>Loading...</div>;
 
   return (
-    <>
+    <div className="pb-[500px]">
       <div
         className="w-full h-[800px] pt-[200px] pb-[50px] bg-cover bg-center"
         style={{
@@ -228,6 +228,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }

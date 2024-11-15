@@ -135,7 +135,6 @@
 
 // export default Footerlayout;
 
-
 import Image from "next/image";
 import Link from "next/link";
 import uiclogo from "/public/icons/Logo.svg";
@@ -146,7 +145,8 @@ import linkidin from "/public/icons/linkidin.png";
 import youTube from "/public/icons/youTube.png";
 import instagram from "/public/icons/instagram.png";
 import facebook from "/public/icons/facebook.png";
-
+import styles from "./style.module.css"
+import Forma from "@/app/forma/forma";
 const Footer = () => {
   const socialLinks = [
     { icon: linkidin, alt: "LinkedIn", href: "#" },
@@ -154,26 +154,20 @@ const Footer = () => {
     { icon: instagram, alt: "Instagram", href: "#" },
     { icon: telegram, alt: "Telegram", href: "#" },
     { icon: youTube, alt: "YouTube", href: "#" },
-  ];
-
-  const menuItems1 = [
-    { text: "Our projects", href: "/about" },
-    { text: "Work values", href: "/workopportunite" },
-    { text: "The team", href: "/praktikum" },
-  ];
-
-  const menuItems2 = [
-    { text: "Contact us", href: "/service-us" },
-    { text: "Vacancies", href: "/portfolio" },
-    { text: "Results", href: "/blog" },
-  ];
+  ];  
 
   return (
-    <footer className="w-full relative bg-gradient-to-tr from-[#22252A61C] via-transparent to-[#3375F61F]">
-      <div className="relative pt-16 pb-12 px-4 sm:px-6 lg:px-8">
-        {/* Background Image */}
+    <footer className="w-full relative h-max "
+    style={{
+      backgroundImage: "linear-gradient(0deg, #FFFFFF0A,transparent,transparent,transparent,transparent, rgb(16, 34, 179) 99%,transparent)"
+    }}
+    >
+      <div className={styles.form}>
+         <Forma />
+       </div>
+      <div className="relative pt-[280px] pb-12 px-4 sm:px-6 lg:px-8 z-3">
         <div
-          className="absolute right-0 bottom-0 w-1/2 h-3/5 bg-no-repeat bg-cover opacity-30"
+          className="absolute right-0 bottom-0 w-1/2 h-[55%] bg-no-repeat bg-cover z-1"
           style={{
             backgroundImage: "url('/icons/footerBgImg.png')",
             transformOrigin: "center",
@@ -181,7 +175,7 @@ const Footer = () => {
         />
 
         <div className="container mx-auto relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
+          <div className="grid grid-cols-1  lg:grid-cols-2 gap-12 lg:gap-24">
             {/* Left Column */}
             <div className="space-y-12">
               <Link href="/">
@@ -193,32 +187,30 @@ const Footer = () => {
               </Link>
 
               {/* Navigation Menus */}
-              <div className="grid grid-cols-2 gap-8 sm:gap-16">
-                <ul className="space-y-4">
-                  {menuItems1.map((item) => (
-                    <li key={item.text}>
-                      <Link 
-                        href={item.href}
-                        className="text-gray-400 hover:text-white transition-colors duration-200"
-                      >
-                        {item.text}
-                      </Link>
-                    </li>
-                  ))}
+              <article className="flex items-center gap-24 font-thin text-gray-600 h-60">
+                <ul className={styles.item_home}>
+                  <Link href="/about">
+                    <li className={styles.item1}>Our projects</li>
+                  </Link>
+                  <Link href="/workopportunite">
+                    <li className={styles.item2}>Work values</li>
+                  </Link>
+                  <Link href="/praktikum">
+                    <li className={styles.item3}>The team</li>
+                  </Link>
                 </ul>
-                <ul className="space-y-4">
-                  {menuItems2.map((item) => (
-                    <li key={item.text}>
-                      <Link 
-                        href={item.href}
-                        className="text-gray-400 hover:text-white transition-colors duration-200"
-                      >
-                        {item.text}
-                      </Link>
-                    </li>
-                  ))}
+                <ul className={styles.item_child}>
+                  <Link href="/service-us">
+                    <li className={styles.item4}>Contact us</li>
+                  </Link>
+                  <Link href="portfolio">
+                    <li className={styles.item5}>Vacancies</li>
+                  </Link>
+                  <Link href="/blog">
+                    <li className={styles.item6}>Results</li>
+                  </Link>
                 </ul>
-              </div>
+              </article>
 
               {/* Contact Information */}
               <div className="flex flex-col sm:flex-row gap-8">
@@ -249,22 +241,22 @@ const Footer = () => {
                 WE ARE <span className="text-[#3375F6]">UIC GAMES!</span>
               </h2>
               <p className="text-gray-400 text-base sm:text-lg max-w-lg">
-                We are passionate storytellers, visionary artists, and technical wizards 
-                dedicated to creating unforgettable gaming experiences
+                We are passionate storytellers, visionary artists, and technical
+                wizards dedicated to creating unforgettable gaming experiences
               </p>
-              
+
               {/* Social Links */}
               <div className="flex gap-4">
                 {socialLinks.map((social) => (
-                  <Link 
-                    key={social.alt} 
+                  <Link
+                    key={social.alt}
                     href={social.href}
-                    className="w-10 h-10 flex items-center justify-center rounded-lg bg-[#FFFFFF1A] hover:bg-[#3375F6] transition-colors duration-300"
+                    className="p-3 flex items-center justify-center rounded-lg bg-[#FFFFFF1A] hover:bg-[#3375F6] transition-colors duration-300"
                   >
                     <Image
                       src={social.icon}
                       alt={social.alt}
-                      className="w-5 h-5"
+                      className=" w-5 h-5"
                     />
                   </Link>
                 ))}

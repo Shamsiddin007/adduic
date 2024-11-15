@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Navbarlayout from "@/components/Navbarlayout";
 import Footerlayout from "@/components/Footerlayout";
-import FormaLayout from "@/app/forma/forma"
+// import FormaLayout from "@/app/forma/forma"
 import './globals.css'
 // import Forma from "@/app/forma/forma";
 
@@ -24,7 +24,7 @@ export default function RootLayout({
         <div>
           {children}
         </div>
-        <FormaLayout/>
+        {/* <FormaLayout/> */}
         <Footerlayout/>
       </body>
     </html>
