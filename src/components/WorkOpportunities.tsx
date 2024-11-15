@@ -7,7 +7,7 @@ import money from "/public/icons/moneyImg.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-const Workopportunite  = () => {
+const Workopportunite = () => {
   const [trips, setTrips] = useState<Job[]>([]);
   type Job = {
     id: number;
@@ -16,6 +16,7 @@ const Workopportunite  = () => {
     jobTime: number;
     jobPrice: number;
   };
+  
   useEffect(() => {
     fetch(
       "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/workOpportunity/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3dvcmtPcHBvcnR1bml0eS9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxNDc0OTQ0LCJleHAiOjE3NjMwMTA5NDR9.gVmYXET9c8Aq1kZOYUdY-5z6Sh-ICeLJDl62TK8Dw8I&t=2024-11-13T05%3A15%3A44.885Z"
@@ -39,23 +40,18 @@ const Workopportunite  = () => {
         <p className="text-[18px] text-center font-thin text-[#FFFFFF66]">
           Feel free to reach out and join our team
         </p>
-        <h1 className="text-6xl capitalize mt-8 text-center flex items-center justify-center gap-6">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl capitalize mt-8 text-center flex items-center justify-center gap-6">
           work <span className="text-[#3375F6]">opportunities</span>
         </h1>
         <div>
-          <div className="flex items-center justify-around mt-20">
-            {trips.map((job, id) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+            {trips.map((job) => (
               <div
-                key={id}
-                className="px-10 py-5 w-[30%] rounded-[24px]"
-                style={{
-                  backgroundImage:
-                    "linear-gradient(110deg, #3375F61C,transparent,transparent,#3375F61C)",
-                  border: "0.03px solid #FFFFFF1A",
-                }}
+                key={job.id}
+                className="px-8 py-6 w-full rounded-[24px] bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] border border-[#FFFFFF1A]"
               >
-                <h2 className="text-xl font-thin  mb-4">{job.jobTitle}</h2>
-                <p className="relative top-0 bottom-0 mb-4 -left-3 w-[110%] h-[1px] bg-[#FFFFFF1A] rounded"></p>
+                <h2 className="text-xl font-thin mb-4">{job.jobTitle}</h2>
+                <p className="relative mb-4 w-[110%] h-[1px] bg-[#FFFFFF1A] rounded"></p>
                 <div className="flex items-center mb-6">
                   <span className="mr-2">
                     <Image src={money} alt="money img" />
@@ -65,14 +61,14 @@ const Workopportunite  = () => {
                   </p>
                 </div>
                 <Link href={`/workopportunite/${job.id}`}>
-                  <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-1000 active:translate-x-3">
+                  <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
                     <div className="flex items-center gap-3">
-                      <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A] ">
+                      <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A]">
                         <Image src={calendar} alt="calendar" width={22} height={22} />
                       </article>
                       <article>{job.jobPrice}</article>
                     </div>
-                    <p className=" relative -left-3">
+                    <p className="relative -left-3">
                       <Image
                         src={strelka}
                         alt="strelka"

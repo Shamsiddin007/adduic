@@ -5,12 +5,12 @@ import styles from "./style.module.css";
 export default function Mani() {
   return (
     <div className="container">
-      <div className="relative">
+      <div className="relative mb-16">
         <div className={`${styles.solder}`}></div>
         <div className="w-[100%] h-[30%] lg:h-[20%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
         <div className="container h-screen">
           <div className="absolute bottom-0">
-            <span className="mb-6 flex gap-1 items-center bg-[#202123] w-[350px] rounded-full text-white text-sm py-2 px-1 font-sans md:text-xs">
+            <span className="mb-6 flex gap-2 items-center bg-[#202123] w-[330px] rounded-full text-white text-sm py-3 px-4 font-sans md:text-xs">
               <Image
                 src={Fire}
                 alt="FireLogo"
