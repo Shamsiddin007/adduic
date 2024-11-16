@@ -60,12 +60,12 @@ const Videolayout = () => {
                     key={platform.name}
                     className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 bg-white/10 rounded-lg hover:bg-white/20 active:translate-y-0.5 transition-all duration-200"
                   >
-                    <Image 
-                      src={platform.icon} 
-                      alt={platform.name} 
-                      width={20} 
+                    <Image
+                      src={platform.icon}
+                      alt={platform.name}
+                      width={20}
                       height={20}
-                      className="w-5 h-5 sm:w-6 sm:h-6" 
+                      className="w-5 h-5 sm:w-6 sm:h-6"
                     />
                     <span className="text-xs sm:text-sm">{platform.name}</span>
                   </button>
@@ -87,12 +87,12 @@ const Videolayout = () => {
           {/* Right Content */}
           <div className="relative w-full lg:w-1/2 p-6 sm:p-12 flex justify-center lg:justify-end">
             <div className="relative">
-              <Image 
-                src={backlogo} 
+              <Image
+                src={backlogo}
                 alt="Back logo"
-                className="w-[280px] sm:w-[400px] lg:w-[500px] h-auto" 
+                className="w-[280px] sm:w-[400px] lg:w-[500px] h-auto"
               />
-              
+
               {/* Play Button */}
               <button
                 onClick={handleVideoOpen}
@@ -122,19 +122,24 @@ const Videolayout = () => {
             <div className="relative w-full max-w-6xl aspect-video bg-black/20 rounded-lg">
               <button
                 onClick={handleVideoClose}
-                className="absolute -top-12 right-0 text-white text-4xl sm:text-5xl hover:text-blue-500 transition-colors duration-300"
+                className="absolute -top-1 right-1 text-white font-thin text-6xl hover:text-blue-500 transition-colors duration-300"
                 aria-label="Close video"
               >
                 &times;
               </button>
-              <video
-                controls
-                autoPlay
-                className="w-full h-full rounded-lg"
-                src="../../public/icons/logo.png"
-              >
-                Your browser does not support the video tag.
-              </video>
+              <div className="w-full h-full flex items-center justify-center">
+              <iframe
+                width="80%"
+                height="80%"
+                src="https://www.youtube.com/embed/mxV0AD_2Gek"
+                title="“Mangu Sarkarda” - Oʻzbekistondagi ilk tarixiy video oʻyin treyleri!"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+                className="mt-20"
+              ></iframe>
+              </div>
             </div>
           </div>
         )}
