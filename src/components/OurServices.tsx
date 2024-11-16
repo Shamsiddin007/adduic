@@ -6,8 +6,7 @@ const Partners = () => {
   return (
     <section className="w-full py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          {/* Left Content */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center m-auto">
           <div className="space-y-6">
             <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-white">
               OUR <span className="text-blue-600">SERVICES</span>
@@ -20,7 +19,7 @@ const Partners = () => {
               applications.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 ml-12">
               <button className="px-6 py-3 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base w-[250px]">
                 More about us
               </button>
@@ -30,7 +29,6 @@ const Partners = () => {
             </div>
           </div>
 
-          {/* Right Content */}
           <div className="relative w-full">
             <div className="bg-[#3375F60D] rounded-2xl p-6 sm:p-8 h-full">
               <div className="relative z-10">
