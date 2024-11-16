@@ -25,9 +25,6 @@ export default function LatestNews() {
 
   return (
     <div className="container">
-      <p className="text-[#FFFFFF] text-xl pt-[64px] font-sans pb-[12px] opacity-30 mt-16">
-        Stay updated about everything
-      </p>
       <div className="flex items-center justify-between pb-10">
         <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white uppercase">
           latest <span className="text-blue-600">news</span>

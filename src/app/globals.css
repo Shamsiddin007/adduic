@@ -2,47 +2,44 @@
 @tailwind components;
 @tailwind utilities;
 
-
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 3px;
   background-color: rgb(75, 74, 74);
 }
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
   width: 2px;
-  background-color: #3375F6;
+  background-color: #3375f6;
 }
-
 
 @font-face {
-  font-family: 'Custom Font';
-  src: url('/fonts/Euclid\ Circular\ A\ Bold.woff2') format('woff2'),
-       url('/fonts/Euclid\ Circular\ A\ Light.woff2') format('woff2'),
-       url('/fonts/Euclid\ Circular\ A\ Medium.woff2') format('woff2'),
-       url('/fonts/Euclid\ Circular\ A\ Regular.woff2') format('woff2'),
-       url('/fonts/Euclid\ Circular\ A\ SemiBold.woff2') format('woff2');
+  font-family: "Custom Font";
+  src: url("/fonts/Euclid\ Circular\ A\ Bold.woff2") format("woff2"),
+    url("/fonts/Euclid\ Circular\ A\ Light.woff2") format("woff2"),
+    url("/fonts/Euclid\ Circular\ A\ Medium.woff2") format("woff2"),
+    url("/fonts/Euclid\ Circular\ A\ Regular.woff2") format("woff2"),
+    url("/fonts/Euclid\ Circular\ A\ SemiBold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-
 }
 
-body{
-  font-family: 'Custom Font', sans-serif;
+body {
+  font-family: "Custom Font", sans-serif;
   background-color: black;
 }
 
-h1{
+h1 {
   font-size: 40px;
   color: white;
 }
 
 .bg-custom {
   @apply bg-cover bg-center;
-  background-image: url('/Imgs/bgimg1.png');
+  background-image: url("/Imgs/bgimg1.png");
 }
-.about-child{
+.about-child {
   width: 380px;
   height: 275px;
-  background-color: #FFFFFF0A; /* #3375F60D in rgba */
+  background-color: #ffffff0a; /* #3375F60D in rgba */
   border-radius: 1rem; /* rounded-xl */
   padding: 1rem; /* p-4 */
   text-align: center;
@@ -50,14 +47,13 @@ h1{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  &:hover{
+  &:hover {
     transition: all 2s ease;
   }
- 
 }
-.about-child-circle{
+.about-child-circle {
   background-color: rgba(255, 255, 255, 0.075);
-  border: 1px solid #FFFFFF0A; /* #FFFFFF0A in rgba */
+  border: 1px solid #ffffff0a; /* #FFFFFF0A in rgba */
   width: 76px;
   height: 76px;
   display: flex;
@@ -124,13 +120,13 @@ h1{
 @media (max-width: 985px) {
   .part2-about {
     display: flex;
-    overflow-x: auto; 
+    overflow-x: auto;
     gap: 16px;
     padding: 10px;
     white-space: nowrap;
-    scroll-snap-type: x mandatory; 
-    -webkit-overflow-scrolling: touch; 
-    scrollbar-width: thin; 
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
   }
 
   /* Style the scrollbar (Webkit browsers like Chrome, Safari) */
@@ -167,7 +163,7 @@ h1{
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #3375F6;
+    background-color: #3375f6;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -194,9 +190,6 @@ h1{
     width: 80%;
   }
 }
-
-
-
 
 /* Part 3 About Section */
 .part3-about {
@@ -234,7 +227,7 @@ h1{
 }
 
 .header span {
-  color: #3375F6;
+  color: #3375f6;
 }
 
 @media (min-width: 768px) {
@@ -255,7 +248,7 @@ h1{
 
 /* Paragraph */
 .paragraph {
-  color: #FFFFFF66;
+  color: #ffffff66;
   font-size: 0.75rem;
   text-align: start;
   max-width: 100%;
@@ -290,13 +283,13 @@ h1{
   width: 100%;
   border-radius: 140px;
   padding: 0.625rem 2rem;
-  background-color: #FFFFFF1A;
+  background-color: #ffffff1a;
   color: white;
   transition: background-color 1s;
 }
 
 .button:hover {
-  background-color: #3375F6;
+  background-color: #3375f6;
 }
 
 @media (min-width: 768px) {
@@ -319,7 +312,7 @@ h1{
 /* Game Development Card */
 .card {
   width: 100%;
-  background-color: #3375F60D;
+  background-color: #3375f60d;
   border-radius: 20px;
   padding: 10px 15px;
   position: relative;
@@ -349,7 +342,7 @@ h1{
 
 /* Icon */
 .icon {
-  background-color: #3375F6;
+  background-color: #3375f6;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -392,7 +385,7 @@ h1{
 }
 
 .card-text {
-  color: #FFFFFF66;
+  color: #ffffff66;
   font-size: 0.875rem;
   width: 100%;
   max-width: 100%;
@@ -411,3 +404,15 @@ h1{
     max-width: 32.375rem;
   }
 }
+
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+

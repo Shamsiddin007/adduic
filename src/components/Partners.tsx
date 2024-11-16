@@ -15,7 +15,7 @@ const Projects = () => {
   return (
     <div className="container mb-10 mt-4">
       <h1 className="font-bold text-white text-center pb-8 text-3xl md:text-4xl lg:text-5xl xl:text-6xl">
-        OUR <span className="text-blue-600">PROJECTS</span>
+        OUR <span className="text-blue-600">PARTNERS</span>
       </h1>
 
       <Swiper
@@ -26,7 +26,7 @@ const Projects = () => {
         }}
         breakpoints={{
           800: {
-            slidesPerView: 6,
+            slidesPerView: 4,
           },
           0: {
             slidesPerView: 2,
