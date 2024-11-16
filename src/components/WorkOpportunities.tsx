@@ -44,7 +44,7 @@ const Workopportunite = () => {
           work <span className="text-[#3375F6]">opportunities</span>
         </h1>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-8 mt-20">
             {trips.map((job) => (
               <div
                 key={job.id}

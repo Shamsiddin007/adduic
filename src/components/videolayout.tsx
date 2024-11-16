@@ -37,7 +37,6 @@ const Videolayout = () => {
         }}
       >
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
-          {/* Left Content */}
           <div className="p-6 sm:p-12 w-full lg:w-1/2">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-[44px] uppercase font-bold">
@@ -51,7 +50,6 @@ const Videolayout = () => {
               </p>
             </div>
 
-            {/* Platforms */}
             <div className="mt-8 sm:mt-12 mb-8 sm:mb-20">
               <h2 className="mb-4 text-sm sm:text-base">Available:</h2>
               <div className="flex flex-wrap gap-3 sm:gap-4">
@@ -73,7 +71,6 @@ const Videolayout = () => {
               </div>
             </div>
 
-            {/* Action Buttons */}
             <div className="flex gap-4 sm:gap-6">
               <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                 About game
@@ -84,7 +81,6 @@ const Videolayout = () => {
             </div>
           </div>
 
-          {/* Right Content */}
           <div className="relative w-full lg:w-1/2 p-6 sm:p-12 flex justify-center lg:justify-end">
             <div className="relative">
               <Image
@@ -92,8 +88,6 @@ const Videolayout = () => {
                 alt="Back logo"
                 className="w-[280px] sm:w-[400px] lg:w-[500px] h-auto"
               />
-
-              {/* Play Button */}
               <button
                 onClick={handleVideoOpen}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group"
