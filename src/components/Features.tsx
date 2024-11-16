@@ -18,7 +18,7 @@ export default function Features() {
       </h2>
       <div className="grid xl:grid-cols-2 justify-between gap-5 pb-16">
         <div className="">
-          <div className="p-9 bg-[#0A3EA5] rounded-[20px] border-[1px] border-[#FFFFFF0D] border-opacity-5 cursor-pointer mb-5">
+          <div className="p-9 bg-feature rounded-[20px] border border-[#FFFFFF0D] border-opacity-95 cursor-pointer mb-5">
             <h5 className="text-[#FFFFFF] text-[48px] font-semibold">
               General
             </h5>
@@ -27,7 +27,7 @@ export default function Features() {
               for aspiring game developers to <br /> enhance their skills.
             </p>
             <div className="flex items-end justify-end">
-              <button className="flex items-center justify-end py-[10px] px-[24px] gap-4 bg-white rounded-full">
+              <button className="flex items-center justify-end py-[10px] px-[24px] gap-4 bg-white rounded-full hover:bg-gray-200 transition-transform duration-300">
                 Apply <Image src={Arrow} alt="ArrowIcons" />
               </button>
             </div>
