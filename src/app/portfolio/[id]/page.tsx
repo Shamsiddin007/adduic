@@ -171,17 +171,17 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <img
             src={post.logo}
             alt="Logo"
-            className="m-auto w-[500px] h-[200px]"
-            width={500}
-            height={200}
+            className="m-auto max-w-[80%] sm:max-w-[60%] lg:max-w-[500px] object-contain h-auto"
           />
           <h1 className="text-4xl font-bold mb-4 mt-4">{post.titlegame}</h1>
-          <p className="text-lg px-8 pb-8 text-[#FFFFFFCC]">{post.description}</p>
+          <p className="text-lg px-8 pb-8 text-[#FFFFFFCC]">
+            {post.description}
+          </p>
         </div>
       </div>
 
       <div className="container px-4 sm:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 my-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
           <div className="flex gap-8 items-center text-white">
             <h2 className="text-[16px]">Available:</h2>
             <div className="flex gap-4">
@@ -190,11 +190,21 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <p className="text-[14px]">Steam</p>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
-                <Image src={WindowsLogo} alt="Desktop app" width={24} height={24} />
+                <Image
+                  src={WindowsLogo}
+                  alt="Desktop app"
+                  width={24}
+                  height={24}
+                />
                 <p className="text-[14px]">Desktop app</p>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
-                <Image src={secendelementLogo} alt="VR" width={24} height={24} />
+                <Image
+                  src={secendelementLogo}
+                  alt="VR"
+                  width={24}
+                  height={24}
+                />
                 <p className="text-[14px]">VR</p>
               </div>
             </div>
@@ -211,7 +221,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         <div className="mb-28">
-          <p className="text-[#FFFFFFCC] max-w-4xl mx-auto">{post.moredescription}</p>
+          <p className="text-[#FFFFFFCC] max-w-4xl mx-auto">
+            {post.moredescription}
+          </p>
         </div>
 
         <div className="container pb-20">
@@ -219,12 +231,48 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             OUR <span className="text-blue-600">PROJECTS</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
-            <Image src={Highlights} alt="Highlight" className="rounded-lg" width={600} height={400} />
-            <Image src={Highlights} alt="Highlight" className="rounded-lg" width={600} height={400} />
-            <Image src={Highlights} alt="Highlight" className="rounded-lg" width={600} height={400} />
-            <Image src={Highlights} alt="Highlight" className="rounded-lg" width={600} height={400} />
-            <Image src={Highlights} alt="Highlight" className="rounded-lg" width={600} height={400} />
-            <Image src={Highlights} alt="Highlight" className="rounded-lg" width={600} height={400} />
+            <Image
+              src={Highlights}
+              alt="Highlight"
+              className="rounded-lg"
+              width={600}
+              height={400}
+            />
+            <Image
+              src={Highlights}
+              alt="Highlight"
+              className="rounded-lg"
+              width={600}
+              height={400}
+            />
+            <Image
+              src={Highlights}
+              alt="Highlight"
+              className="rounded-lg"
+              width={600}
+              height={400}
+            />
+            <Image
+              src={Highlights}
+              alt="Highlight"
+              className="rounded-lg"
+              width={600}
+              height={400}
+            />
+            <Image
+              src={Highlights}
+              alt="Highlight"
+              className="rounded-lg"
+              width={600}
+              height={400}
+            />
+            <Image
+              src={Highlights}
+              alt="Highlight"
+              className="rounded-lg"
+              width={600}
+              height={400}
+            />
           </div>
         </div>
       </div>

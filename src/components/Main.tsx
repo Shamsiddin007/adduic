@@ -5,12 +5,12 @@ import styles from "./style.module.css";
 export default function Mani() {
   return (
     <div className="container">
-      <div className="relative">
+      <div className="relative mb-16">
         <div className={`${styles.solder}`}></div>
         <div className="w-[100%] h-[30%] lg:h-[20%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
-        <div className="container h-screen">
+        <div className="container h-[85vh]">
           <div className="absolute bottom-0">
-            <span className="mb-6 flex gap-1 items-center bg-[#202123] w-[350px] rounded-full text-white text-sm py-2 px-1 font-sans md:text-xs">
+            <span className="mb-6 flex gap-2 items-center bg-[#202123] w-[330px] rounded-full text-white text-sm py-3 px-4 font-sans md:text-xs">
               <Image
                 src={Fire}
                 alt="FireLogo"
@@ -18,7 +18,7 @@ export default function Mani() {
               />
               Working day & night to bring out the best results
             </span>
-            <h1 className="mb-12 md:mb-16 lg:mb-[150px] xl:mb-[268px] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase pt-[19px] text-white tracking-wider">
+            <h1 className="mb-12 md:mb-16 lg:mb-[150px] xl:mb-[268px] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase text-white tracking-wider">
               YOUR{" "}
               <span className="relative text-blue-500 border border-blue-500 inline-block mb-2">
                 IDEAS

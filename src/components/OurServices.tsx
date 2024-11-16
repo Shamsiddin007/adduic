@@ -21,10 +21,10 @@ const Partners = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="px-6 py-3 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base">
+              <button className="px-6 py-3 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base w-[250px]">
                 More about us
               </button>
-              <button className="px-6 py-3 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base">
+              <button className="px-6 py-3 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base w-[250px]">
                 Contact us
               </button>
             </div>
