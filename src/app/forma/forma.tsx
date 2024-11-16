@@ -60,9 +60,9 @@ export default function Forma() {
     if (isFormValid) {
       setNotificationVisible(true);
       setTimeout(() => setNotificationVisible(false), 3000);
-      // setName("");
-      // setContact("");
-      // setMessage("");
+      setName("");
+      setContact("");
+      setMessage("");
     }
   };
 
@@ -70,14 +70,7 @@ export default function Forma() {
 
   return (
     <div className="container">
-      <div
-        className="w-full rounded-[20px] bg-custom-forma mb-12 flex flex-col items-center"
-        style={{
-          backgroundImage:
-            "linear-gradient(110deg, #3375F61C,transparent,transparent,#3375F61C)",
-          border: "0.03px solid #FFFFFF1A",
-        }}
-      >
+      <div className="w-full rounded-[20px] mb-12 flex flex-col items-center bg-forma">
         <div className="flex flex-col items-center justify-center xl:w-7/12 md:w-8/12 w-10/12">
           <h4 className="pb-6 pt-11 text-start md:text-[32px] text-[26px] font-bold text-white">
             Any questions
@@ -174,9 +167,14 @@ export default function Forma() {
           </form>
         </div>
       </div>
+      
       {notificationVisible && (
         <div className="flex items-center gap-2 md:text-sm text-xs font-sans fixed bottom-4 right-4 bg-[#1E1E1E] text-white py-2 sm:px-4 px-2 rounded shadow-sm shadow-blue-400 z-50 animate-slide-in-out">
-          <Image src={check} alt="CheckIcons" className="sm:w-6 sm:h-6 w-5 h-5" />
+          <Image
+            src={check}
+            alt="CheckIcons"
+            className="sm:w-6 sm:h-6 w-5 h-5"
+          />
           Your question has been sent successfully
         </div>
       )}

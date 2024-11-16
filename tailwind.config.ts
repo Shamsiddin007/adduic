@@ -32,6 +32,9 @@ module.exports = {
           "practicum-bgBook":
             "linear-gradient(180deg, rgba(51, 117, 246, 0.32) 0%, rgba(51, 117, 246, 0.052) 100%)",
           "bg-practicum": "linear-gradient(135deg, #1a1a2e, #16213e);",
+          "order-hover" : "linear-gradient(45deg, #3375F6 -40%, #02005E,transparent)",
+          "feature" : "linear-gradient(189deg, #3375F6 -55%, #02005E,transparent)",
+          "forma": "radial-gradient(transparent 40%, #132649 100%)"
         },
         zIndex: {
           0: "0",
