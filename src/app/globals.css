@@ -81,13 +81,6 @@ h1 {
 .animate-scroll {
   animation: scroll 1.5s infinite ease-in-out;
 }
-/* .part2-about {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  padding: 1rem;
-  justify-content: center;
-} */
 .about-child {
   flex: 1 1 100%;
   max-width: 100%;
@@ -115,6 +108,21 @@ h1 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 32px;
   margin-top: 80px;
+}
+
+@media (max-width: 1240px) {
+  .group2{
+    display: block;
+  }
+}
+
+@media (max-width: 700px) {
+  .group2 {
+    display: none;
+  }
+  .group5 {
+    height: 50vh;
+  }
 }
 
 @media (max-width: 985px) {
@@ -415,4 +423,3 @@ h1 {
   justify-content: center;
   cursor: pointer;
 }
-
