@@ -24,7 +24,7 @@ export default function Acceptance() {
                 You can enter your information and register for the exam by
                 going to a special Telegram bot using the button below
               </p>
-              <button className="flex items-center gap-3 mt-12 bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <button className="flex items-center gap-3 mt-[50px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                 Go to bot <Image src={arrowdown} alt="arrowdown" />
               </button>
             </div>
@@ -45,7 +45,7 @@ export default function Acceptance() {
               <p className="font-sans opacity-60">
                 C# basic / DS&A / Unity basic
               </p>
-              <button className="flex items-center gap-3 mt-[60px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+              <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                 Go to bot <Image src={arrowdown} alt="arrowdown" />
               </button>
             </div>
@@ -63,7 +63,7 @@ export default function Acceptance() {
                 Then an interview will be held to check the English language
                 level of the candidates who have passed the exam.
               </p>
-              <p className="font-sans opacity-60 leading-[20px]">
+              <p className="font-sans opacity-60 leading-[20px] pb-2">
                 The interview will be conducted in English. The minimum required
                 level is B1
               </p>
