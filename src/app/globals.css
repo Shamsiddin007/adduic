@@ -121,7 +121,7 @@ h1 {
     display: none;
   }
   .group5 {
-    height: 35vh;
+    height: 43vh;
   }
 }
 
@@ -422,8 +422,4 @@ h1 {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-}
-
-.group{
-  background: linear-gradient(to bottom,#3c1d1b,#FFFFFF0A);
 }
