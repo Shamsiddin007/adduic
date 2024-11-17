@@ -97,7 +97,7 @@ function ProjectsPage() {
             {projects.map((project) => (
               <Link href={`/portfolio/${project.id}`}>
                 <div
-                  className="group relative h-[400px] w-full overflow-hidden rounded-2xl p-5 text-white shadow-lg transition-all duration-300 hover:shadow-xl">
+                  className="group relative h-[400px] w-full overflow-hidden rounded-2xl bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg transition-all duration-300 hover:shadow-xl">
                   <div className="relative z-10 flex h-full flex-col items-center text-center">
                     <h3 className="text-[16px] font-bold mb-2">
                       {project.title}
