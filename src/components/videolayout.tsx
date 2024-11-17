@@ -8,8 +8,12 @@ import backlogo from "../../public/icons/Logos.png";
 
 const Videolayout = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
 
-  const handleVideoOpen = () => setIsVideoOpen(true);
+  const handleVideoOpen = () => {
+    setIsVideoOpen(true);
+    setIsVideoLoading(true); // Video ochilganda yuklashni boshlash
+  };
   const handleVideoClose = () => setIsVideoOpen(false);
 
   useEffect(() => {
@@ -49,7 +53,6 @@ const Videolayout = () => {
                 life!
               </p>
             </div>
-
             <div className="mt-8 sm:mt-12 mb-8 sm:mb-20">
               <h2 className="mb-4 text-sm sm:text-base">Available:</h2>
               <div className="flex flex-wrap gap-3 sm:gap-4">
@@ -70,7 +73,6 @@ const Videolayout = () => {
                 ))}
               </div>
             </div>
-
             <div className="flex gap-4 sm:gap-6">
               <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                 About game
@@ -80,7 +82,6 @@ const Videolayout = () => {
               </button>
             </div>
           </div>
-
           <div className="relative w-full lg:w-1/2 p-6 sm:p-12 flex justify-center lg:justify-end">
             <div className="relative">
               <Image
@@ -110,10 +111,14 @@ const Videolayout = () => {
           </div>
         </div>
 
-        {/* Video Modal */}
         {isVideoOpen && (
           <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
             <div className="relative w-full max-w-6xl aspect-video bg-black/20 rounded-lg">
+              {isVideoLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50 z-10">
+                  <div className="loader">Loading...</div>
+                </div>
+              )}
               <button
                 onClick={handleVideoClose}
                 className="absolute -top-1 right-1 text-white font-thin text-6xl hover:text-blue-500 transition-colors duration-300"
@@ -122,17 +127,18 @@ const Videolayout = () => {
                 &times;
               </button>
               <div className="w-full h-full flex items-center justify-center">
-              <iframe
-                width="80%"
-                height="80%"
-                src="https://www.youtube.com/embed/mxV0AD_2Gek"
-                title="“Mangu Sarkarda” - Oʻzbekistondagi ilk tarixiy video oʻyin treyleri!"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-                className="mt-20"
-              ></iframe>
+                <iframe
+                  onLoad={() => setIsVideoLoading(false)} // Yuklash tugagach animatsiyani o'chirish
+                  width="80%"
+                  height="80%"
+                  src="https://www.youtube.com/embed/mxV0AD_2Gek"
+                  title="“Mangu Sarkarda” - Oʻzbekistondagi ilk tarixiy video oʻyin treyleri!"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  className="mt-20"
+                ></iframe>
               </div>
             </div>
           </div>
