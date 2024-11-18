@@ -21,7 +21,7 @@ export default function Mani() {
         <div className="relative mb-16">
           <div className={`${styles.solder}`}></div>
           <div className="w-[100%] h-[30%] lg:h-[20%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
-          <div className="container h-screen">
+          <div className="container h-screen mt-[50px]">
             <div
               className="w-60 h-28 bg-[#3375F6] bg-opacity-90 shadow-[0_0_195px_55px_#3375F6] rounded-t-full absolute bottom-[230px] right-[232px] -z-2"
               style={{ backdropFilter: "blur(321.8558044433594px)" }}
