@@ -189,10 +189,10 @@ const Footer = () => {
               {/* Navigation Menus */}
               <article className="flex items-center gap-24 font-thin text-gray-600 h-60">
                 <ul className={styles.item_home}>
-                  <Link href="/about">
+                  <Link href="/portfolio">
                     <li className={styles.item1}>Our projects</li>
                   </Link>
-                  <Link href="/workopportunite">
+                  <Link href="/about">
                     <li className={styles.item2}>Work values</li>
                   </Link>
                   <Link href="/praktikum">
@@ -203,7 +203,7 @@ const Footer = () => {
                   <Link href="/service-us">
                     <li className={styles.item4}>Contact us</li>
                   </Link>
-                  <Link href="portfolio">
+                  <Link href="/portfolio">
                     <li className={styles.item5}>Vacancies</li>
                   </Link>
                   <Link href="/blog">
