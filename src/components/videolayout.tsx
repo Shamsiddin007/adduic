@@ -8,8 +8,12 @@ import backlogo from "../../public/icons/Logos.png";
 
 const Videolayout = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isVideoLoading, setIsVideoLoading] = useState(true);
 
-  const handleVideoOpen = () => setIsVideoOpen(true);
+  const handleVideoOpen = () => {
+    setIsVideoOpen(true);
+    setIsVideoLoading(true); // Video ochilganda yuklashni boshlash
+  };
   const handleVideoClose = () => setIsVideoOpen(false);
 
   useEffect(() => {
@@ -37,7 +41,6 @@ const Videolayout = () => {
         }}
       >
         <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between">
-          {/* Left Content */}
           <div className="p-6 sm:p-12 w-full lg:w-1/2">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-[44px] uppercase font-bold">
@@ -50,8 +53,6 @@ const Videolayout = () => {
                 life!
               </p>
             </div>
-
-            {/* Platforms */}
             <div className="mt-8 sm:mt-12 mb-8 sm:mb-20">
               <h2 className="mb-4 text-sm sm:text-base">Available:</h2>
               <div className="flex flex-wrap gap-3 sm:gap-4">
@@ -60,20 +61,18 @@ const Videolayout = () => {
                     key={platform.name}
                     className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 bg-white/10 rounded-lg hover:bg-white/20 active:translate-y-0.5 transition-all duration-200"
                   >
-                    <Image 
-                      src={platform.icon} 
-                      alt={platform.name} 
-                      width={20} 
+                    <Image
+                      src={platform.icon}
+                      alt={platform.name}
+                      width={20}
                       height={20}
-                      className="w-5 h-5 sm:w-6 sm:h-6" 
+                      className="w-5 h-5 sm:w-6 sm:h-6"
                     />
                     <span className="text-xs sm:text-sm">{platform.name}</span>
                   </button>
                 ))}
               </div>
             </div>
-
-            {/* Action Buttons */}
             <div className="flex gap-4 sm:gap-6">
               <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                 About game
@@ -83,17 +82,13 @@ const Videolayout = () => {
               </button>
             </div>
           </div>
-
-          {/* Right Content */}
           <div className="relative w-full lg:w-1/2 p-6 sm:p-12 flex justify-center lg:justify-end">
             <div className="relative">
-              <Image 
-                src={backlogo} 
+              <Image
+                src={backlogo}
                 alt="Back logo"
-                className="w-[280px] sm:w-[400px] lg:w-[500px] h-auto" 
+                className="w-[280px] sm:w-[400px] lg:w-[500px] h-auto"
               />
-              
-              {/* Play Button */}
               <button
                 onClick={handleVideoOpen}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group"
@@ -116,25 +111,35 @@ const Videolayout = () => {
           </div>
         </div>
 
-        {/* Video Modal */}
         {isVideoOpen && (
           <div className="fixed inset-0 bg-black/90 flex items-center justify-center z-50 p-4">
             <div className="relative w-full max-w-6xl aspect-video bg-black/20 rounded-lg">
+              {isVideoLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/50 z-10">
+                  <div className="loader">Loading...</div>
+                </div>
+              )}
               <button
                 onClick={handleVideoClose}
-                className="absolute -top-12 right-0 text-white text-4xl sm:text-5xl hover:text-blue-500 transition-colors duration-300"
+                className="absolute -top-1 right-1 text-white font-thin text-6xl hover:text-blue-500 transition-colors duration-300"
                 aria-label="Close video"
               >
                 &times;
               </button>
-              <video
-                controls
-                autoPlay
-                className="w-full h-full rounded-lg"
-                src="../../public/icons/logo.png"
-              >
-                Your browser does not support the video tag.
-              </video>
+              <div className="w-full h-full flex items-center justify-center">
+                <iframe
+                  onLoad={() => setIsVideoLoading(false)} // Yuklash tugagach animatsiyani o'chirish
+                  width="80%"
+                  height="80%"
+                  src="https://www.youtube.com/embed/mxV0AD_2Gek"
+                  title="“Mangu Sarkarda” - Oʻzbekistondagi ilk tarixiy video oʻyin treyleri!"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                  className="mt-20"
+                ></iframe>
+              </div>
             </div>
           </div>
         )}

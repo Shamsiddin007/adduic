@@ -16,7 +16,7 @@ const Workopportunite = () => {
     jobTime: number;
     jobPrice: number;
   };
-  
+
   useEffect(() => {
     fetch(
       "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/workOpportunity/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3dvcmtPcHBvcnR1bml0eS9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxNDc0OTQ0LCJleHAiOjE3NjMwMTA5NDR9.gVmYXET9c8Aq1kZOYUdY-5z6Sh-ICeLJDl62TK8Dw8I&t=2024-11-13T05%3A15%3A44.885Z"
@@ -44,7 +44,7 @@ const Workopportunite = () => {
           work <span className="text-[#3375F6]">opportunities</span>
         </h1>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-8 mt-20">
             {trips.map((job) => (
               <div
                 key={job.id}

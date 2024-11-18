@@ -29,62 +29,77 @@ const Navbarlayout = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isMenuOpen]);
+
   return (
-    <div className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? styles.activeScrolled : ''}`}>
-    <nav className='container mx-auto max-w-screen-xl flex justify-between items-center pt-10 relative top-0 left-0'>
-        <button 
-          className="lg:hidden p-2" 
+    <div
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled ? styles.activeScrolled : ""
+      }`}
+    >
+      <nav className="container mx-auto max-w-screen-xl flex justify-between items-center pt-10 relative">
+        <button
+          className="lg:hidden p-2"
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
           <Image src={BurgerIcon} alt="Menu" width={24} height={24} />
         </button>
 
         <Link href="/" className="py-2">
-          <Image 
-            width={160} 
-            height={16} 
-            src={Logo} 
+          <Image
+            width={160}
+            height={16}
+            src={Logo}
             alt="Logo UIC Games"
-            className="h-auto" 
+            className="h-auto"
           />
         </Link>
 
         <ul className="hidden lg:flex items-center gap-8">
           <li>
-            <Link 
-              href="/about" 
+            <Link
+              href="/about"
               className="text-sm font-medium text-white hover:text-blue-400 transition-colors py-2"
             >
               About us
             </Link>
           </li>
           <li>
-            <Link 
-              href="/portfolio" 
+            <Link
+              href="/portfolio"
               className="text-sm font-medium text-white hover:text-blue-400 transition-colors py-2"
             >
               Portfolio
             </Link>
           </li>
           <li>
-            <Link 
-              href="/praktikum" 
+            <Link
+              href="/praktikum"
               className="text-sm font-medium text-white hover:text-blue-400 transition-colors py-2"
             >
               Praktikum
             </Link>
           </li>
           <li>
-            <Link 
-              href="/service-us" 
+            <Link
+              href="/service-us"
               className="text-sm font-medium text-white hover:text-blue-400 transition-colors py-2"
             >
               Services
             </Link>
           </li>
           <li>
-            <Link 
-              href="/blog" 
+            <Link
+              href="/blog"
               className="text-sm font-medium text-white hover:text-blue-400 transition-colors py-2"
             >
               Blogs
@@ -104,14 +119,18 @@ const Navbarlayout = () => {
               Join us
             </button>
           </div>
-          
+
           <div className="relative">
             <div
               className="flex items-center gap-2 cursor-pointer py-2"
               onClick={handleActiveLang}
             >
               <p className="text-sm font-medium text-white uppercase">eng</p>
-              <div className={`transition-transform ${isActive ? "rotate-180" : "rotate-0"}`}>
+              <div
+                className={`transition-transform ${
+                  isActive ? "rotate-180" : "rotate-0"
+                }`}
+              >
                 <Image
                   src="/icons/arrow.png"
                   alt="Language Toggle"
@@ -135,10 +154,10 @@ const Navbarlayout = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="lg:hidden fixed inset-0 bg-black bg-opacity-95 z-50">
-            <div className="flex flex-col items-center pt-20 gap-8">
+          <div className="lg:hidden fixed inset-0 bg-opacity-95 z-50">
+            <div className="flex flex-col items-center pt-20 gap-8 h-screen bg-black">
               <button
-                className="absolute top-6 left-6"
+                className="absolute top-12 left-6"
                 onClick={() => setMenuOpen(false)}
               >
                 <Image src={CloseBtn} alt="Close" width={24} height={24} />
@@ -199,7 +218,6 @@ const Navbarlayout = () => {
         )}
       </nav>
 
-      {/* Join Us Modal */}
       {isModalOpen && <JoinUsModal onClose={() => setIsModalOpen(false)} />}
     </div>
   );
