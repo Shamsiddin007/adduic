@@ -42,7 +42,7 @@ function Page() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="flex flex-col items-center pb-16 text-white text-xs sm:text-sm mt-6 sm:mt-10">
+      <div className="flex flex-col items-center pb-28 text-white text-xs sm:text-sm mt-6 sm:mt-20">
         <div className="relative w-4 h-8 sm:w-6 sm:h-12 border-2 border-white rounded-full flex items-center justify-center mb-2">
           <div className="w-1 h-2 bg-white rounded-full animate-scroll" />
         </div>
@@ -93,13 +93,13 @@ function Page() {
 
           {/* Navigation Buttons */}
           <button
-            className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-[#3375F6] text-white rounded-full w-10 h-10 flex items-center justify-center"
+            className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white rounded-full w-15 h-15 flex items-center justify-center"
             onClick={handlePrev}
           >
             ‹
           </button>
           <button
-            className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-[#3375F6] text-white rounded-full w-10 h-10 flex items-center justify-center"
+            className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white rounded-full w-10 h-10 flex items-center justify-center"
             onClick={handleNext}
           >
             ›
