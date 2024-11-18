@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import order1 from "public/Imgs/Order1.png";
 import order2 from "public/Imgs/Order2.png";
 import order3 from "public/Imgs/Order3.png";
@@ -24,9 +25,11 @@ export default function Acceptance() {
                 You can enter your information and register for the exam by
                 going to a special Telegram bot using the button below
               </p>
-              <button className="flex items-center gap-3 mt-[50px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-                Go to bot <Image src={arrowdown} alt="arrowdown" />
-              </button>
+              <Link href={"https://t.me/UICGames_bot"} target="blank">
+                <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                  Go to bot <Image src={arrowdown} alt="arrowdown" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -45,9 +48,11 @@ export default function Acceptance() {
               <p className="font-sans opacity-60">
                 C# basic / DS&A / Unity basic
               </p>
-              <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-                Go to bot <Image src={arrowdown} alt="arrowdown" />
-              </button>
+              <Link href={"https://t.me/UICGames_bot"} target="blank">
+                <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                  Go to bot <Image src={arrowdown} alt="arrowdown" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -67,9 +72,11 @@ export default function Acceptance() {
                 The interview will be conducted in English. The minimum required
                 level is B1
               </p>
-              <button className="flex items-center gap-3 mt-[5px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-                Go to bot <Image src={arrowdown} alt="arrowdown" />
-              </button>
+              <Link href={"https://t.me/UICGames_bot"} target="blank">
+                <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                  Go to bot <Image src={arrowdown} alt="arrowdown" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -89,9 +96,11 @@ export default function Acceptance() {
                 Based on the results of the offline interview, of the practicum
                 will be selected
               </p>
-              <button className="flex items-center gap-3 mt-6 bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
-                Go to bot <Image src={arrowdown} alt="arrowdown" />
-              </button>
+              <Link href={"https://t.me/UICGames_bot"} target="blank">
+                <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                  Go to bot <Image src={arrowdown} alt="arrowdown" />
+                </button>
+              </Link>
             </div>
           </div>
         </div>
