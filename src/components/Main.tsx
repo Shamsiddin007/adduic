@@ -6,14 +6,14 @@ export default function Mani() {
   return (
     <div className="relative">
       <div className="relative hidden sm:block">
-        {/* <div
-          className="w-64 rotate-90 h-32 bg-[#30125A] bg-opacity-80 shadow-[0_0_95px_35px_#30125A] rounded-t-full absolute top-72 -left-16"
-          style={{ backdropFilter: "blur(321.8558044433594px)" }}
-        ></div> */}
-
         <div
-          className="w-64 rotate-90 h-32 bg-[#30125A] bg-opacity-90 shadow-[0_0_150px_100px_#30125A] rounded-t-full absolute top-72 -left-16"
-          style={{ backdropFilter: "blur(321.8558044433594px)" }}
+          className="absolute top-72 rounded-full"
+          style={{
+            background:
+              "radial-gradient(circle, rgba(48,18,90,0.8) 0%, rgba(48,18,90,0) 80%)",
+            boxShadow: "0px 0px 170px 150px rgba(48,18,90,0.6)",
+            backdropFilter: "blur(60px)",
+          }}
         ></div>
       </div>
 
@@ -21,16 +21,16 @@ export default function Mani() {
         <div className="relative mb-16">
           <div className={`${styles.solder}`}></div>
           <div className="w-[100%] h-[30%] lg:h-[20%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
-          <div className="container h-screen">
+          <div className="container h-screen mt-[50px]">
             <div
-              className="w-60 h-28 bg-[#3375F6] bg-opacity-90 shadow-[0_0_195px_55px_#3375F6] rounded-t-full absolute bottom-[230px] right-[232px] -z-2"
-              style={{ backdropFilter: "blur(321.8558044433594px)" }}
+              className="absolute bottom-[250px] right-[399px] rounded-full -z-10"
+              style={{
+                background:
+                  "radial-gradient(circle, rgba(51,117,246,0.8) 0%, rgba(51,117,246,0) 80%)",
+                boxShadow: "0px 0px 150px 150px rgba(51,117,246,0.6)",
+                backdropFilter: "blur(60px)",
+              }}
             ></div>
-            {/* <div className="w-[300px] h-[300px] shadow-lg rounded-full absolute bottom-[100px] right-[232px] -z-2"
-                style={{backgroundImage:" radial-gradient(#edf1cf, #3375F6)",
-                    boxShadow:" 5px 4px 99px 100px rgba(6, 100, 172, 0.29)",
-                }}
-            ></div> */}
             <div className="absolute bottom-0">
               <span className="mb-6 flex gap-2 items-center bg-[#202123] w-[330px] rounded-full text-white text-sm py-3 px-4 font-sans md:text-xs">
                 <Image
@@ -65,4 +65,3 @@ export default function Mani() {
     </div>
   );
 }
-

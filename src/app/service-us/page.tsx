@@ -20,7 +20,6 @@ function Page() {
 
   return (
     <div className="pb-[500px]">
-      {/* Hero Section */}
       <div className="bg-custom w-full flex flex-col items-center h-[500px] sm:h-[700px] justify-center">
         <span className="flex gap-2 items-center bg-[#202123] w-[90%] sm:w-[380px] rounded-full text-white text-xs sm:text-sm py-2 px-3 font-sans mb-4">
           <Image
@@ -40,9 +39,7 @@ function Page() {
           applications.
         </p>
       </div>
-
-      {/* Scroll Indicator */}
-      <div className="flex flex-col items-center pb-28 text-white text-xs sm:text-sm mt-6 sm:mt-20">
+      <div className="flex flex-col items-center pb-16 text-white text-xs sm:text-sm mt-6 sm:mt-16 sm:mb-16">
         <div className="relative w-4 h-8 sm:w-6 sm:h-12 border-2 border-white rounded-full flex items-center justify-center mb-2">
           <div className="w-1 h-2 bg-white rounded-full animate-scroll" />
         </div>

@@ -117,7 +117,7 @@ h1 {
     display: none;
   }
   .group5 {
-    height: 43vh;
+    height: 50vh;
   }
 }
 
@@ -366,6 +366,12 @@ h1 {
 
 .card-title {
   font-size: 1.125rem;
+}
+
+@media (max-width: 768px) {
+  .imgs{
+    width: 250px;
+  }
 }
 
 @media (max-width: 768px) {
