@@ -113,7 +113,6 @@ const Navbarlayout = () => {
               Contact us
             </button>
             <button
-              onClick={() => setIsModalOpen(true)}
               className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
             >
               Join us
