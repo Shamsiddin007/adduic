@@ -69,7 +69,7 @@ function Page() {
 
                   {/* Icon */}
                   <div className="bg-[#3375F6] w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[76px] lg:h-[76px] flex items-center justify-center rounded-full mb-4 md:mb-6 lg:mb-8">
-                    <Image src={Game} alt="" />
+                    <Image src={Game} alt="" className="p-2 md:p-2"/>
                   </div>
 
                   {/* Title */}
