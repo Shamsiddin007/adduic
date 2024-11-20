@@ -5,12 +5,7 @@ import styles from "./style.module.css";
 export default function Mani() {
   return (
     <div className="relative">
-      <div className="relative hidden sm:block">
-        {/* <div
-          className="w-64 rotate-90 h-32 bg-[#30125A] bg-opacity-80 shadow-[0_0_95px_35px_#30125A] rounded-t-full absolute top-72 -left-16"
-          style={{ backdropFilter: "blur(321.8558044433594px)" }}
-        ></div> */}
-
+      <div className="relative hidden md:block">
         <div
           className="w-64 rotate-90 h-32 bg-[#30125A] bg-opacity-90 shadow-[0_0_150px_100px_#30125A] rounded-t-full absolute top-72 -left-16"
           style={{ backdropFilter: "blur(321.8558044433594px)" }}
@@ -22,15 +17,12 @@ export default function Mani() {
           <div className={`${styles.solder}`}></div>
           <div className="w-[100%] h-[30%] lg:h-[20%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
           <div className="container h-screen mt-[50px]">
-            <div
-              className="w-60 h-28 bg-[#3375F6] bg-opacity-90 shadow-[0_0_195px_55px_#3375F6] rounded-t-full absolute bottom-[230px] right-[232px] -z-2"
-              style={{ backdropFilter: "blur(321.8558044433594px)" }}
-            ></div>
-            {/* <div className="w-[300px] h-[300px] shadow-lg rounded-full absolute bottom-[100px] right-[232px] -z-2"
-                style={{backgroundImage:" radial-gradient(#edf1cf, #3375F6)",
-                    boxShadow:" 5px 4px 99px 100px rgba(6, 100, 172, 0.29)",
-                }}
-            ></div> */}
+            <div className="hidden md:block">
+              <div
+                className="w-60 h-28 bg-[#3375F6] bg-opacity-90 shadow-[0_0_195px_55px_#3375F6] rounded-t-full absolute bottom-[230px] right-[232px] -z-2"
+                style={{ backdropFilter: "blur(321.8558044433594px)" }}
+              ></div>
+            </div>
             <div className="absolute bottom-0">
               <span className="mb-6 flex gap-2 items-center bg-[#202123] w-[330px] rounded-full text-white text-sm py-3 px-4 font-sans md:text-xs">
                 <Image
