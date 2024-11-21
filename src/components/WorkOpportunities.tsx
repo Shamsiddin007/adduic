@@ -56,15 +56,18 @@ const Workopportunite = () => {
                   <span className="mr-2">
                     <Image src={money} alt="money img" />
                   </span>
-                  <p>
-                    {job.weekJob} / {job.jobTime}
-                  </p>
+                  <p>{job.weekJob} / {job.jobTime}</p>
                 </div>
                 <Link href={`/workopportunite/${job.id}`}>
                   <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
                     <div className="flex items-center gap-3">
                       <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A]">
-                        <Image src={calendar} alt="calendar" width={22} height={22} />
+                        <Image
+                          src={calendar}
+                          alt="calendar"
+                          width={22}
+                          height={22}
+                        />
                       </article>
                       <article>{job.jobPrice}</article>
                     </div>
