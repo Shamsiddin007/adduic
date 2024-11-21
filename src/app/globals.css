@@ -64,7 +64,7 @@ h1 {
 }
 
 /* styles/globals.css */
-@keyframes scroll {
+/* @keyframes scroll {
   0% {
     transform: translateY(0);
     opacity: 1;
@@ -76,7 +76,7 @@ h1 {
     transform: translateY(10px);
     opacity: 1;
   }
-}
+} */
 
 .animate-scroll {
   animation: scroll 1.5s infinite ease-in-out;
@@ -87,15 +87,11 @@ h1 {
   text-align: center;
   padding: 1rem;
   transition: background 0.3s ease;
+  transform: scale(1.05);
 }
 @media (min-width: 640px) {
   .about-child {
     flex: 1 1 48%;
-  }
-}
-@media (min-width: 768px) {
-  .about-child {
-    flex: 1 1 32%;
   }
 }
 @media (min-width: 1024px) {
@@ -129,11 +125,11 @@ h1 {
   .part2-about {
     display: flex;
     overflow-x: auto;
-    gap: 16px;
+    gap: 32px;
     padding: 10px;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
-    scrollbar-width: thin;
+    scrollbar-width: none;
   }
 
   /* Style the scrollbar (Webkit browsers like Chrome, Safari) */
@@ -162,7 +158,6 @@ h1 {
   }
 
   .about-child:hover {
-    transform: scale(1.05); /* Scale up on hover */
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
   }
 
@@ -208,18 +203,11 @@ h1 {
   margin-bottom: 5rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .part3-about {
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     margin-top: 5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .part3-about {
-    gap: 6.25rem;
-    margin-top: 8rem;
   }
 }
 
