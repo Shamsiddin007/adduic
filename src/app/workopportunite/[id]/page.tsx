@@ -48,7 +48,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <p className="w-full h-[2px] rounded-lg bg-gray-400 mb-8"></p>
           <div className="flex flex-col md:flex-row items-start sm:items-center justify-start gap-6 sm:gap-20">
             <article className="flex gap-4 sm:gap-8">
-              <span className="p-2 rounded-xl cursor-pointer transition duration-1000 border hover:border-[#00a795]">
+              <span className="p-2 rounded-xl cursor-pointer transition duration-1000 border hover:border-[#2365eb]">
                 <Image
                   src={facebook}
                   alt="facebook icon"
@@ -56,7 +56,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   height={20}
                 />
               </span>
-              <span className="p-2 rounded-xl cursor-pointer transition duration-1000 border hover:border-[#00a795]">
+              <span className="p-2 rounded-xl cursor-pointer transition duration-1000 border hover:border-[#2365eb]">
                 <Image
                   src={instagram}
                   alt="instagram icon"
@@ -64,7 +64,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   height={20}
                 />
               </span>
-              <span className="p-2 rounded-xl cursor-pointer transition duration-1000 border hover:border-[#00a795]">
+              <span className="p-2 rounded-xl cursor-pointer transition duration-1000 border hover:border-[#2365eb]">
                 <Image src={telegram} alt="telegram icon" />
               </span>
             </article>

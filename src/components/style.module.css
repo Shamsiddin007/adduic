@@ -95,12 +95,12 @@
   position: absolute;
   top: 125px;
   left: 200px;
+  transition: all 1000ms ease;
 }
 .item4:hover {
   color: #3375f6;
   left: 224px;
   list-style-type: disc;
-  transition: all 1000ms ease;
 }
 .item5 {
   cursor: pointer;
@@ -108,12 +108,12 @@
   position: absolute;
   top: 170px;
   left: 200px;
+  transition: all 1000ms ease;
 }
 .item5:hover {
   color: #3375f6;
   left: 224px;
   list-style-type: disc;
-  transition: all 1000ms ease;
 }
 .item6 {
   cursor: pointer;
@@ -121,12 +121,12 @@
   position: absolute;
   top: 218px;
   left: 200px;
+  transition: all 1000ms ease;
 }
 .item6:hover {
   color: #3375f6;
   left: 224px;
   list-style-type: disc;
-  transition: all 1000ms ease;
 }
 @media (max-width: 900px) {
   .item3 {

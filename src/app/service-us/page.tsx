@@ -20,7 +20,7 @@ function Page() {
 
   return (
     <div className="pb-[500px]">
-      <div className="bg-custom w-full flex flex-col items-center h-[500px] sm:h-[700px] justify-center">
+      <div className="bg-custom w-full flex flex-col items-center h-[100vh] justify-center">
         <span className="flex gap-2 items-center bg-[#202123] w-[90%] sm:w-[380px] rounded-full text-white text-xs sm:text-sm py-2 px-3 font-sans mb-4">
           <Image
             src={Fire}
@@ -57,7 +57,7 @@ function Page() {
                 key={index}
                 className="w-full flex-shrink-0 px-4"
               >
-                <div className="w-[90%] mx-auto rounded-[20px] bg-[#3375F60D] p-4 relative">
+                <div className="w-[90%] mx-auto rounded-[20px]  p-4 relative bg-[#3375F60D]">
                   {/* Background Image */}
                   <Image
                     src={Game1}
