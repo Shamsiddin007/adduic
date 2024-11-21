@@ -196,9 +196,9 @@ function ProjectsPage() {
             OUR <span className="text-blue-600">PROJECTS</span>
           </h2>
           <Link href="/portfolio">
-            <button className="flex items-center justify-center gap-2 rounded-full bg-[#FFFFFF1A] px-6 py-3 text-white hover:bg-[#3375F6] transition-all duration-300">
+            <button className="flex items-center group justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
               All projects{" "}
-              <Image src={Chevron} alt="Chevron right" className="w-4 h-4" />
+              <Image src={Chevron} alt="Chevron right" className="w-4 h-4 group-hover:scale-125 transition-all duration-300 " />
             </button>
           </Link>
         </div>
