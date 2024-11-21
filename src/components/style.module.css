@@ -253,3 +253,25 @@
   width: 250px;
   margin: auto;
 }
+
+
+.custom-prev-btn,
+.custom-next-btn {
+  z-index: 10; /* Tugmalar slayddan yuqorida turishi uchun */
+}
+
+.custom-prev-btn {
+  left: 20px;
+}
+
+.custom-next-btn {
+  right: 20px;
+}
+
+@media (max-width: 768px) {
+  .custom-prev-btn,
+  .custom-next-btn {
+    width: 6rem;
+    height: 2.5rem;
+  }
+}

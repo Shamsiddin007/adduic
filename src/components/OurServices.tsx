@@ -8,18 +8,18 @@ const Partners = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center m-auto">
           <div className="space-y-6">
-            <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-white">
+            <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-white text-center md:text-start">
               OUR <span className="text-blue-600">SERVICES</span>
             </h1>
             
-            <p className="text-[#FFFFFF66] text-sm sm:text-base lg:text-lg max-w-xl">
+            <p className="text-[#FFFFFF66] text-sm sm:text-base lg:text-lg max-w-xl text-center md:text-start">
               We provide comprehensive development solutions focused on creating
               engaging, interactive experiences that enhance user engagement,
               learning, and entertainment across a variety of platforms and
               applications.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 ml-12">
+            <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full items-center">
               <button className="px-6 py-3 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base w-[250px]">
                 More about us
               </button>
