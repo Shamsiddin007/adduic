@@ -51,7 +51,7 @@ const Workopportunite = () => {
                 className="px-8 py-6 w-full rounded-[24px] bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] border border-[#FFFFFF1A]"
               >
                 <h2 className="text-xl font-thin mb-4">{job.jobTitle}</h2>
-                <p className="relative mb-4 w-[110%] h-[1px] bg-[#FFFFFF1A] rounded"></p>
+                <p className="relative mb-4 w-[100%] h-[1px] bg-[#FFFFFF1A] rounded"></p>
                 <div className="flex items-center mb-6">
                   <span className="mr-2">
                     <Image src={money} alt="money img" />

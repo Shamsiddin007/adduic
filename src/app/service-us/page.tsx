@@ -46,9 +46,7 @@ function Page() {
         <p>Scroll to continue</p>
       </div>
 
-      {/* Services Section */}
       <div className="container px-4 sm:px-0">
-        {/* Slider - Visible only on mobile (hidden on desktop) */}
         <div className="relative w-full overflow-hidden md:hidden">
           <div
             className="flex transition-transform duration-500"
@@ -68,7 +66,7 @@ function Page() {
                   />
 
                   {/* Icon */}
-                  <div className="bg-[#3375F6] w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[76px] lg:h-[76px] flex items-center justify-center rounded-full mb-4 md:mb-6 lg:mb-8">
+                  <div className="bg-[#3375F6] w-[70px] h-[70px] flex items-center justify-center rounded-full mb-4 md:mb-6 lg:mb-8 ">
                     <Image src={Game} alt="" />
                   </div>
 
@@ -103,14 +101,12 @@ function Page() {
           </button>
         </div>
 
-        {/* Static Grid - Visible only on desktop (md and up) */}
         <div className="grid grid-cols-2 gap-8 md:grid md:grid-cols-2 md:gap-8 md:block hidden">
           {slides.map((_, index) => (
             <div
               key={index}
               className="w-[90%] mx-auto rounded-[20px] bg-[#3375F60D] p-4 relative"
             >
-              {/* Background Image */}
               <Image
                 src={Game1}
                 alt=""
