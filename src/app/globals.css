@@ -32,6 +32,11 @@ h1 {
   color: white;
 }
 
+.rfm-initial-child-container, .rfm-marquee{
+  display: flex !important;
+  gap: 70px !important;
+}
+
 .bg-custom {
   @apply bg-cover bg-center;
   background-image: url("/Imgs/bgimg1.png");

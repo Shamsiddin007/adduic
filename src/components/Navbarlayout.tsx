@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./style.module.css";
-import Logo from "/public/icons/logo.svg";
+import Logo from "/public/icons/Logo.svg";
 import BurgerIcon from "/public/Imgs/hamburger_icon.svg";
 import CloseBtn from "/public/Imgs/close-428 1.png";
 import JoinUsModal from "@/components/JoinUs";
