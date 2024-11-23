@@ -162,9 +162,11 @@ const Footer = () => {
       backgroundImage: "linear-gradient(0deg, #FFFFFF0A,transparent,transparent,transparent,transparent, rgb(16, 34, 179) 99%,transparent)"
     }}
     >
+    <div className="w-full flex justify-center items-center">
       <div className={styles.form}>
          <Forma />
        </div>
+    </div>
       <div className="relative pt-[280px] pb-12 px-4 sm:px-6 lg:px-8 z-3">
         <div
           className="absolute right-0 bottom-0 w-1/2 h-[55%] bg-no-repeat bg-cover z-1"
@@ -187,7 +189,7 @@ const Footer = () => {
               </Link>
 
               {/* Navigation Menus */}
-              <article className="flex items-center gap-24 font-thin text-gray-600 h-60">
+              <article className={styles.article}>
                 <ul className={styles.item_home}>
                   <Link href="/portfolio">
                     <li className={styles.item1}>Our projects</li>
@@ -199,7 +201,7 @@ const Footer = () => {
                     <li className={styles.item3}>The team</li>
                   </Link>
                 </ul>
-                <ul className={styles.item_child}>
+                <ul className={styles.item_home}>
                   <Link href="/service-us">
                     <li className={styles.item4}>Contact us</li>
                   </Link>
