@@ -92,7 +92,7 @@ export default function Forma() {
               autoComplete="off"
               value={name}
               onChange={handleNameChange}
-              className={`bg-[#161B22] py-[11px] pl-3 w-full rounded-xl text-white font-sans mb-6 border ${
+              className={`bg-[#161B22] py-[11px] px-3 w-full rounded-xl text-white font-sans mb-6 border ${
                 errors.name ? "border-red-500" : "border-transparent"
               } outline-none ${
                 !errors.name && "hover:border-blue-500"
