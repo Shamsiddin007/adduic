@@ -71,14 +71,17 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
       <div className="container px-4 sm:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
-          <div className="flex gap-8 items-center text-white">
-            <h2 className="text-[16px]">Available:</h2>
-            <div className="flex gap-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] hover:bg-blue-700/10 rounded-lg cursor-pointer text-sm text-white transition-colors duration-200">
+          {/* Available section */}
+          <div className="flex flex-col lg:flex-row lg:items-center gap-4 text-white">
+            <h2 className="text-[16px] whitespace-nowrap">Available:</h2>
+            <div className="flex flex-wrap gap-4">
+              {/* Steam */}
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
                 <Image src={elementLogo} alt="Steam" width={24} height={24} />
                 <p className="text-[14px]">Steam</p>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] hover:bg-blue-700/10 rounded-lg cursor-pointer text-sm text-white transition-colors duration-200">
+              {/* Desktop app */}
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
                 <Image
                   src={WindowsLogo}
                   alt="Desktop app"
@@ -87,7 +90,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 />
                 <p className="text-[14px]">Desktop app</p>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] hover:bg-blue-700/10 rounded-lg cursor-pointer text-sm text-white transition-colors duration-200">
+              {/* VR */}
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
                 <Image
                   src={secendelementLogo}
                   alt="VR"
