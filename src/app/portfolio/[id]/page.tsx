@@ -6,6 +6,7 @@ import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
 import Highlights from "public/Imgs/highlights.png";
 import { useEffect, useState } from "react";
+import NotFound from "@/app/not-found";
 
 type Post = {
   id: number;
@@ -24,6 +25,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const { id } = params;
   const [post, setPost] = useState<Post | null>(null);
 
+  if(!Number(id)){
+    return <NotFound/>
+  }
+
+  
   useEffect(() => {
     fetch(
       "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjYzNDQ0LCJleHAiOjE3NjI3OTk0NDR9.LR1i1jdY-dZ1LUdenb9T8oKsJa_dtJNQ6pcmg2njGZM&t=2024-11-10T18%3A30%3A45.640Z"

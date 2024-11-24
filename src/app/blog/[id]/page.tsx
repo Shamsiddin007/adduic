@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import SingleImg from "public/Imgs/singleImage.png";
+import NotFound from "@/app/not-found";
 
 type Post = {
   id: number;
@@ -22,6 +23,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const [single, setSingle] = useState<Post | null>(null);
   const [showFullText, setShowFullText] = useState(false);
   const [FullText, setFullText] = useState(false);
+
+  if(!Number(id)){
+    return <NotFound/>
+  }
+
 
   useEffect(() => {
     fetch(
