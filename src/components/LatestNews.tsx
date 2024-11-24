@@ -31,8 +31,8 @@ export default function LatestNews() {
         </h2>
 
         <Link href="blog">
-          <button className="flex items-center justify-center gap-2 rounded-full bg-[#FFFFFF1A] px-6 py-3 text-white hover:bg-[#3375F6] transition-all duration-300">
-            All projects <Image src={Chevron} alt="Logo" />
+          <button className="flex items-center justify-center gap-2 px-6 py-3 text-white bg-blue-600 hover:bg-blue-700 rounded-full text-sm transition-colors group">
+            All projects <Image src={Chevron} alt="Logo" className="w-4 h-4 group-hover:scale-125 transition-all duration-300 " />
           </button>
         </Link>
       </div>
