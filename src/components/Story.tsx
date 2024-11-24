@@ -18,10 +18,10 @@ export default function Story() {
                 Our team of talented developers, designers, and creatives come together to push the boundaries...
               </p>
               <article className="flex flex-col md:flex-row gap-4 md:gap-6 pb-16 w-full items-center"> 
-                <button className="bg-[#1F2022] px-8 md:px-20 py-[10px] rounded-full text-white hover:bg-[#3375F6] transition-all duration-500 md:w-[250px] w-[300px]">
+                <button className="bg-[#1F2022] px-8 md:px-20 py-[10px] rounded-full text-white hover:bg-[#3375F6] transition-all duration-500 md:w-[250px] w-[220px]">
                   Contact us
                 </button>
-                <button className="bg-[#1F2022] px-8 md:px-16 py-[10px] rounded-full text-white hover:bg-[#3375F6] transition-all duration-500 md:w-[250px] w-[300px]">
+                <button className="bg-[#1F2022] px-8 md:px-16 py-[10px] rounded-full text-white hover:bg-[#3375F6] transition-all duration-500 md:w-[250px] w-[220px]">
                   Learn more
                 </button>
               </article>

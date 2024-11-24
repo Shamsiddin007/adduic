@@ -43,11 +43,19 @@ export default function Mani() {
               <h1 className="mb-12 md:mb-16 lg:mb-[150px] xl:mb-[268px] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase text-white tracking-wider">
                 YOUR{" "}
                 <span className="relative text-blue-500 border border-blue-500 inline-block mb-2">
-                  IDEAS
+                  <span className="absolute -top-1 bg-white -left-1 w-2 h-2"></span>
+                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-white"></span>
+                  <span className="absolute -bottom-1 -left-1 w-2 h-2 bg-white"></span>
+                  <span className="absolute -bottom-1 -right-1 w-2 h-2 bg-white"></span>
+                  <span className="relative">IDEAS</span>
                 </span>{" "}
                 WILL <br /> BECOME A{" "}
                 <span className="relative text-blue-500 border border-blue-500 inline-block">
-                  REALITY
+                  <span className="absolute -top-1 bg-white -left-1 w-2 h-2"></span>
+                  <span className="absolute -top-1 -right-1 w-2 h-2 bg-white"></span>
+                  <span className="absolute -bottom-1 -left-1 w-2 h-2 bg-white"></span>
+                  <span className="absolute -bottom-1 -right-1 w-2 h-2 bg-white"></span>
+                  <span className="relative">reality</span>
                 </span>
               </h1>
               <p className=" text-white font-sans text-base pb-14 ">

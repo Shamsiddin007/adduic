@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from "react";
@@ -167,9 +168,9 @@ export default function Forma() {
           </form>
         </div>
       </div>
-      
+
       {notificationVisible && (
-        <div className="flex items-center gap-2 md:text-sm text-xs font-sans fixed bottom-4 right-4 bg-[#1E1E1E] text-white py-2 sm:px-4 px-2 rounded shadow-sm shadow-blue-400 z-50 animate-slide-in-out">
+        <div className="flex items-center gap-2 md:text-sm text-xs font-sans fixed bottom-8 right-4 bg-[#1E1E1E] text-white py-2 sm:px-4 px-2 rounded shadow-sm shadow-blue-400 z-50 animate-slide-in-out">
           <Image
             src={check}
             alt="CheckIcons"

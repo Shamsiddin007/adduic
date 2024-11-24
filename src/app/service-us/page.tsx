@@ -20,7 +20,7 @@ function Page() {
 
   return (
     <div className="pb-[500px]">
-      <div className="bg-custom w-full flex flex-col items-center h-[100vh] justify-center">
+      <div className="bg-custom w-full flex flex-col items-center h-[100vh] justify-center pt-[250px]">
         <span className="flex gap-2 items-center bg-[#202123] w-[90%] sm:w-[380px] rounded-full text-white text-xs sm:text-sm py-2 px-3 font-sans mb-4">
           <Image
             src={Fire}
@@ -38,14 +38,13 @@ function Page() {
           learning, and entertainment across a variety of platforms and
           applications.
         </p>
-      </div>
-      <div className="flex flex-col items-center pb-16 text-white text-xs sm:text-sm mt-6 sm:mt-16 sm:mb-16">
-        <div className="relative w-4 h-8 sm:w-6 sm:h-12 border-2 border-white rounded-full flex items-center justify-center mb-2">
-          <div className="w-1 h-2 bg-white rounded-full animate-scroll" />
+        <div className="pt-[50px] flex flex-col items-center pb-16 text-white text-xs sm:text-sm mt-6 sm:mt-16 sm:mb-16">
+          <div className="relative w-4 h-8 sm:w-6 sm:h-12 border-2 border-white rounded-full flex items-center justify-center mb-2">
+            <div className="w-1 h-2 bg-white rounded-full animate-scroll" />
+          </div>
+          <p>Scroll to continue</p>
         </div>
-        <p>Scroll to continue</p>
       </div>
-
       <div className="container px-4 sm:px-0">
         <div className="relative w-full overflow-hidden md:hidden">
           <div
@@ -58,24 +57,20 @@ function Page() {
                 className="w-full flex-shrink-0 px-4"
               >
                 <div className="w-[90%] mx-auto rounded-[20px]  p-4 relative bg-[#3375F60D]">
-                  {/* Background Image */}
                   <Image
                     src={Game1}
                     alt=""
                     className="absolute top-0 right-0 hidden sm:block lg:w-auto"
                   />
 
-                  {/* Icon */}
                   <div className="bg-[#3375F6] w-[70px] h-[70px] flex items-center justify-center rounded-full mb-4 md:mb-6 lg:mb-8 ">
                     <Image src={Game} alt="" />
                   </div>
 
-                  {/* Title */}
                   <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
                     Game development
                   </h1>
 
-                  {/* Description */}
                   <p className="text-[#FFFFFF66] text-sm w-[80%]">
                     We constantly push the boundaries of creativity and technology
                     to deliver groundbreaking experiences that captivate and
@@ -86,7 +81,6 @@ function Page() {
             ))}
           </div>
 
-          {/* Navigation Buttons */}
           <button
             className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white rounded-full w-15 h-15 flex items-center justify-center"
             onClick={handlePrev}
@@ -100,7 +94,6 @@ function Page() {
             ›
           </button>
         </div>
-
         <div className="grid grid-cols-2 gap-8 md:grid md:grid-cols-2 md:gap-8 md:block hidden">
           {slides.map((_, index) => (
             <div
@@ -113,17 +106,14 @@ function Page() {
                 className="absolute top-0 right-0 hidden sm:block lg:w-auto"
               />
 
-              {/* Icon */}
               <div className="bg-[#3375F6] w-[50px] h-[50px] md:w-[60px] md:h-[60px] lg:w-[76px] lg:h-[76px] flex items-center justify-center rounded-full mb-4 md:mb-6 lg:mb-8">
                 <Image src={Game} alt="" />
               </div>
 
-              {/* Title */}
               <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
                 Game development
               </h1>
 
-              {/* Description */}
               <p className="text-[#FFFFFF66] text-sm w-[80%]">
                 We constantly push the boundaries of creativity and technology
                 to deliver groundbreaking experiences that captivate and

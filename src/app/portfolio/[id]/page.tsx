@@ -23,6 +23,8 @@ type ProjectPageProps = {
 export default function ProjectPage({ params }: ProjectPageProps) {
   const { id } = params;
   const [post, setPost] = useState<Post | null>(null);
+  const [showFullText, setShowFullText] = useState(false);
+  const [FullText, setFullText] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -39,10 +41,17 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   if (!post) return <div>Loading...</div>;
 
+  const toggleTextVisibility = () => {
+    setShowFullText((prev) => !prev);
+  };
+  const toggleTextHandle = () => {
+    setFullText((prev) => !prev);
+  };
+
   return (
     <div className="pb-[500px]">
       <div
-        className="w-full h-[800px] pt-[200px] pb-[50px] bg-cover bg-center"
+        className="w-full h-[100vh] pt-[200px] pb-[50px] bg-cover bg-center"
         style={{
           backgroundImage: `url(${post.backgroundCover})`,
         }}
@@ -65,11 +74,11 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="flex gap-8 items-center text-white">
             <h2 className="text-[16px]">Available:</h2>
             <div className="flex gap-4">
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] hover:bg-blue-700/10 rounded-lg cursor-pointer text-sm text-white transition-colors duration-200">
                 <Image src={elementLogo} alt="Steam" width={24} height={24} />
                 <p className="text-[14px]">Steam</p>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] hover:bg-blue-700/10 rounded-lg cursor-pointer text-sm text-white transition-colors duration-200">
                 <Image
                   src={WindowsLogo}
                   alt="Desktop app"
@@ -78,7 +87,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 />
                 <p className="text-[14px]">Desktop app</p>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
+              <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] hover:bg-blue-700/10 rounded-lg cursor-pointer text-sm text-white transition-colors duration-200">
                 <Image
                   src={secendelementLogo}
                   alt="VR"
@@ -90,7 +99,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </div>
           </div>
 
-          <div className="flex gap-4 justify-center">
+          {/* Buttons section */}
+          <div className="flex flex-wrap gap-4 justify-center">
             <button className="cursor-pointer w-[200px] rounded-full px-8 py-3 bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] duration-300">
               About Game
             </button>
@@ -101,14 +111,26 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         <div className="mb-28">
-          <p className="text-[#FFFFFFCC] max-w-4xl mx-auto">
+          <p
+            className={`text-white font-sans opacity-80 text-[16px] mb-6 ${
+              FullText ? "" : "line-clamp-3"
+            }`}
+          >
             {post.moredescription}
           </p>
+          <div className="flex items-center justify-center md:mb-16 mb-10">
+            <button
+              onClick={toggleTextHandle}
+              className="text-blue-500 hover:underline"
+            >
+              {showFullText ? "Show less" : "Show more"}
+            </button>
+          </div>
         </div>
 
         <div className="container pb-20">
-          <h2 className="font-bold text-5xl text-white text-center">
-            OUR <span className="text-blue-600">PROJECTS</span>
+          <h2 className="font-bold text-5xl text-white text-start">
+            SOME <span className="text-blue-600">HIGHLITS</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
             <Image
