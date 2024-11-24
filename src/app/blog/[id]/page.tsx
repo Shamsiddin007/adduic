@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import SingleImg from "public/Imgs/singleImage.png";
+import NotFound from "@/app/not-found";
 
 type Post = {
   id: number;
@@ -22,6 +23,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const [single, setSingle] = useState<Post | null>(null);
   const [showFullText, setShowFullText] = useState(false);
   const [FullText, setFullText] = useState(false);
+
+  if(!Number(id)){
+    return <NotFound/>
+  }
 
   useEffect(() => {
     fetch(
@@ -61,7 +66,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <img
             src={single.imgPost}
             alt="NewsImage"
-            className="w-full md:h-[500px] rounded-xl object-center border border-cyan-50 border-opacity-25 mb-6"
+            className="m-auto w-[600px] md:h-[450px] rounded-xl object-center border border-cyan-50 border-opacity-25 mb-6"
           />
 
           <h2 className="text-white font-euclid md:text-[24px] sm:text-[21px] text-[20px] mb-4">
@@ -85,7 +90,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <Image
             src={SingleImg}
             alt="SingleImg"
-            className="w-full rounded-xl object-center mb-6"
+            className="m-auto w-[600px] rounded-xl object-center mb-6"
           />
           <p
             className={`text-white font-sans opacity-80 text-[16px] mb-6 ${

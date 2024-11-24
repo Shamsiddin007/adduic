@@ -45,7 +45,7 @@ function Page() {
           <p>Scroll to continue</p>
         </div>
       </div>
-      <div className="container px-4 py-8 sm:px-0">
+      <div className="container px-4 py-12 sm:px-0">
         <div className="relative w-full overflow-hidden md:hidden">
           <div
             className="flex transition-transform duration-500"

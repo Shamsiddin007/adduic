@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useState } from "react";
@@ -91,7 +92,7 @@ export default function Forma() {
               autoComplete="off"
               value={name}
               onChange={handleNameChange}
-              className={`bg-[#161B22] py-[11px] pl-3 w-full rounded-xl text-white font-sans mb-6 border ${
+              className={`bg-[#161B22] py-[11px] px-3 w-full rounded-xl text-white font-sans mb-6 border ${
                 errors.name ? "border-red-500" : "border-transparent"
               } outline-none ${
                 !errors.name && "hover:border-blue-500"
@@ -167,9 +168,9 @@ export default function Forma() {
           </form>
         </div>
       </div>
-      
+
       {notificationVisible && (
-        <div className="flex items-center gap-2 md:text-sm text-xs font-sans fixed bottom-4 right-4 bg-[#1E1E1E] text-white py-2 sm:px-4 px-2 rounded shadow-sm shadow-blue-400 z-50 animate-slide-in-out">
+        <div className="flex items-center gap-2 md:text-sm text-xs font-sans fixed bottom-8 right-4 bg-[#1E1E1E] text-white py-2 sm:px-4 px-2 rounded shadow-sm shadow-blue-400 z-50 animate-slide-in-out">
           <Image
             src={check}
             alt="CheckIcons"

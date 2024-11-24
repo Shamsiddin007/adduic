@@ -94,7 +94,7 @@
 //   );
 // };
 
-// export default Somestats;
+// export default Somestats   
 
 "use client";
 import { useEffect, useRef } from "react";
@@ -156,7 +156,7 @@ const Somestats = () => {
         {/* Background Decorations */}
         <div
           ref={parallaxRef}
-          className="w-[120vw] h-[50%] md:h-[200px] absolute bottom-0 -left-[10vw] z-0 hidden md:block"
+          className="w-[120vw] h-[50%] absolute bottom-0 -left-[10vw] z-0 hidden md:block"
         >
           <div
             data-depth="0.1"
