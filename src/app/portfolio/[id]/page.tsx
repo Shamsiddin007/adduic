@@ -56,7 +56,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="pb-[500px]">
       <div
-        className="w-full h-[100vh] pt-[200px] pb-[50px] bg-cover bg-center"
+        className="w-full h-[100vh] pt-[100px] pb-[50px] bg-cover bg-center"
         style={{
           backgroundImage: `url(${post.backgroundCover})`,
         }}
