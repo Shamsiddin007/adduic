@@ -4,6 +4,7 @@ import Footerlayout from "@/components/Footerlayout";
 // import FormaLayout from "@/app/forma/forma"
 import './globals.css'
 import TestLaunch from "@/components/testLaunch/TestLaunch";
+import Loader from "@/components/Loader/Loader";
 // import Forma from "@/app/forma/forma";
 
 
@@ -21,6 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Loader/>
         <Navbarlayout/>
         <div>
           {children}

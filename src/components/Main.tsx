@@ -32,7 +32,7 @@ export default function Mani() {
               }}
             ></div>
             <div className="absolute bottom-0">
-              <span className="mb-6 flex gap-2 items-center bg-[#202123] w-[330px] rounded-full text-white text-sm py-3 px-4 font-sans md:text-xs">
+              <span className="mb-6 flex gap-2 items-center bg-[#202123] w-[350px] rounded-full text-white text-sm py-3 px-4 font-sans md:text-xs">
                 <Image
                   src={Fire}
                   alt="FireLogo"
