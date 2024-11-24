@@ -40,11 +40,11 @@ const Workopportunite = () => {
         <p className="text-[18px] text-center font-thin text-[#FFFFFF66]">
           Feel free to reach out and join our team
         </p>
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl capitalize mt-8 text-center flex items-center justify-center gap-6">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl capitalize mt-8 text-center flex items-center justify-center gap-6 md:mb-8">
           work <span className="text-[#3375F6]">opportunities</span>
         </h1>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-3 gap-8 mt-20">
+          <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 md:grid-cols-1 md:w-[500px] md:m-auto gap-8 mt-20">
             {trips.map((job) => (
               <div
                 key={job.id}
