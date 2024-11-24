@@ -5,6 +5,9 @@ import Windowslogo from "../../public/icons/Windowslogo.png";
 import elementlogo from "../../public/icons/Element.png";
 import secondelementlogo from "../../public/icons/fi_10781896.png";
 import backlogo from "../../public/icons/Logos.png";
+import style from "@/components/style.module.css"
+import CloseBtn from "/public/Imgs/close-428 1.png";
+
 
 const Videolayout = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -121,12 +124,13 @@ const Videolayout = () => {
               )}
               <button
                 onClick={handleVideoClose}
-                className="absolute -top-1 right-1 text-white font-thin text-6xl hover:text-blue-500 transition-colors duration-300"
+                className="absolute -top-1 right-1 z-[11] cursor-pointer text-white font-thin hover:text-blue-500 transition-colors duration-300"
                 aria-label="Close video"
               >
-                &times;
+                <Image src={CloseBtn} alt="close btn" width={40} height={40}/>
               </button>
-              <div className="w-full h-full flex items-center justify-center">
+              <div className={style.video}>
+                <div className={style.video_child}>
                 <iframe
                   onLoad={() => setIsVideoLoading(false)} // Yuklash tugagach animatsiyani o'chirish
                   width="80%"
@@ -139,6 +143,7 @@ const Videolayout = () => {
                   allowfullscreen
                   className="mt-20"
                 ></iframe>
+                </div>
               </div>
             </div>
           </div>

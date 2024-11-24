@@ -318,6 +318,24 @@
   top: -400px;
   z-index: 5;
 }
+.video{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: -3px;
+}
+.video_child{
+  width: 120%;
+  height: 110%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .space {
   position: absolute;
   width: 400vw;
