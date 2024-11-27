@@ -16,7 +16,7 @@ function WhatisPracticum() {
       </p>
       <p className="text-white md:text-[14px] text-[10px] text-center opacity-80 md:w-8/12 sm:leading-5 font-sans m-auto pb-[25px]">
         Our team of talented developers, designers, and creatives come together
-        to push the boundaries of what's possible, delivering games that
+        to push the boundaries of what&apos;s possible, delivering games that
         resonate with players around the globe. Join us on this journey as we
         redefine the future of interactive entertainment.
       </p>

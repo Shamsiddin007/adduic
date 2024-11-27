@@ -30,7 +30,7 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
   };
 
   const handleContact = (e) => {
-    let value = e.target.value;
+    const value = e.target.value;
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const numericValue = value.replace(/\D/g, "");
     const isPhoneValid = numericValue.length >= 7;
@@ -38,12 +38,6 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
     setContact(value);
     const isValidContact = isPhoneValid || isEmailValid;
     setErrors((prev) => ({ ...prev, contact: !isValidContact }));
-  };
-
-  const handleMessage = (e) => {
-    const value = e.target.value;
-    setMessage(value);
-    setErrors((prev) => ({ ...prev, message: value.length < 10 }));
   };
 
   const handleSubmit = (e) => {
