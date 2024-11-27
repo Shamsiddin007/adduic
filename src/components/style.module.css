@@ -227,6 +227,7 @@
   /* absolute w-3/5 top-[-400px] left-[300px] z-5  */
   position: absolute;
   width: 100%;
+  margin: auto;
   top: -400px;
   z-index: 5;
 }
