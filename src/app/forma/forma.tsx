@@ -1,4 +1,3 @@
-
 "use client";
 
 import React, { useState } from "react";
@@ -7,17 +6,23 @@ import send from "public/icons/send.png";
 import check from "public/icons/check.png";
 
 export default function Forma() {
-  const [name, setName] = useState("");
-  const [contact, setContact] = useState("");
-  const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState({
+  const [name, setName] = useState<string>("");
+  const [contact, setContact] = useState<string>("");
+  const [message, setMessage] = useState<string>("");
+  const [errors, setErrors] = useState<{
+    name: boolean;
+    contact: boolean;
+    message: boolean;
+  }>({
     name: false,
     contact: false,
     message: false,
   });
-  const [notificationVisible, setNotificationVisible] = useState(false);
+  const [notificationVisible, setNotificationVisible] = useState<boolean>(
+    false
+  );
 
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
     if (value.length > 0 && /^[a-z]/.test(value)) {
       value = value.charAt(0).toUpperCase() + value.slice(1);
@@ -26,8 +31,8 @@ export default function Forma() {
     setErrors((prev) => ({ ...prev, name: value.length < 3 }));
   };
 
-  const handleContact = (e) => {
-    let value = e.target.value;
+  const handleContact = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const numericValue = value.replace(/\D/g, "");
     const isPhoneValid = numericValue.length >= 7;
@@ -37,19 +42,21 @@ export default function Forma() {
     setErrors((prev) => ({ ...prev, contact: !isValidContact }));
   };
 
-  const handleMessage = (e) => {
+
+  const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
     setMessage(value);
     setErrors((prev) => ({ ...prev, message: value.length < 10 }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const isFormValid =
       name.length >= 3 &&
       (contact.length >= 7 ||
         /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(contact)) &&
       message.length >= 10;
+
     setErrors({
       name: name.length < 3,
       contact: !(
