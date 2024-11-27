@@ -32,7 +32,7 @@ const Somestats = () => {
               SOME <span className="text-blue-500">STATS</span>
             </h1>
             <p className="text-[#FFFFFF66] mt-2 text-sm sm:text-base">
-              Let's talk about numbers
+              Let&apos;s talk about numbers
             </p>
 
             <div className="grid grid-cols-3 gap-8 sm:gap-12 lg:gap-24 mt-12 lg:mt-20 w-full max-w-6xl mx-auto px-4">

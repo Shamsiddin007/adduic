@@ -49,7 +49,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         }}
       >
         <div className="text-center text-white">
-          <img
+          <Image
             src={post.logo}
             alt="Logo"
             className="m-auto max-w-[80%] sm:max-w-[60%] lg:max-w-[500px] object-contain h-auto"

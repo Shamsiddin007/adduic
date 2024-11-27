@@ -59,7 +59,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </p>
             <p className="text-white text-[14px] opacity-50 font-sans">352</p>
           </div>
-          <img
+          <Image
             src={single.imgPost}
             alt="NewsImage"
             className="m-auto w-[600px] md:h-[450px] rounded-xl object-center border border-cyan-50 border-opacity-25 mb-6"

@@ -58,7 +58,7 @@ function Page() {
                     <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
                       {post.date}
                     </p>
-                    <img
+                    <Image
                       src={post.imgLogo}
                       alt={post.title}
                       className="imgs inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"

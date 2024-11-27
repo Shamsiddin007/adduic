@@ -7,8 +7,6 @@ import calendar from "/public/icons/calendar.png";
 import clock from "/public/icons/clock.png";
 import money from "/public/icons/moneyImg.png";
 import Image from "next/image";
-import NotFound from "@/app/not-found";
-
 
 type Job = {
   id: number;
@@ -23,12 +21,6 @@ type ProjectPageProps = {
 export default function ProjectPage({ params }: ProjectPageProps) {
   const [single, setSingle] = useState<Job | null>(null);
   const { id } = params;
-
-
-  if(!Number(id)){
-    return <NotFound/>
-  }
-
 
   useEffect(() => {
     fetch(

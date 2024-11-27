@@ -5,6 +5,7 @@ import Image from "next/image";
 import send from "public/icons/send.png";
 import check from "public/icons/check.png";
 
+
 export default function Forma() {
   const [name, setName] = useState("");
   const [contact, setContact] = useState("");
@@ -26,7 +27,7 @@ export default function Forma() {
   };
 
   const handleContact = (e) => {
-    let value = e.target.value;
+    const value = e.target.value;
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const numericValue = value.replace(/\D/g, "");
     const isPhoneValid = numericValue.length >= 7;
