@@ -103,6 +103,7 @@ function WhatisPracticum() {
                       </span>
                     )
                   )}
+                  {/* hello */}
                 </div>
               </div>
             </div>
