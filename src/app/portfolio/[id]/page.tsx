@@ -6,7 +6,6 @@ import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
 import Highlights from "public/Imgs/highlights.png";
 import { useEffect, useState } from "react";
-import NotFound from "@/app/not-found";
 
 type Post = {
   id: number;
@@ -24,10 +23,6 @@ type ProjectPageProps = {
 export default function ProjectPage({ params }: ProjectPageProps) {
   const { id } = params;
   const [post, setPost] = useState<Post | null>(null);
-
-  if(!Number(id)){
-    return <NotFound/>
-  }
 
   
   useEffect(() => {
