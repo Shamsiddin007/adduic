@@ -4,8 +4,17 @@ import Image from "next/image";
 import Link from "next/link";
 import Chevron from "public/Imgs/chevron-right.png";
 
+
+interface NewsItem {
+  id: string;          // yoki number, agar id raqam bo'lsa
+  titlePost: string;
+  postdate: string;
+  imgPost: string;
+}
+
+
 export default function LatestNews() {
-  const [trips, setTrips] = useState([]);
+  const [trips, setTrips] = useState<NewsItem[]>([]);
 
   useEffect(() => {
     fetch(
@@ -41,7 +50,7 @@ export default function LatestNews() {
         {trips.slice(0, 8).map((link, id) => (
           <Link href={`/blog/${link.id}`} key={id}>
             <div className="h-full text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] pt-[12px] px-[12px] hover:scale-[1.02] transition-all duration-500">
-              <img
+              <Image
                 src={link.imgPost}
                 alt="NewsImage"
                 className="rounded-xl object-cover border border-transparent"

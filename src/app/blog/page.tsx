@@ -6,8 +6,17 @@ import Arrow from "public/icons/arrow.png";
 import { useEffect, useState } from "react";
 import Levelup from "@/components/Levelup";
 
+interface Trip {
+  id: string;
+  imgPost: string;
+  postdate: string;
+  titlePost: string;
+}
+
+
+
 function AllNews() {
-  const [trips, setTrips] = useState([]);
+  const [trips, setTrips] = useState<Trip[]>([]);
   const [visibleTrips, setVisibleTrips] = useState(8);
   const [loading, setLoading] = useState(false);
 
@@ -50,7 +59,7 @@ function AllNews() {
             trips.slice(0, visibleTrips).map((link, id) => (
               <Link href={`/blog/${link.id}`} key={id}>
                 <div className="h-full py-0 overflow-hidden text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] pt-[12px] px-[12px] hover:scale-[1.02] transition-all duration-500">
-                  <img
+                  <Image
                     src={link.imgPost}
                     alt="NewsImage"
                     className="rounded-xl object-cover border border-transparent"

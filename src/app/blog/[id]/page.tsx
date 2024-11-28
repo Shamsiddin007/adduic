@@ -1,5 +1,6 @@
 "use client";
 
+
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import SingleImg from "public/Imgs/singleImage.png";
@@ -24,9 +25,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const [showFullText, setShowFullText] = useState(false); // Birinchi blok uchun
   const [showFullText2, setShowFullText2] = useState(false); // Ikkinchi blok uchun
 
-  if (!Number(id)) {
-    return <NotFound />;
-  }
 
   useEffect(() => {
     fetch(
@@ -69,10 +67,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Post image */}
-          <img
+          <Image
             src={single.imgPost}
             alt="NewsImage"
             className="m-auto w-[600px] md:h-[450px] rounded-xl object-center border border-cyan-50 border-opacity-25 mb-6"
+            width={400}
+            height={300}
           />
 
           {/* First block: Title + description */}
@@ -100,6 +100,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             src={SingleImg}
             alt="SingleImg"
             className="m-auto w-[600px] rounded-xl object-center mb-6"
+            width={400}
+            height={300}
           />
           <p
             className={`text-white font-sans opacity-80 text-[16px] mb-6 ${
