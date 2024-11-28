@@ -1,10 +1,8 @@
-"use client";
 
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import SingleImg from "public/Imgs/singleImage.png";
-import NotFound from "@/app/not-found";
 
 type Post = {
   id: number;
