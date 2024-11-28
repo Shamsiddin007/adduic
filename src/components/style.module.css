@@ -128,13 +128,14 @@
   list-style-type: disc;
 }
 .article {
-  display: flex; 
-  align-items: center; 
+  display: flex;
+  align-items: center;
   font-weight: 100;
-  color: #4B5563; 
-  height: 15rem; 
-  gap: 6rem; 
+  color: #4B5563;
+  height: 15rem;
+  gap: 6rem;
 }
+
 
 @media (max-width: 900px) {
   .item3 {
@@ -314,7 +315,7 @@
 .form {
   /* absolute w-3/5 top-[-400px] left-[300px] z-5  */
   position: absolute;
-  width: 63%;
+  width: 100%;
   top: -400px;
   z-index: 5;
 }
@@ -324,6 +325,7 @@
     width: 90%;
   }
 }
+
 
 .video{
   width: 100%;
@@ -365,7 +367,7 @@
 }
 .custom-prev-btn,
 .custom-next-btn {
-  z-index: 10; 
+  z-index: 10;
 }
 
 .custom-prev-btn {
