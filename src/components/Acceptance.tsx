@@ -14,7 +14,7 @@ export default function Acceptance() {
       </h2>
       <div className="grid xl:grid-cols-4 xl:grid-rows-1 lg:grid-cols-3 sm:grid-cols-2 justify-center gap-6 w-full text-white mb-16">
         <div className="flex flex-col items-center">
-          <Image src={order1} alt="order01" />
+          <Image src={order1} alt="order01" className="w-full h-auto" />
           <div className="px-6 py-5 rounded-[20px] relative group overflow-hidden h-full">
             <div className="absolute inset-0 rounded-[20px] bg-[#10131A] group-hover:bg-order-hover transition-all duration-300"></div>
             <div className="relative z-10">
@@ -34,7 +34,7 @@ export default function Acceptance() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Image src={order2} alt="order01" />
+          <Image src={order2} alt="order01" className="w-full h-auto"/>
           <div className="px-6 py-5 rounded-[20px] relative group overflow-hidden h-full">
             <div className="absolute inset-0 rounded-[20px] bg-[#10131A] group-hover:bg-order-hover transition-all duration-300"></div>
             <div className="relative z-10">
@@ -57,7 +57,7 @@ export default function Acceptance() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Image src={order3} alt="order01" />
+          <Image src={order3} alt="order01" className="w-full h-auto"/>
           <div className="px-6 py-5 rounded-[20px] h-full relative group overflow-hidden">
             <div className="absolute inset-0 rounded-[20px] bg-[#10131A] group-hover:bg-order-hover transition-all duration-300"></div>
             <div className="relative z-10">
@@ -81,7 +81,7 @@ export default function Acceptance() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Image src={order4} alt="order01" />
+          <Image src={order4} alt="order01" className="w-full h-auto"/>
           <div className="px-6 py-5 rounded-[20px] relative group overflow-hidden">
             <div className="absolute inset-0 rounded-[20px] bg-[#10131A] group-hover:bg-order-hover transition-all duration-300"></div>
             <div className="relative z-10 ">
