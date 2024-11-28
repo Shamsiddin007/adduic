@@ -6,7 +6,6 @@ import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
 import Highlights from "public/Imgs/highlights.png";
 import { useEffect, useState } from "react";
-import NotFound from "@/app/not-found";
 
 type Post = {
   id: number;
