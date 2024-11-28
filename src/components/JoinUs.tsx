@@ -1,8 +1,7 @@
-
-import CloseBtn from "/public/Imgs/close-428 1.png";
+import CloseBtn from "public/Imgs/close-428 1.png";
 import React, { useState } from "react";
 import Image from "next/image";
-import send from "/public/icons/send.png";
+import send from "public/icons/send.png";
 import check from "public/icons/check.png";
 
 interface JoinUsModalProps {
@@ -20,7 +19,7 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
   });
   const [notificationVisible, setNotificationVisible] = useState(false);
 
-  const handleNameChange = (e) => {
+  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
     if (value.length > 0 && /^[a-z]/.test(value)) {
       value = value.charAt(0).toUpperCase() + value.slice(1);
@@ -29,7 +28,7 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
     setErrors((prev) => ({ ...prev, name: value.length < 3 }));
   };
 
-  const handleContact = (e) => {
+  const handleContact = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     const numericValue = value.replace(/\D/g, "");
@@ -40,7 +39,7 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
     setErrors((prev) => ({ ...prev, contact: !isValidContact }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const isFormValid =
       name.length >= 3 &&
