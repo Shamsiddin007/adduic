@@ -16,7 +16,7 @@ function ProjectsPage() {
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMyNzAzMzQ4LCJleHAiOjE3NjQyMzkzNDh9.vyvNLVHppdjazVI-uLHevwXDm1UHQikiT84k9E5WnCM&t=2024-11-27T10%3A29%3A08.268Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMyNzgwODAwLCJleHAiOjE3NjQzMTY4MDB9.ahM_1of1bv5eTriiI7IbRASpxvxXvDzwo_FB_-XBr7I&t=2024-11-28T08%3A00%3A00.538Z"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -126,7 +126,7 @@ function ProjectsPage() {
                   </h3>
                   <p className="text-gray-300 pb-14">{project.date}</p>
                   <Image
-                    width={500}
+                    width={150}
                     height={300}
                     src={project.imgLogo}
                     alt={project.title}

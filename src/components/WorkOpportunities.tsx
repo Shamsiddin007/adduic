@@ -29,7 +29,6 @@ const Workopportunite = () => {
       })
       .then((dat) => {
         setTrips(dat.workopportunity);
-        console.log(dat);
       })
       .catch((error) => console.error("Fetch error:", error));
   }, []);
