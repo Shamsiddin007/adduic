@@ -22,6 +22,7 @@ module.exports = {
         },
         boxShadow: {
           "spread-purple": "0 0 50px 20px #30125A",
+          'custom-blue-light-inset2': 'inset 6px -10px 177px -4px rgba(0,47,255,0.29)',
         },
         dropShadow: {
           "custom-yellow": "1px 1px 1px #FB7041",

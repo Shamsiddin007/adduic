@@ -82,7 +82,7 @@ function ProjectsPage() {
                         </h3>
                         <p className="text-gray-300 pb-14">{project.date}</p>
                         <div className="flex-grow relative w-full">
-                          <Image
+                          <img
                             src={project.imgLogo}
                             alt={project.title}
                             className="m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
