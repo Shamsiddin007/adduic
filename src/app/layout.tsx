@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
 import Navbarlayout from "@/components/Navbarlayout";
 import Footerlayout from "@/components/Footerlayout";
-// import FormaLayout from "@/app/forma/forma"
 import './globals.css'
 import TestLaunch from "@/components/testLaunch/TestLaunch";
 import Loader from "@/components/Loader/Loader";
-// import Forma from "@/app/forma/forma";
+import { Analytics } from "@vercel/analytics/react"; 
 
 
 
@@ -26,9 +25,9 @@ export default function RootLayout({
         <Navbarlayout/>
         <div>
           {children}
+          <Analytics />
           <TestLaunch/>
         </div>
-        {/* <FormaLayout/> */}
         <Footerlayout/>
       </body>
     </html>
