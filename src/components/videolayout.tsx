@@ -137,10 +137,10 @@ const Videolayout = () => {
                   height="80%"
                   src="https://www.youtube.com/embed/mxV0AD_2Gek"
                   title="“Mangu Sarkarda” - Oʻzbekistondagi ilk tarixiy video oʻyin treyleri!"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                   className="mt-20"
                 ></iframe>
                 </div>
