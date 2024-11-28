@@ -31,6 +31,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     return <NotFound/>  
   }
 
+  
   useEffect(() => {
     fetch(
       "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjYzNDQ0LCJleHAiOjE3NjI3OTk0NDR9.LR1i1jdY-dZ1LUdenb9T8oKsJa_dtJNQ6pcmg2njGZM&t=2024-11-10T18%3A30%3A45.640Z"
@@ -62,7 +63,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         }}
       >
         <div className="text-center text-white">
-          <img
+          <Image
             src={post.logo}
             alt="Logo"
             className="m-auto max-w-[80%] sm:max-w-[60%] lg:max-w-[500px] object-contain h-auto"
