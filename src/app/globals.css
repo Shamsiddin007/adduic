@@ -22,6 +22,15 @@
   font-style: normal;
 }
 
+@import "~nprogress/nprogress.css";
+
+
+#nprogress .bar {
+  background: #3c82f6; /* Progress bar rangini o'zgartirish */
+  height: 4px;
+}
+
+
 body {
   font-family: "Custom Font", sans-serif;
   background-color: black;
