@@ -24,7 +24,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const { id } = params;
   const [post, setPost] = useState<Post | null>(null);
   const [showFullText, setShowFullText] = useState(false);
-  const [FullText, setFullText] = useState(false);
 
   useEffect(() => {
     fetch(
@@ -41,11 +40,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   if (!post) return <div>Loading...</div>;
 
-  const toggleTextVisibility = () => {
-    setShowFullText((prev) => !prev);
-  };
   const toggleTextHandle = () => {
-    setFullText((prev) => !prev);
+    setShowFullText((prev) => !prev);
   };
 
   return (
@@ -57,10 +53,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         }}
       >
         <div className="text-center text-white">
-          <img
+          <Image
             src={post.logo}
             alt="Logo"
             className="m-auto max-w-[80%] sm:max-w-[60%] lg:max-w-[500px] object-contain h-auto"
+            width={400}
+            height={300}
           />
           <h1 className="text-4xl font-bold mb-4 mt-4">{post.titlegame}</h1>
           <p className="text-lg px-8 pb-8 text-[#FFFFFFCC] container">
@@ -75,29 +73,16 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="flex flex-col lg:flex-row lg:items-center gap-4 text-white">
             <h2 className="text-[16px] whitespace-nowrap">Available:</h2>
             <div className="flex flex-wrap gap-4">
-              {/* Steam */}
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
                 <Image src={elementLogo} alt="Steam" width={24} height={24} />
                 <p className="text-[14px]">Steam</p>
               </div>
-              {/* Desktop app */}
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
-                <Image
-                  src={WindowsLogo}
-                  alt="Desktop app"
-                  width={24}
-                  height={24}
-                />
+                <Image src={WindowsLogo} alt="Desktop app" width={24} height={24} />
                 <p className="text-[14px]">Desktop app</p>
               </div>
-              {/* VR */}
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
-                <Image
-                  src={secendelementLogo}
-                  alt="VR"
-                  width={24}
-                  height={24}
-                />
+                <Image src={secendelementLogo} alt="VR" width={24} height={24} />
                 <p className="text-[14px]">VR</p>
               </div>
             </div>
@@ -117,7 +102,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <div className="mb-28">
           <p
             className={`text-white font-sans opacity-80 text-[16px] mb-6 ${
-              FullText ? "" : "line-clamp-3"
+              showFullText ? "" : "line-clamp-3"
             }`}
           >
             {post.moredescription}
@@ -134,51 +119,19 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
         <div className="container pb-20">
           <h2 className="font-bold text-5xl text-white text-start">
-            SOME <span className="text-blue-600">HIGHLITS</span>
+            SOME <span className="text-blue-600">HIGHLIGHTS</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
-            <Image
-              src={Highlights}
-              alt="Highlight"
-              className="rounded-lg"
-              width={600}
-              height={400}
-            />
-            <Image
-              src={Highlights}
-              alt="Highlight"
-              className="rounded-lg"
-              width={600}
-              height={400}
-            />
-            <Image
-              src={Highlights}
-              alt="Highlight"
-              className="rounded-lg"
-              width={600}
-              height={400}
-            />
-            <Image
-              src={Highlights}
-              alt="Highlight"
-              className="rounded-lg"
-              width={600}
-              height={400}
-            />
-            <Image
-              src={Highlights}
-              alt="Highlight"
-              className="rounded-lg"
-              width={600}
-              height={400}
-            />
-            <Image
-              src={Highlights}
-              alt="Highlight"
-              className="rounded-lg"
-              width={600}
-              height={400}
-            />
+            {[...Array(6)].map((_, index) => (
+              <Image
+                key={index}
+                src={Highlights}
+                alt={`Highlight ${index + 1}`}
+                className="rounded-lg"
+                width={600}
+                height={400}
+              />
+            ))}
           </div>
         </div>
       </div>

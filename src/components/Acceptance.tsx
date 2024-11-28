@@ -14,7 +14,7 @@ export default function Acceptance() {
       </h2>
       <div className="grid xl:grid-cols-4 xl:grid-rows-1 lg:grid-cols-3 sm:grid-cols-2 justify-center gap-6 w-full text-white mb-16">
         <div className="flex flex-col items-center">
-          <Image src={order1} alt="order01" />
+          <Image src={order1} alt="order01" className="w-full h-auto" />
           <div className="px-6 py-5 rounded-[20px] relative group overflow-hidden h-full">
             <div className="absolute inset-0 rounded-[20px] bg-[#10131A] group-hover:bg-order-hover transition-all duration-300"></div>
             <div className="relative z-10">
@@ -26,7 +26,7 @@ export default function Acceptance() {
                 going to a special Telegram bot using the button below
               </p>
               <Link href={"https://t.me/UICGames_bot"} target="blank">
-                <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <button className="flex items-center gap-3 mt-[50px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                   Go to bot <Image src={arrowdown} alt="arrowdown" />
                 </button>
               </Link>
@@ -34,7 +34,7 @@ export default function Acceptance() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Image src={order2} alt="order01" />
+          <Image src={order2} alt="order01" className="w-full h-auto"/>
           <div className="px-6 py-5 rounded-[20px] relative group overflow-hidden h-full">
             <div className="absolute inset-0 rounded-[20px] bg-[#10131A] group-hover:bg-order-hover transition-all duration-300"></div>
             <div className="relative z-10">
@@ -57,7 +57,7 @@ export default function Acceptance() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Image src={order3} alt="order01" />
+          <Image src={order3} alt="order01" className="w-full h-auto"/>
           <div className="px-6 py-5 rounded-[20px] h-full relative group overflow-hidden">
             <div className="absolute inset-0 rounded-[20px] bg-[#10131A] group-hover:bg-order-hover transition-all duration-300"></div>
             <div className="relative z-10">
@@ -73,7 +73,7 @@ export default function Acceptance() {
                 level is B1
               </p>
               <Link href={"https://t.me/UICGames_bot"} target="blank">
-                <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <button className="flex items-center gap-3 mt-[5px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                   Go to bot <Image src={arrowdown} alt="arrowdown" />
                 </button>
               </Link>
@@ -81,7 +81,7 @@ export default function Acceptance() {
           </div>
         </div>
         <div className="flex flex-col items-center">
-          <Image src={order4} alt="order01" />
+          <Image src={order4} alt="order01" className="w-full h-auto"/>
           <div className="px-6 py-5 rounded-[20px] relative group overflow-hidden">
             <div className="absolute inset-0 rounded-[20px] bg-[#10131A] group-hover:bg-order-hover transition-all duration-300"></div>
             <div className="relative z-10 ">
@@ -97,7 +97,7 @@ export default function Acceptance() {
                 will be selected
               </p>
               <Link href={"https://t.me/UICGames_bot"} target="blank">
-                <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <button className="flex items-center gap-3 mt-6 bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                   Go to bot <Image src={arrowdown} alt="arrowdown" />
                 </button>
               </Link>

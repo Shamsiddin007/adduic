@@ -58,10 +58,12 @@ function Page() {
                     <p className="text-gray-300 pb-14 duration-1000 group-hover:pb-[40px]">
                       {post.date}
                     </p>
-                    <img
+                    <Image
                       src={post.imgLogo}
                       alt={post.title}
                       className="imgs inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
+                     width={150}
+                     height={300}
                     />
                     <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center">
                       Learn more <Image src={Chevron} alt="Logo" />

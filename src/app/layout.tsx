@@ -3,6 +3,8 @@ import Navbarlayout from "@/components/Navbarlayout";
 import Footerlayout from "@/components/Footerlayout";
 import './globals.css'
 import TestLaunch from "@/components/testLaunch/TestLaunch";
+import Loader from "@/components/Loader/Loader";
+import { Analytics } from "@vercel/analytics/react"; 
 
 
 
@@ -19,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Loader/>
         <Navbarlayout/>
         <div>
           {children}
+          <Analytics />
           <TestLaunch/>
         </div>
         <Footerlayout/>

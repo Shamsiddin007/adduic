@@ -6,8 +6,8 @@ import telegram from "/public/icons/telegram.png";
 import calendar from "/public/icons/calendar.png";
 import clock from "/public/icons/clock.png";
 import money from "/public/icons/moneyImg.png";
-
 import Image from "next/image";
+
 type Job = {
   id: number;
   jobTitle: string;

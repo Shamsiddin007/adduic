@@ -1,29 +1,12 @@
 "use client"
 
-import Loader from "@/components/Loader/Loader";
-import { useEffect, useState } from "react";
+import Link from "next/link";
 
-function NotFound() {
-
-    const [showNotFound, setShowNotFound] = useState(false)
-
-
-    useEffect(()=> {
-        const timer = setTimeout(()=> {
-            setShowNotFound(true)
-        }, 1000)
-
-        return () => clearTimeout(timer)
-    }, [])
-
-
-    if(!showNotFound){
-        return <Loader/>
-    }
-
+function NotFound() { 
   return (
-    <div>
+    <div className="w-full h-screen fixed left-0 top-0 bg-black z-[999] flex justify-center items-center flex-col gap-10">
        <h1 className="text-white text-5xl">404 - Sahifa topilmadi</h1>
+       <button className="py-4 px-6 bg-blue-600 rounded-lg transition-all duration-300 hover:bg-blue-500"><Link href="/" className="text-white">Asosiyga Qaytish</Link></button>
     </div>
   )
 }

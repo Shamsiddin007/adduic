@@ -15,11 +15,12 @@ function ProjectsPage() {
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjYzNDQ0LCJleHAiOjE3NjI3OTk0NDR9.LR1i1jdY-dZ1LUdenb9T8oKsJa_dtJNQ6pcmg2njGZM&t=2024-11-10T18%3A30%3A45.640Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMyNzgwODAwLCJleHAiOjE3NjQzMTY4MDB9.ahM_1of1bv5eTriiI7IbRASpxvxXvDzwo_FB_-XBr7I&t=2024-11-28T08%3A00%3A00.538Z"
     )
       .then((response) => response.json())
       .then((data) => {
-        const limitedProjects = data.ourprojects.slice(0, 4);
+        const projects = data.ourprojects || [];
+        const limitedProjects = projects.slice(0, 4);
         setProjects(limitedProjects);
       });
 
@@ -54,9 +55,9 @@ function ProjectsPage() {
             OUR <span className="text-blue-600">PROJECTS</span>
           </h2>
           <Link href="/portfolio">
-            <button className="flex items-center justify-center gap-2 rounded-full bg-[#FFFFFF1A] px-6 py-3 text-white hover:bg-[#3375F6] transition-all duration-300">
+            <button className="flex items-center group justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
               All projects{" "}
-              <Image src={Chevron} alt="Chevron right" className="w-4 h-4" />
+              <Image src={Chevron} alt="Chevron right" className="w-4 h-4 group-hover:scale-125 transition-all duration-300 " />
             </button>
           </Link>
         </div>
@@ -82,9 +83,12 @@ function ProjectsPage() {
                         </h3>
                         <p className="text-gray-300 pb-14">{project.date}</p>
                         <div className="flex-grow relative w-full">
-                          <img
+                          <Image
+                            width={500}
+                            height={300}
                             src={project.imgLogo}
                             alt={project.title}
+                            layout="intrinsic"
                             className="m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                           />
                         </div>
@@ -120,9 +124,13 @@ function ProjectsPage() {
                     {project.title}
                   </h3>
                   <p className="text-gray-300 pb-14">{project.date}</p>
-                  <img
+                  <Image
+                    width={150}
+                    height={300}
                     src={project.imgLogo}
                     alt={project.title}
+                    layout="intrinsic"
+
                     className="inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                   />
                   <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center">

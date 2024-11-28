@@ -4,8 +4,6 @@ module.exports = {
       "./app/**/*.{js,ts,jsx,tsx,mdx}",
       "./pages/**/*.{js,ts,jsx,tsx,mdx}",
       "./components/**/*.{js,ts,jsx,tsx,mdx}",
-
-      // Or if using `src` directory:
       "./src/**/*.{js,ts,jsx,tsx,mdx}",
     ],
     theme: {
@@ -22,7 +20,7 @@ module.exports = {
         },
         boxShadow: {
           "spread-purple": "0 0 50px 20px #30125A",
-          'custom-blue-light-inset2': 'inset 6px -10px 177px -4px rgba(0,47,255,0.29)',
+          'custom-blue-light-inset2': 'inset 2px -4px 89px 2px  rgb(29 78 216)',
         },
         dropShadow: {
           "custom-yellow": "1px 1px 1px #FB7041",

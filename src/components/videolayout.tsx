@@ -1,10 +1,14 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import Windowslogo from "../../public/icons/Windowslogo.png";
 import elementlogo from "../../public/icons/Element.png";
 import secondelementlogo from "../../public/icons/fi_10781896.png";
 import backlogo from "../../public/icons/Logos.png";
+import style from "@/components/style.module.css"
+import CloseBtn from "/public/Imgs/close-428 1.png";
+
 
 const Videolayout = () => {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -12,7 +16,7 @@ const Videolayout = () => {
 
   const handleVideoOpen = () => {
     setIsVideoOpen(true);
-    setIsVideoLoading(true); // Video ochilganda yuklashni boshlash
+    setIsVideoLoading(true);
   };
   const handleVideoClose = () => setIsVideoOpen(false);
 
@@ -74,12 +78,16 @@ const Videolayout = () => {
               </div>
             </div>
             <div className="flex gap-4 sm:gap-6">
-              <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
-                About game
-              </button>
+            <Link href={"/portfolio/6"}>
+                <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
+                  About game
+                </button>
+            </Link>
+            <Link href={"https://mangusarkarda.com/"} target="blank">
               <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                 Download
               </button>
+            </Link>
             </div>
           </div>
           <div className="relative w-full lg:w-1/2 p-6 sm:p-12 flex justify-center lg:justify-end">
@@ -121,24 +129,26 @@ const Videolayout = () => {
               )}
               <button
                 onClick={handleVideoClose}
-                className="absolute -top-1 right-1 text-white font-thin text-6xl hover:text-blue-500 transition-colors duration-300"
+                className="absolute -top-1 right-1 z-[11] cursor-pointer text-white font-thin hover:text-blue-500 transition-colors duration-300"
                 aria-label="Close video"
               >
-                &times;
+                <Image src={CloseBtn} alt="close btn" width={40} height={40}/>
               </button>
-              <div className="w-full h-full flex items-center justify-center">
+              <div className={style.video}>
+                <div className={style.video_child}>
                 <iframe
                   onLoad={() => setIsVideoLoading(false)} // Yuklash tugagach animatsiyani o'chirish
                   width="80%"
                   height="80%"
                   src="https://www.youtube.com/embed/mxV0AD_2Gek"
                   title="“Mangu Sarkarda” - Oʻzbekistondagi ilk tarixiy video oʻyin treyleri!"
-                  frameborder="0"
+                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
                   className="mt-20"
                 ></iframe>
+                </div>
               </div>
             </div>
           </div>
