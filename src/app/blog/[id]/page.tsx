@@ -1,9 +1,8 @@
-"use client";
+"use client"
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import SingleImg from "public/Imgs/singleImage.png";
-import NotFound from "@/app/not-found";
 
 type Post = {
   id: number;
@@ -24,13 +23,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const [showFullText, setShowFullText] = useState(false); // Birinchi blok uchun
   const [showFullText2, setShowFullText2] = useState(false); // Ikkinchi blok uchun
 
-  if (!Number(id)) {
-    return <NotFound />;
-  }
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMxMjM1MDM4LCJleHAiOjE3NjI3NzEwMzh9.4cOiyxDSL4rSMbgbGYvgbN3sTHPLACdcMf0HPWx9poE&t=2024-11-10T10%3A37%3A18.316Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMyNzc1ODQwLCJleHAiOjE3NjQzMTE4NDB9.VQc6kKyJ5alk8C13csiwcOjY0d9R0pEG7cVjKcpOFjQ&t=2024-11-28T06%3A37%3A20.579Z"
     )
       .then((response) => response.json())
       .then((data) => {
@@ -69,10 +65,12 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Post image */}
-          <img
+          <Image
             src={single.imgPost}
             alt="NewsImage"
             className="m-auto w-[600px] md:h-[450px] rounded-xl object-center border border-cyan-50 border-opacity-25 mb-6"
+            width={400}
+            height={300}
           />
 
           {/* First block: Title + description */}
@@ -100,6 +98,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             src={SingleImg}
             alt="SingleImg"
             className="m-auto w-[600px] rounded-xl object-center mb-6"
+            width={400}
+            height={300}
           />
           <p
             className={`text-white font-sans opacity-80 text-[16px] mb-6 ${

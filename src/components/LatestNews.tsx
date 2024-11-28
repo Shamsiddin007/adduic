@@ -1,27 +1,40 @@
-"use client";
+"use client"
+
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Chevron from "public/Imgs/chevron-right.png";
 
+// NewsItem va APIResponse interfeyslarini qo'shing
+interface NewsItem {
+  id: string;        
+  titlePost: string;
+  postdate: string;
+  imgPost: string;
+}
+
+interface APIResponse {
+  allnews: NewsItem[];
+}
+
 export default function LatestNews() {
-  const [trips, setTrips] = useState([]);
+  const [trips, setTrips] = useState<NewsItem[]>([]);  // trips - NewsItem turida
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMxMjM1MDM4LCJleHAiOjE3NjI3NzEwMzh9.4cOiyxDSL4rSMbgbGYvgbN3sTHPLACdcMf0HPWx9poE&t=2024-11-10T10%3A37%3A18.316Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMyNzc1ODQwLCJleHAiOjE3NjQzMTE4NDB9.VQc6kKyJ5alk8C13csiwcOjY0d9R0pEG7cVjKcpOFjQ&t=2024-11-28T06%3A37%3A20.579Z"
     )
       .then((res) => {
         if (!res.ok) {
           throw new Error("Network response was not ok");
         }
-        return res.json();
+        return res.json();  // JSON shaklida ma'lumotlarni olish
       })
-      .then((dat) => {
-        setTrips(dat.allnews);
+      .then((data: APIResponse) => {
+        setTrips(data.allnews);  // allnews massiviga saqlash
       })
-      .catch((error) => console.error("Fetch error:", error));
-  }, []);
+      .catch((error) => console.error("Fetch error:", error));  // xatolikni konsolga chiqarish
+  }, []);  // Component birinchi marta render qilinganida faqat ishlaydi
 
   return (
     <div className="container">
@@ -41,10 +54,12 @@ export default function LatestNews() {
         {trips.slice(0, 8).map((link, id) => (
           <Link href={`/blog/${link.id}`} key={id}>
             <div className="h-full text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] pt-[12px] px-[12px] hover:scale-[1.02] transition-all duration-500">
-              <img
+              <Image
                 src={link.imgPost}
                 alt="NewsImage"
                 className="rounded-xl object-cover border border-transparent"
+                width={400}
+                height={300}
               />
               <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
                 {link.postdate}
