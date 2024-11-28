@@ -15,7 +15,7 @@ export default function School() {
             resources, or personal development, this financial <br /> support ensures
             you have what you need to excel.
           </p>
-          <button className="bg-transparent border-[1.5px] border-[#FFFFFF52] border-opacity-[32px] md:py-[10px] py-[6px] md:px-[79px] sm:px-[59px] px-[45px] rounded-full text-[#FFFFFF] hover:bg-[#3375F6] transition-all duration-300">Apply</button>
+          <button className="md:py-[10px] py-[6px] md:px-[79px] sm:px-[59px] px-[45px] bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">Apply</button>
         </div>
         <div className="text-white">
             <Image src={coin} alt="CoinImg"/>

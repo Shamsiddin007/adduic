@@ -7,7 +7,6 @@ function TestLaunch() {
     "Sayt test holatida ishlamoqda",
     "Sayt test holatida ishlamoqda",
     "Sayt test holatida ishlamoqda",
-    "Sayt test holatida ishlamoqda",
     "Sayt test holatida ishlamoqda"
   ];
 

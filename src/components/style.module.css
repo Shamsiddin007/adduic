@@ -40,7 +40,6 @@
 .item_home {
   list-style: none;
   position: relative;
-  background-color: aqua;
   height: 130px;
   transition: all 1000ms ease-in-out;
 }
@@ -78,7 +77,7 @@
   cursor: pointer;
   width: max-content;
   position: absolute;
-  bottom: 15px;
+  bottom: 18px;
   left: 0;
   transition: all 1000ms ease;
 }
@@ -93,111 +92,201 @@
   cursor: pointer;
   width: max-content;
   position: absolute;
-  top: 125px;
-  left: 200px;
+  top: 0px;
+  left: 140px;
   transition: all 1000ms ease;
 }
 .item4:hover {
   color: #3375f6;
-  left: 224px;
+  left: 164px;
   list-style-type: disc;
 }
 .item5 {
   cursor: pointer;
   width: max-content;
   position: absolute;
-  top: 170px;
-  left: 200px;
+  top: 42px;
+  left: 140px;
   transition: all 1000ms ease;
 }
 .item5:hover {
   color: #3375f6;
-  left: 224px;
+  left: 164px;
   list-style-type: disc;
 }
 .item6 {
   cursor: pointer;
   width: max-content;
   position: absolute;
-  top: 218px;
-  left: 200px;
+  bottom: 18px;
+  left: 140px;
   transition: all 1000ms ease;
 }
 .item6:hover {
   color: #3375f6;
-  left: 224px;
+  left: 164px;
   list-style-type: disc;
 }
+.article {
+  display: flex;
+  align-items: center;
+  font-weight: 100;
+  color: #4B5563;
+  height: 15rem;
+  gap: 6rem;
+}
+
+
 @media (max-width: 900px) {
   .item3 {
     left: 300px;
     top: 0px;
+    &:hover{
+      list-style: none;
+      left: 300px;
+    }
   }
   .item4 {
-    top: 165px;
-    left: 310px;
+    top: 41px;
+    left: 207px;
+    &:hover{
+      list-style: none;
+      left: 207px;
+    }
   }
   .item5 {
-    left: 600px;
-    top: 120px;
+    left: 500px;
+    top: 0px;
+    &:hover{
+      list-style: none;
+      left: 500px;
+    }
   }
   .item6 {
-    left: 600px;
-    top: 160px;
+    left: 501px;
+    top: 40px;
+    &:hover{
+      list-style: none;
+      left: 501px;
+    }
   }
 }
 @media (max-width: 730px) {
   .item3 {
-    left: 250px;
+    left: 210px;
     top: 0px;
+    &:hover{
+      list-style: none;
+      left: 210px;
+    }
   }
   .item4 {
-    top: 165px;
-    left: 260px;
+    top: 40px;
+    left: 118px;
+    &:hover{
+      list-style: none;
+      left: 118px;
+    }
   }
   .item5 {
-    left: 500px;
-    top: 120px;
+    left: 340px;
+    top: 0px;
+    &:hover{
+      list-style: none;
+      left: 330px;
+    }
   }
   .item6 {
-    left: 500px;
-    top: 160px;
+    left: 342px;
+    top:40px;
+    &:hover{
+      list-style: none;
+      left: 342px;
+    }
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 570px) {
   .item3 {
-    left: 200px;
+    left: 190px;
     top: 0px;
+    &:hover{
+      list-style: none;
+      left: 190px;
+    }
   }
   .item4 {
-    top: 165px;
-    left: 210px;
+    top: 40px;
+    left: 98px;
+    &:hover{
+      list-style: none;
+      left: 98px;
+    }
   }
   .item5 {
-    left: 400px;
-    top: 120px;
+    left: 290px;
+    top: 0px;
+    &:hover{
+      list-style: none;
+      left: 290px;
+    }
   }
   .item6 {
-    left: 400px;
-    top: 160px;
+    left: 292px;
+    top:40px;
+    &:hover{
+      list-style: none;
+      left: 292px;
+    }
   }
 }
 @media (max-width: 510px) {
   .item3 {
-    left: 0;
-    top: 95px;
+    left: 0px;
+    top: 85px;
+    &:hover{
+      list-style: none;
+      left: 0px;
+    }
   }
   .item4 {
-    top: 125px;
-    left: 200px;
+    top: 0px;
+    left: 140px;
+    &:hover{
+      list-style: none;
+      left: 140px;
+    }
   }
   .item5 {
-    top: 170px;
-    left: 200px;
+    top: 40px;
+    left: 140px;
+    &:hover{
+      list-style: none;
+      left: 140px;
+    }
   }
   .item6 {
-    top: 218px;
-    left: 200px;
+    top: 81px;
+    left: 142px;
+    &:hover{
+      list-style: none;
+      left: 142px;
+    }
+  }
+  .item1{
+    &:hover{
+      list-style: none;
+      left: 0px;
+    }
+  }
+  .item2{
+    &:hover{
+      list-style: none;
+      left: 0px;
+    }
+  }
+  .article{
+    height: auto;
+    gap: 4rem;
   }
 }
 .items {
@@ -227,7 +316,6 @@
   /* absolute w-3/5 top-[-400px] left-[300px] z-5  */
   position: absolute;
   width: 100%;
-  margin: auto;
   top: -400px;
   z-index: 5;
 }
@@ -238,6 +326,24 @@
   }
 }
 
+
+.video{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 0;
+  left: -3px;
+}
+.video_child{
+  width: 120%;
+  height: 110%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .space {
   position: absolute;
   width: 400vw;
@@ -251,21 +357,17 @@
   backface-visibility: visible;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8yIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDI0MCAyNDAiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDI0MCAyNDAiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxyZWN0IHg9IjEwNiIgeT0iOTAiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz48cmVjdCB4PSI3NCIgeT0iNjMiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIyMyIgeT0iNjYiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSI1MCIgeT0iMTEwIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iNjMiIHk9IjEyOCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjQ1IiB5PSIxNDkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSI5MiIgeT0iMTUxIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iNTgiIHk9IjgiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNDciIHk9IjMzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMiIgaGVpZ2h0PSIyIi8+PHJlY3QgeD0iOTEiIHk9IjQzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMTY5IiB5PSIyOSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjE4MiIgeT0iMTkiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNjEiIHk9IjU5IiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMTM4IiB5PSI5NSIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjE5OSIgeT0iNzEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIzIiBoZWlnaHQ9IjMiLz48cmVjdCB4PSIyMTMiIHk9IjE1MyIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjIiIGhlaWdodD0iMiIvPjxyZWN0IHg9IjEyOCIgeT0iMTYzIiBmaWxsPSIjRkZGRkZGIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIi8+PHJlY3QgeD0iMjA1IiB5PSIxNzQiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxNTIiIHk9IjIwMCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjxyZWN0IHg9IjUyIiB5PSIyMTEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIyIiBoZWlnaHQ9IjIiLz48cmVjdCB5PSIxOTEiIGZpbGw9IiNGRkZGRkYiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiLz48cmVjdCB4PSIxMTAiIHk9IjE4NCIgZmlsbD0iI0ZGRkZGRiIgd2lkdGg9IjEiIGhlaWdodD0iMSIvPjwvc3ZnPg==);
 }
-
 .swiper-slide {
   width: 200px;
   margin: auto;
 }
-
 .swiper-slide {
   width: 250px;
   margin: auto;
 }
-
-
 .custom-prev-btn,
 .custom-next-btn {
-  z-index: 10; /* Tugmalar slayddan yuqorida turishi uchun */
+  z-index: 10;
 }
 
 .custom-prev-btn {
@@ -283,4 +385,3 @@
     height: 2.5rem;
   }
 }
-
