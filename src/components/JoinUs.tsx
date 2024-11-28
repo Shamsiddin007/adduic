@@ -27,6 +27,7 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
     setName(value);
     setErrors((prev) => ({ ...prev, name: value.length < 3 }));
   };
+  // add
 
   const handleContact = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
