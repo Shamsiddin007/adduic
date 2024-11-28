@@ -1,28 +1,28 @@
-"use client";
+"use client"
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Arrow from "public/icons/arrow.png";
-import { useEffect, useState } from "react";
 import Levelup from "@/components/Levelup";
 
-interface Trip {
-  id: string;
-  imgPost: string;
-  postdate: string;
-  titlePost: string;
+// Type definition for the individual news item.
+interface NewsItem {
+  id: string;        // Unique identifier for each news item
+  titlePost: string; // Title of the news post
+  postdate: string;  // Date when the news post was created
+  imgPost: string;   // URL for the image of the news post
 }
 
-
-
 function AllNews() {
-  const [trips, setTrips] = useState<Trip[]>([]);
-  const [visibleTrips, setVisibleTrips] = useState(8);
-  const [loading, setLoading] = useState(false);
+  // State hooks with types
+  const [trips, setTrips] = useState<NewsItem[]>([]);  // Array of NewsItem objects
+  const [visibleTrips, setVisibleTrips] = useState<number>(8);  // Number of visible news items
+  const [loading, setLoading] = useState<boolean>(false);  // Loading state
 
   useEffect(() => {
     fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMxMjM1MDM4LCJleHAiOjE3NjI3NzEwMzh9.4cOiyxDSL4rSMbgbGYvgbN3sTHPLACdcMf0HPWx9poE&t=2024-11-10T10%3A37%3A18.316Z"
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMyNzc1ODQwLCJleHAiOjE3NjQzMTE4NDB9.VQc6kKyJ5alk8C13csiwcOjY0d9R0pEG7cVjKcpOFjQ&t=2024-11-28T06%3A37%3A20.579Z"
     )
       .then((res) => {
         if (!res.ok) {
@@ -31,22 +31,23 @@ function AllNews() {
         return res.json();
       })
       .then((dat) => {
-        setTrips(dat.allnews);
+        setTrips(dat.allnews);  // Update state with the fetched news
       })
       .catch((error) => console.error("Fetch error:", error));
-  }, []);
+  }, []);  // This effect runs once when the component mounts
 
+  // Function to handle "See more" button click
   const handleSeeMore = () => {
     setLoading(true);
     setTimeout(() => {
-      setVisibleTrips((prevVisibleTrips) => prevVisibleTrips + 4);
+      setVisibleTrips((prevVisibleTrips) => prevVisibleTrips + 4);  // Show 4 more news items
       setLoading(false);
-    }, 1000);
+    }, 1000);  // Simulate loading delay
   };
 
   return (
     <div className="pb-[450px]">
-        <Levelup/>
+      <Levelup />
       <div className="container">
         <p className="text-[#FFFFFF] text-center text-xl font-sans pb-[12px] opacity-30 md:mt-16 mt-8">
           Stay updated about everything
@@ -56,13 +57,15 @@ function AllNews() {
         </h2>
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-[340px] sm:w-full m-auto gap-7 justify-between sm:mb-16 mb-8">
           {Array.isArray(trips) &&
-            trips.slice(0, visibleTrips).map((link, id) => (
+            trips.slice(0, visibleTrips).map((link: NewsItem, id: number) => (
               <Link href={`/blog/${link.id}`} key={id}>
                 <div className="h-full py-0 overflow-hidden text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] pt-[12px] px-[12px] hover:scale-[1.02] transition-all duration-500">
                   <Image
                     src={link.imgPost}
                     alt="NewsImage"
                     className="rounded-xl object-cover border border-transparent"
+                    width={400}
+                    height={300}
                   />
                   <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
                     {link.postdate}
