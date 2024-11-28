@@ -27,10 +27,6 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   const [showFullText, setShowFullText] = useState(false);
   const [FullText, setFullText] = useState(false);
 
-  if(!Number(id)){
-    return <NotFound/>  
-  }
-
   
   useEffect(() => {
     fetch(
