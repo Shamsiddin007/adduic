@@ -29,7 +29,7 @@ function Page() {
           />{" "}
           Working day & night to bring out the best results
         </span>
-        <h2 className="font-bold text-4xl sm:text-6xl text-white text-center">
+        <h2 className="font-bold text-4xl sm:text-6xl text-white text-center pt-[20px] pb-[20px]">
           OUR <span className="text-blue-600">SERVICES</span>
         </h2>
         <p className="text-gray-500 text-center w-[90%] sm:w-[50%] pt-4 text-sm sm:text-base">
@@ -94,7 +94,7 @@ function Page() {
             ›
           </button>
         </div>
-        <div className="grid grid-cols-2 gap-8 md:grid md:grid-cols-2 md:gap-8 md:block hidden">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-2 md:gap-8 md:block hidden">
           {slides.map((_, index) => (
             <div
               key={index}

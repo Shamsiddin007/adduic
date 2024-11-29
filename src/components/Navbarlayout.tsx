@@ -67,7 +67,7 @@ const Navbarlayout = () => {
     { path: "/portfolio", label: "Portfolio" },
     { path: "/praktikum", label: "Praktikum" },
     { path: "/service-us", label: "Services" },
-    { path: "/blog", label: "Blogs" },
+    { path: "/blog", label: "Blogs"},
   ];
 
   return (

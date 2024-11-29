@@ -25,7 +25,7 @@ const Somestats = () => {
 
   return (
     <div>
-      <div className="w-full md:min-h-screen h-[30%] overflow-hidden bg-black relative px-4 pt-[80px]">
+      <div className="w-full md:min-h-screen h-[50%] overflow-hidden bg-black relative px-4 pb-[80px] pt-[80px]">
         <div className={`${styles.space} h-[200px] w-full relative`}></div>
 
         <div className="container mx-auto text-center">

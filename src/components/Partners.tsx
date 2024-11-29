@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import "./style.module.css";
+import styles from "./style.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -23,7 +23,7 @@ const Projects = () => {
       </h1>
 
       <Swiper
-        className="mx-auto max-w-[90%]"
+        className="mx-auto max-w-[80%]"
         loop={true}
         autoplay={{
           delay: 1500,
@@ -52,7 +52,7 @@ const Projects = () => {
               <Image
                 src={ProjectImg1}
                 alt="project image"
-                className="rounded-lg"
+                className={styles.cardich}
                 width={200}
                 height={120}
               />
@@ -65,7 +65,7 @@ const Projects = () => {
               <Image
                 src={ProjectImg2}
                 alt="project image"
-                className="rounded-lg"
+                className={styles.cardich}
                 width={200}
                 height={120}
               />
@@ -78,7 +78,7 @@ const Projects = () => {
               <Image
                 src={ProjectImg3}
                 alt="project image"
-                className="rounded-lg"
+                className={styles.cardich}
                 width={200}
                 height={120}
               />
@@ -91,7 +91,7 @@ const Projects = () => {
               <Image
                 src={ProjectImg4}
                 alt="project image"
-                className="rounded-lg"
+                className={styles.cardich}
                 width={200}
                 height={120}
               />
@@ -104,7 +104,7 @@ const Projects = () => {
               <Image
                 src={ProjectImg5}
                 alt="project image"
-                className="rounded-lg"
+                className={styles.cardich}
                 width={200}
                 height={120}
               />
