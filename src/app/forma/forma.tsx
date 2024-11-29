@@ -77,7 +77,7 @@ export default function Forma() {
   const hasErrors = errors.name || errors.contact || errors.message;
 
   return (
-    <div className="container">
+    <div className="container"  id="contact-section">
       <div className="w-full rounded-[20px] mb-12 flex flex-col items-center bg-forma">
         <div className="flex flex-col items-center justify-center xl:w-7/12 md:w-8/12 w-10/12">
           <h4 className="pb-6 pt-11 text-start md:text-[32px] text-[26px] font-bold text-white">

@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 import Windowslogo from "../../public/icons/Windowslogo.png";
 import elementlogo from "../../public/icons/Element.png";
@@ -15,7 +16,7 @@ const Videolayout = () => {
 
   const handleVideoOpen = () => {
     setIsVideoOpen(true);
-    setIsVideoLoading(true); // Video ochilganda yuklashni boshlash
+    setIsVideoLoading(true);
   };
   const handleVideoClose = () => setIsVideoOpen(false);
 
@@ -77,12 +78,16 @@ const Videolayout = () => {
               </div>
             </div>
             <div className="flex gap-4 sm:gap-6">
-              <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
-                About game
-              </button>
+            <Link href={"/portfolio/6"}>
+                <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
+                  About game
+                </button>
+            </Link>
+            <Link href={"https://mangusarkarda.com/"} target="blank">
               <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                 Download
               </button>
+            </Link>
             </div>
           </div>
           <div className="relative w-full lg:w-1/2 p-6 sm:p-12 flex justify-center lg:justify-end">

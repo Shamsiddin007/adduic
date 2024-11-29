@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./style.module.css";
 import Logo from "/public/icons/Logo.svg";
@@ -17,6 +17,15 @@ const Navbarlayout = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [activePath, setActivePath] = useState<string>("");
   const [isActive, setActive] = useState(false);
+
+  const contactRef = useRef(null);
+
+  const scrollToContact = () => {
+    const contactElement = document.getElementById("contact-section");
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   const handleActiveLang = () => {
     setActive(!isActive);
@@ -107,12 +116,15 @@ const Navbarlayout = () => {
         </ul>
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center gap-4">
-            <button className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
-              Contact us
-            </button>
-            <button
-              className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
-            >
+            <div className="flex items-center gap-4">
+              <button
+                className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors"
+                onClick={scrollToContact}
+              >
+                Contact us
+              </button>
+            </div>
+            <button className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
               Join us
             </button>
           </div>
@@ -179,9 +191,7 @@ const Navbarlayout = () => {
                 <button className="py-2 px-8 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
                   Contact us
                 </button>
-                <button
-                  className="py-2 px-8 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
-                >
+                <button className="py-2 px-8 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
                   Join us
                 </button>
               </div>
