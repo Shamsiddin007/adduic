@@ -50,7 +50,7 @@ function Page() {
           {Array.isArray(posts) &&
             posts.slice(0, visibleTrips).map((post) => (
               <Link href={`/portfolio/${post.id}`} key={post.id}>
-                <div className="group relative sm:h-[400px] h-[500px] w-[80%]  sm:w-[100%] m-auto  overflow-hidden rounded-2xl bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg hover:shadow-xl">
+                <div className="group relative sm:h-[400px] w-[80%]  sm:w-[100%] m-auto  overflow-hidden rounded-2xl bg-none md:bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg hover:shadow-xl">
                   <div className="relative z-10 flex h-full flex-col items-center text-center">
                     <h3 className="text-xl font-bold mb-2">
                       {post.title}

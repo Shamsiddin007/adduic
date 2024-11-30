@@ -122,13 +122,13 @@ function ProjectsPage() {
 
             <button
               onClick={handlePrev}
-              className="absolute top-1/2 left-2 transform -translate-y-1/2 bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors duration-300"
+              className="absolute top-1/2 left-2 sm:left-[50px] transform -translate-y-1/2 bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors duration-300"
             >
               ‹
             </button>
             <button
               onClick={handleNext}
-              className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors duration-300"
+              className="absolute top-1/2 right-2 sm:right-[50px] transform -translate-y-1/2 bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors duration-300"
             >
               ›
             </button>

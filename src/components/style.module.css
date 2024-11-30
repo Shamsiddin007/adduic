@@ -31,7 +31,7 @@
   display: flex;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 750px) {
   .vio {
     display: none;
   }
@@ -387,3 +387,13 @@
   }
 }
 
+@media (max-width: 500px) {
+  .cardich{
+    width: 135px;
+    height: 100px;
+  }
+}
+
+.cardich{
+  border-radius: 10px;
+}

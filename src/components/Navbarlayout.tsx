@@ -32,12 +32,15 @@ const Navbarlayout = () => {
   };
 
   useEffect(() => {
-    const savedPath = localStorage.getItem("activePath");
-    if (!savedPath || savedPath !== pathname) {
-      setActivePath(pathname);
-      localStorage.setItem("activePath", pathname);
+    // Dinamik yo‘llar uchun asosiy route-ni aniqlash
+    const baseRoute = pathname.split('/')[1]; // "/portfolio/123" -> "portfolio"
+    const matchedPath = `/${baseRoute}`; // "portfolio" -> "/portfolio"
+
+    if (!matchedPath || matchedPath !== activePath) {
+      setActivePath(matchedPath);
+      localStorage.setItem("activePath", matchedPath);
     } else {
-      setActivePath(savedPath);
+      setActivePath(matchedPath);
     }
   }, [pathname]);
 
