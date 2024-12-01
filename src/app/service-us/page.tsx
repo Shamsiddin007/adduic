@@ -94,7 +94,7 @@ function Page() {
             ›
           </button>
         </div>
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-2 md:gap-8 md:block hidden">
+        <div className="md:grid grid-cols-2 gap-8 md:grid-cols-2 md:gap-8 hidden">
           {slides.map((_, index) => (
             <div
               key={index}
