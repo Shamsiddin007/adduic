@@ -25,10 +25,10 @@ const Projects = () => {
       <Swiper
         className="mx-auto max-w-[80%]"
         loop={true}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 1500,
+        //   disableOnInteraction: false,
+        // }}
         spaceBetween={16}
         modules={[Autoplay]}
         breakpoints={{
@@ -94,6 +94,7 @@ const Projects = () => {
                 className={styles.cardich}
                 width={200}
                 height={120}
+
               />
             </Link>
           </div>
