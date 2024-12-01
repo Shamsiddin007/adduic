@@ -389,12 +389,15 @@
 
 @media (max-width: 500px) {
   .cardich{
-    width: 125px;
-    height: 100px;
+    width: 100px;
+    height: 35px;
+  }
+  .cardin{
+    width: 130px;
+    height: 90px;
   }
 }
 
 .cardich{
-  border-radius: 10px;
   object-fit: cover !important;
 }
