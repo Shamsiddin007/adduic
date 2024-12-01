@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
@@ -32,7 +31,6 @@ const Navbarlayout = () => {
   };
 
   useEffect(() => {
-    // Dinamik yo‘llar uchun asosiy route-ni aniqlash
     const baseRoute = pathname.split('/')[1]; // "/portfolio/123" -> "portfolio"
     const matchedPath = `/${baseRoute}`; // "portfolio" -> "/portfolio"
 

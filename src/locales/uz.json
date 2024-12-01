@@ -1,0 +1,83 @@
+{
+  "working_message": "Eng yaxshi natijalarni yaratish uchun kun-u tun ishlaymiz",
+  "main_title": "SIZNING G'OYALARINGIZ HAQIQATGA AYLANADI",
+  "description": "UIC Games - bu 2018 yilda tashkil etilgan o'yin ishlab chiqish kompaniyasi. Bu texnologiyani ijodiy hikoya qilish bilan uyg'unlashtirib, foydalanuvchilar uchun qiziqarli va immersiv o'yinlarni yaratishga qaratilgan.",
+  "title": "Biz - UIC O'yinlari!",
+  "description1": "UIC Games o'z ishiga ishtiyoq bilan yondashuvchi hikoyachilar, tasavvurli san'atkorlar va texnologiya sehrgarlaridan tashkil topgan jamoa.",
+  "description2": "Bizning iste’dodli ishlab chiquvchilar, dizaynerlar va ijodkorlardan iborat jamoamiz interaktiv o‘yinlar va innovatsiyalar chegarasini kengaytirishga intiladi.",
+  "contact_button": "Bog'lanish",
+  "learn_more_button": "Ko'proq bilish",
+  "game_title": "Mangu Sarkarda",
+  "game_highlight": "sarkarda",
+  "game_description": "Buyuk sarkarda va davlat arbobi uchun insoniyatning taqdirini belgilagan buyuk tarixiy yurishlar va hal qiluvchi nuqtalar o'yinlashtirilgan bo'lib, bu sizning kundalik hayotingizni portlatib yuboradi!",
+  "available": "Mavjud:",
+  "about_game": "O'yin haqida",
+  "download": "Yuklab olish",
+  "platforms": {
+    "steam": "Steam",
+    "desktop_app": "Desktop ilova",
+    "vr": "VR"
+  },
+  "video_title": "“Mangu Sarkarda” - Oʻzbekistondagi ilk tarixiy video oʻyin treyleri!",
+  "stats_title": "STATISTIKALAR",
+  "stats_subtitle": "Keling, raqamlar haqida gaplashamiz",
+  "stats": [
+    { "label": "Mutaxassislar", "value": "8" },
+    { "label": "Mobil o'yinlar", "value": "10" },
+    { "label": "Rejalashtirilgan loyihalar", "value": "3" }
+  ],
+  "services_title": "BIZNING XIZMATLAR",
+  "services_description": "Biz qiziqarli va interaktiv tajribalarni yaratishga qaratilgan keng qamrovli rivojlantirish yechimlarini taqdim etamiz. Bu foydalanuvchilarni jalb qilish, o'rganish va turli platformalar va dasturlarda o'yin-kulgini yaxshilashga qaratilgan.",
+  "services_buttons": {
+    "more_about_us": "Biz haqimizda",
+    "contact_us": "Bog'lanish"
+  },
+  "game_development": {
+    "title": "Oʻyinlarni yaratish",
+    "description": "Biz ijodkorlik va texnologiya chegaralarini doimiy ravishda kengaytirib, jalb qiluvchi va ilhomlantiruvchi tajribalarni taqdim etamiz."
+  },
+  "praktikum_title": "Practicum nima?",
+  "subtitle": "Biz UIC Games'da unutilmas o'yin tajribalarini yaratishga bag'ishlangan hikoya aytuvchilar, tasavvurchi san'atkorlar va texnik sehrgarlarmiz.",
+  "paragraph": "Talantli ishlab chiquvchilar, dizaynerlar va ijodkorlardan tashkil topgan jamoamiz imkoniyatlar chegarasini kengaytirib, global miqyosdagi o'yinchilarga mos keladigan o'yinlarni yetkazib beradi. Biz bilan interaktiv ko'ngilochar kelajagini qayta belgilashga qo'shiling.",
+  "curriculum_title": "12-OYLIK O‘QUV DASTURI",
+  "modules": {
+    "theoretical": {
+      "duration": "4 oy",
+      "title": "Nazariy",
+      "description": "Nazariy darslar orqali o'yin ishlab chiqishda mustahkam asos yarating.",
+      "skills": "O'rganiladigan ko'nikmalar"
+    },
+    "skills_list": ["2D", "3D", "Animatsiya", "UI/UX", "C#", "Unity"]
+  },
+  "features": "Xususiyatlar",
+  "general": "Umumiy",
+  "generalDescription": "Ushbu dasturiy mashg'ulot o'yin ishlab chiqaruvchi bo'lishni istaganlar uchun amaliy tajriba va tushunchalar beradi.",
+  "apply": "Ariza berish",
+  "globalization": "Globalizatsiya",
+  "globalizationDescription": "Musobaqali o'yinlar uchun loyihalarga qo'shiling va global bozorga tayyorgarlik ko'ring.",
+  "employmentContract": "Ish shartnomasi",
+  "employmentContractDescription": "1 yillik shartnoma bilan qimmatli tajriba oling va texnologiya sohasidagi karyerangizni boshlang.",
+  "study": "O'rganish",
+  "studyDescription": "Fokuslangan o'rganish va amaliy tajriba orqali bilim va tajribangizni chuqurlashtiring, sanoatda muvaffaqiyatga erishing.",
+  "learnBasics": "Asoslarni o'rganing",
+  "learnBasicsDescription": "Asosiy tamoyillar va muhim ko'nikmalarni o'zlashtirib, kelajakdagi o'sish va muvaffaqiyat uchun mustahkam poydevor yarating.",
+  "makePortfolio": "Portfel yaratish",
+  "makePortfolioDescription": "O'z ko'nikmalaringiz va yutuqlaringizni ajoyib portfel yaratish orqali namoyish eting, o'z tajribangiz va ijodkorligingizni ish beruvchilar yoki mijozlarga ko'rsating.",
+  "professionalMentors": "Professional mentorlar",
+  "professionalMentorsDescription": "Tajriba va mahoratingizni takomillashtirishga yordam beradigan shaxsiy yordam va master-klasslar orqali tajribali mentorlarning maslahatlarini oling.",
+  "workInTeam": "Jamoada ishlash",
+  "workInTeamDescription": "Haqiqiy loyihalarda ishlash orqali muloqot va jamoaviy ishlash ko'nikmalarini rivojlantiring, kengroq auditoriyaga namoyish qilinishi mumkin bo'lgan loyihalarda ishtirok eting.",
+  "acceptanceConditions": "Qabul qilish shartlari",
+  "signUpBot": "Bot orqali ro‘yxatdan o‘tish",
+  "signUpBotDescription": "Maxsus Telegram botga kirib, tugma orqali ma’lumotlaringizni kiritishingiz va imtihon uchun ro‘yxatdan o‘tishingiz mumkin",
+  "goToBot": "Botga o'tish",
+  "examDescription": "Ro‘yxatdan o‘tganingizdan so‘ng quyidagi yo‘nalishlar bo‘yicha maxsus imtihon topshirasiz:",
+  "examSubjects": "C# basic / DS&A / Unity basic",
+  "interviewDescription": "Imtihondan o‘tgan nomzodlar ingliz tilidan suhbatdan o‘tadi.",
+  "interviewRequirement": "Suhbat ingliz tilida bo‘lib o‘tadi. Talab etiladigan minimal daraja: B1",
+  "finalInterviewDescription": "Nomzodlar o‘z soft va hard ko‘nikmalarini ko‘rsatish uchun offline suhbatdan o‘tadi.",
+  "finalSelection": "Offline suhbat natijalariga ko‘ra amaliyot uchun qatnashchilar tanlanadi.",
+  "scholarshipAwards": "Stipendiya mukofotlari",
+  "scholarshipDescription": "Biz iste'dodni qo'llab-quvvatlashga ishonamiz. Ushbu amaliyot $14,000 miqdorida grantni taklif qiladi, tanlangan talabalar orasida taqsimlanadi va ularga tajribani to'liq o'zlashtirish imkonini beradi. Dasturiy ta'minot, loyiha resurslari yoki shaxsiy rivojlanish uchun bo'ladimi, bu moliyaviy yordam muvaffaqiyatga erishishingizga yordam beradi.",
+  "school_apply": "Ariza yuboring"
+}
