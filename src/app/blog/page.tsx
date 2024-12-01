@@ -87,7 +87,7 @@ function AllNews() {
               className="text-white flex items-center gap-2 bg-[#FFFFFF1A] py-[10px] px-[24px] rounded-full m-auto  mb-12"
             >
               See more
-              <Image src={Arrow} alt="ArrowIcons" />
+              <Image src={Arrow} alt="ArrowIcons" width={12} height={8} />
             </button>
           ))}
       </div>

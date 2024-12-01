@@ -165,6 +165,8 @@ export default function Forma() {
               <Image
                 src={send}
                 alt="send icon"
+                width={22}
+                height={22}
                 className={`${
                   hasErrors
                     ? ""
@@ -182,6 +184,8 @@ export default function Forma() {
             src={check}
             alt="CheckIcons"
             className="sm:w-6 sm:h-6 w-5 h-5"
+            width={22}
+            height={22}                               
           />
           Your question has been sent successfully
         </div>
