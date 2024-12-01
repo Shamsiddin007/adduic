@@ -41,7 +41,7 @@ export default function Story() {
                   </button>
                 </div>
                 <Link href="/about">
-                  <button className="bg-[#1F2022] px-8 md:px-16 py-[10px] rounded-full text-white hover:bg-[#3375F6] transition-all duration-500 md:w-[250px] w-[220px]">
+                  <button className="py-[10px] px-7 bg-[#1F2022] hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
                     Learn more
                   </button>
                 </Link>
