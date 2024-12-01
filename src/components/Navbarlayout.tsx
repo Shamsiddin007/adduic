@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./style.module.css";
 import Logo from "/public/icons/Logo.svg";
@@ -17,7 +17,6 @@ const Navbarlayout = () => {
   const [activePath, setActivePath] = useState<string>("");
   const [isActive, setActive] = useState(false);
 
-  const contactRef = useRef(null);
 
   const scrollToContact = () => {
     const contactElement = document.getElementById("contact-section");

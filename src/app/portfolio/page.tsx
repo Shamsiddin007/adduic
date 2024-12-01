@@ -50,7 +50,7 @@ function Page() {
           {Array.isArray(posts) &&
             posts.slice(0, visibleTrips).map((post) => (
               <Link href={`/portfolio/${post.id}`} key={post.id}>
-                <div className="group relative sm:h-[400px] w-[80%]  sm:w-[100%] m-auto  overflow-hidden rounded-2xl bg-none md:bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg hover:shadow-xl">
+                <div className="group relative sm:h-[400px] h-[500px] w-[80%]  sm:w-[100%] m-auto  overflow-hidden rounded-2xl bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg hover:shadow-xl">
                   <div className="relative z-10 flex h-full flex-col items-center text-center">
                     <h3 className="text-xl font-bold mb-2">
                       {post.title}
@@ -62,8 +62,8 @@ function Page() {
                       src={post.imgLogo}
                       alt={post.title}
                       className="imgs inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
-                     width={150}
-                     height={300}
+                      width={150}
+                      height={300}
                     />
                     <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center">
                       Learn more <Image src={Chevron} alt="Logo" />

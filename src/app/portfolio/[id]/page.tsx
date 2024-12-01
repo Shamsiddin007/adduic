@@ -7,6 +7,10 @@ import secendelementLogo from "public/Imgs/secendElementLogo.png";
 import Highlights from "public/Imgs/highlights.png";
 import { useEffect, useState } from "react";
 
+type ProjectPageProps = {
+  params: { id: string };
+};
+
 type Post = {
   id: number;
   titlegame: string;
@@ -16,19 +20,16 @@ type Post = {
   moredescription: string;
 };
 
-type ProjectPageProps = {
-  params: { id: string };
-};
+const BASE_URL: string = "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjYzNDQ0LCJleHAiOjE3NjI3OTk0NDR9.LR1i1jdY-dZ1LUdenb9T8oKsJa_dtJNQ6pcmg2njGZM&t=2024-11-10T18%3A30%3A45.640Z"
 
 export default function ProjectPage({ params }: ProjectPageProps) {
+
   const { id } = params;
   const [post, setPost] = useState<Post | null>(null);
   const [showFullText, setShowFullText] = useState(false);
 
   useEffect(() => {
-    fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/singleImg/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3NpbmdsZUltZy9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxMjYzNDQ0LCJleHAiOjE3NjI3OTk0NDR9.LR1i1jdY-dZ1LUdenb9T8oKsJa_dtJNQ6pcmg2njGZM&t=2024-11-10T18%3A30%3A45.640Z"
-    )
+    fetch(BASE_URL)
       .then((response) => response.json())
       .then((data) => {
         const project = data.singleprojects.find(
@@ -47,7 +48,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="pb-[500px]">
       <div
-        className="w-full h-[100vh] pt-[100px] pb-[50px] bg-cover bg-center flex flex-col-reverse items-center justify-center"
+        className="w-full h-[100vh] pt-[100px] pb-[50px] bg-cover bg-center"
         style={{
           backgroundImage: `url(${post.backgroundCover})`,
         }}

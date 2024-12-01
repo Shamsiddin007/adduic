@@ -4,6 +4,10 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import SingleImg from "public/Imgs/singleImage.png";
 
+type ProjectPageProps = {
+  params: { id: string };
+};
+
 type Post = {
   id: number;
   postdate: number;
@@ -13,11 +17,10 @@ type Post = {
   imgPost: string;
 };
 
-type ProjectPageProps = {
-  params: { id: string };
-};
+const BASE_URL: string = "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMyNzc1ODQwLCJleHAiOjE3NjQzMTE4NDB9.VQc6kKyJ5alk8C13csiwcOjY0d9R0pEG7cVjKcpOFjQ&t=2024-11-28T06%3A37%3A20.579Z"
 
 export default function ProjectPage({ params }: ProjectPageProps) {
+
   const { id } = params;
   const [single, setSingle] = useState<Post | null>(null);
   const [showFullText, setShowFullText] = useState(false); // Birinchi blok uchun
@@ -25,14 +28,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
 
   useEffect(() => {
-    fetch(
-      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMyNzc1ODQwLCJleHAiOjE3NjQzMTE4NDB9.VQc6kKyJ5alk8C13csiwcOjY0d9R0pEG7cVjKcpOFjQ&t=2024-11-28T06%3A37%3A20.579Z"
-    )
+    fetch(BASE_URL)
       .then((response) => response.json())
       .then((data) => {
-        const project = data.allnews.find(
-          (item: Post) => item.id === Number(id)
-        );
+        const project = data.allnews.find((item: Post) => item.id === Number(id));
         setSingle(project);
       });
   }, [id]);

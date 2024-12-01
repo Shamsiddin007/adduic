@@ -1,12 +1,10 @@
 "use client"
 
 import styles from "./style.module.css";
-import { useRef } from "react";
 
 import Link from "next/link";
 
 export default function Story() {
-  const contactRef = useRef(null);
 
   const scrollToContact = () => {
     const contactElement = document.getElementById("contact-section");
@@ -43,7 +41,7 @@ export default function Story() {
                   </button>
                 </div>
                 <Link href="/about">
-                  <button className="py-2 px-6 bg-[#1F2022] hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
+                  <button className="py-[10px] px-7 bg-[#1F2022] hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
                     Learn more
                   </button>
                 </Link>
