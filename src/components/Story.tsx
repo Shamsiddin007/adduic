@@ -1,12 +1,10 @@
 "use client"
 
 import styles from "./style.module.css";
-import { useRef } from "react";
 
 import Link from "next/link";
 
 export default function Story() {
-  const contactRef = useRef(null);
 
   const scrollToContact = () => {
     const contactElement = document.getElementById("contact-section");
