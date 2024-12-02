@@ -23,8 +23,8 @@ const Somestats = () => {
 
   return (
     <div>
-      <div className="group5 w-full h-screen overflow-hidden bg-black relative p-4 mt-[80px]">
-        <div className={`${styles.space} h-1/2 w-full relative`}></div>
+      <div className="group5 w-full h-[110vh] overflow-hidden bg-black relative p-4 mt-[80px]">
+        <div className={`${styles.space} w-[400%] left-[-80%] h-[300%] absolute`}></div>
 
         <div className="container mx-auto px-4">
           <div className="relative z-0 text-center flex flex-col justify-center items-center py-4 mt-[35px] h-1/2">
@@ -34,7 +34,7 @@ const Somestats = () => {
             <p className="text-[#FFFFFF66] mt-2 text-sm sm:text-base">
               Let&apos;s talk about numbers
             </p>
-
+              {/* Stars */}
             <div className="grid grid-cols-3 gap-8 sm:gap-12 lg:gap-24 mt-12 lg:mt-20 w-full max-w-6xl mx-auto px-4">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -54,12 +54,13 @@ const Somestats = () => {
                 </div>
               ))}
             </div>
+             {/* Stars */}
           </div>
         </div>
 
         <div
           ref={parallaxRef}
-          className="group2 w-[120vw] h-[80%] absolute -bottom-8 z-1 -left-[10vw] mt-9"
+          className="group2 w-[120vw] h-[60%] absolute -bottom-8 z-1 -left-[10vw] mt-9"
         >
           <div
             data-depth="0.111111111111111111111111111111111"

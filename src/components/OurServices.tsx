@@ -23,10 +23,10 @@ const Partners = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full items-center md:justify-start justify-center">
-              <button className="md:px-6 md:py-3 px-4 py-2 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base md:w-[250px] w-[150px]">
+              <button className="sm:w-[220px] sm:py-3 md:px-6 md:py-3 px-4 py-2 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base md:w-[250px] w-[150px]">
                 {t("services_buttons.more_about_us")}
               </button>
-              <button className="md:px-6 md:py-3 px-4 py-2 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base md:w-[250px] w-[150px]">
+              <button className="sm:w-[220px] md:px-6 md:py-3 px-4 py-2 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base md:w-[250px] w-[150px]">
                 {t("services_buttons.contact_us")}
               </button>
             </div>

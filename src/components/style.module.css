@@ -347,12 +347,12 @@
 }
 .space {
   position: absolute;
-  width: 400vw;
+  width: 400%;
   height: 400vh;
-  top: 50%;
-  left: 50%;
-  margin-top: -200vh;
-  margin-left: -200vw;
+  top: -10%;
+  left: 0%;
+  margin-top: 10vh;
+  margin-left: 00vw;
   animation: spin 200s linear infinite;
   background-size: 240px;
   backface-visibility: visible;
