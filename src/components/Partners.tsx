@@ -53,67 +53,67 @@ const Projects = () => {
         }}
       >
           <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[150px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
+            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
               <Link href={"https://uzbekistans.club/"} target="blank">
                 <Image
                   src={ProjectImg1}
                   alt="project image"
-                  className="object-cover w-[114px] h-[46px]"
+                  className="h-[30px] w-[90px]  sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[150px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
+            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
               <Link href={"https://sqb.uz/"} target="blank">
                 <Image
                   src={ProjectImg2}
                   alt="project image"
-                  className="object-cover w-[114px] h-[41px]"
+                  className="w-[90px] sm:w-[114px] h-[30px] sm:h-[41px]"
                 />
               </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[150px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
+            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
               <Link href={"https://it-market.uz/"} target="blank">
                 <Image
                   src={ProjectImg3}
                   alt="project image"
-                  className="object-cover w-[90px] h-[38px]"
+                  className="h-[30px] w-[90px] sm:h-[38px]"
                 />
               </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[150px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
+            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
               <Link href={"https://uic.group"} target="blank">
                 <Image
                   src={ProjectImg4}
                   alt="project image"
-                  className="object-coverw-[144px] h-[29px]"
+                  className="h-[30px] w-[90px] sm:w-[144px] sm:h-[29px]"
                 />
               </Link> 
             </div>
           </SwiperSlide>
           <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[150px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
+            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
               <Link href={"https://uzbekistans.club/"} target="blank">
                 <Image
                   src={ProjectImg1}
                   alt="project image"
-                  className="object-cover w-[114px] h-[46px]"
+                  className="h-[30px] w-[90px] sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
           </SwiperSlide>
           <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[150px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
+            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
               <Link href={"https://paylov.uz/"} target="blank">
                 <Image
                   src={ProjectImg5}
                   alt="project image"
-                  className="object-cover w-[118px] h-[38px]"
+                  className="h-[30px] w-[50px] sm:w-[90px] sm:h-[38px]"
                 />
               </Link>
             </div>

@@ -6,10 +6,9 @@ import { Link } from "@/navigation";
 import Arrow from "public/icons/arrow.png";
 import Levelup from "@/components/Levelup";
 
-// Type definition for the individual news item.
 interface NewsItem {
-  id: string;        // Unique identifier for each news item
-  titlePost: string; // Title of the news post
+  id: string; 
+  titlePost: string;
   postdate: string;  // Date when the news post was created
   imgPost: string;   // URL for the image of the news post
 }
