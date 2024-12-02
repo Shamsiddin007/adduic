@@ -10,7 +10,7 @@ import youTube from "/public/icons/youTube.png";
 import instagram from "/public/icons/instagram.png";
 import facebook from "/public/icons/facebook.png";
 import styles from "./style.module.css"
-import Forma from "@/app/forma/forma";
+import Forma from "@/app/[locale]/(root)/forma/forma";
 const Footer = () => {
   const socialLinks = [
     { icon: linkidin, alt: "LinkedIn", href: "#" },

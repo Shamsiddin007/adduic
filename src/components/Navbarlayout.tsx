@@ -1,6 +1,7 @@
 "use client";
+
 import Image from "next/image";
-import Link from "next/link";
+import { Link, usePathname as usePath } from "@/navigation";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./style.module.css";
@@ -8,36 +9,31 @@ import Logo from "/public/icons/Logo.svg";
 import BurgerIcon from "/public/Imgs/hamburger_icon.svg";
 import CloseBtn from "/public/Imgs/close-428 1.png";
 import JoinUsModal from "@/components/JoinUs";
+import { useLocale, useTranslations } from "next-intl";
 
 const Navbarlayout = () => {
+
   const pathname = usePathname();
+  const locale = useLocale()
+  const usePa = usePath()
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [activePath, setActivePath] = useState<string>("");
   const [isActive, setActive] = useState(false);
 
-
-  const scrollToContact = () => {
-    const contactElement = document.getElementById("contact-section");
-    if (contactElement) {
-      contactElement.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   const handleActiveLang = () => {
     setActive(!isActive);
   };
 
   useEffect(() => {
-    const baseRoute = pathname.split('/')[1]; // "/portfolio/123" -> "portfolio"
-    const matchedPath = `/${baseRoute}`; // "portfolio" -> "/portfolio"
-
-    if (!matchedPath || matchedPath !== activePath) {
-      setActivePath(matchedPath);
-      localStorage.setItem("activePath", matchedPath);
+    const savedPath = localStorage.getItem("activePath");
+    if (!savedPath || savedPath !== pathname) {
+      setActivePath(pathname);
+      localStorage.setItem("activePath", pathname);
     } else {
-      setActivePath(matchedPath);
+      setActivePath(savedPath);
     }
   }, [pathname]);
 
@@ -62,12 +58,14 @@ const Navbarlayout = () => {
     };
   }, [isMenuOpen]);
 
+  const t = useTranslations("Navbartitle") 
+
   const navItems = [
-    { path: "/about", label: "About us" },
-    { path: "/portfolio", label: "Portfolio" },
-    { path: "/praktikum", label: "Praktikum" },
-    { path: "/service-us", label: "Services" },
-    { path: "/blog", label: "Blogs" },
+    { path: `/about`, label: t("about_us_title")},
+    { path: `/portfolio`, label: t("portfolio_title") },
+    { path: `/praktikum`, label: t("praktikum_title") },
+    { path: `/service-us`, label: t("service_title") },
+    { path: `/blog`, label: t("blog_title") },
   ];
 
   return (
@@ -99,15 +97,12 @@ const Navbarlayout = () => {
             <li key={item.path}>
               <Link
                 href={item.path}
-                onClick={() => {
-                  setActivePath(item.path);
-                  localStorage.setItem("activePath", item.path);
-                }}
                 className={`text-sm font-medium py-2 transition-colors ${
                   activePath === item.path
                     ? "text-blue-400 border-b-2 border-blue-400"
                     : "text-white hover:text-blue-400"
                 }`}
+                aria-label={item.label}
               >
                 {item.label}
               </Link>
@@ -116,16 +111,13 @@ const Navbarlayout = () => {
         </ul>
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center gap-4">
-            <div className="flex items-center gap-4">
-              <button
-                className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors"
-                onClick={scrollToContact}
-              >
-                Contact us
-              </button>
-            </div>
-            <button className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
-              Join us
+            <button className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
+              {t("nav_btn.contact_btn")}
+            </button>
+            <button
+              className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
+            >
+              {t("nav_btn.join_us_btn")}
             </button>
           </div>
           <div className="relative">
@@ -133,7 +125,7 @@ const Navbarlayout = () => {
               className="flex items-center gap-2 cursor-pointer py-2"
               onClick={handleActiveLang}
             >
-              <p className="text-sm font-medium text-white uppercase">eng</p>
+              <p className="text-sm font-medium text-white uppercase">{locale}</p>
               <div
                 className={`transition-transform ${
                   isActive ? "rotate-180" : "rotate-0"
@@ -150,12 +142,20 @@ const Navbarlayout = () => {
 
             {isActive && (
               <div className="absolute right-0 top-full mt-2 w-20 bg-gray-800 rounded-lg overflow-hidden">
-                <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
-                  uz
+                {locale !== "uz" && <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                  <Link locale="uz" href={usePa} className="block">uz</Link>
                 </button>
-                <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
-                  ru
+                }
+                {
+                  locale !== "en" && <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                  <Link locale="en" href={usePa} className="block">en</Link>
                 </button>
+                }
+                {
+                  locale !== "ru" && <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                  <Link locale="ru" href={usePa} className="block">ru</Link>
+                </button>
+                }
               </div>
             )}
           </div>
@@ -189,10 +189,12 @@ const Navbarlayout = () => {
 
               <div className="flex flex-col gap-4 mt-8">
                 <button className="py-2 px-8 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
-                  Contact us
+                  {t("nav_btn.contact_btn")}
                 </button>
-                <button className="py-2 px-8 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
-                  Join us
+                <button
+                  className="py-2 px-8 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
+                >
+                  {t("nav_btn.join_us_btn")}
                 </button>
               </div>
             </div>

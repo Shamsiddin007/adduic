@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Chevron from "public/Imgs/chevron-right.png";
+import { useTranslations } from "next-intl";
 
 // NewsItem va APIResponse interfeyslarini qo'shing
 interface NewsItem {
@@ -18,6 +19,7 @@ interface APIResponse {
 }
 
 export default function LatestNews() {
+  const t = useTranslations("HomePage")
   const [trips, setTrips] = useState<NewsItem[]>([]);  // trips - NewsItem turida
 
   useEffect(() => {
@@ -36,16 +38,19 @@ export default function LatestNews() {
       .catch((error) => console.error("Fetch error:", error));  // xatolikni konsolga chiqarish
   }, []);  // Component birinchi marta render qilinganida faqat ishlaydi
 
+
+  const [firrstTitle, secondTitle] = t('latest_new_Title').split(" ")
+
   return (
     <div className="container">
       <div className="flex flex-col sm:flex-row items-center justify-between pb-10">
         <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white uppercase mb-2 sm:mb-0">
-          latest <span className="text-blue-600">news</span>
+          {firrstTitle} <span className="text-blue-600">{secondTitle}</span>
         </h2>
 
         <Link href="blog">
           <button className="flex items-center justify-center gap-2 sm:px-6 sm:py-3 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-full text-sm transition-colors group">
-            All projects <Image src={Chevron} alt="Logo" className="w-4 h-4 group-hover:scale-125 transition-all duration-300" />
+            {t("all_Project_btn")} <Image src={Chevron} alt="Logo" className="w-4 h-4 group-hover:scale-125 transition-all duration-300" />
           </button>
         </Link>
       </div>

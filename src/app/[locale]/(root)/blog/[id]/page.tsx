@@ -1,12 +1,9 @@
 "use client"
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SingleImg from "public/Imgs/singleImage.png";
-
-type ProjectPageProps = {
-  params: { id: string };
-};
+import { useData } from "@/components/ContextProvider";
 
 type Post = {
   id: number;
@@ -17,35 +14,14 @@ type Post = {
   imgPost: string;
 };
 
-const BASE_URL: string = "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/allnews/news.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2FsbG5ld3MvbmV3cy5qc29uIiwiaWF0IjoxNzMyNzc1ODQwLCJleHAiOjE3NjQzMTE4NDB9.VQc6kKyJ5alk8C13csiwcOjY0d9R0pEG7cVjKcpOFjQ&t=2024-11-28T06%3A37%3A20.579Z"
+export default function ProjectPage() {
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-
-  const { id } = params;
-  const [single, setSingle] = useState<Post | null>(null);
-  const [showFullText, setShowFullText] = useState(false); // Birinchi blok uchun
-  const [showFullText2, setShowFullText2] = useState(false); // Ikkinchi blok uchun
-
-
-  useEffect(() => {
-    fetch(BASE_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        const project = data.allnews.find((item: Post) => item.id === Number(id));
-        setSingle(project);
-      });
-  }, [id]);
+  const single: Post = useData()
+  const [showFullText, setShowFullText] = useState(false)
+  const [showFullText2, setShowFullText2] = useState(false)
 
   if (!single) return <div>Loading...</div>;
-
-  const toggleTextVisibility = () => {
-    setShowFullText((prev) => !prev);
-  };
-
-  const toggleTextVisibility2 = () => {
-    setShowFullText2((prev) => !prev);
-  };
-
+  
   return (
     <div className="pb-[500px]">
       <div className="container">
@@ -76,22 +52,23 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <h2 className="text-white font-euclid md:text-[24px] sm:text-[21px] text-[20px] mb-4">
             {single.titlePost}
           </h2>
+
           <p
-            className={`text-white font-sans opacity-80 text-[16px] mb-6 ${
+          className={`text-white font-sans opacity-80 text-[16px] mb-6 ${
               showFullText ? "" : "line-clamp-3"
-            }`}
+          }`}
           >
-            {single.description}
+          {single.description}
           </p>
           <div className="flex items-center justify-center md:mb-16 mb-10">
-            <button
-              onClick={toggleTextVisibility}
+          <button
+              onClick={() => setShowFullText(prev => !prev)}
               className="text-blue-500 hover:underline"
-            >
+          >
               {showFullText ? "Show less" : "Show more"}
-            </button>
+          </button>
           </div>
-
+          
           {/* Second block: Additional image + description2 */}
           <Image
             src={SingleImg}
@@ -100,21 +77,22 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             width={400}
             height={300}
           />
+          
           <p
-            className={`text-white font-sans opacity-80 text-[16px] mb-6 ${
+          className={`text-white font-sans opacity-80 text-[16px] mb-6 ${
               showFullText2 ? "" : "line-clamp-3"
-            }`}
+          }`}
           >
-            {single.description2}
+          {single.description2}
           </p>
           <div className="flex items-center justify-center md:mb-16 mb-10">
-            <button
-              onClick={toggleTextVisibility2}
+          <button
+              onClick={() => setShowFullText2(prev => !prev)}
               className="text-blue-500 hover:underline"
-            >
+          >
               {showFullText2 ? "Show less" : "Show more"}
-            </button>
-          </div>
+          </button>
+        </div>
         </div>
       </div>
     </div>

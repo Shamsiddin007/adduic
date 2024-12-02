@@ -1,0 +1,54 @@
+{
+  "HomePage": {
+    "working_message": "Working day & night to bring out the best results",
+    "main_title": "YOUR IDEAS WILL reality",
+    "main_title1": "BECOME A",
+    "description_first_home": "UIC Games is a game development company founded in 2018. It focuses on creating engaging and immersive video games, combining technology with creative storytelling to deliver unique gaming experiences",
+    "title_second": "We are",
+    "story_description1": "UIC Games is a team of passionate storytellers, imaginative artists, and technology masters.",
+    "story_description2": "Our talented team of developers, designers, and creatives strives to push the boundaries of interactive gaming and innovation.",
+    "contact_button": "Contact Us",
+    "our_title": "OUR",
+    "our_projects": "PROJECTS",
+    "all_Project_btn": "All project",
+    "learn_more_button": "Learn More",
+    "game_title": "Mangu Sarkarda",
+    "game_highlight": "sarkarda",
+    "game_description": "Gamification of great historical campaigns and key moments that played significant roles in the destinies of humanity for a great commander and statesman will explode your everyday routine!",
+    "available": "Available:",
+    "about_game": "About Game",
+    "download": "Download",
+    "platforms": {
+      "Web_app": "Steam",
+      "desktop_app": "Desktop Application",
+      "vr": "VR"
+    },
+
+    "latest_new_Title": "Latest news",
+    "services_title": "OUR SERVICES",
+    "services_description": "We provide integrated development solutions aimed at creating engaging and interactive experiences that enhance engagement, learning, and entertainment across various platforms and applications.",
+    "services_buttons": {
+      "more_about_us": "More About Us",
+      "contact_us": "Contact Us"
+    },
+    "game_development": {
+      "title": "Game Development",
+      "description": "We constantly push the boundaries of creativity and technology to deliver unique and inspiring experiences."
+    },
+    "OurPartnyors": "OUR PARTNERS",
+    "work_free_title": "Feel free to reach out and join our team",
+    "opportunities": "work opportunities"
+  },
+  "Navbartitle": {
+    "about_us_title": "About us",
+    "portfolio_title": "Portfolio",
+    "praktikum_title": "Praktikum",
+    "service_title": "Services",
+    "blog_title": "Blogs",
+    "nav_btn": {
+      "contact_btn": "Contact us",
+      "join_us_btn": "Join us"
+    }
+  }
+}
+  

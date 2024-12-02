@@ -1,0 +1,52 @@
+{
+  "HomePage": {
+    "working_message": "Eng yaxshi natijalarga erishish uchun kunu tuni ishlayapmiz",
+    "main_title": "SIZNING IDEALARINGIZ HAQIQATGA AYLANADI",
+    "main_title1": "",
+    "description_first_home": "UIC Games 2018 yilda tashkil etilgan o'yin ishlab chiqaruvchi kompaniya bo'lib, texnologiyalarni ijodiy hikoyalar bilan birlashtirib, noyob o'yin tajribalari yaratishga qaratilgan.",
+    "title_second": "Biz",
+    "story_description1": "UIC Games – bu ishtiyoq bilan ishlovchi hikoyachilar, ijodkor rassomlar va texnologiya ustalaridan iborat jamoa.",
+    "story_description2": "Bizning iste'dodli ishlab chiquvchilar, dizaynerlar va ijodkorlar jamoamiz interaktiv o'yinlar va innovatsiyalar sohasida chegaralarni kengaytirishga intiladi.",
+    "contact_button": "Biz bilan bog'laning",
+    "our_title": "BIZNING",
+    "our_projects": "LOYIHALARIMIZ",
+    "all_Project_btn": "Barcha loyihalar",
+    "learn_more_button": "Batafsil ma'lumot",
+    "game_title": "Mangu Sarkarda",
+    "game_highlight": "sarkarda",
+    "game_description": "Insoniyat taqdiriga katta ta'sir ko'rsatgan buyuk qo'mondon va davlat arbobi uchun tarixiy kampaniyalar va muhim voqealar gamifikatsiyasi sizning kundalik tartibingizni buzadi!",
+    "available": "Mavjud:",
+    "about_game": "O'yin haqida",
+    "download": "Yuklab olish",
+    "platforms": {
+      "Web_app": "Steam",
+      "desktop_app": "Desktop Application",
+      "vr": "VR"
+    },
+    "latest_new_Title": "So'nggi yangiliklar",
+    "services_title": "BIZNING XIZMATLARIMIZ",
+    "services_description": "Biz turli platformalar va ilovalar bo'yicha ishtirok etish, o'rganish va ko'ngilochar tajribalarni yaxshilashga qaratilgan integratsiyalangan ishlab chiqish echimlarini taqdim etamiz.",
+    "services_buttons": {
+      "more_about_us": "Biz haqimizda batafsil",
+      "contact_us": "Biz bilan bog'laning"
+    },
+    "game_development": {
+      "title": "O'yin ishlab chiqish",
+      "description": "Biz har doim ijodkorlik va texnologiyalar chegaralarini kengaytirib, noyob va ilhomlantiruvchi tajribalar yaratishga intilamiz."
+    },
+    "OurPartnyors": "BIZNING HAMKORLARIMIZ",
+    "work_free_title": "Xursand bo'lib biz bilan bog'laning va jamoamizga qo'shiling",
+    "opportunities": "ish o'rinlari"
+  },
+  "Navbartitle": {
+    "about_us_title": "Biz haqimizda",
+    "portfolio_title": "Portfolio",
+    "praktikum_title": "Praktikum",
+    "service_title": "Xizmatlar",
+    "blog_title": "Bloglar",
+    "nav_btn": {
+      "contact_btn": "Biz bilan bog'laning",
+      "join_us_btn": "Bizga qo'shiling"
+    }
+  }
+}

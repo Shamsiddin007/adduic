@@ -8,9 +8,11 @@ import secondelementlogo from "../../public/icons/fi_10781896.png";
 import backlogo from "../../public/icons/Logos.png";
 import style from "@/components/style.module.css"
 import CloseBtn from "/public/Imgs/close-428 1.png";
+import { useTranslations } from "next-intl";
 
 
 const Videolayout = () => {
+  const t = useTranslations("HomePage")
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isVideoLoading, setIsVideoLoading] = useState(true);
 
@@ -28,10 +30,12 @@ const Videolayout = () => {
   }, [isVideoOpen]);
 
   const platforms = [
-    { icon: elementlogo, name: "Steam" },
-    { icon: Windowslogo, name: "Desktop app" },
-    { icon: secondelementlogo, name: "VR" },
+    { icon: elementlogo, name: t("platforms.Web_app") },
+    { icon: Windowslogo, name: t("platforms.desktop_app") },
+    { icon: secondelementlogo, name: t("platforms.vr") },
   ];
+
+  const [firstTitle, secondTitle] = t("game_title").split(" ")
 
   return (
     <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,17 +52,14 @@ const Videolayout = () => {
           <div className="p-6 sm:p-12 w-full lg:w-1/2">
             <div className="space-y-4">
               <h1 className="text-3xl sm:text-4xl lg:text-[44px] uppercase font-bold">
-                mangu <span className="text-orange-600">sarkarda</span>
+                {firstTitle} <span className="text-orange-600">{secondTitle}</span>
               </h1>
               <p className="text-sm sm:text-base text-white/90 max-w-xl">
-                The gamification of great historical campaigns and tipping
-                points, which played the key destinies of mankind for the Great
-                Commander and statesman, will blow up the tapes of your everyday
-                life!
+                {t("game_description")}
               </p>
             </div>
             <div className="mt-8 sm:mt-12 mb-8 sm:mb-20">
-              <h2 className="mb-4 text-sm sm:text-base">Available:</h2>
+              <h2 className="mb-4 text-sm sm:text-base">{t("available")}</h2>
               <div className="flex flex-wrap gap-3 sm:gap-4">
                 {platforms.map((platform) => (
                   <button
@@ -80,12 +81,12 @@ const Videolayout = () => {
             <div className="flex gap-4 sm:gap-6">
             <Link href={"/portfolio/6"}>
                 <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
-                  About game
+                  {t("about_game")}
                 </button>
             </Link>
             <Link href={"https://mangusarkarda.com/"} target="blank">
               <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
-                Download
+                {t("download")}
               </button>
             </Link>
             </div>
@@ -144,7 +145,7 @@ const Videolayout = () => {
                   title="“Mangu Sarkarda” - Oʻzbekistondagi ilk tarixiy video oʻyin treyleri!"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
+                    referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
                   className="mt-20"
                 ></iframe>

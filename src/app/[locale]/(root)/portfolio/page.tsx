@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -14,6 +14,7 @@ type Post = {
 };
 
 function Page() {
+  
   const [posts, setPosts] = useState<Post[]>([]);
   const [visibleTrips, setVisibleTrips] = useState(8);
   const [loading, setLoading] = useState(false);

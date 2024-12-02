@@ -1,30 +1,33 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Game from "public/Imgs/games1.png";
 import Game1 from "public/Imgs/positionimg.png";
 
 const Partners = () => {
+
+  const t = useTranslations("HomePage")
+
+  const [firsttTitle, secondTitle] = t("services_title").split(" ")
+
   return (
     <section className="w-full py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center m-auto">
           <div className="space-y-6">
             <h1 className="font-bold text-3xl sm:text-4xl lg:text-6xl text-white text-center md:text-start">
-              OUR <span className="text-blue-600">SERVICES</span>
+              {firsttTitle} <span className="text-blue-600">{secondTitle}</span>
             </h1>
 
             <p className="text-[#FFFFFF66] text-sm sm:text-base lg:text-lg max-w-xl text-center md:text-start">
-              We provide comprehensive development solutions focused on creating
-              engaging, interactive experiences that enhance user engagement,
-              learning, and entertainment across a variety of platforms and
-              applications.
+              {t("services_description")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 w-full items-center md:justify-start justify-center">
               <button className="md:px-6 md:py-3 px-4 py-2 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base md:w-[250px] w-[150px]">
-                More about us
+                {t("services_buttons.more_about_us")}
               </button>
               <button className="md:px-6 md:py-3 px-4 py-2 rounded-full bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] transition-all duration-300 text-sm sm:text-base md:w-[250px] w-[150px]">
-                Contact us
+                {t("services_buttons.contact_us")}
               </button>
             </div>
           </div>
@@ -41,12 +44,11 @@ const Partners = () => {
                 </div>
 
                 <h2 className="text-white text-xl sm:text-2xl lg:text-3xl font-semibold mb-4">
-                  Game development
+                  {t("game_development.title")}
                 </h2>
 
                 <p className="text-[#FFFFFF66] text-sm sm:text-base lg:text-lg max-w-lg relative z-10">
-                  We constantly push the boundaries of creativity and technology to
-                  deliver groundbreaking experiences that captivate and inspire.
+                  {t("game_development.description")}
                 </p>
               </div>
 

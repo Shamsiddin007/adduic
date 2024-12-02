@@ -6,10 +6,13 @@ import Chevron from "public/Imgs/chevron-right.png";
 import { useEffect, useState, useRef } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
+import { useTranslations } from "next-intl";
 
 type Project = { id: number; title: string; date: string; imgLogo: string };
 
 function ProjectsPage() {
+
+  const t = useTranslations("HomePage")
   const [projects, setProjects] = useState<Project[]>([]);
   const [isMobile, setIsMobile] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -65,11 +68,11 @@ function ProjectsPage() {
             className="font-bold text-3xl sm:text-4xl lg:text-5xl text-white"
             data-aos="fade-right"
           >
-            OUR <span className="text-blue-600">PROJECTS</span>
+            {t("our_title")}<span className="text-blue-600">{t("our_projects")}</span>
           </h2>
           <Link href="/portfolio" data-aos="fade-right">
             <button className="flex items-center group justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
-              All projects{" "}
+              {t("all_Project_btn")}
               <Image
                 src={Chevron}
                 alt="Chevron right"
@@ -111,7 +114,7 @@ function ProjectsPage() {
                           />
                         </div>
                         <button className="w-[200px] text-white px-4 py-2 opacity-100 transition ease-in-out bg-gradient-to-b from-gray-700 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center mt-8">
-                          Learn more <Image src={Chevron} alt="Logo" />
+                          {t("learn_more_button")}<Image src={Chevron} alt="Logo" />
                         </button>
                       </div>
                     </Link>
@@ -154,7 +157,7 @@ function ProjectsPage() {
                     className="inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                   />
                   <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-gray-800 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center">
-                    Learn more <Image src={Chevron} alt="Logo" />
+                    {t("learn_more_button")} <Image src={Chevron} alt="Logo" />
                   </button>
                 </div>
 

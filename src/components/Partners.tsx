@@ -14,13 +14,19 @@ import ProjectImg4 from "public/icons/Logo(3).png";
 import ProjectImg5 from "public/icons/Logo(1).svg";
 
 import { Autoplay} from 'swiper/modules';
+import { useTranslations } from "next-intl";
 
 
 const Projects = () => {
+
+  const t = useTranslations("HomePage")
+
+  const [firstTitle, secondTitle] = t("OurPartnyors").split(" ")
+
   return (
     <div className="container mx-auto overflow-hidden">
       <h1 className="font-bold text-white text-center pb-8 text-2xl md:text-3xl lg:text-4xl">
-        OUR <span className="text-blue-600">PARTNERS</span>
+        {firstTitle} <span className="text-blue-600">{secondTitle}</span>
       </h1>
 
       <Swiper

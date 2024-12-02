@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/navigation";
 import Arrow from "public/icons/arrow.png";
 import Levelup from "@/components/Levelup";
 
@@ -87,7 +87,7 @@ function AllNews() {
               className="text-white flex items-center gap-2 bg-[#FFFFFF1A] py-[10px] px-[24px] rounded-full m-auto  mb-12"
             >
               See more
-              <Image src={Arrow} alt="ArrowIcons" width={12} height={8} />
+              <Image src={Arrow} alt="ArrowIcons" />
             </button>
           ))}
       </div>

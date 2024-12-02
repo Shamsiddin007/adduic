@@ -6,8 +6,12 @@ import calendar from "/public/icons/calendar.png";
 import money from "/public/icons/moneyImg.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const Workopportunite = () => {
+
+  const t = useTranslations("HomePage")
+
   const [trips, setTrips] = useState<Job[]>([]);
   type Job = {
     id: number;
@@ -33,14 +37,17 @@ const Workopportunite = () => {
       .catch((error) => console.error("Fetch error:", error));
   }, []);
 
+
+  const [firstTitle, secondTitle] = t("opportunities").split(" ")
+
   return (
-    <div className="container select-none mx-auto">
+    <div className="container mx-auto">
       <div className="h-[max-content] w-full text-white pb-[450px] pt-20 mb-10">
         <p className="text-[18px] text-center font-thin text-[#FFFFFF66]">
-          Feel free to reach out and join our team
+          {t("work_free_title")}
         </p>
         <h1 className="text-3xl sm:text-5xl lg:text-6xl capitalize mt-8 md:mb-12 text-center flex items-center justify-center gap-6">
-          work <span className="text-[#3375F6]">opportunities</span>
+          {firstTitle} <span className="text-[#3375F6]">{secondTitle}</span>
         </h1>
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 lg:w-auto md:w-[500px] md:m-auto gap-8 mt-20 w-auto">
