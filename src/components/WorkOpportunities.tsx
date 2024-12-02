@@ -6,11 +6,13 @@ import calendar from "/public/icons/calendar.png";
 import money from "/public/icons/moneyImg.png";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const Workopportunite = () => {
 
   const t = useTranslations("HomePage")
+  const locale = useLocale()
+
 
   const [trips, setTrips] = useState<Job[]>([]);
   type Job = {
@@ -64,7 +66,7 @@ const Workopportunite = () => {
                   </span>
                   <p>{job.weekJob} / {job.jobTime}</p>
                 </div>
-                <Link href={`/workopportunite/${job.id}`}>
+                <Link href={`${locale}/workopportunite/${job.id}`}>
                   <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
                     <div className="flex items-center gap-3">
                       <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A]">

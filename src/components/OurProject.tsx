@@ -6,8 +6,7 @@ import Chevron from "public/Imgs/chevron-right.png";
 import { useEffect, useState, useRef } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { useTranslations } from "next-intl";
-
+import { useLocale, useTranslations } from "next-intl";
 type Project = { id: number; title: string; date: string; imgLogo: string };
 
 function ProjectsPage() {
@@ -17,6 +16,8 @@ function ProjectsPage() {
   const [isMobile, setIsMobile] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const locale = useLocale()
 
   useEffect(() => {
     fetch(
@@ -70,7 +71,7 @@ function ProjectsPage() {
           >
             {t("our_title")}<span className="text-blue-600">{t("our_projects")}</span>
           </h2>
-          <Link href="/portfolio" data-aos="fade-right">
+          <Link href={`/portfolio`} data-aos="fade-right">
             <button className="flex items-center group justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
               {t("all_Project_btn")}
               <Image
@@ -97,7 +98,7 @@ function ProjectsPage() {
                     key={project.id}
                     className="min-w-full flex-shrink-0 flex flex-col items-center text-center"
                   >
-                    <Link href={`/portfolio/${project.id}`}>
+                    <Link href={`${locale}/portfolio/${project.id}`} locale={false}>
                       <div className="group relative w-full rounded-2x p-5 text-white text-center shadow-lg transition-all duration-300 hover:shadow-xl mb-12">
                         <h3 className="text-xl font-bold mb-2 text-center">
                           {project.title}
@@ -142,7 +143,7 @@ function ProjectsPage() {
             data-aos="fade-right"
           >
             {projects.map((project) => (
-              <Link href={`/portfolio/${project.id}`} key={project.id}>
+              <Link href={`${locale}/portfolio/${project.id}`} key={project.id}>
                 <div className="group relative h-[400px] w-full overflow-hidden text-center rounded-2xl bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg transition-all duration-300 hover:shadow-xl">
                   <h3 className="text-[16px] font-bold mb-2">
                     {project.title}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import styles from "./style.module.css";
 
 import Link from "next/link";
@@ -8,6 +8,7 @@ import Link from "next/link";
 export default function Story() {
 
   const t = useTranslations("HomePage")
+  const locale = useLocale()
 
   const scrollToContact = () => {
     const contactElement = document.getElementById("contact-section");
@@ -41,7 +42,7 @@ export default function Story() {
                     {t("contact_button")}
                   </button>
                 </div>
-                <Link href="/about">
+                <Link href={`${locale}/about`}>
                   <button className="py-[10px] px-7 bg-[#1F2022] hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
                     {t("learn_more_button")}
                   </button>

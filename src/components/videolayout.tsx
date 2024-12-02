@@ -8,13 +8,15 @@ import secondelementlogo from "../../public/icons/fi_10781896.png";
 import backlogo from "../../public/icons/Logos.png";
 import style from "@/components/style.module.css"
 import CloseBtn from "/public/Imgs/close-428 1.png";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 
 const Videolayout = () => {
   const t = useTranslations("HomePage")
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [isVideoLoading, setIsVideoLoading] = useState(true);
+
+  const locale = useLocale()
 
   const handleVideoOpen = () => {
     setIsVideoOpen(true);
@@ -79,7 +81,7 @@ const Videolayout = () => {
               </div>
             </div>
             <div className="flex gap-4 sm:gap-6">
-            <Link href={"/portfolio/6"}>
+            <Link href={`${locale}/portfolio/6`}>
                 <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                   {t("about_game")}
                 </button>
