@@ -9,10 +9,8 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 
 const Workopportunite = () => {
-
-  const t = useTranslations("HomePage")
-  const locale = useLocale()
-
+  const t = useTranslations("HomePage");
+  const locale = useLocale();
 
   const [trips, setTrips] = useState<Job[]>([]);
   type Job = {
@@ -37,10 +35,9 @@ const Workopportunite = () => {
         setTrips(dat.workopportunity);
       })
       .catch((error) => console.error("Fetch error:", error));
-  }, []);
+}, []);
 
-
-  const [firstTitle, secondTitle] = t("opportunities").split(" ")
+  const [firstTitle, secondTitle] = t("opportunities").split(" ");
 
   return (
     <div className="container mx-auto">
@@ -64,7 +61,9 @@ const Workopportunite = () => {
                   <span className="mr-2">
                     <Image src={money} alt="money img" />
                   </span>
-                  <p>{job.weekJob} / {job.jobTime}</p>
+                  <p>
+                    {job.weekJob} / {job.jobTime}
+                  </p>
                 </div>
                 <Link href={`${locale}/workopportunite/${job.id}`}>
                   <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
@@ -91,6 +90,9 @@ const Workopportunite = () => {
               </div>
             ))}
           </div>
+          <Link href={`${locale}/opportunity`}>
+            <button className="flex items-center justify-center gap-2 sm:px-24 sm:py-3 px-16 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-full text-sm transition-colors mt-5 m-auto">Load</button>
+          </Link>
         </div>
       </div>
     </div>
