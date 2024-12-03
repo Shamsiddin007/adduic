@@ -7,17 +7,16 @@ import Arrow from "public/icons/arrow.png";
 import Levelup from "@/components/Levelup";
 
 interface NewsItem {
-  id: string; 
+  id: string;
   titlePost: string;
-  postdate: string;  // Date when the news post was created
-  imgPost: string;   // URL for the image of the news post
+  postdate: string;
+  imgPost: string;
 }
 
 function AllNews() {
-  // State hooks with types
-  const [trips, setTrips] = useState<NewsItem[]>([]);  // Array of NewsItem objects
-  const [visibleTrips, setVisibleTrips] = useState<number>(8);  // Number of visible news items
-  const [loading, setLoading] = useState<boolean>(false);  // Loading state
+  const [trips, setTrips] = useState<NewsItem[]>([]);
+  const [visibleTrips, setVisibleTrips] = useState<number>(8);
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     fetch(
@@ -30,18 +29,17 @@ function AllNews() {
         return res.json();
       })
       .then((dat) => {
-        setTrips(dat.allnews);  // Update state with the fetched news
+        setTrips(dat.allnews);
       })
       .catch((error) => console.error("Fetch error:", error));
-  }, []);  // This effect runs once when the component mounts
+  }, []);
 
-  // Function to handle "See more" button click
   const handleSeeMore = () => {
     setLoading(true);
     setTimeout(() => {
-      setVisibleTrips((prevVisibleTrips) => prevVisibleTrips + 4);  // Show 4 more news items
+      setVisibleTrips((prevVisibleTrips) => prevVisibleTrips + 4);
       setLoading(false);
-    }, 1000);  // Simulate loading delay
+    }, 1000);
   };
 
   return (
@@ -54,7 +52,7 @@ function AllNews() {
         <h2 className="font-bold text-center text-5xl text-white uppercase pb-10">
           All <span className="text-blue-600">news</span>
         </h2>
-        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-[340px] sm:w-full m-auto gap-7 justify-between sm:mb-16 mb-8">
+        <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-auto sm:w-full m-auto gap-7 justify-center sm:justify-between sm:mb-16 mb-8">
           {Array.isArray(trips) &&
             trips.slice(0, visibleTrips).map((link: NewsItem, id: number) => (
               <Link href={`/blog/${link.id}`} key={id}>
