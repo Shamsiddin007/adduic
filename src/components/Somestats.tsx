@@ -60,7 +60,7 @@ const Somestats = () => {
 
         <div
           ref={parallaxRef}
-          className="group2 w-[120vw] h-[60%] absolute -bottom-8 z-1 -left-[10vw] mt-9"
+          className="group2 w-[120vw] h-[60%] absolute -bottom-16 z-1 -left-[10vw] mt-9"
         >
           <div
             data-depth="0.111111111111111111111111111111111"

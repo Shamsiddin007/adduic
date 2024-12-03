@@ -1,3 +1,4 @@
+"use client"
 
 import Image from "next/image";
 import Link from "next/link";
@@ -11,11 +12,15 @@ import instagram from "/public/icons/instagram.png";
 import facebook from "/public/icons/facebook.png";
 import styles from "./style.module.css"
 import Forma from "@/app/[locale]/(root)/forma/forma";
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 const Footer = () => {
 
   const t = useTranslations("FooterTitle") ;
-  const locale = useLocale()
+  const pathname = usePathname()
+  const locale = pathname.split("/")[1]
+
+  const basePath = locale ? `/${locale}` : ''
 
   const socialLinks = [
     { icon: linkidin, alt: "LinkedIn", href: "#" },
@@ -60,24 +65,24 @@ const Footer = () => {
               {/* Navigation Menus */}
               <article className={styles.article}>
                 <ul className={styles.item_home}>
-                  <Link href={`${locale}/portfolio`}>
+                  <Link href={`${basePath}/portfolio`}>
                     <li className={styles.item1}>{t("footer_ourprojects")}</li>
                   </Link>
-                  <Link href={`${locale}/about`}>
+                  <Link href={`${basePath}/about`}>
                     <li className={styles.item2}>{t("footer_workvalues")}</li>
                   </Link>
-                  <Link href={`${locale}/praktikum`}>
+                  <Link href={`${basePath}/praktikum`}>
                     <li className={styles.item3}>{t("footer_theteam")}</li>
                   </Link>
                 </ul>
                 <ul className={styles.item_home}>
-                  <Link href={`${locale}/service-us`}>
+                  <Link href={`${basePath}/service-us`}>
                     <li className={styles.item4}>{t("footer_contactus")}</li>
                   </Link>
-                  <Link href={`${locale}/portfolio`}>
+                  <Link href={`${basePath}/portfolio`}>
                     <li className={styles.item5}>{t("footer_vacansies")}</li>
                   </Link>
-                  <Link href={`${locale}/blog`}>
+                  <Link href={`${basePath}/blog`}>
                     <li className={styles.item6}>{t("footer_results")}</li>
                   </Link>
                 </ul>

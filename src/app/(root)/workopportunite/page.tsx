@@ -18,6 +18,7 @@ type Jobs = {
 export default function Page() {
   const [trips, setTrips] = useState<Jobs[]>([]);
   const locale = useLocale();
+  
 
   useEffect(() => {
     fetch(
@@ -34,6 +35,8 @@ export default function Page() {
       })
       .catch((error) => console.error("Fetch error:", error));
   }, []);
+  
+
 
   return (
     <section className="container mb-[500px] mt-[150px]">

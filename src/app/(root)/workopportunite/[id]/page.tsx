@@ -7,7 +7,6 @@ import calendar from "/public/icons/calendar.png";
 import clock from "/public/icons/clock.png";
 import money from "/public/icons/moneyImg.png";
 import Image from "next/image";
-import { useData } from "@/components/ContextProvider";
 
 type Job = {
   id: number;
@@ -16,18 +15,36 @@ type Job = {
   jobTime: number;
   jobPrice: number;
 };
-
 type ProjectPageProps = {
   params: { id: string };
 };
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const post: Job = useData()
+  const [single, setSingle] = useState<Job | null>(null);
+  const { id } = params;
+
+  useEffect(() => {
+    fetch(
+      "https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/workOpportunity/projects.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3dvcmtPcHBvcnR1bml0eS9wcm9qZWN0cy5qc29uIiwiaWF0IjoxNzMxNDc0OTQ0LCJleHAiOjE3NjMwMTA5NDR9.gVmYXET9c8Aq1kZOYUdY-5z6Sh-ICeLJDl62TK8Dw8I&t=2024-11-13T05%3A15%3A44.885Z"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data); // JSON ma'lumotini tekshirish
+        const project = data.workopportunity.find(
+          (item: Job) => item.id === Number(id)
+        ); // to'g'ri massiv
+        setSingle(project);
+      });
+  }, [id]);
+
+  if (!single) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="container text-white">
       <div className="pb-[500px] w-full">
         <div className="w-full py-5 px-4 sm:px-12 rounded-xl m-[150px_0px_20px_0px] bg-[#2b2b2e] text-start mb-12">
-          <h1 className="mb-3 text-xl sm:text-2xl">{post.jobTitle}</h1>
+          <h1 className="mb-3 text-xl sm:text-2xl">{single.jobTitle}</h1>
           <p className="w-full h-[2px] rounded-lg bg-gray-400 mb-8"></p>
           <div className="flex flex-col md:flex-row items-start sm:items-center justify-start gap-6 sm:gap-20">
             <article className="flex gap-4 sm:gap-8">
@@ -56,19 +73,19 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 <p className="rounded-[50%] bg-gray-700 cursor-pointer p-2">
                   <Image src={calendar} alt="calendar icon" width={20} />
                 </p>
-                <span>{post.weekJob}</span>
+                <span>{single.weekJob}</span>
               </article>
               <article className="flex items-center gap-2">
                 <p className="rounded-[50%] bg-gray-700 cursor-pointer p-1">
                   <Image src={clock} alt="clock icon" width={28} />
                 </p>
-                <span>{post.jobTime}</span>
+                <span>{single.jobTime}</span>
               </article>
               <article className="flex items-center gap-2">
                 <p className="rounded-[50%] bg-gray-700 cursor-pointer py-[10px] px-[6px]">
                   <Image src={money} alt="money icon"  />
                 </p>
-                <p>{post.jobPrice}</p>
+                <p>{single.jobPrice}</p>
               </article>
             </div>
           </div>
