@@ -61,6 +61,8 @@ function ProjectsPage() {
     });
   }, []);
 
+  const [firstTitle, secondTitle] = t("our_projects").split(" ")
+  
   return (
     <section className="w-full py-4 sm:py-16">
       <div className="container m-auto px-4 sm:px-6 lg:px-8">
@@ -69,9 +71,9 @@ function ProjectsPage() {
             className="font-bold text-3xl sm:text-4xl lg:text-5xl text-white"
             data-aos="fade-right"
           >
-            {t("our_title")}<span className="text-blue-600">{t("our_projects")}</span>
+            {firstTitle}<span className="text-blue-600 ml-4">{secondTitle}</span>
           </h2>
-          <Link href={`/portfolio`} data-aos="fade-right">
+          <Link href={`${locale}/portfolio`} data-aos="fade-right">
             <button className="flex items-center group justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
               {t("all_Project_btn")}
               <Image

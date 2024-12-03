@@ -8,8 +8,7 @@
     "story_description1": "UIC Games – bu ishtiyoq bilan ishlovchi hikoyachilar, ijodkor rassomlar va texnologiya ustalaridan iborat jamoa.",
     "story_description2": "Bizning iste'dodli ishlab chiquvchilar, dizaynerlar va ijodkorlar jamoamiz interaktiv o'yinlar va innovatsiyalar sohasida chegaralarni kengaytirishga intiladi.",
     "contact_button": "Biz bilan bog'laning",
-    "our_title": "BIZNING",
-    "our_projects": "LOYIHALARIMIZ",
+    "our_projects": "BIZNING LOYIHALARIMIZ",
     "all_Project_btn": "Barcha loyihalar",
     "learn_more_button": "Batafsil ma'lumot",
     "game_title": "Mangu Sarkarda",
@@ -36,7 +35,28 @@
     },
     "OurPartnyors": "BIZNING HAMKORLARIMIZ",
     "work_free_title": "Xursand bo'lib biz bilan bog'laning va jamoamizga qo'shiling",
-    "opportunities": "ish o'rinlari"
+    "opportunities": "ish o'rinlari",
+    "test_Launch": "Sayt test rejimida",
+    "about_page": {
+      "title_about": "biz kimmiz",
+      "description_about": "UIC Games-da biz ishtiyoqmand hikoyachilar, ko‘ruvchan rassomlar va texnologik sehrgarlar bo‘lib, unutilmas o‘yin tajribalarini yaratishga bag‘ishlanganmiz. Innovatsiyalarga bo‘lgan qat’iy sadoqat bilan biz o‘yinchilar epik sarguzashtlar va qiziqarli hikoyalar ichida yo‘qolib qoladigan maftunkor dunyolarni yaratamiz. Iqtidorli dasturchilar, dizaynerlar va ijodiy xodimlar jamoamiz o‘z imkoniyatlar chegaralarini kengaytirib, butun dunyodagi o‘yinchilarni qiziqtiradigan o‘yinlarni yaratadi. Biz bilan birga bu sayohatda ishtirok etib, interaktiv ko‘ngilochar kelajagini qayta belgilashda ishtirok eting.",
+      "title_about_small": "Biz qanday ishlaymiz?",
+      "title_our_work": "Ish qadriyatlarimiz",
+      "title_innovation": "Innovatsiya",
+      "description_innovation": "Biz ilhomlantiruvchi va maftunkor tajribalarni taqdim etish uchun har doim ijodkorlik va texnologiya chegaralarini kengaytirishga intilamiz.",
+      "title_passion": "Ishq",
+      "description_passion": "O‘yinlarga bo‘lgan muhabbatimiz biz qiladigan hamma narsaning asosi hisoblanadi. Biz har bir loyihaga o‘z qalbimizni qo‘yamiz, har bir detal bizning ishtiyoqimizni aks ettiradi.",
+      "title_collaboration": "Hamkorlik",
+      "description_collaboration": "Biz jamoaviy ishlash kuchiga ishonamiz. Bizning jamoamiz bir-biriga o‘xshamagan nuqtai nazarlarni birlashtiradi va ajoyib narsalar yaratadi.",
+      "title_quality": "Sifat",
+      "description_quality": "Mukammallik - bizning standartimiz. Biz o‘yinchilarning umidlarini oqlaydigan sifatli o‘yinlarni taqdim etishga intilamiz.",
+      "title_creativity": "Ijodkorlik",
+      "description_creativity": "Biz jasoratli g‘oyalarni qabul qilamiz va ijodiy fikrlashni qo‘llab-quvvatlaymiz, bu esa tasavvur rivojlanadigan madaniyatni shakllantiradi.",
+      "title_growth": "O‘sish",
+      "description_growth": "Biz doimiy o‘rganish va takomillashuvga intilamiz, har doim ko‘nikmalarimizni oshirish va sohaga moslashning yangi usullarini izlaymiz.",
+      "what_can": "Nimalar qilamiz?",
+      "about_ourcompany": "Bizning kompaniyamiz o‘yin ishlab chiqish sohasida keng ko‘lamli xizmatlarni taqdim etadi va o‘yin industriyasini zabt etishni istagan iqtidorli yoshlar uchun o‘quv maydonchasini taqdim etadi."
+    }
   },
   "Navbartitle": {
     "about_us_title": "Biz haqimizda",
@@ -48,5 +68,18 @@
       "contact_btn": "Biz bilan bog'laning",
       "join_us_btn": "Bizga qo'shiling"
     }
+  },
+  "FooterTitle": {
+    "footer_ourprojects": "Loyihalarimiz",
+    "footer_workvalues": "Ish qadriyatlari",
+    "footer_theteam": "Jamoa",
+    "footer_contactus": "Biz bilan bog‘laning",
+    "footer_vacansies": "Bo‘sh ish o‘rinlari",
+    "footer_results": "Natijalar",
+    "footer_phoneTitle": "Telefon raqami",
+    "footer_emailTitle": "Elektron pochta",
+    "footer_TitleLogo": "BIZ",
+    "footer_description": "Biz qizg‘in hikoyachilar, orzudagi san’atkorlar va unutilmas o‘yin tajribalarini yaratishga bag‘ishlangan texnik sehrgarlar"
   }
+
 }

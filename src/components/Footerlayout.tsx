@@ -11,7 +11,12 @@ import instagram from "/public/icons/instagram.png";
 import facebook from "/public/icons/facebook.png";
 import styles from "./style.module.css"
 import Forma from "@/app/[locale]/(root)/forma/forma";
+import { useLocale, useTranslations } from "next-intl";
 const Footer = () => {
+
+  const t = useTranslations("FooterTitle") ;
+  const locale = useLocale()
+
   const socialLinks = [
     { icon: linkidin, alt: "LinkedIn", href: "#" },
     { icon: facebook, alt: "Facebook", href: "#" },
@@ -55,25 +60,25 @@ const Footer = () => {
               {/* Navigation Menus */}
               <article className={styles.article}>
                 <ul className={styles.item_home}>
-                  <Link href="/portfolio">
-                    <li className={styles.item1}>Our projects</li>
+                  <Link href={`${locale}/portfolio`}>
+                    <li className={styles.item1}>{t("footer_ourprojects")}</li>
                   </Link>
-                  <Link href="/about">
-                    <li className={styles.item2}>Work values</li>
+                  <Link href={`${locale}/about`}>
+                    <li className={styles.item2}>{t("footer_workvalues")}</li>
                   </Link>
-                  <Link href="/praktikum">
-                    <li className={styles.item3}>The team</li>
+                  <Link href={`${locale}/praktikum`}>
+                    <li className={styles.item3}>{t("footer_theteam")}</li>
                   </Link>
                 </ul>
                 <ul className={styles.item_home}>
-                  <Link href="/service-us">
-                    <li className={styles.item4}>Contact us</li>
+                  <Link href={`${locale}/service-us`}>
+                    <li className={styles.item4}>{t("footer_contactus")}</li>
                   </Link>
-                  <Link href="/portfolio">
-                    <li className={styles.item5}>Vacancies</li>
+                  <Link href={`${locale}/portfolio`}>
+                    <li className={styles.item5}>{t("footer_vacansies")}</li>
                   </Link>
-                  <Link href="/blog">
-                    <li className={styles.item6}>Results</li>
+                  <Link href={`${locale}/blog`}>
+                    <li className={styles.item6}>{t("footer_results")}</li>
                   </Link>
                 </ul>
               </article>
@@ -85,7 +90,7 @@ const Footer = () => {
                     <Image src={phone} alt="Phone" className="w-5 h-5" />
                   </span>
                   <div>
-                    <p className="text-sm text-gray-400">Phone number</p>
+                    <p className="text-sm text-gray-400">{t("footer_phoneTitle")}</p>
                     <p className="text-white">+998 (71) 252-74-77</p>
                   </div>
                 </div>
@@ -94,7 +99,7 @@ const Footer = () => {
                     <Image src={email} alt="Email" className="w-5 h-5" />
                   </span>
                   <div>
-                    <p className="text-sm text-gray-400">Email</p>
+                    <p className="text-sm text-gray-400">{t("footer_emailTitle")}</p>
                     <p className="text-white">info@uicgames.uz</p>
                   </div>
                 </div>
@@ -105,12 +110,9 @@ const Footer = () => {
             {/* Right Column */}
             <div className="space-y-6">
               <h2 className="text-3xl sm:text-4xl font-bold text-white">
-                WE ARE <span className="text-[#3375F6]">UIC GAMES!</span>
+                {t("footer_TitleLogo")} <span className="text-[#3375F6]">UIC GAMES!</span>
               </h2>
-              <p className="text-gray-400 text-base sm:text-lg max-w-lg">
-                We are passionate storytellers, visionary artists, and technical
-                wizards dedicated to creating unforgettable gaming experiences
-              </p>
+              <p className="text-gray-400 text-base sm:text-lg max-w-lg">{t("footer_description")} </p>
 
               {/* Social Links */}
               <div className="flex gap-4">

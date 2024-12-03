@@ -46,17 +46,17 @@ export default function Mani() {
                 />
                 {t("working_message")}
               </span>
-             <h1 className="max-w-[66%] mb-12 md:mb-16 lg:mb-[100px] xl:mb-[180px] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase text-white tracking-wider">
+             <h1 className="max-w-[70%] mb-12 md:mb-16 lg:mb-[100px] xl:mb-[180px] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase text-white tracking-wider">
                 {firstTitle}
-                <span className="relative text-blue-500 border border-blue-500 inline-block mb-2">
+                <span className="relative text-blue-500 border border-blue-500 inline-block mb-2 mx-4">
                   <span className="absolute -top-1 bg-white -left-1 w-2 h-2"></span>
                   <span className="absolute -top-1 -right-1 w-2 h-2 bg-white"></span>
                   <span className="absolute -bottom-1 -left-1 w-2 h-2 bg-white"></span>
                   <span className="absolute -bottom-1 -right-1 w-2 h-2 bg-white"></span>
-                  <span className="relative">{secondTitle}</span>
+                  <span className="relative mx-2">{secondTitle}</span>
                 </span>{" "}
                 {thirtTitle} {t("main_title1")}
-                <span className="relative text-blue-500 border border-blue-500 inline-block">
+                <span className="relative text-blue-500 border border-blue-500 inline-block ml-3">
                   <span className="absolute -top-1 bg-white -left-1 w-2 h-2"></span>
                   <span className="absolute -top-1 -right-1 w-2 h-2 bg-white"></span>
                   <span className="absolute -bottom-1 -left-1 w-2 h-2 bg-white"></span>
