@@ -163,7 +163,7 @@ function ProjectsPage() {
                     {t("learn_more_button")} <Image src={Chevron} alt="Logo" />
                   </button>
                 </div>
-
+                  
               </Link>
             ))}
           </div>

@@ -42,12 +42,14 @@ const Workopportunite = () => {
   return (
     <div className="container mx-auto">
       <div className="h-[max-content] w-full text-white pb-[450px] pt-20 mb-10">
-        <p className="text-[18px] text-center font-thin text-[#FFFFFF66]">
+        <div>
+        <p className="text-[18px] text-center font-thin  text-[#FFFFFF66]">
           {t("work_free_title")}
         </p>
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl capitalize mt-8 md:mb-12 text-center flex items-center justify-center gap-6">
+        <h1 className="text-3xl sm:text-5xl lg:text-6xl capitalize mt-8 md:mb-12 text-center sm:flex flex-cols items-center justify-center gap-6">
           {firstTitle} <span className="text-[#3375F6]">{secondTitle}</span>
         </h1>
+        </div>
         <div>
           <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 lg:w-auto md:w-[500px] md:m-auto gap-8 mt-20 w-auto">
             {trips.map((job) => (
