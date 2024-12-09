@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import Chevron from "public/Imgs/chevron-right.png";
+import { useTranslations } from "next-intl";
 
 type Post = {
   id: number;
@@ -18,6 +19,7 @@ function Page() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [visibleTrips, setVisibleTrips] = useState(8);
   const [loading, setLoading] = useState(false);
+  const t = useTranslations("HomePage")
 
   useEffect(() => {
     fetch(
@@ -37,12 +39,14 @@ function Page() {
     }, 1000);
   };
 
+  const [firstElement, secondElement] = t("portfolio_page.portfolio_title").split(" ")
+
   return (
     <div className="pb-[450px]">
       <div className="container m-auto px-4 sm:px-6 lg:px-8">
         <div className="mt-[200px] sm:mt-[150px]">
           <h1 className="font-bold mt-8 sm:mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center pb-8 sm:pb-16">
-            OUR <span className="text-blue-600">PROJECTS</span>
+            {firstElement} <span className="text-blue-600">{secondElement}</span>
           </h1>
         </div>
 
@@ -66,7 +70,7 @@ function Page() {
                       height={200}
                     />
                     <button className="w-[150px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center ">
-                      Learn more <Image src={Chevron} alt="Logo" />
+                      {t("portfolio_page.single_btn_portfolio")} <Image src={Chevron} alt="Logo" />
                     </button>
                   </div>
                 </div>
@@ -84,7 +88,7 @@ function Page() {
               onClick={handleSeeMore}
               className="text-white flex items-center gap-2 bg-[#FFFFFF1A] py-2 px-6 sm:py-[10px] sm:px-[24px] rounded-full m-auto mb-12"
             >
-              Load moxre
+              {t("portfolio_page.single_btn_portfolio")}
             </button>
           ))}
       </div>

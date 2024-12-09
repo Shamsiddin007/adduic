@@ -13,6 +13,7 @@ const Workopportunite = () => {
   const locale = useLocale();
 
   const [trips, setTrips] = useState<Job[]>([]);
+  
   type Job = {
     id: number;
     jobTitle: string;

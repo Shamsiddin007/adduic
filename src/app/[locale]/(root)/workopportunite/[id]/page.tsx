@@ -10,7 +10,6 @@ import { useData } from "@/components/ContextProvider";
 import Link from "next/link";
 
 type Job = {
-  id: number;
   jobTitle: string;
   weekJob: string;
   jobTime: number;
@@ -18,8 +17,10 @@ type Job = {
 };
 
 type ProjectPageProps = {
-  params: { id: string };
+  params: { id: number };
 };
+
+
 export default function ProjectPage({ params }: ProjectPageProps) {
   const post: Job = useData()
 

@@ -5,8 +5,9 @@ import elementLogo from "public/Imgs/elementLogo.png";
 import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
 import Highlights from "public/Imgs/highlights.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useData } from "@/components/ContextProvider";
+import { useTranslations } from "next-intl";
 
 type ProjectPageProps = {
   params: { id: string };
@@ -25,12 +26,15 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
   const post : Post = useData()
   const [showFullText, setShowFullText] = useState(false)
+  const t = useTranslations("HomePage")
 
   if (!post) return <div>Loading...</div>;
 
   const toggleTextHandle = () => {
     setShowFullText((prev) => !prev);
   };
+
+  const [firstElement, secondElement] = t("some_highlights").split(" ")
 
   return (
     <div className="pb-[500px]">
@@ -59,7 +63,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
           {/* Available section */}
           <div className="flex flex-col lg:flex-row lg:items-center gap-4 text-white">
-            <h2 className="text-[16px] whitespace-nowrap">Available:</h2>
+            <h2 className="text-[16px] whitespace-nowrap">{t("available")}</h2>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
                 <Image src={elementLogo} alt="Steam" width={24} height={24} />
@@ -67,7 +71,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
                 <Image src={WindowsLogo} alt="Desktop app" width={24} height={24} />
-                <p className="text-[14px]">Desktop app</p>
+                <p className="text-[14px]">{t("platforms.desktop_app")}</p>
               </div>
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
                 <Image src={secendelementLogo} alt="VR" width={24} height={24} />
@@ -79,10 +83,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           {/* Buttons section */}
           <div className="flex flex-wrap gap-4 justify-center">
             <button className="cursor-pointer w-[200px] rounded-full px-8 py-3 bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] duration-300">
-              About Game
+              {t("about_game")}
             </button>
             <button className="cursor-pointer w-[200px] rounded-full px-8 py-3 bg-[#FFFFFF1A] text-white hover:bg-[#3375F6] duration-300">
-              Download
+              {t("download")}
             </button>
           </div>
         </div>
@@ -100,14 +104,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               onClick={toggleTextHandle}
               className="text-blue-500 hover:underline"
             >
-              {showFullText ? "Show less" : "Show more"}
+              {showFullText ? t("toggle_showless") : t("toggle_showmore")}
             </button>
           </div>
         </div>
 
         <div className="container pb-20">
           <h2 className="font-bold text-5xl text-white text-start">
-            SOME <span className="text-blue-600">HIGHLIGHTS</span>
+            {firstElement} <span className="text-blue-600">{secondElement}</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
             {[...Array(6)].map((_, index) => (

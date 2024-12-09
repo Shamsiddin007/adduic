@@ -5,7 +5,7 @@ import strelka from "/public/icons/strelka.png";
 import calendar from "/public/icons/calendar.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { usePathname } from "next/navigation";
 
 type Jobs = {
   id: number;
@@ -17,8 +17,10 @@ type Jobs = {
 
 export default function Page() {
   const [trips, setTrips] = useState<Jobs[]>([]);
-  const locale = useLocale();
-  
+  const pathname = usePathname()
+  const lcoale = pathname.split("/")[1]
+
+  const basePath = lcoale ? `/${lcoale}` : ""
 
   useEffect(() => {
     fetch(
@@ -58,7 +60,7 @@ export default function Page() {
                 {job.weekJob} / {job.jobTime}
               </p>
             </div>
-            <Link  href={`${locale}/workopportunite/${job.id}`}>
+            <Link  href={`${basePath}/workopportunite/${job.id}`}>
               <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
                 <div className="flex items-center gap-3">
                   <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A]">
@@ -99,21 +101,28 @@ export default function Page() {
                 {job.weekJob} / {job.jobTime}
               </p>
             </div>
-            <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
-              <div className="flex items-center gap-3">
-                <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A]">
-                  <Image src={calendar} alt="calendar" width={22} height={22} />
-                </article>
-                <article>{job.jobPrice}</article>
+            <Link  href={`${basePath}/workopportunite/${job.id}`}>
+              <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
+                <div className="flex items-center gap-3">
+                  <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A]">
+                    <Image
+                      src={calendar}
+                      alt="calendar"
+                      width={22}
+                      height={22}
+                    />
+                  </article>
+                  <article>{job.jobPrice}</article>
+                </div>
+                <p className="relative -left-3">
+                  <Image
+                    src={strelka}
+                    alt="strelka"
+                    className="w-4 h-4 pr-2 opacity-1"
+                  />
+                </p>
               </div>
-              <p className="relative -left-3">
-                <Image
-                  src={strelka}
-                  alt="strelka"
-                  className="w-4 h-4 pr-2 opacity-1"
-                />
-              </p>
-            </div>
+            </Link>
           </div>
         ))}
       </div>

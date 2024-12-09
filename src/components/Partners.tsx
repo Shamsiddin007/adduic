@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./style.module.css";
 import "./style.module.css"
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

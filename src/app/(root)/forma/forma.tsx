@@ -4,8 +4,10 @@ import React, { useState } from "react";
 import Image from "next/image";
 import send from "public/icons/send.png";
 import check from "public/icons/check.png";
+import { useTranslations } from "next-intl";
 
 export default function Forma() {
+  const t = useTranslations("HomePage")
   const [name, setName] = useState<string>("");
   const [contact, setContact] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -81,14 +83,14 @@ export default function Forma() {
       <div className="w-full rounded-[20px] mb-12 flex flex-col items-center bg-forma">
         <div className="flex flex-col items-center justify-center xl:w-7/12 md:w-8/12 w-10/12">
           <h4 className="pb-6 pt-11 text-start md:text-[32px] text-[26px] font-bold text-white">
-            Any questions
+            {t("contact.title_questions")}
           </h4>
           <form onSubmit={handleSubmit} className="w-full">
             <label
               htmlFor="name"
               className="text-[#FFFFFF] text-[16px] pb-2 font-sans"
             >
-              Your name
+              {t("contact.name_input")}
             </label>
             <br />
             <input
@@ -110,7 +112,7 @@ export default function Forma() {
               htmlFor="contact"
               className="text-[#FFFFFF] text-[16px] pb-2 font-sans"
             >
-              Phone number or email
+              {t("contact.phone_or_email")}
             </label>
             <br />
             <input
@@ -132,7 +134,7 @@ export default function Forma() {
               htmlFor="message"
               className="text-[#FFFFFF] text-[16px] pb-2 font-sans"
             >
-              Message
+              {t("contact.message")}
             </label>
             <br />
             <textarea
@@ -161,7 +163,7 @@ export default function Forma() {
                 hasErrors ? "" : "hover:shadow-lg"
               } transition-all duration-300`}
             >
-              Send
+              {t("contact.btn_send")}
               <Image
                 src={send}
                 alt="send icon"
@@ -187,7 +189,7 @@ export default function Forma() {
             width={22}
             height={22}                               
           />
-          Your question has been sent successfully
+          {t("contact.form_notif")}
         </div>
       )}
     </div>
