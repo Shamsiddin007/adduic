@@ -9,6 +9,13 @@
     "story_description2": "Our talented team of developers, designers, and creatives strives to push the boundaries of interactive gaming and innovation.",
     "contact_button": "Contact Us",
     "our_projects": "OUR PROJECTS",
+    "some_stats": "SOME STATS",
+    "desc_somestats": "Let&apos;s talk about numbers",
+    "stats_all": {
+      "special": "Specialists",
+      "mobile_games": "Mobile games",
+      "planed_projects": "Planned projects"
+    },
     "all_Project_btn": "All project",
     "learn_more_button": "Learn More",
     "game_title": "Mangu Sarkarda",
@@ -17,6 +24,10 @@
     "available": "Available:",
     "about_game": "About Game",
     "download": "Download",
+    "some_highlights": "SOME HIGHLIGHTS",
+    "toggle_showmore": "Show more",
+    "toggle_showless": "Show less",
+    "see_more": "See more",
     "platforms": {
       "Web_app": "Steam",
       "desktop_app": "Desktop Application",
@@ -25,6 +36,7 @@
     "latest_new_Title": "Latest news",
     "services_title": "OUR SERVICES",
     "services_description": "We provide integrated development solutions aimed at creating engaging and interactive experiences that enhance engagement, learning, and entertainment across various platforms and applications.",
+    "scroll_anim": "Scroll to continue",
     "services_buttons": {
       "more_about_us": "More About Us",
       "contact_us": "Contact Us"
@@ -56,7 +68,41 @@
       "description_growth": "We are committed to continuous learning and improvement, always seeking new ways to enhance our skills and evolve with the industry.",
       "what_can": "What can we do?",
       "about_ourcompany": "Our company provides a broad spectrum of services in the field of game development and provides a learning ground for any talented youth willing to conquer the game industry."
-    }
+    },
+    "portfolio_page": {
+      "portfolio_title": "OUR PROJECTS",
+      "single_btn_portfolio": "Learn more"
+    },
+    "work_opportunity": {
+      "title_requirements": "Requirements",
+      "desc_title_requirements1": "Experience in software testing.",
+      "desc_title_requirements2": "Knowledge of testing methodologies and understanding of the software development lifecycle.",
+      "desc_title_requirements3": "Experience writing test cases and test plans.",
+      "desc_title_requirements4": "Understanding the basics of test automation and experience working with automation tools (e.g. Selenium, Appium, JUnit, TestNG).",
+      "desc_title_requirements5": "The desire to learn new technologies and testing methodologies.",
+      "desc_title_requirements6": "Knowledge of software testing theory (methods, techniques);",
+      "title_Conditions": "Conditions",
+      "desc_title_conditions1": "The work schedule is 5/2 09:00 to 18:00",
+      "desc_title_conditions2": "Corporate education and trainings",
+      "desc_title_conditions3": " Working with a professional team to develop interesting projects",
+      "desc_title_conditions4": "Friendly and supportive atmosphere in the team, regular team events, team building, including marathons and quizzes",
+      "desc_title_conditions5": "The company is proud to provide its employees with the most modern and high-quality equipment for work",
+      "desc_title_conditions6": "A modern office with work facilities",
+      "desc_title_conditions7": "Timely payment of labor, including a system of bonuses for outstanding results",
+      "desc_title_conditions8": "Employment in accordance with the Labor Code of the Republic of Uzbekistan",
+      "desc_title_conditions9": "If you are ready to join our team and contribute to the development of innovative projects, please send your resume For more information about our capabilities, please follow this"
+    },
+    "contact": {
+      "title_questions": "Any questions",
+      "name_input": "Your name",
+      "phone_or_email": "Phone number or email",
+      "message": "Message",
+      "btn_send": "send",
+      "form_notif": "Your question has been sent successfully"
+    },
+    "blog_title": "LEVEL UP WITH THE LATEST GAME INSIGHTS!",
+    "blog_desc1": "Stay updated about everything",
+    "blog_news": "All news"
   },
   "Navbartitle": {
     "about_us_title": "About us",

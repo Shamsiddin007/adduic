@@ -1,5 +1,4 @@
 "use client";
-import { useState, useEffect } from "react";
 import facebook from "/public/icons/facebook.png";
 import instagram from "/public/icons/instagram.png";
 import telegram from "/public/icons/telegram.png";
@@ -8,6 +7,7 @@ import clock from "/public/icons/clock.png";
 import money from "/public/icons/moneyImg.png";
 import Image from "next/image";
 import { useData } from "@/components/ContextProvider";
+import Link from "next/link";
 
 type Job = {
   id: number;
@@ -132,8 +132,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <p>
                 If you are ready to join our team and contribute to the
                 development of innovative projects, please send your resume For
-                more information about our capabilities, please follow this
-                (https://uic.games/about).
+                more information about our capabilities, please follow this  
+                <Link href="/about" style={{color: "#3375f6"}}> (https://uic.games/about).</Link>
               </p>
             </article>
           </div>

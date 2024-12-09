@@ -5,7 +5,6 @@ import strelka from "/public/icons/strelka.png";
 import calendar from "/public/icons/calendar.png";
 import Image from "next/image";
 import Link from "next/link";
-import { useLocale } from "next-intl";
 import { usePathname } from "next/navigation";
 
 type Jobs = {

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { Link } from "@/navigation";
 import Arrow from "public/icons/arrow.png";
 import Levelup from "@/components/Levelup";
+import { useTranslations } from "next-intl";
 
 interface NewsItem {
   id: string;
@@ -17,6 +18,7 @@ function AllNews() {
   const [trips, setTrips] = useState<NewsItem[]>([]);
   const [visibleTrips, setVisibleTrips] = useState<number>(8);
   const [loading, setLoading] = useState<boolean>(false);
+  const t = useTranslations("HomePage")
 
   useEffect(() => {
     fetch(
@@ -42,15 +44,17 @@ function AllNews() {
     }, 1000);
   };
 
+  const [firstElement, secondElement] = t("blog_news").split(" ")
+
   return (
     <div className="pb-[450px]">
       <Levelup />
       <div className="container">
         <p className="text-[#FFFFFF] text-center text-xl font-sans pb-[12px] opacity-30 md:mt-16 mt-8">
-          Stay updated about everything
+          {t("blog_desc1")}
         </p>
         <h2 className="font-bold text-center text-5xl text-white uppercase pb-10">
-          All <span className="text-blue-600">news</span>
+          {firstElement} <span className="text-blue-600">{secondElement}</span>
         </h2>
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-auto sm:w-full m-auto gap-7 justify-center sm:justify-between sm:mb-16 mb-8">
           {Array.isArray(trips) &&
@@ -83,7 +87,7 @@ function AllNews() {
               onClick={handleSeeMore}
               className="text-white flex items-center gap-2 bg-[#FFFFFF1A] py-[10px] px-[24px] rounded-full m-auto  mb-12"
             >
-              See more
+              {t("see_more")}
               <Image src={Arrow} alt="ArrowIcons" />
             </button>
           ))}

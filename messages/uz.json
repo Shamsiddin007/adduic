@@ -1,85 +1,130 @@
 {
   "HomePage": {
-    "working_message": "Eng yaxshi natijalarga erishish uchun kunu tuni ishlayapmiz",
-    "main_title": "SIZNING G'oyalaringiz HAQIQATGA AYLANADI",
+    "working_message": "Eng yaxshi natijalarni yaratish uchun kun-u tun ishlaymiz",
+    "main_title": "SIZNING G'OYALARINGIZ HAQIQATGA AYLANADI",
     "main_title1": "",
-    "description_first_home": "UIC Games 2018 yilda tashkil etilgan o'yin ishlab chiqaruvchi kompaniya bo'lib, texnologiyalarni ijodiy hikoyalar bilan birlashtirib, noyob o'yin tajribalari yaratishga qaratilgan.",
+    "description_first_home": "UIC Games 2018-yilda tashkil etilgan oʻyin ishlab chiqish kompaniyasidir. U texnologiyani ijodiy hikoyalar bilan birlashtirgan holda noyob oʻyin tajribalarini yetkazib berishga qaratilgan.",
     "title_second": "Biz",
-    "story_description1": "UIC Games – bu ishtiyoq bilan ishlovchi hikoyachilar, ijodkor rassomlar va texnologiya ustalaridan iborat jamoa.",
-    "story_description2": "Bizning iste'dodli ishlab chiquvchilar, dizaynerlar va ijodkorlar jamoamiz interaktiv o'yinlar va innovatsiyalar sohasida chegaralarni kengaytirishga intiladi.",
+    "story_description1": "UIC Games - bu ehtirosli hikoyachilar, tasavvurli rassomlar va texnologiya ustalaridan iborat jamoa.",
+    "story_description2": "Bizning isteʼdodli ishlab chiquvchilar, dizaynerlar va ijodiy mutaxassislar jamoasi interaktiv oʻyinlar va innovatsiyalarda chegaralarni kengaytirish uchun intiladilar.",
     "contact_button": "Biz bilan bog'laning",
-    "our_projects": "BIZNING LOYIHALARIMIZ",
+    "our_projects": "BIZNING LOYIHALAR",
+    "some_stats": "BA'ZI STATISTIKALAR",
+    "desc_somestats": "Keling, raqamlar haqida gaplashamiz",
+    "stats_all": {
+      "special": "Mutaxassislar",
+      "mobile_games": "Mobil o'yinlar",
+      "planed_projects": "Rejalashtirilgan loyihalar"
+    },
     "all_Project_btn": "Barcha loyihalar",
     "learn_more_button": "Batafsil ma'lumot",
     "game_title": "Mangu Sarkarda",
     "game_highlight": "sarkarda",
-    "game_description": "Insoniyat taqdiriga katta ta'sir ko'rsatgan buyuk qo'mondon va davlat arbobi uchun tarixiy kampaniyalar va muhim voqealar gamifikatsiyasi sizning kundalik tartibingizni buzadi!",
+    "game_description": "Ulug‘ tarixiy yurishlar va insoniyat taqdiriga katta ta’sir ko‘rsatgan muhim daqiqalar haqida oʻyin sizning kundalik hayotingizni o‘zgartiradi!",
     "available": "Mavjud:",
-    "about_game": "O'yin haqida",
+    "about_game": "Oʻyin haqida",
     "download": "Yuklab olish",
+    "some_highlights": "ASOSIY YO‘NALISHLAR",
+    "toggle_showmore": "Ko‘proq ko‘rsatish",
+    "toggle_showless": "Kamroq ko‘rsatish",
+    "see_more": "Ko‘proq koʻrish",
     "platforms": {
       "Web_app": "Steam",
-      "desktop_app": "Desktop Application",
+      "desktop_app": "Desktop dastur",
       "vr": "VR"
     },
-    "latest_new_Title": "So'nggi yangiliklar",
+    "latest_new_Title": "So‘nggi yangiliklar",
     "services_title": "BIZNING XIZMATLARIMIZ",
-    "services_description": "Biz turli platformalar va ilovalar bo'yicha ishtirok etish, o'rganish va ko'ngilochar tajribalarni yaxshilashga qaratilgan integratsiyalangan ishlab chiqish echimlarini taqdim etamiz.",
+    "services_description": "Biz turli platforma va ilovalarda qiziqarli va interaktiv tajribalarni yaratishga qaratilgan integratsiyalangan rivojlanish yechimlarini taklif qilamiz.",
+    "scroll_anim": "Davom etish uchun suring",
     "services_buttons": {
-      "more_about_us": "Biz haqimizda batafsil",
+      "more_about_us": "Biz haqimizda ko‘proq",
       "contact_us": "Biz bilan bog'laning"
     },
     "game_development": {
-      "title": "O'yin ishlab chiqish",
-      "description": "Biz har doim ijodkorlik va texnologiyalar chegaralarini kengaytirib, noyob va ilhomlantiruvchi tajribalar yaratishga intilamiz."
+      "title": "O‘yin ishlab chiqish",
+      "description": "Biz noyob va ilhomlantiruvchi tajribalarni yetkazib berish uchun ijod va texnologiya chegaralarini muntazam kengaytiramiz."
     },
-    "OurPartnyors": "BIZNING HAMKORLARIMIZ",
-    "work_free_title": "Xursand bo'lib biz bilan bog'laning va jamoamizga qo'shiling",
-    "opportunities": "ish o'rinlari",
+    "OurPartnyors": "HAMKORLARIMIZ",
+    "work_free_title": "Bizning jamoamizga qo‘shilishga va bog‘lanishga xush kelibsiz",
+    "opportunities": "ish imkoniyatlari",
     "test_Launch": "Sayt test rejimida",
     "about_page": {
-      "title_about": "biz kimmiz",
-      "description_about": "UIC Games-da biz ishtiyoqmand hikoyachilar, ko‘ruvchan rassomlar va texnologik sehrgarlar bo‘lib, unutilmas o‘yin tajribalarini yaratishga bag‘ishlanganmiz. Innovatsiyalarga bo‘lgan qat’iy sadoqat bilan biz o‘yinchilar epik sarguzashtlar va qiziqarli hikoyalar ichida yo‘qolib qoladigan maftunkor dunyolarni yaratamiz. Iqtidorli dasturchilar, dizaynerlar va ijodiy xodimlar jamoamiz o‘z imkoniyatlar chegaralarini kengaytirib, butun dunyodagi o‘yinchilarni qiziqtiradigan o‘yinlarni yaratadi. Biz bilan birga bu sayohatda ishtirok etib, interaktiv ko‘ngilochar kelajagini qayta belgilashda ishtirok eting.",
-      "title_about_small": "Biz qanday ishlaymiz?",
+      "title_about": "Biz kimmiz",
+      "description_about": "UIC Games’da biz unutilmas oʻyin tajribalarini yaratishga bagʻishlangan hikoya soʻzlovchilar, tasavvurga ega rassomlar va texnik sehrgarlarimiz. Biz innovatsiyaga intilish bilan epik sarguzashtlar va qiziqarli hikoyalarga toʻla immersiv dunyolarni yaratamiz. Bizning isteʼdodli ishlab chiquvchilar, dizaynerlar va ijodiy mutaxassislar jamoasi chegaralarni kengaytirib, oʻyinchilarni hayratga soladigan oʻyinlarni yetkazib beradi.",
+      "title_about_small": "Qanday ishlaymiz?",
       "title_our_work": "Ish qadriyatlarimiz",
       "title_innovation": "Innovatsiya",
-      "description_innovation": "Biz ilhomlantiruvchi va maftunkor tajribalarni taqdim etish uchun har doim ijodkorlik va texnologiya chegaralarini kengaytirishga intilamiz.",
-      "title_passion": "Ishq",
-      "description_passion": "O‘yinlarga bo‘lgan muhabbatimiz biz qiladigan hamma narsaning asosi hisoblanadi. Biz har bir loyihaga o‘z qalbimizni qo‘yamiz, har bir detal bizning ishtiyoqimizni aks ettiradi.",
+      "description_innovation": "Biz ijod va texnologiya chegaralarini kengaytirib, ilhomlantiruvchi va o‘ziga jalb qiluvchi tajribalarni yetkazib beramiz.",
+      "title_passion": "Ehtiros",
+      "description_passion": "O'yinlarga bo'lgan muhabbatimiz har bir loyihada aks etadi.",
       "title_collaboration": "Hamkorlik",
-      "description_collaboration": "Biz jamoaviy ishlash kuchiga ishonamiz. Bizning jamoamiz bir-biriga o‘xshamagan nuqtai nazarlarni birlashtiradi va ajoyib narsalar yaratadi.",
+      "description_collaboration": "Bizning jamoa birgalikdagi ko'rinishlarni yaratish uchun ishlaydi.",
       "title_quality": "Sifat",
-      "description_quality": "Mukammallik - bizning standartimiz. Biz o‘yinchilarning umidlarini oqlaydigan sifatli o‘yinlarni taqdim etishga intilamiz.",
+      "description_quality": "Yuqori sifatli, mukammal o‘yinlarni yetkazish majburiyatimizdir.",
       "title_creativity": "Ijodkorlik",
-      "description_creativity": "Biz jasoratli g‘oyalarni qabul qilamiz va ijodiy fikrlashni qo‘llab-quvvatlaymiz, bu esa tasavvur rivojlanadigan madaniyatni shakllantiradi.",
+      "description_creativity": "Tasavvur rivojlanadigan madaniyatni targ‘ib qilamiz.",
       "title_growth": "O‘sish",
-      "description_growth": "Biz doimiy o‘rganish va takomillashuvga intilamiz, har doim ko‘nikmalarimizni oshirish va sohaga moslashning yangi usullarini izlaymiz.",
-      "what_can": "Nimalar qilamiz?",
-      "about_ourcompany": "Bizning kompaniyamiz o‘yin ishlab chiqish sohasida keng ko‘lamli xizmatlarni taqdim etadi va o‘yin industriyasini zabt etishni istagan iqtidorli yoshlar uchun o‘quv maydonchasini taqdim etadi."
-    }
+      "description_growth": "Doimiy o‘rganish va rivojlanishni maqsad qilamiz.",
+      "what_can": "Biz nimalarni qilamiz?",
+      "about_ourcompany": "Bizning kompaniyamiz oʻyin ishlab chiqish sohasida keng xizmatlarni taklif qiladi va oʻyin sanoatini zabt etishni istagan iqtidorli yoshlar uchun oʻquv maydoni yaratadi."
+    },
+    "portfolio_page": {
+      "portfolio_title": "BIZNING LOYIHALAR",
+      "single_btn_portfolio": "Batafsil"
+    },
+    "work_opportunity": {
+      "title_requirements": "Talablar",
+      "desc_title_requirements1": "Dasturiy ta'minotni test qilishda tajriba.",
+      "desc_title_requirements2": "Testlash metodologiyalari va dasturiy ta’minot ishlab chiqish hayotiy tsiklini tushunish.",
+      "desc_title_requirements3": "Test holatlari va test rejalari yozish tajribasi.",
+      "desc_title_requirements4": "Test avtomatizatsiyasining asoslarini tushunish.",
+      "desc_title_requirements5": "Yangi texnologiyalarni o‘rganishga tayyorlik.",
+      "desc_title_requirements6": "Dasturiy ta'minotni testlash nazariyasi bilimlari.",
+      "title_Conditions": "Shartlar",
+      "desc_title_conditions1": "Ish jadvali 5/2 09:00 dan 18:00 gacha.",
+      "desc_title_conditions2": "Korporativ taʼlim va treninglar.",
+      "desc_title_conditions3": "Qiziqarli loyihalarni rivojlantirish uchun professional jamoa bilan ishlash.",
+      "desc_title_conditions4": "Do'stona jamoaviy muhit.",
+      "desc_title_conditions5": "Zamonaviy va sifatli jihozlar.",
+      "desc_title_conditions6": "Ish sharoitlariga mos zamonaviy ofis.",
+      "desc_title_conditions7": "Mehnatni o‘z vaqtida to‘lash, mukofot tizimi mavjud.",
+      "desc_title_conditions8": "O‘zbekiston Respublikasi Mehnat kodeksiga muvofiq ishga joylashish.",
+      "desc_title_conditions9": "Rezyume yuboring."
+    },
+    "contact": {
+      "title_questions": "Savollar bormi",
+      "name_input": "Ismingiz",
+      "phone_or_email": "Telefon raqami yoki email",
+      "message": "Xabar",
+      "btn_send": "Yuborish",
+      "succes_notif": "Sizning savolingiz muvaffaqiyatli yuborildi"
+    },
+    "blog_title": "ENG SO‘NGGI O‘YIN YANGILIKLARINI O‘RGANING!",
+    "blog_desc1": "Hamma narsadan xabardor bo‘ling",
+    "blog_news": "Barcha yangiliklar"
   },
   "Navbartitle": {
     "about_us_title": "Biz haqimizda",
     "portfolio_title": "Portfolio",
-    "praktikum_title": "Praktikum",
+    "praktikum_title": "Amaliyot",
     "service_title": "Xizmatlar",
     "blog_title": "Bloglar",
     "nav_btn": {
-      "contact_btn": "Biz bilan bog'laning",
-      "join_us_btn": "Bizga qo'shiling"
+      "contact_btn": "Bog‘lanish",
+      "join_us_btn": "Bizga qo‘shiling"
     }
   },
   "FooterTitle": {
-    "footer_ourprojects": "Loyihalarimiz",
+    "footer_ourprojects": "Bizning loyihalarimiz",
     "footer_workvalues": "Ish qadriyatlari",
     "footer_theteam": "Jamoa",
     "footer_contactus": "Biz bilan bog‘laning",
-    "footer_vacansies": "Bo‘sh ish o‘rinlari",
+    "footer_vacansies": "Vakansiyalar",
     "footer_results": "Natijalar",
-    "footer_phoneTitle": "Telefon raqami",
+    "footer_phoneTitle": "Telefon raqam",
     "footer_emailTitle": "Elektron pochta",
     "footer_TitleLogo": "BIZ",
-    "footer_description": "Biz qizg‘in hikoyachilar, orzudagi san’atkorlar va unutilmas o‘yin tajribalarini yaratishga bag‘ishlangan texnik sehrgarlar"
+    "footer_description": "Biz o'yin sanoatida unutilmas tajribalarni yaratishga bag'ishlangan hikoyachilar va texnik sehrgarlarmiz."
   }
-
 }

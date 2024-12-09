@@ -3,8 +3,10 @@ import { useEffect, useRef } from "react";
 import Parallax from "parallax-js";
 import styles from "../components/style.module.css";
 import '@/app/[locale]/globals.css'
+import { useTranslations } from "next-intl";
 const Somestats = () => {
   const parallaxRef = useRef(null);
+  const t = useTranslations("HomePage")
 
   useEffect(() => {
     if (parallaxRef.current) {
@@ -16,10 +18,12 @@ const Somestats = () => {
   }, []);
 
   const stats = [
-    { label: "Specialists", value: "8" },
-    { label: "Mobile games", value: "10" },
-    { label: "Planned projects", value: "3" },
+    { label: t("stats_all.special"), value: "8" },
+    { label: t("stats_all.mobile_games"), value: "10" },
+    { label: t("stats_all.planed_projects"), value: "3" },
   ];
+
+  const [firstElemnt, secondElement] = t("some_stats").split(" ")
 
   return (
     <div>
@@ -29,10 +33,10 @@ const Somestats = () => {
         <div className="container mx-auto px-4">
           <div className="relative z-0 text-center flex flex-col justify-center items-center py-4 mt-[35px] h-1/2">
             <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-bold">
-              SOME <span className="text-blue-500">STATS</span>
+              {firstElemnt} <span className="text-blue-500">{secondElement}</span>
             </h1>
             <p className="text-[#FFFFFF66] mt-2 text-sm sm:text-base">
-              Let&apos;s talk about numbers
+              {t("desc_somestats")}
             </p>
               {/* Stars */}
             <div className="grid grid-cols-3 gap-8 sm:gap-12 lg:gap-24 mt-12 lg:mt-20 w-full max-w-6xl mx-auto px-4">
@@ -60,7 +64,7 @@ const Somestats = () => {
 
         <div
           ref={parallaxRef}
-          className="group2 w-[120vw] h-[60%] absolute -bottom-16 z-1 -left-[10vw] mt-9"
+          className="group2 w-[120vw] h-[70%] absolute -bottom-28 z-1 -left-[10vw] mt-9"
         >
           <div
             data-depth="0.111111111111111111111111111111111"
