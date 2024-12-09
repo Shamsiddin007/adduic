@@ -4,7 +4,7 @@ import Game from "public/Imgs/games1.png";
 import Game1 from "public/Imgs/positionimg.png";
 import Portfolio from "../portfolio/page";
 import { useTranslations } from "next-intl";
-function page() {
+function Page() {
 
   const t = useTranslations("HomePage")
 
@@ -228,4 +228,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

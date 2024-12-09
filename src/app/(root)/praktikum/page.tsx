@@ -4,7 +4,7 @@ import School from "@/components/School"
 import WhatisPracticum from "@/components/WhatisPracticum"
 import PractikumShadow from "@/components/PractikumShadow"
 
-function page() {
+function Page() {
     return (
       <div className="pb-[450px]">
         <PractikumShadow/>
@@ -16,4 +16,4 @@ function page() {
     )
   }
 
-  export default page
+  export default Page
