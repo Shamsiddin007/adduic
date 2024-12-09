@@ -116,7 +116,7 @@ function ProjectsPage() {
                             className="m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                           />
                         </div>
-                        <button className="w-[200px] text-white px-4 py-2 opacity-100 transition ease-in-out bg-gradient-to-b from-gray-700 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center mt-8">
+                        <button className="text-white px-4 py-2 opacity-100 transition ease-in-out bg-gradient-to-b from-gray-700 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center mt-8">
                           {t("learn_more_button")}<Image src={Chevron} alt="Logo" />
                         </button>
                       </div>
@@ -159,11 +159,11 @@ function ProjectsPage() {
                     layout="intrinsic"
                     className="inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                   />
-                  <button className="w-auto absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-gray-800 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center">
+                  <button className="w-[210px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-gray-800 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center">
                     {t("learn_more_button")} <Image src={Chevron} alt="Logo" />
                   </button>
                 </div>
-
+                  
               </Link>
             ))}
           </div>
