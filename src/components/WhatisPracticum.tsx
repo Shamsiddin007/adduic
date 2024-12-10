@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Books from "public/icons/booksIcon.png";
+import Vectorpeople from "public/Imgs/Vectorpeople.png";
 
 function WhatisPracticum() {
   return (
@@ -20,22 +21,22 @@ function WhatisPracticum() {
         resonate with players around the globe. Join us on this journey as we
         redefine the future of interactive entertainment.
       </p>
+
       <div className="md:pt-16 pb-16">
         <div className="flex items-center justify-between bg-black text-white">
           <div className="w-full">
             <h2 className="font-bold md:text-5xl text-3xl sm:text-start text-center text-white font-sans uppercase md:leading-[50px]">
               12-MONTH <span className="text-blue-500">CURRICULUM</span>
             </h2>
-
             <div className="mt-10 flex flex-col md:flex-row justify-between gap-8">
-              <div className="p-6  rounded-xl bg-bg-practicum border border-[#FFFFFF33] flex-1 shadow-lg">
+              <div className="p-6 rounded-xl bg-custom-blue border border-blue-700/35 flex-1 shadow-lg">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-practicum-bgBook border border-[#3375F633] border-opacity-20 p-6  rounded-xl">
+                  <div className="bg-gradient-to-b from-gradientBlueStart to-gradientBlueEnd border border-[#3375F633] border-opacity-20 py-4 px-6 rounded-xl">
                     <Image
                       src={Books}
                       alt="BooksImg"
-                      width={35}
-                      height={35}
+                      width={40}
+                      height={40}
                       className="cursor-pointer"
                     />
                   </div>
@@ -43,7 +44,7 @@ function WhatisPracticum() {
                     <span className="text-sm transparent border border-[#3375F6] rounded-full px-3 py-1 mb-[16px] cursor-pointer hover:bg-blue-500 transition-all duration-300">
                       4 months
                     </span>
-                    <h2 className="text-2xl font-semibold mb-2">Theoretical</h2>
+                    <h2 className="text-2xl font-semibold my-2">Theoretical</h2>
                     <p className="text-gray-300 font-sans mb-4">
                       Build a strong foundation in game development <br />{" "}
                       through theoretical lessons.
@@ -67,25 +68,25 @@ function WhatisPracticum() {
                 </div>
               </div>
 
-              <div className="p-6  rounded-xl bg-bg-practicum border border-[#FFFFFF33] flex-1 shadow-lg">
+              <div className="p-6 rounded-xl bg-custom-orange1 border border-orange-600/35 flex-1 shadow-lg">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className="bg-practicum-bgBook border border-[#3375F633] border-opacity-20 p-6  rounded-xl">
+                  <div className="bg-gradient-to-b from-gradientStart to-gradientEnd border border-[#EA563866] border-opacity-20 p-6 rounded-xl">
                     <Image
-                      src={Books}
+                      src={Vectorpeople}
                       alt="BooksImg"
-                      width={35}
-                      height={35}
-                      className="cursor-pointer"
+                      width={40}
+                      height={45}
+                      className="cursor-pointer scale-125"
                     />
                   </div>
                   <div>
-                    <span className="text-sm transparent border border-[#3375F6] rounded-full px-3 py-1 mb-[16px] cursor-pointer hover:bg-blue-500 transition-all duration-300">
-                      4 months
+                    <span className="text-sm transparent font-sans border border-borderMonth rounded-full px-3 py-1 mb-[16px] cursor-pointer hover:bg-borderMonth transition-all duration-300">
+                      8 months
                     </span>
-                    <h2 className="text-2xl font-semibold mb-2">Theoretical</h2>
+                    <h2 className="text-2xl font-semibold font-sans my-2">Practical</h2>
                     <p className="text-gray-300 font-sans mb-4">
-                      Build a strong foundation in game development <br />{" "}
-                      through theoretical lessons.
+                      Gain hands-on experience and real-world skills from <br />
+                      industry professionals
                     </p>
                   </div>
                 </div>
@@ -93,11 +94,11 @@ function WhatisPracticum() {
                   Skills you will learn
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["2D", "3D", "Animation", "UI/UX", "C#", "Unity"].map(
+                  {["Soft skills", "Hard skills", "ShaderLab", "Algoritm", "Solid"].map(
                     (skill) => (
                       <span
                         key={skill}
-                        className="text-sm bg-transparent border-[1.45px] border-[#3375F6] rounded-full cursor-pointer px-3 py-1 hover:bg-blue-500 transition-all duration-300"
+                        className="text-sm bg-transparent border-[1.45px] border-borderMonth rounded-full cursor-pointer px-3 py-1 hover:bg-borderMonth transition-all duration-300"
                       >
                         {skill}
                       </span>

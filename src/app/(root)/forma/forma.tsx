@@ -187,7 +187,7 @@ export default function Forma() {
             alt="CheckIcons"
             className="sm:w-6 sm:h-6 w-5 h-5"
             width={22}
-            height={22}                               
+            height={22}
           />
           {t("contact.form_notif")}
         </div>
