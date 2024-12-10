@@ -16,7 +16,7 @@ type Post = {
 
 export default function ProjectPage() {
 
-  const single: Post = useData()
+  const single = useData() as Post | null
   const [showFullText, setShowFullText] = useState(false)
   const [showFullText2, setShowFullText2] = useState(false)
 

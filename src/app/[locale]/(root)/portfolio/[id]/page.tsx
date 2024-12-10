@@ -24,9 +24,11 @@ type Post = {
 
 export default function ProjectPage({ params }: ProjectPageProps) {
 
-  const post : Post = useData()
+  const post = useData() as Post
   const [showFullText, setShowFullText] = useState(false)
   const t = useTranslations("HomePage")
+  console.log(params.id);
+  
 
   if (!post) return <div>Loading...</div>;
 

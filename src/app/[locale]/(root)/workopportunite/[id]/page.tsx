@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useData } from "@/components/ContextProvider";
 import Link from "next/link";
 
-type Job = {
+type Post = {
   jobTitle: string;
   weekJob: string;
   jobTime: number;
@@ -22,7 +22,9 @@ type ProjectPageProps = {
 
 
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const post: Job = useData()
+  const post = useData() as Post
+  console.log(params.id);
+  
 
   return (
     <div className="container text-white">
