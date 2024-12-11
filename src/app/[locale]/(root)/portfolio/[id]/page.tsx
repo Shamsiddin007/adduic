@@ -4,7 +4,7 @@ import Image from "next/image";
 import elementLogo from "public/Imgs/elementLogo.png";
 import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
-import Highlights from "public/Imgs/highlights.png";
+import highlights from "public/Imgs/highlights.png";
 import { useState } from "react";
 import { useData } from "@/components/ContextProvider";
 import { useTranslations } from "next-intl";
@@ -119,7 +119,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             {[...Array(6)].map((_, index) => (
               <Image
                 key={index}
-                src={Highlights}
+                src={highlights}
                 alt={`Highlight ${index + 1}`}
                 className="rounded-lg"
                 width={600}
