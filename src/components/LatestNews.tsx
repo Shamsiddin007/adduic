@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import Chevron from "public/Imgs/chevron-right.png";
 import { useLocale, useTranslations } from "next-intl";
 

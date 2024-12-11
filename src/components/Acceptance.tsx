@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import order1 from "public/Imgs/Order1.png";
 import order2 from "public/Imgs/Order2.png";
 import order3 from "public/Imgs/Order3.png";

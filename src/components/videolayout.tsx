@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import { useState, useEffect } from "react";
 import Windowslogo from "../../public/icons/Windowslogo.png";
 import elementlogo from "../../public/icons/Element.png";

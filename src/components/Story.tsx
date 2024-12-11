@@ -3,7 +3,7 @@
 import { useLocale, useTranslations } from "next-intl";
 import styles from "./style.module.css";
 
-import Link from "next/link";
+import {Link} from "@/navigation";
 
 export default function Story() {
 

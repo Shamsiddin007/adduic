@@ -28,7 +28,9 @@ const Somestats = () => {
   return (
     <div>
       <div className="group5 w-full h-[110vh] overflow-hidden bg-black relative p-4 mt-[80px]">
-        <div className={`${styles.space} w-[400%] left-[-80%] h-[300%] absolute`}></div>
+        <div className={`${styles.space} w-[100%] h-[100%]`}></div>
+        <div className={`${styles.space} w-[100%] h-[100%]`}></div>
+
 
         <div className="container mx-auto px-4">
           <div className="relative z-0 text-center flex flex-col justify-center items-center py-4 mt-[35px] h-1/2">

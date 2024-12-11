@@ -7,7 +7,7 @@ import clock from "/public/icons/clock.png";
 import money from "/public/icons/moneyImg.png";
 import Image from "next/image";
 import { useData } from "@/components/ContextProvider";
-import Link from "next/link";
+import {Link} from "@/navigation";
 
 type Post = {
   jobTitle: string;

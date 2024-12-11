@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import {Link} from "@/navigation";
 import Image from "next/image";
 import Chevron from "public/Imgs/chevron-right.png";
 import { useEffect, useState, useRef } from "react";
@@ -100,7 +100,7 @@ function ProjectsPage() {
                     key={project.id}
                     className="min-w-full flex-shrink-0 flex flex-col items-center text-center"
                   >
-                    <Link href={`${locale}/portfolio/${project.id}`} locale={false}>
+                    <Link href={`${locale}/portfolio/${project.id}`} locale={"false"}>
                       <div className="group relative w-full rounded-2x p-5 text-white text-center shadow-lg transition-all duration-300 hover:shadow-xl mb-12">
                         <h3 className="text-xl font-bold mb-2 text-center">
                           {project.title}

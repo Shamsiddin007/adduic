@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import {Link} from "@/navigation";
 import strelka from "/public/icons/strelka.png";
 import calendar from "/public/icons/calendar.png";
 import money from "/public/icons/moneyImg.png";

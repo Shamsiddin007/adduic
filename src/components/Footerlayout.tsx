@@ -1,7 +1,7 @@
 "use client"
 
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from "@/navigation";
 import uiclogo from "/public/icons/Logo.svg";
 import phone from "/public/icons/phone.png";
 import email from "/public/icons/email.png";
