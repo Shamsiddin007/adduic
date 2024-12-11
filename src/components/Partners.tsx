@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import "./style.module.css"
+import "./style.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
@@ -12,15 +12,13 @@ import ProjectImg3 from "public/icons/Group 3(1).png";
 import ProjectImg4 from "public/icons/Logo(3).png";
 import ProjectImg5 from "public/icons/Logo(1).svg";
 
-import { Autoplay} from 'swiper/modules';
+import { Autoplay } from "swiper/modules";
 import { useTranslations } from "next-intl";
 
-
 const Projects = () => {
+  const t = useTranslations("HomePage");
 
-  const t = useTranslations("HomePage")
-
-  const [firstTitle, secondTitle] = t("OurPartnyors").split(" ")
+  const [firstTitle, secondTitle] = t("OurPartnyors").split(" ");
 
   return (
     <div className="container mx-auto overflow-hidden">
@@ -38,7 +36,7 @@ const Projects = () => {
         modules={[Autoplay]}
         breakpoints={{
           1200: {
-            slidesPerView: 5,
+            slidesPerView: 4,
             spaceBetween: 20,
           },
           850: {
@@ -51,72 +49,87 @@ const Projects = () => {
           },
         }}
       >
-          <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
+        <SwiperSlide className="sm:w-[200px] w-[150px]">
+          <div className="relative group duration-1000 p-8">
+            <div className="hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] w-[100px] cursor-pointer border-none border-[1px] sm:w-[200px] h-[112px] rounded-lg flex items-center justify-center bg-[#FFFFFF0A] duration-1000">
               <Link href={"https://uzbekistans.club/"} target="blank">
                 <Image
                   src={ProjectImg1}
                   alt="project image"
-                  className="h-[30px] w-[90px]  sm:w-[114px] sm:h-[46px]"
+                  className="h-[30px] w-[100px] sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
-          </SwiperSlide>
-          <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
-              <Link href={"https://sqb.uz/"} target="blank">
+              <div className="absolute -top-[150px] group-hover:top-[-6px] ml-6 duration-300">
+                <span className="text-white">Uzbekistanlik Club</span>
+              </div>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide className="sm:w-[200px] w-[150px]">
+        <div className="relative group duration-1000 p-8">
+            <div className="hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] w-[100px] cursor-pointer border-none border-[1px] sm:w-[200px] h-[112px] rounded-lg flex items-center justify-center bg-[#FFFFFF0A] duration-1000">
+              <Link href={"https://uzbekistans.club/"} target="blank">
                 <Image
                   src={ProjectImg2}
                   alt="project image"
-                  className="w-[90px] sm:w-[114px] h-[30px] sm:h-[41px]"
+                  className="h-[30px] w-[120px] sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
-          </SwiperSlide>
-          <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
-              <Link href={"https://it-market.uz/"} target="blank">
+              <div className="absolute -top-[150px] group-hover:top-[-6px] ml-20 duration-300">
+                <span className="text-white">SQB</span>
+              </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="sm:w-[200px] w-[150px]">
+        <div className="relative group duration-1000 p-8">
+            <div className="hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] w-[100px] cursor-pointer border-none border-[1px] sm:w-[200px] h-[112px] rounded-lg flex items-center justify-center bg-[#FFFFFF0A] duration-1000">
+              <Link href={"https://uzbekistans.club/"} target="blank">
                 <Image
                   src={ProjectImg3}
                   alt="project image"
-                  className="h-[30px] w-[90px] sm:h-[38px]"
+                  className="h-[30px] w-[100px] sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
-          </SwiperSlide>
-          <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
-              <Link href={"https://uic.group"} target="blank">
+              <div className="absolute -top-[150px] group-hover:top-[-6px] ml-[70px] duration-300">
+                <span className="text-white">Imkon</span>
+              </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="sm:w-[200px] w-[150px]">
+        <div className="relative group duration-1000 p-8">
+            <div className="hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] w-[100px] cursor-pointer border-none border-[1px] sm:w-[200px] h-[112px] rounded-lg flex items-center justify-center bg-[#FFFFFF0A] duration-1000">
+              <Link href={"https://uzbekistans.club/"} target="blank">
                 <Image
                   src={ProjectImg4}
                   alt="project image"
-                  className="h-[30px] w-[90px] sm:w-[144px] sm:h-[29px]"
-                />
-              </Link> 
-            </div>
-          </SwiperSlide>
-          <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
-              <Link href={"https://uzbekistans.club/"} target="blank">
-                <Image
-                  src={ProjectImg1}
-                  alt="project image"
-                  className="h-[30px] w-[90px] sm:w-[114px] sm:h-[46px]"
+                  className="h-[30px] w-[144px] sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
-          </SwiperSlide>
-          <SwiperSlide className="sm:w-[200px] w-[150px]">
-            <div className="w-[100px] border-gray-700 border-[1px] sm:w-[181px] h-[112px] rounded-lg  flex items-center justify-center bg-[#FFFFFF0A] hover:shadow-custom-blue-light-inset2 duration-1000 ease-in-out">
-              <Link href={"https://paylov.uz/"} target="blank">
+              <div className="absolute -top-[150px] group-hover:top-[-6px] ml-16 duration-300">
+                <span className="text-white">UIC Group</span>
+              </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="sm:w-[200px] w-[150px]">
+        <div className="relative group duration-1000 p-8">
+            <div className="hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] w-[100px] cursor-pointer border-none border-[1px] sm:w-[200px] h-[112px] rounded-lg flex items-center justify-center bg-[#FFFFFF0A] duration-1000">
+              <Link href={"https://uzbekistans.club/"} target="blank">
                 <Image
                   src={ProjectImg5}
                   alt="project image"
-                  className="h-[30px] w-[50px] sm:w-[90px] sm:h-[38px]"
+                  className="h-[30px] w-[100px] sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
-          </SwiperSlide>
+              <div className="absolute -top-[150px] group-hover:top-[-4px] ml-16 duration-300 mb-2">
+                <span className="text-white">Paylov</span>
+              </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
     </div>
   );
