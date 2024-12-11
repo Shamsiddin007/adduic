@@ -4,7 +4,7 @@ import Image from "next/image";
 import elementLogo from "public/Imgs/elementLogo.png";
 import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
-import Highlights from "public/Imgs/Highlights.png";
+import Highlights from "public/Imgs/highlights.png";
 import { useState } from "react";
 import { useData } from "@/components/ContextProvider";
 import { useTranslations } from "next-intl";
