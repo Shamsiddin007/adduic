@@ -1,14 +1,15 @@
 "use client";
+
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 import Fire from "/public/icons/olov.png";
 import Game from "public/Imgs/games1.png";
 import Game1 from "public/Imgs/positionimg.png";
-import { useState } from "react";
-import { useTranslations } from "next-intl";
 
 function Page() {
-  const slides = [...Array(5)]; // 5 ta slayd
+  const slides = [...Array(5)]; // 5 slides
   const [currentSlide, setCurrentSlide] = useState(0);
   const t = useTranslations("HomePage");
 
@@ -20,6 +21,15 @@ function Page() {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   };
 
+  // Autoplay functionality for mobile
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 2000);
+
+    return () => clearInterval(interval); // Clear interval on unmount
+  }, [slides.length]);
+
   const [firstElement, secondElement] = t("services_title").split(" ");
 
   return (
@@ -30,7 +40,7 @@ function Page() {
             src={Fire}
             alt="FireLogo"
             className="drop-shadow-custom-yellow"
-          />{" "}
+          />
           {t("working_message")}
         </span>
         <h2 className="font-bold text-4xl sm:text-6xl text-white text-center pt-[20px] pb-[20px]">
@@ -46,6 +56,7 @@ function Page() {
           <p>{t("scroll_anim")}</p>
         </div>
       </div>
+
       <div className="container px-4 py-12 sm:px-0">
         <div className="relative w-full overflow-hidden md:hidden">
           <div
@@ -70,7 +81,7 @@ function Page() {
                   </h1>
 
                   <p className="text-[#FFFFFF66] text-sm w-[80%]">
-                   {t("game_development.description")}
+                    {t("game_development.description")}
                   </p>
                 </div>
               </div>
@@ -90,6 +101,7 @@ function Page() {
             ›
           </button>
         </div>
+
         <div className="md:grid grid-cols-2 gap-8 md:grid-cols-2 md:gap-8 hidden">
           {slides.map((_, index) => (
             <div

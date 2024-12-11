@@ -4,7 +4,7 @@ import Image from "next/image";
 import elementLogo from "public/Imgs/elementLogo.png";
 import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
-import Highlights from "public/Imgs/highlights.png";
+import Highlights from "public/Imgs/Highlights.png";
 import { useState } from "react";
 import { useData } from "@/components/ContextProvider";
 import { useTranslations } from "next-intl";
@@ -41,7 +41,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="pb-[500px]">
       <div
-        className="w-full h-[100vh] pt-[100px] pb-[50px] bg-cover bg-center"
+        className="w-full h-[100vh] pb-[50px] bg-cover bg-center pt-[300px]"
         style={{
           backgroundImage: `url(${post.backgroundCover})`,
         }}
