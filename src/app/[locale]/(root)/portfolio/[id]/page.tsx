@@ -4,7 +4,6 @@ import Image from "next/image";
 import elementLogo from "public/Imgs/elementLogo.png";
 import WindowsLogo from "public/Imgs/windowsLogo.png";
 import secendelementLogo from "public/Imgs/secendElementLogo.png";
-import highlights from "public/Imgs/highlights.png";
 import { useState } from "react";
 import { useData } from "@/components/ContextProvider";
 import { useTranslations } from "next-intl";
@@ -115,7 +114,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <h2 className="font-bold text-5xl text-white text-start">
             {firstElement} <span className="text-blue-600">{secondElement}</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
+          {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
             {[...Array(6)].map((_, index) => (
               <Image
                 key={index}
@@ -126,7 +125,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 height={400}
               />
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
