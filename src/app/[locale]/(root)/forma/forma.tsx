@@ -7,7 +7,7 @@ import check from "public/icons/check.png";
 import { useTranslations } from "next-intl";
 
 export default function Forma() {
-  const t = useTranslations("HomePage")
+  const t = useTranslations("HomePage");
   const [name, setName] = useState<string>("");
   const [contact, setContact] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -24,6 +24,7 @@ export default function Forma() {
     false
   );
 
+  // Handle Name Input
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value;
     if (value.length > 0 && /^[a-z]/.test(value)) {
@@ -33,6 +34,7 @@ export default function Forma() {
     setErrors((prev) => ({ ...prev, name: value.length < 3 }));
   };
 
+  // Handle Contact Input (Phone or Email)
   const handleContact = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
@@ -40,19 +42,21 @@ export default function Forma() {
     const isPhoneValid = numericValue.length >= 7;
     const isEmailValid = emailRegex.test(value);
     setContact(value);
-    const isValidContact = isPhoneValid || isEmailValid;
-    setErrors((prev) => ({ ...prev, contact: !isValidContact }));
+    setErrors((prev) => ({ ...prev, contact: !(isPhoneValid || isEmailValid) }));
   };
 
-
+  // Handle Message Input
   const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const value = e.target.value;
     setMessage(value);
     setErrors((prev) => ({ ...prev, message: value.length < 10 }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Handle Form Submission
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Form validation
     const isFormValid =
       name.length >= 3 &&
       (contact.length >= 7 ||
@@ -67,37 +71,57 @@ export default function Forma() {
       message: message.length < 10,
     });
 
-    if (isFormValid) {
+    if (!isFormValid) return;
+
+    // Send Data to Backend
+    try {
+      const response = await fetch("/api/sendMessage", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name,
+          contact: contact,
+          message: message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Error bor Responseda");
+      }
+
       setNotificationVisible(true);
       setTimeout(() => setNotificationVisible(false), 3000);
       setName("");
       setContact("");
       setMessage("");
+    } catch (error) {
+      console.error(error);
+      alert("Error bor"); // Optional user notification for errors
     }
   };
 
   const hasErrors = errors.name || errors.contact || errors.message;
 
   return (
-    <div className="container"  id="contact-section">
+    <div className="container" id="contact-section">
       <div className="w-full rounded-[20px] mb-12 flex flex-col items-center bg-forma">
         <div className="flex flex-col items-center justify-center xl:w-7/12 md:w-8/12 w-10/12">
           <h4 className="pb-6 pt-11 text-start md:text-[32px] text-[26px] font-bold text-white">
             {t("contact.title_questions")}
           </h4>
           <form onSubmit={handleSubmit} className="w-full">
+            {/* Name Input */}
             <label
               htmlFor="name"
               className="text-[#FFFFFF] text-[16px] pb-2 font-sans"
             >
               {t("contact.name_input")}
             </label>
-            <br />
             <input
               type="text"
               id="name"
               name="name"
-              placeholder="Enter your full name"
+              placeholder={t("contact.name_input")}
               autoComplete="off"
               value={name}
               onChange={handleNameChange}
@@ -107,19 +131,19 @@ export default function Forma() {
                 !errors.name && "hover:border-blue-500"
               } transition-all duration-300`}
             />
-            <br />
+
+            {/* Contact Input */}
             <label
               htmlFor="contact"
               className="text-[#FFFFFF] text-[16px] pb-2 font-sans"
             >
               {t("contact.phone_or_email")}
             </label>
-            <br />
             <input
               type="text"
               id="contact"
               name="contact"
-              placeholder="Example: info@uic.games or +998 (71) 200-70-07"
+              placeholder={t("contact.phone_or_email")}
               autoComplete="off"
               value={contact}
               onChange={handleContact}
@@ -129,18 +153,18 @@ export default function Forma() {
                 !errors.contact && "hover:border-blue-500"
               } transition-all duration-300`}
             />
-            <br />
+
+            {/* Message Input */}
             <label
               htmlFor="message"
               className="text-[#FFFFFF] text-[16px] pb-2 font-sans"
             >
               {t("contact.message")}
             </label>
-            <br />
             <textarea
               id="message"
               name="message"
-              placeholder="Write your message"
+              placeholder={t("contact.message")}
               rows={4}
               autoComplete="off"
               value={message}
@@ -151,7 +175,8 @@ export default function Forma() {
                 !errors.message && "hover:border-blue-500"
               } transition-all duration-300`}
             ></textarea>
-            <br />
+
+            {/* Submit Button */}
             <button
               type="submit"
               disabled={hasErrors}
@@ -180,6 +205,7 @@ export default function Forma() {
         </div>
       </div>
 
+      {/* Notification */}
       {notificationVisible && (
         <div className="flex items-center gap-2 md:text-sm text-xs font-sans fixed !bottom-12 right-4 bg-[#1E1E1E] text-white py-2 sm:px-4 px-2 rounded shadow-sm shadow-blue-400 z-50 animate-slide-in-out">
           <Image
@@ -187,7 +213,7 @@ export default function Forma() {
             alt="CheckIcons"
             className="sm:w-6 sm:h-6 w-5 h-5"
             width={22}
-            height={22}                               
+            height={22}
           />
           {t("contact.succes_notif")}
         </div>

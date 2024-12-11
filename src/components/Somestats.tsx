@@ -29,8 +29,6 @@ const Somestats = () => {
     <div>
       <div className="group5 w-full h-[110vh] overflow-hidden bg-black relative p-4 mt-[80px]">
         <div className={`${styles.space} w-[100%] h-[100%]`}></div>
-        <div className={`${styles.space} w-[100%] h-[100%]`}></div>
-
 
         <div className="container mx-auto px-4">
           <div className="relative z-0 text-center flex flex-col justify-center items-center py-4 mt-[35px] h-1/2">
@@ -40,7 +38,7 @@ const Somestats = () => {
             <p className="text-[#FFFFFF66] mt-2 text-sm sm:text-base">
               {t("desc_somestats")}
             </p>
-              {/* Stars */}
+            {/* Stars */}
             <div className="grid grid-cols-3 gap-8 sm:gap-12 lg:gap-24 mt-12 lg:mt-20 w-full max-w-6xl mx-auto px-4">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -60,7 +58,7 @@ const Somestats = () => {
                 </div>
               ))}
             </div>
-             {/* Stars */}
+            {/* Stars */}
           </div>
         </div>
 
@@ -74,13 +72,13 @@ const Somestats = () => {
           >
           </div>
         </div>
-            <div
-              className="w-full h-[100%] left-0 bottom-32 right-0 absolute z-0 sm:brightness-[.9] group-2 brightness-[.0] "
-              style={{
-                background:
-                  "linear-gradient(180deg, transparent 27%, rgba(0, 144, 254, 0.5) 100%)",
-              }}
-            ></div>
+        <div
+          className="w-full h-[100%] left-0 bottom-32 right-0 absolute z-0 sm:brightness-[.9] group-2 brightness-[.0] "
+          style={{
+            background:
+              "linear-gradient(180deg, transparent 27%, rgba(0, 144, 254, 0.5) 100%)",
+          }}
+        ></div>
         <div
           className="w-full h-[200px] left-0 right-0 absolute z-2 -bottom-1 brightness-[.9] group-2"
           style={{
@@ -89,6 +87,7 @@ const Somestats = () => {
           }}
         >
         </div>
+
       </div>
 
       <div
@@ -103,3 +102,5 @@ const Somestats = () => {
 };
 
 export default Somestats;
+
+

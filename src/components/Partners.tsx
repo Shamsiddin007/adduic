@@ -29,10 +29,10 @@ const Projects = () => {
       <Swiper
         className="m-auto w-[80%]"
         loop={true}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 1500,
+        //   disableOnInteraction: false,
+        // }}
         modules={[Autoplay]}
         breakpoints={{
           1200: {
@@ -56,7 +56,6 @@ const Projects = () => {
                 <Image
                   src={ProjectImg1}
                   alt="project image"
-                  className="h-[30px] w-[100px] sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
@@ -73,7 +72,6 @@ const Projects = () => {
                 <Image
                   src={ProjectImg2}
                   alt="project image"
-                  className="h-[30px] w-[120px] sm:w-[114px] sm:h-[46px]"
                 />
               </Link>
             </div>
@@ -89,7 +87,7 @@ const Projects = () => {
                 <Image
                   src={ProjectImg3}
                   alt="project image"
-                  className="h-[30px] w-[100px] sm:w-[114px] sm:h-[46px]"
+                  
                 />
               </Link>
             </div>
@@ -105,7 +103,7 @@ const Projects = () => {
                 <Image
                   src={ProjectImg4}
                   alt="project image"
-                  className="h-[30px] w-[144px] sm:w-[114px] sm:h-[46px]"
+                  
                 />
               </Link>
             </div>
@@ -121,7 +119,7 @@ const Projects = () => {
                 <Image
                   src={ProjectImg5}
                   alt="project image"
-                  className="h-[30px] w-[100px] sm:w-[114px] sm:h-[46px]"
+                  
                 />
               </Link>
             </div>
