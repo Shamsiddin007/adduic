@@ -1,0 +1,130 @@
+{
+  "HomePage": {
+    "working_message": "Working day & night to bring out the best results",
+    "main_title": "YOUR IDEAS WILL reality",
+    "main_title1": "BECOME A",
+    "description_first_home": "UIC Games is a game development company founded in 2018. It focuses on creating engaging and immersive video games, combining technology with creative storytelling to deliver unique gaming experiences",
+    "title_second": "We are",
+    "story_description1": "UIC Games is a team of passionate storytellers, imaginative artists, and technology masters.",
+    "story_description2": "Our talented team of developers, designers, and creatives strives to push the boundaries of interactive gaming and innovation.",
+    "contact_button": "Contact Us",
+    "our_projects": "OUR PROJECTS",
+    "some_stats": "SOME STATS",
+    "desc_somestats": "Let&apos;s talk about numbers",
+    "stats_all": {
+      "special": "Specialists",
+      "mobile_games": "Mobile games",
+      "planed_projects": "Planned projects"
+    },
+    "all_Project_btn": "All project",
+    "learn_more_button": "Learn More",
+    "game_title": "Mangu Sarkarda",
+    "game_highlight": "sarkarda",
+    "game_description": "Gamification of great historical campaigns and key moments that played significant roles in the destinies of humanity for a great commander and statesman will explode your everyday routine!",
+    "available": "Available:",
+    "about_game": "About Game",
+    "download": "Download",
+    "some_highlights": "SOME HIGHLIGHTS",
+    "toggle_showmore": "Show more",
+    "toggle_showless": "Show less",
+    "see_more": "See more",
+    "platforms": {
+      "Web_app": "Steam",
+      "desktop_app": "Desktop Application",
+      "vr": "VR"
+    },
+    "latest_new_Title": "Latest news",
+    "services_title": "OUR SERVICES",
+    "services_description": "We provide integrated development solutions aimed at creating engaging and interactive experiences that enhance engagement, learning, and entertainment across various platforms and applications.",
+    "scroll_anim": "Scroll to continue",
+    "services_buttons": {
+      "more_about_us": "More About Us",
+      "contact_us": "Contact Us"
+    },
+    "game_development": {
+      "title": "Game Development",
+      "description": "We constantly push the boundaries of creativity and technology to deliver unique and inspiring experiences."
+    },
+    "OurPartnyors": "OUR PARTNERS",
+    "work_free_title": "Feel free to reach out and join our team",
+    "opportunities": "work opportunities",
+    "test_Launch": "The site is in test mode",
+    "about_page": {
+      "title_about": "who are we",
+      "description_about": "At UIC Games, we are passionate storytellers, visionary artists, and technical wizards dedicated to creating unforgettable gaming experiences. With a relentless commitment to innovation, we craft immersive worlds where players can lose themselves in epic adventures and compelling narratives. Our team of talented developers, designers, and creatives come together to push the boundaries of what is possible, delivering games that resonate with players around the globe. Join us on this journey as we redefine the future of interactive entertainment.",
+      "title_about_small": "How do we work?",
+      "title_our_work": "our Work values",
+      "title_innovation": "Innovation",
+      "description_innovation": "We constantly push the boundaries of creativity and technology to deliver groundbreaking experiences that captivate and inspire.",
+      "title_passion": "Passion",
+      "description_passion": "Our love for gaming drives everything we do. We pour our hearts into each project, ensuring every detail reflects our dedication to the craft.",
+      "title_collaboration": "Collaboration",
+      "description_collaboration": "We believe in the power of teamwork. Our team works through combining unique perspectives to create something extraordinary.",
+      "title_quality": "Quality",
+      "description_quality": "Excellence is our standard. We are committed to delivering polished, high-quality games that exceed player expectations.",
+      "title_creativity": "Creativity",
+      "description_creativity": "We embrace bold ideas and encourage out-of-the-box thinking, fostering a culture where imagination thrives.",
+      "title_growth": "Growth",
+      "description_growth": "We are committed to continuous learning and improvement, always seeking new ways to enhance our skills and evolve with the industry.",
+      "what_can": "What can we do?",
+      "about_ourcompany": "Our company provides a broad spectrum of services in the field of game development and provides a learning ground for any talented youth willing to conquer the game industry."
+    },
+    "portfolio_page": {
+      "portfolio_title": "OUR PROJECTS",
+      "single_btn_portfolio": "Learn more"
+    },
+    "work_opportunity": {
+      "title_requirements": "Requirements",
+      "desc_title_requirements1": "Experience in software testing.",
+      "desc_title_requirements2": "Knowledge of testing methodologies and understanding of the software development lifecycle.",
+      "desc_title_requirements3": "Experience writing test cases and test plans.",
+      "desc_title_requirements4": "Understanding the basics of test automation and experience working with automation tools (e.g. Selenium, Appium, JUnit, TestNG).",
+      "desc_title_requirements5": "The desire to learn new technologies and testing methodologies.",
+      "desc_title_requirements6": "Knowledge of software testing theory (methods, techniques);",
+      "title_Conditions": "Conditions",
+      "desc_title_conditions1": "The work schedule is 5/2 09:00 to 18:00",
+      "desc_title_conditions2": "Corporate education and trainings",
+      "desc_title_conditions3": " Working with a professional team to develop interesting projects",
+      "desc_title_conditions4": "Friendly and supportive atmosphere in the team, regular team events, team building, including marathons and quizzes",
+      "desc_title_conditions5": "The company is proud to provide its employees with the most modern and high-quality equipment for work",
+      "desc_title_conditions6": "A modern office with work facilities",
+      "desc_title_conditions7": "Timely payment of labor, including a system of bonuses for outstanding results",
+      "desc_title_conditions8": "Employment in accordance with the Labor Code of the Republic of Uzbekistan",
+      "desc_title_conditions9": "If you are ready to join our team and contribute to the development of innovative projects, please send your resume For more information about our capabilities, please follow this"
+    },
+    "contact": {
+      "title_questions": "Any questions",
+      "name_input": "Your name",
+      "phone_or_email": "Phone number or email",
+      "message": "Message",
+      "btn_send": "send",
+      "succes_notif": "Your question has been sent successfully"
+    },
+    "blog_title": "LEVEL UP WITH THE LATEST GAME INSIGHTS!",
+    "blog_desc1": "Stay updated about everything",
+    "blog_news": "All news"
+  },
+  "Navbartitle": {
+    "about_us_title": "About us",
+    "portfolio_title": "Portfolio",
+    "praktikum_title": "Praktikum",
+    "service_title": "Services",
+    "blog_title": "Blogs",
+    "nav_btn": {
+      "contact_btn": "Contact us",
+      "join_us_btn": "Join us"
+    }
+  },
+  "FooterTitle": {
+    "footer_ourprojects": "Our projects",
+    "footer_workvalues": "Work values",
+    "footer_theteam": "The team",
+    "footer_contactus": "Contact us",
+    "footer_vacansies": "Vacancies",
+    "footer_results": "Results",
+    "footer_phoneTitle": "Phone number",
+    "footer_emailTitle": "Email",
+    "footer_TitleLogo": "WE ARE",
+    "footer_description": "We are passionate storytellers, visionary artists, and technical wizards dedicated to creating unforgettable gaming experiences"
+  }
+}
