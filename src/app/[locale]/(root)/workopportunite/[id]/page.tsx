@@ -8,6 +8,7 @@ import money from "/public/icons/moneyImg.png";
 import Image from "next/image";
 import { useData } from "@/components/ContextProvider";
 import {Link} from "@/navigation";
+import { useLocale } from "next-intl";
 
 type Post = {
   jobTitle: string;
@@ -22,7 +23,8 @@ type ProjectPageProps = {
 
 
 export default function ProjectPage({ params }: ProjectPageProps) {
-  const post = useData() as Post
+  const post = useData() as Post;
+  const locale = useLocale()
   console.log(params.id);
   
 
