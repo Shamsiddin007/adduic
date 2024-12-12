@@ -29,10 +29,10 @@ const Projects = () => {
       <Swiper
         className="m-auto w-[80%]"
         loop={true}
-        // autoplay={{
-        //   delay: 1500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
         modules={[Autoplay]}
         breakpoints={{
           1200: {

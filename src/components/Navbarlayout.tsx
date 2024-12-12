@@ -111,14 +111,18 @@ const Navbarlayout = () => {
         </ul>
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center gap-4">
-            <button className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
-              {t("nav_btn.contact_btn")}
-            </button>
-            <button
-              className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
-            >
-              {t("nav_btn.join_us_btn")}
-            </button>
+            <Link href={"https://t.me/UICGames_bot"} target="_blank">
+              <button className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
+                {t("nav_btn.contact_btn")}
+              </button>
+            </Link>
+            <Link href={"https://t.me/uicgames"} target="_blank">
+              <button
+                className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
+              >
+                {t("nav_btn.join_us_btn")}
+              </button>
+            </Link>
           </div>
           <div className="relative">
             <div
