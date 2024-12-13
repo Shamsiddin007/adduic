@@ -84,12 +84,10 @@ function Page() {
                 </div>
 
                 <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-                  Desktop Games
+                 {t("service_game_box.title_game_service1")}
                 </h1>
                 <p className="text-[#FFFFFF66] text-sm">
-                  We offer expert development services for desktop games,
-                  delivering engaging gameplay and immersive experiences
-                  tailored to your vision
+                  {t("service_game_box.description_game_service1")}
                 </p>
               </div>
             </div>
@@ -106,11 +104,10 @@ function Page() {
                 </div>
 
                 <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-                  Mobile Games
+                  {t("service_game_box.title_game_service2")}
                 </h1>
                 <p className="text-[#FFFFFF66] text-sm">
-                  Our mobile game development services create captivating and
-                  user-friendly experiences that engage players on-the-go
+                  {t("service_game_box.description_game_service2")}
                 </p>
               </div>
             </div>
@@ -127,12 +124,10 @@ function Page() {
                 </div>
 
                 <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-                  VR Development
+                  {t("service_game_box.title_game_service3")}
                 </h1>
                 <p className="text-[#FFFFFF66] text-sm">
-                  We design immersive VR experiences that allow users to explore
-                  interactive, virtual environments, perfect for entertainment
-                  or educational purposes
+                  {t("service_game_box.description_game_service3")}
                 </p>
               </div>
             </div>
@@ -149,12 +144,10 @@ function Page() {
                 </div>
 
                 <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-                  Simulators
+                  {t("service_game_box.title_game_service4")}
                 </h1>
                 <p className="text-[#FFFFFF66] text-sm">
-                  We develop realistic simulators that provide interactive,
-                  hands-on experiences for education, training, and exhibition
-                  purposes
+                  {t("service_game_box.description_game_service4")}
                 </p>
               </div>
             </div>
@@ -171,12 +164,10 @@ function Page() {
                 </div>
 
                 <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-                  Gamifications
+                  {t("service_game_box.title_game_service5")}
                 </h1>
                 <p className="text-[#FFFFFF66] text-sm">
-                  Our gamification services integrate engaging game elements
-                  into large-scale solutions, enhancing user interaction and
-                  motivation across various platforms
+                  {t("service_game_box.description_game_service5")}
                 </p>
               </div>
             </div>
@@ -209,12 +200,10 @@ function Page() {
             </div>
 
             <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-              Desktop Games
+              {t("service_game_box.title_game_service1")}
             </h1>
             <p className="text-[#FFFFFF66] text-sm w-[90%]">
-              We offer expert development services for desktop games, delivering
-              engaging gameplay and immersive experiences tailored to your
-              vision
+              {t("service_game_box.description_game_service1")}
             </p>
           </div>
           <div className="w-[90%] mx-auto rounded-[20px] bg-[#3375F60D] p-5 relative">
@@ -229,11 +218,10 @@ function Page() {
             </div>
 
             <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-              Mobile Games
+              {t("service_game_box.title_game_service2")}
             </h1>
             <p className="text-[#FFFFFF66] text-sm w-[90%]">
-              Our mobile game development services create captivating and
-              user-friendly experiences that engage players on-the-go
+              {t("service_game_box.description_game_service2")}
             </p>
           </div>
           <div className="w-[90%] mx-auto rounded-[20px] bg-[#3375F60D] p-5 relative">
@@ -248,12 +236,10 @@ function Page() {
             </div>
 
             <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-              VR Development
+              {t("service_game_box.title_game_service3")}
             </h1>
             <p className="text-[#FFFFFF66] text-sm w-[90%]">
-              We design immersive VR experiences that allow users to explore
-              interactive, virtual environments, perfect for entertainment or
-              educational purposes
+              {t("service_game_box.description_game_service3")}
             </p>
           </div>
           <div className="w-[90%] mx-auto rounded-[20px] bg-[#3375F60D] p-5 relative">
@@ -268,11 +254,10 @@ function Page() {
             </div>
 
             <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-              Simulators
+              {t("service_game_box.title_game_service4")}
             </h1>
             <p className="text-[#FFFFFF66] text-sm w-[90%]">
-              We develop realistic simulators that provide interactive, hands-on
-              experiences for education, training, and exhibition purposes
+              {t("service_game_box.description_game_service4")}
             </p>
           </div>
           <div className="w-[90%] mx-auto rounded-[20px] bg-[#3375F60D] p-5 relative">
@@ -287,12 +272,10 @@ function Page() {
             </div>
 
             <h1 className="text-[20px] md:text-[24px] lg:text-[28px] font-semibold">
-              Gamifications
+            {t("service_game_box.title_game_service5")}
             </h1>
             <p className="text-[#FFFFFF66] text-sm w-[90%]">
-              Our gamification services integrate engaging game elements into
-              large-scale solutions, enhancing user interaction and motivation
-              across various platforms
+              {t("service_game_box.description_game_service5")}
             </p>
           </div>
         </div>
