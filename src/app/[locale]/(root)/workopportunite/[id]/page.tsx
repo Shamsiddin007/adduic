@@ -24,7 +24,6 @@ type ProjectPageProps = {
 
 export default function ProjectPage({ params }: ProjectPageProps) {
   const post = useData() as Post;
-  const locale = useLocale()
   console.log(params.id);
   
 
