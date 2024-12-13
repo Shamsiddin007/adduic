@@ -156,7 +156,7 @@ function Page() {
           {Array.isArray(posts) &&
             posts.slice(0, visibleTrips).map((post) => (
               <Link href={`/portfolio/${post.id}`} key={post.id}>
-                <div className="group relative sm:h-[400px] h-[800px] bg-none w-[80%]  sm:w-[100%] m-auto overflow-hidden rounded-2xl sm:bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg hover:shadow-xl">
+                <div className="group relative sm:h-[400px] h-[550px] bg-none w-[80%]  sm:w-[100%] m-auto overflow-hidden rounded-2xl sm:bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg hover:shadow-xl">
                   <div className="relative z-10 flex h-full flex-col items-center text-center">
                     <h3 className="text-xl font-bold mb-2">
                       {post.title}
@@ -167,7 +167,7 @@ function Page() {
                     <Image
                       src={post.imgLogo}
                       alt={post.title}
-                      className="imgs sm:h-[200px] h-[400px] inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
+                      className="imgs sm:h-[400px] h-[300px] inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000 mt-8"
                       width={150}
                       height={200}
                     />
