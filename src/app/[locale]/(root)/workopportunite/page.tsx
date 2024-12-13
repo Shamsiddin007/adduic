@@ -5,7 +5,6 @@ import strelka from "/public/icons/strelka.png";
 import calendar from "/public/icons/calendar.png";
 import Image from "next/image";
 import {Link} from "@/navigation";
-import { usePathname } from "next/navigation";
 
 type Jobs = {
   id: number;
@@ -17,8 +16,6 @@ type Jobs = {
 
 export default function Page() {
   const [trips, setTrips] = useState<Jobs[]>([]);
-  const pathname = usePathname()
-
 
   useEffect(() => {
     fetch(
