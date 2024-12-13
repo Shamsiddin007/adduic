@@ -60,7 +60,7 @@ function AllNews() {
           {Array.isArray(trips) &&
             trips.slice(0, visibleTrips).map((link: NewsItem, id: number) => (
               <Link href={`/blog/${link.id}`} key={id}>
-                <div className="h-full py-0 overflow-hidden text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] pt-[12px] px-[12px] hover:scale-[1.02] transition-all duration-500">
+                <div className="h-full py-0 overflow-hidden text-white rounded-lg flex flex-col border-[1px] border-transparent bg-[#10131A] pt-[12px] px-[12px] sm:hover:scale-[1.02] transition-all duration-500">
                   <Image
                     src={link.imgPost}
                     alt="NewsImage"
@@ -68,10 +68,10 @@ function AllNews() {
                     width={400}
                     height={300}
                   />
-                  <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px]">
+                  <p className="text-[14px] font-sans opacity-30 pt-[14px] pb-[8px] w-1/2">
                     {link.postdate}
                   </p>
-                  <h4 className="pb-4 font-medium text-sm">{link.titlePost}</h4>
+                  <h4 className="pb-4 font-medium text-sm max-sm:w-[200px]">{link.titlePost}</h4>
                 </div>
               </Link>
             ))}

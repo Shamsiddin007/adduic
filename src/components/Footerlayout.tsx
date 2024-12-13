@@ -18,12 +18,12 @@ const Footer = () => {
   const t = useTranslations("FooterTitle") ;
 
   const socialLinks = [
-    { icon: linkidin, alt: "LinkedIn", href: "#" },
-    { icon: facebook, alt: "Facebook", href: "#" },
-    { icon: instagram, alt: "Instagram", href: "#" },
-    { icon: telegram, alt: "Telegram", href: "#" },
-    { icon: youTube, alt: "YouTube", href: "#" },
-  ];  
+    { icon: linkidin, alt: "LinkedIn", href: "https://www.linkedin.com/" },
+    { icon: facebook, alt: "Facebook", href: "https://www.facebook.com/UICGames/"},
+    { icon: instagram, alt: "Instagram", href: "https://www.instagram.com/uicgames?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" },
+    { icon: telegram, alt: "Telegram", href: "https://t.me/uicgames" },
+    { icon: youTube, alt: "YouTube", href: "https://www.youtube.com/" },
+  ];
 
   return (
     <footer className="w-full relative h-max "
@@ -119,6 +119,7 @@ const Footer = () => {
                   <Link
                     key={social.alt}
                     href={social.href}
+                    target="_blank"
                     className="p-3 flex items-center justify-center rounded-lg bg-[#FFFFFF1A] hover:bg-[#3375F6] transition-colors duration-300"
                   >
                     <Image
@@ -138,4 +139,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
