@@ -106,7 +106,7 @@ function ProjectsPage() {
                           {project.title}
                         </h3>
                         <p className="text-gray-300 pb-14">{project.date}</p>
-                        <div className="flex-grow relative w-full">
+                        <div className="flex-grow relative w-full mb-4">
                           <Image
                             width={180}
                             height={290}
@@ -116,7 +116,7 @@ function ProjectsPage() {
                             className="m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                           />
                         </div>
-                        <button className="text-white px-4 py-2 opacity-100 transition ease-in-out bg-gradient-to-b from-gray-700 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center mt-8">
+                        <button className="text-white px-4 py-2 opacity-100 transition ease-in-out bg-gradient-to-b from-gray-700 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center m-auto">
                           {t("learn_more_button")}<Image src={Chevron} alt="Logo" />
                         </button>
                       </div>

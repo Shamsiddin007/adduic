@@ -83,7 +83,6 @@ const Footer = () => {
                 </ul>
               </article>
 
-              {/* Contact Information */}
               <div className="flex flex-col sm:flex-row gap-8">
                 <div className="flex items-center gap-4">
                   <span className="p-3 rounded-lg bg-[#3375F6]">

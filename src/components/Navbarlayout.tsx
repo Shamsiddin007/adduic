@@ -123,7 +123,7 @@ const Navbarlayout = () => {
           </div>
           <div className="relative">
             <div
-              className="flex items-center gap-2 cursor-pointer py-2"
+              className="flex items-center gap-2 cursor-pointer py-2 px-[8px]"
               onClick={handleActiveLang}
             >
               <p className="text-sm font-medium text-white uppercase">
