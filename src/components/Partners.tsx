@@ -180,12 +180,12 @@ const Projects = () => {
             slidesPerView: 3,
             spaceBetween: 16,
           },
-          480: {
+          400: {
             slidesPerView: 2,
             spaceBetween: 12,
           },
           0: {
-            slidesPerView: 1,
+            slidesPerView: 2,
             spaceBetween: 8,
           },
         }}
@@ -198,7 +198,7 @@ const Projects = () => {
                   <Image
                     src={img}
                     alt={`project image ${index + 1}`}
-                    className="h-[20px] w-[70px] sm:w-[114px] sm:h-[46px] m-4"
+                    className="h-[30px] w-[90px] sm:w-[114px] sm:h-[46px] m-4"
                   />
                 </Link>
               </div>
@@ -212,7 +212,6 @@ const Projects = () => {
         ))}
       </Swiper>
 
-      {/* Responsive hover and scale adjustments */}
       <style jsx global>{`
         @media (max-width: 500px) {
           .group:hover .group-hover\:top-\[-6px\] {
