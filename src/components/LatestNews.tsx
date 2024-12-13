@@ -16,6 +16,7 @@ interface NewsItem {
 interface APIResponse {
   allnews: NewsItem[];
 }
+// salom
 
 export default function LatestNews() {
   const t = useTranslations("HomePage");
