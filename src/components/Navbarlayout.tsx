@@ -12,10 +12,9 @@ import JoinUsModal from "@/components/JoinUs";
 import { useLocale, useTranslations } from "next-intl";
 
 const Navbarlayout = () => {
-
   const pathname = usePathname();
-  const locale = useLocale()
-  const usePa = usePath()
+  const locale = useLocale();
+  const usePa = usePath();
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
@@ -58,10 +57,10 @@ const Navbarlayout = () => {
     };
   }, [isMenuOpen]);
 
-  const t = useTranslations("Navbartitle") 
+  const t = useTranslations("Navbartitle");
 
   const navItems = [
-    { path: `/about`, label: t("about_us_title")},
+    { path: `/about`, label: t("about_us_title") },
     { path: `/portfolio`, label: t("portfolio_title") },
     { path: `/praktikum`, label: t("praktikum_title") },
     { path: `/service-us`, label: t("service_title") },
@@ -111,21 +110,25 @@ const Navbarlayout = () => {
         </ul>
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center gap-4">
-            <button className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
-              {t("nav_btn.contact_btn")}
-            </button>
-            <button
-              className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
-            >
-              {t("nav_btn.join_us_btn")}
-            </button>
+            <Link href={"@UICGames_bot"} target="_blank">
+              <button className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
+                {t("nav_btn.join_us_btn")}
+              </button>
+            </Link>
+            <Link href={"https://t.me/uicgames"} target="_blank">
+              <button className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
+                {t("nav_btn.contact_btn")}
+              </button>
+            </Link>
           </div>
           <div className="relative">
             <div
               className="flex items-center gap-2 cursor-pointer py-2"
               onClick={handleActiveLang}
             >
-              <p className="text-sm font-medium text-white uppercase">{locale}</p>
+              <p className="text-sm font-medium text-white uppercase">
+                {locale}
+              </p>
               <div
                 className={`transition-transform ${
                   isActive ? "rotate-180" : "rotate-0"
@@ -142,20 +145,27 @@ const Navbarlayout = () => {
 
             {isActive && (
               <div className="absolute right-0 top-full mt-2 w-20 bg-gray-800 rounded-lg overflow-hidden">
-                {locale !== "uz" && <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
-                  <Link locale="uz" href={usePa} className="block">uz</Link>
-                </button>
-                }
-                {
-                  locale !== "en" && <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
-                  <Link locale="en" href={usePa} className="block">en</Link>
-                </button>
-                }
-                {
-                  locale !== "ru" && <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
-                  <Link locale="ru" href={usePa} className="block">ru</Link>
-                </button>
-                }
+                {locale !== "uz" && (
+                  <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                    <Link locale="uz" href={usePa} className="block">
+                      uz
+                    </Link>
+                  </button>
+                )}
+                {locale !== "en" && (
+                  <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                    <Link locale="en" href={usePa} className="block">
+                      en
+                    </Link>
+                  </button>
+                )}
+                {locale !== "ru" && (
+                  <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                    <Link locale="ru" href={usePa} className="block">
+                      ru
+                    </Link>
+                  </button>
+                )}
               </div>
             )}
           </div>
@@ -191,9 +201,7 @@ const Navbarlayout = () => {
                 <button className="py-2 px-8 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
                   {t("nav_btn.contact_btn")}
                 </button>
-                <button
-                  className="py-2 px-8 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors"
-                >
+                <button className="py-2 px-8 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
                   {t("nav_btn.join_us_btn")}
                 </button>
               </div>

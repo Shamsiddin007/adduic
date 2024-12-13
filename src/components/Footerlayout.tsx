@@ -17,7 +17,6 @@ const Footer = () => {
 
   const t = useTranslations("FooterTitle") ;
 
-
   const socialLinks = [
     { icon: linkidin, alt: "LinkedIn", href: "#" },
     { icon: facebook, alt: "Facebook", href: "#" },
