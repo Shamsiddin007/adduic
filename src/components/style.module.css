@@ -17,6 +17,11 @@
   margin-left: auto;
   z-index: -1;
 }
+@media(max-width:900px){
+    .solder{
+      opacity: 0.5;
+    }
+}
 .vio {
   position: absolute;
   right: 0;

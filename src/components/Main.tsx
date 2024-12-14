@@ -27,7 +27,7 @@ export default function Mani() {
         <div className="relative mb-16">
           <div className={`${styles.solder}`}></div>
           <div className="w-[100%] h-[30%] lg:h-[20%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
-          <div className="container h-screen mt-[50px]">
+          <div className="container md:h-screen h-[78vh] mt-[50px]">
             <div
               className="absolute bottom-[250px] right-[399px] rounded-full -z-10"
               style={{
@@ -64,7 +64,7 @@ export default function Mani() {
                   <span className="relative">{fourTitle}</span>
                 </span>
               </h1>
-              <p className=" text-white font-sans text-base pb-14 max-w-[75%]">
+              <p className=" text-white font-sans text-base pb-14 text-center max-w-[90%] md:max-w-[75%]">
                 {t("description_first_home")}
               </p>
             </div>
