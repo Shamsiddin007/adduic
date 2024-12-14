@@ -54,8 +54,8 @@ function Page() {
           {Array.isArray(posts) &&
             posts.slice(0, visibleTrips).map((post) => (
               <Link href={`/portfolio/${post.id}`} key={post.id}>
-                <div className="group relative sm:h-[400px] h-[550px] bg-none w-[80%]  sm:w-[100%] m-auto overflow-hidden rounded-2xl sm:bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg hover:shadow-xl">
-                  <div className="relative z-10 flex h-full flex-col items-center text-center">
+                <div className="group relative sm:h-[400px] h-[550px] bg-none w-[80%] sm:w-[100%] m-auto overflow-hidden rounded-2xl sm:bg-gradient-to-b from-black to-gray-800 p-5 text-white shadow-lg hover:shadow-xl nth-child-all">
+                  <div className="relative z-10 flex h-full flex-col items-center text-center sm:!pb-0 !pb-11">
                     <h3 className="text-xl font-bold mb-2">
                       {post.title}
                     </h3>
@@ -65,11 +65,11 @@ function Page() {
                     <Image
                       src={post.imgLogo}
                       alt={post.title}
-                      className="imgs sm:h-[400px] h-[380px] inset-0 m-auto z-0 opacity-100 sm:group-hover:scale-[1.06] sm:!translate-y-[-40px] sm:duration-1000 mt-2 sm:mt-8"
+                      className="imgs sm:h-[400px] sm:!w-[170px] !w-[200px] h-[400px] inset-0 m-auto z-0 opacity-100 sm:group-hover:scale-[1.06] sm:!translate-y-[-40px] sm:duration-1000 mt-2 sm:mt-8"
                       width={150}
                       height={200}
                     />
-                    <button  aria-label="Main" className=" w-[180px] absolute bottom-1 sm:bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center ">
+                    <button  aria-label="Main" className=" w-[180px] bg-blue-600 absolute -bottom-5 sm:bottom-0 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition ease-in-out sm:bg-gradient-to-b sm:from-black sm:to-blue-600 duration-1000 rounded-[8px] sm:rounded-[30px] flex items-center justify-center ">
                       {t("portfolio_page.single_btn_portfolio")} <Image src={Chevron} alt="Logo" />
                     </button>
                   </div>

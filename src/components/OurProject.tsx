@@ -114,7 +114,7 @@ function ProjectsPage() {
                             src={project.imgLogo}
                             alt={project.title}
                             layout="intrinsic"
-                            className="m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
+                            className="m-auto z-0 opacity-100 sm:group-hover:scale-[1.07] sm:duration-1000"
                           />
                         </div>
                         <button aria-label="Main" className="text-white px-4 py-2 opacity-100 transition ease-in-out bg-gradient-to-b from-gray-700 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center m-auto">

@@ -76,21 +76,6 @@ h1 {
   margin-bottom: 2rem; /* mb-8 */
 }
 
-/* styles/globals.css */
-/* @keyframes scroll {
-  0% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(10px);
-    opacity: 1;
-  }
-} */
-
 .animate-scroll {
   animation: scroll 1.5s infinite ease-in-out;
 }
@@ -382,16 +367,6 @@ h1 {
   font-size: 1.125rem;
 }
 
-@media (max-width: 768px) {
-  .imgs {
-    width: 150px;
-  }
-}
-@media (max-width: 640px) {
-  .imgs {
-    width: 190px;
-  }
-}
 
 @media (max-width: 768px) {
   .card-title {

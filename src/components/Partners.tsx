@@ -30,12 +30,12 @@ const Projects = () => {
 
   return (
     <div className="container mx-auto overflow-hidden">
-      <h1 className="font-bold text-white text-center pb-8 text-2xl md:text-3xl lg:text-4xl">
+      <h1 className="font-bold text-white text-center pb-8 text-2xl md:text-3xl lg:text-6xl">
         {firstTitle} <span className="text-blue-600">{secondTitle}</span>
       </h1>
 
       <Swiper
-        className="m-auto w-[90%] md:w-[80%]"
+        className="m-auto w-[90%] md:w-[90%]"
         loop={true}
         autoplay={{
           delay: 1500,
@@ -51,27 +51,27 @@ const Projects = () => {
             slidesPerView: 3,
             spaceBetween: 16,
           },
-          400: {
+          600: {
             slidesPerView: 2,
             spaceBetween: 12,
           },
-          0: {
+          400: {
             slidesPerView: 2,
-            spaceBetween: 4,
+            spaceBetween: 8,
           },
         }}
       >
         {partnyor.map((logo, id) => (
           <>
-            <SwiperSlide className="w-[170px] sm:w-[200px] md:w-[250px] p-4 flex justify-center">
-              <div className="relative group duration-1000 p-8 bg-pink-500">
-                <div className="w-[150px] hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] sm:w-[181px] h-[112px] rounded-lg flex items-center justify-center bg-red-600 bg-inherit duration-1000">
+            <SwiperSlide className="w-[60px] sm:w-[200px] md:w-[300px] p-2 flex justify-center">
+              <div className="relative group duration-1000 p-4 sm:p-8">
+                <div className="w-[100px] h-[60px] hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] sm:w-[181px] sm:h-[112px] rounded-lg flex items-center justify-center bg-inherit duration-1000">
                   <Link href={logo.link} target="_blank">
                     <Image
                       src={logo.logo}
                       alt={`project image ${id + 1}`}
-                      className="m-4 sm:w-[120px] w-[85px]"
-                      width={120}
+                      className="p-2 sm:w-[120px] w-[80px]"
+                      width={150}
                       height={100}
                     />
                   </Link>
