@@ -35,7 +35,7 @@ const Projects = () => {
       </h1>
 
       <Swiper
-        className="m-auto w-[80%] md:w-[80%]"
+        className="m-auto w-[90%] md:w-[90%]"
         loop={true}
         autoplay={{
           delay: 1500,
