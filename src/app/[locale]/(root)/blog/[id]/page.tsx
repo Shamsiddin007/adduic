@@ -39,7 +39,6 @@ export default function ProjectPage() {
             <p className="text-white text-[14px] opacity-50 font-sans">352</p>
           </div>
 
-          {/* Post image */}
           <Image
             src={single.imgPost}
             alt="NewsImage"

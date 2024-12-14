@@ -24,7 +24,7 @@ const Projects = () => {
     )
       .then((response) => response.json())
       .then((data) => {
-          setPartnyor(data.partnyor);
+        setPartnyor(data.partnyor);
       });
   }, []);
 
@@ -61,27 +61,25 @@ const Projects = () => {
           },
         }}
       >
-                  {partnyor.map((logo, id)=> (
-                    <>
-                    <SwiperSlide className="w-[150px] sm:w-[200px] p-4">
-                      <div className="relative group duration-1000 p-8">
-                        <div className="hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] w-[100px] sm:w-[181px] h-[112px] rounded-lg flex items-center justify-center bg-[#FFFFFF0A] duration-1000">
-                              <Link href={logo.link} target="_blank">
-                                <Image
-                                  src={logo.logo}
-                                  alt={`project image ${id + 1}`}
-                                  className="m-4"
-                                  width={120}
-                                  height={100}
-                                />
-                              </Link>
-                        </div>
-                      </div>
-                    </SwiperSlide>
-                    </>
-                  ))}
-
-            
+        {partnyor.map((logo, id) => (
+          <>
+            <SwiperSlide className="w-[150px] sm:w-[200px] p-4">
+              <div className="relative group duration-1000 p-8">
+                <div className="hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] w-[100px] sm:w-[181px] h-[112px] rounded-lg flex items-center justify-center md:bg-[#FFFFFF0A] bg-inherit duration-1000">
+                  <Link href={logo.link} target="_blank">
+                    <Image
+                      src={logo.logo}
+                      alt={`project image ${id + 1}`}
+                      className="m-4"
+                      width={120}
+                      height={100}
+                    />
+                  </Link>
+                </div>
+              </div>
+            </SwiperSlide>
+          </>
+        ))}
       </Swiper>
 
       <style jsx global>{`
