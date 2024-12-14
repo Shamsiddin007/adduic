@@ -27,7 +27,7 @@ export default function Mani() {
         <div className="relative mb-16">
           <div className={`${styles.solder}`}></div>
           <div className="w-[100%] h-[30%] lg:h-[20%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
-          <div className="container md:h-screen h-[78vh] mt-[50px]">
+          <div className="container h-screen mt-[50px]">
             <div
               className="absolute bottom-[250px] right-[399px] rounded-full -z-10"
               style={{
@@ -38,17 +38,19 @@ export default function Mani() {
               }}
             ></div>
             <div className="absolute bottom-0">
-              <span className="mb-6 flex gap-2 items-center bg-[#202123] sm:w-[450px] w-[300px] rounded-full text-white text-sm py-3 sm:px-4 px-2 font-sans md:text-xs">
+              <span className="mb-6 flex gap-2 items-center bg-[#202123] sm:w-max w-10/12 rounded-full text-white text-sm py-3 pl-4 pr-5 font-sans md:text-xs">
                 <Image
                   src={Fire}
                   alt="FireLogo"
                   className="drop-shadow-custom-yellow"
+                  width={20}
+                  height={20}
                 />
                 {t("working_message")}
               </span>
-             <h1 className="max-w-[70%] mb-12 md:mb-16 lg:mb-[100px] xl:mb-[180px] text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase text-white tracking-wider">
+             <h1 className="sm:max-w-[70%] md:mb-16 lg:mb-[100px] xl:mb-[180px] mb-[39px] leading-9 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold uppercase text-white tracking-wider">
                 {firstTitle}
-                <span className="relative text-blue-500 border border-blue-500 inline-block mb-2 mx-4">
+                <span className="relative text-blue-500 border border-blue-500 inline-block sm:mb-1 mx-4">
                   <span className="absolute -top-1 bg-white -left-1 w-2 h-2"></span>
                   <span className="absolute -top-1 -right-1 w-2 h-2 bg-white"></span>
                   <span className="absolute -bottom-1 -left-1 w-2 h-2 bg-white"></span>
@@ -56,7 +58,7 @@ export default function Mani() {
                   <span className="relative mx-2">{secondTitle}</span>
                 </span>{" "}
                 {thirtTitle} {t("main_title1")}
-                <span className="relative text-blue-500 border border-blue-500 inline-block ml-3">
+                <span className="relative text-blue-500 border border-blue-500 inline-block mt-1 sm:ml-3 ml-2">
                   <span className="absolute -top-1 bg-white -left-1 w-2 h-2"></span>
                   <span className="absolute -top-1 -right-1 w-2 h-2 bg-white"></span>
                   <span className="absolute -bottom-1 -left-1 w-2 h-2 bg-white"></span>
@@ -64,7 +66,7 @@ export default function Mani() {
                   <span className="relative">{fourTitle}</span>
                 </span>
               </h1>
-              <p className=" text-white font-sans text-base pb-14 text-center max-w-[90%] md:max-w-[75%]">
+              <p className=" text-white font-sans text-base pb-14 sm:max-w-[75%]">
                 {t("description_first_home")}
               </p>
             </div>

@@ -8,7 +8,7 @@
   position: absolute;
   bottom: 0px;
   right: 0px;
-  background-image: url("/Imgs/askar.svg");
+  background-image: url("https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/askar.svg?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L2Fza2FyLnN2ZyIsImlhdCI6MTczNDE3MjMzNCwiZXhwIjoxNzY1NzA4MzM0fQ.JlXOOwFToGeS09cpc6YiMAUa2QhVNLr1jEg6Q7MCovs&t=2024-12-14T10%3A32%3A14.544Z");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -17,6 +17,7 @@
   margin-left: auto;
   z-index: -1;
 }
+
 @media(max-width:900px){
     .solder{
       opacity: 0.5;

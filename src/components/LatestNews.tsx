@@ -44,11 +44,10 @@ export default function LatestNews() {
 
   return (
     <div className="container">
-      <div className="flex flex-col sm:flex-row items-center justify-between pb-10">
-        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white uppercase mb-2 sm:mb-0">
+      <div className="flex flex-col sm:flex-row items-center justify-between md:pb-10 pb-7">
+        <h2 className="font-bold text-3xl md:text-4xl lg:text-5xl text-white uppercase mb-3 sm:mb-0 flex max-sm:flex-col gap-2 items-center leading-6">
           {firrstTitle} <span className="text-blue-600">{secondTitle}</span>
         </h2>
-
         <Link href={`${locale}/blog`}>
           <button className="flex items-center justify-center gap-2 sm:px-6 sm:py-3 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-full text-sm transition-colors group">
             {t("all_Project_btn")}{" "}
