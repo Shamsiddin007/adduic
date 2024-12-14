@@ -41,7 +41,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="pb-[500px]">
       <div
-        className="w-full h-[100vh] pb-[50px] bg-cover bg-center pt-[300px]"
+        className="w-full h-[100vh] pb-[50px] bg-cover bg-center sm:pt-[300px] pt-[150px]"
         style={{
           backgroundImage: `url(${post.backgroundCover})`,
         }}
@@ -54,8 +54,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             width={400}
             height={300}
           />
-          <h1 className="text-4xl font-bold mb-4 mt-4">{post.titlegame}</h1>
-          <p className="text-lg px-8 pb-8 text-[#FFFFFFCC] container">
+          <h1 className="text-4xl font-bold mb-4 mt-6">{post.titlegame}</h1>
+          <p className="text-lg px-3 sm:px-8 pb-8 text-[#FFFFFFCC] container">
             {post.description}
           </p>
         </div>
