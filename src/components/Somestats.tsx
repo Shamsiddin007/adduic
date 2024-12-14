@@ -73,7 +73,7 @@ const Somestats = () => {
           </div>
         </div>
         <div
-          className="w-full h-[100%] left-0 bottom-32 right-0 absolute z-0 sm:brightness-[.9] group-2 brightness-[.0] "
+          className="mb-[50px] w-full h-[50%] left-0 bottom-32 right-0 absolute z-0 sm:brightness-[.9] group-2 brightness-[.0] "
           style={{
             background:
               "linear-gradient(180deg, transparent 27%, rgba(0, 144, 254, 0.5) 100%)",
