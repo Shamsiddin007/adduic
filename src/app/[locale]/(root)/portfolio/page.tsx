@@ -44,8 +44,8 @@ function Page() {
   return (
     <div className="pb-[450px]">
       <div className="container m-auto px-4 sm:px-6 lg:px-8">
-        <div className="mt-[200px] sm:mt-[150px]">
-          <h1 className="font-bold mt-8 sm:mt-2 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white text-center pb-8 sm:pb-16">
+        <div className="mt-[170px] sm:mt-[150px]">
+          <h1 className="font-bold mt-8 text-[44px] sm:mt-2 sm:text-4xl md:text-5xl lg:text-6xl text-white text-center pb-8 sm:pb-16">
             {firstElement} <span className="text-blue-600">{secondElement}</span>
           </h1>
         </div>
@@ -59,17 +59,17 @@ function Page() {
                     <h3 className="text-xl font-bold mb-2">
                       {post.title}
                     </h3>
-                    <p className="text-gray-300 sm:pb-14 pb-1  duration-1000 group-hover:pb-[40px]">
+                    <p className="text-gray-300 sm:pb-14 pb-1  duration-1000 sm:group-hover:pb-[40px]">
                       {post.date}
                     </p>
                     <Image
                       src={post.imgLogo}
                       alt={post.title}
-                      className="imgs sm:h-[400px] h-[300px] inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000 mt-8"
+                      className="imgs sm:h-[400px] h-[380px] inset-0 m-auto z-0 opacity-100 sm:group-hover:scale-[1.06] sm:!translate-y-[-40px] sm:duration-1000 mt-2 sm:mt-8"
                       width={150}
                       height={200}
                     />
-                    <button  aria-label="Main" className=" w-[180px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center ">
+                    <button  aria-label="Main" className=" w-[180px] absolute bottom-1 sm:bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center ">
                       {t("portfolio_page.single_btn_portfolio")} <Image src={Chevron} alt="Logo" />
                     </button>
                   </div>

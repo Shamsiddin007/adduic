@@ -57,20 +57,20 @@ const Projects = () => {
           },
           0: {
             slidesPerView: 2,
-            spaceBetween: 8,
+            spaceBetween: 4,
           },
         }}
       >
         {partnyor.map((logo, id) => (
           <>
-            <SwiperSlide className="w-[150px] sm:w-[200px] p-4">
-              <div className="relative group duration-1000 p-8">
-                <div className="hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] w-[100px] sm:w-[181px] h-[112px] rounded-lg flex items-center justify-center md:bg-[#FFFFFF0A] bg-inherit duration-1000">
+            <SwiperSlide className="w-[170px] sm:w-[200px] md:w-[250px] p-4 flex justify-center">
+              <div className="relative group duration-1000 p-8 bg-pink-500">
+                <div className="w-[150px] hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] sm:w-[181px] h-[112px] rounded-lg flex items-center justify-center bg-red-600 bg-inherit duration-1000">
                   <Link href={logo.link} target="_blank">
                     <Image
                       src={logo.logo}
                       alt={`project image ${id + 1}`}
-                      className="m-4"
+                      className="m-4 sm:w-[120px] w-[85px]"
                       width={120}
                       height={100}
                     />
@@ -101,4 +101,4 @@ const Projects = () => {
 
 export default Projects;
 
-// https://leuscgqzalmrfujkzpbd.supabase.co/storage/v1/object/sign/ourproject/partnyor/partnyor.json?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJvdXJwcm9qZWN0L3BhcnRueW9yL3BhcnRueW9yLmpzb24iLCJpYXQiOjE3MzQxNjA4MzQsImV4cCI6MTc2NTY5NjgzNH0.jRH37KCspHzqNWzpOTRDwNz8Qzt5-EXAC3fYmme72ro&t=2024-12-14T07%3A20%3A32.693Z
+// md:bg-[#FFFFFF0A]
