@@ -4,7 +4,7 @@ import money from "/public/icons/moneyImg.png";
 import strelka from "/public/icons/strelka.png";
 import calendar from "/public/icons/calendar.png";
 import Image from "next/image";
-import {Link} from "@/navigation";
+import { Link } from "@/navigation";
 
 type Jobs = {
   id: number;
@@ -32,12 +32,18 @@ export default function Page() {
       })
       .catch((error) => console.error("Fetch error:", error));
   }, []);
-  
-
 
   return (
-    <section className="container mb-[500px] mt-[150px]">
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 lg:w-auto md:w-[500px] md:m-auto gap-8 mt-20 w-auto">
+    <section className="container mb-[500px] mt-[100px]">
+      <h1 className="flex justify-center md:text-6xl font-bold text-blue-700/95 md:mb-4 tracking-wide uppercase">
+        Vacancies
+      </h1>
+      <div className="flex justify-center">
+        <div className="h-1 w-24 bg-blue-500/90 rounded-full md:mb-10 mb-7"></div>
+      </div>
+
+      {/* <h1 className="flex justify-center">Vacancies</h1> */}
+      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 lg:w-auto md:w-[500px] md:m-auto gap-8 md:mt-20 w-auto">
         {trips.map((job) => (
           <div
             key={job.id}
@@ -55,7 +61,7 @@ export default function Page() {
                 {job.weekJob} / {job.jobTime}
               </p>
             </div>
-            <Link  href={`/workopportunite/${job.id}`}>
+            <Link href={`/workopportunite/${job.id}`}>
               <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
                 <div className="flex items-center gap-3">
                   <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A]">
@@ -96,7 +102,7 @@ export default function Page() {
                 {job.weekJob} / {job.jobTime}
               </p>
             </div>
-            <Link  href={`/workopportunite/${job.id}`}>
+            <Link href={`/workopportunite/${job.id}`}>
               <div className="bg-[#FFFFFF14] text-start rounded-lg text-blue-200 font-medium flex items-center cursor-pointer justify-between hover:bg-blue-700 duration-300 active:translate-x-3">
                 <div className="flex items-center gap-3">
                   <article className="text-start rounded p-3 text-xl bg-[#FFFFFF0A]">

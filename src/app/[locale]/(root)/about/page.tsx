@@ -1,16 +1,38 @@
+"use client";
 import Image from "next/image";
 import Fire from "/public/icons/olov.png";
 import Game from "public/Imgs/games1.png";
 import Game1 from "public/Imgs/positionimg.png";
 import Portfolio from "../portfolio/page";
 import { useTranslations } from "next-intl";
+import { useRef } from "react";
 function Page() {
+  const sliderRef = useRef<HTMLDivElement | null>(null);
+  const t = useTranslations("HomePage");
 
-  const t = useTranslations("HomePage")
+  const left = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({
+        left: -300,
+        behavior: "smooth",
+      });
+    }
+  };
 
-  const [firstTitle, secondTitle, thirtTitle] = t("about_page.title_about").split(" ");
+  const right = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({
+        left: 300,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  const [firstTitle, secondTitle, thirtTitle] = t(
+    "about_page.title_about"
+  ).split(" ");
   const [our, work, values] = t("about_page.title_our_work").split(" ");
-  const [what, can, we, doo] = t("about_page.what_can").split(" ")
+  const [what, can, we, doo] = t("about_page.what_can").split(" ");
 
   return (
     <div>
@@ -34,7 +56,8 @@ function Page() {
           </span>
 
           <h2 className="font-bold text-4xl md:text-6xl text-white uppercase text-center">
-            {firstTitle} {secondTitle} <span className="text-blue-600">{thirtTitle}</span> ? 
+            {firstTitle} {secondTitle}{" "}
+            <span className="text-blue-600">{thirtTitle}</span> ?
           </h2>
 
           <p className="text-gray-500 text-center max-w-[90%] md:max-w-[800px] lg:max-w-[1184px] pt-4 md:pt-8 text-sm md:text-base">
@@ -44,12 +67,14 @@ function Page() {
       </div>
       <div className="container text-white">
         <div className="mt-20 flex flex-col gap-9 items-center">
-          <p className="text-xl text-gray-500">{t("about_page.title_about_small")}</p>
+          <p className="text-xl text-gray-500">
+            {t("about_page.title_about_small")}
+          </p>
           <h2 className="font-bold text-4xl md:text-6xl text-white uppercase text-center">
             {our} {work} <span className="text-blue-600">{values}</span>
           </h2>
         </div>
-        <div className="part2-about">
+        <div className="part2-about" ref={sliderRef}>
           <div className="about-child cursor-pointer group transition-all  hover:bg-[linear-gradient(-330deg,_#0a2346_12%,_transparent_90%,_#3375F60A_99%)] duration-1000 ease-in-out">
             <div className="about-child-circle flex items-center justify-center relative z-1">
               <svg
@@ -69,9 +94,11 @@ function Page() {
                 />
               </svg>
             </div>
-            <h1 className="text-[24px] pb-2">{t("about_page.title_innovation")}</h1>
+            <h1 className="text-[24px] pb-2">
+              {t("about_page.title_innovation")}
+            </h1>
             <p className="text-[#FFFFFF66] text-sm text-center ">
-             {t("about_page.description_innovation")}
+              {t("about_page.description_innovation")}
             </p>
           </div>
           <div className="about-child cursor-pointer group hover:bg-[linear-gradient(-330deg,_#0a2346_12%,_transparent_90%,_#3375F60A_99%)]">
@@ -90,10 +117,12 @@ function Page() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="group-hover:stroke-blue-600 transition duration-300"
-                  />
+                />
               </svg>
             </div>
-            <h1 className="text-[24px] pb-2">{t("about_page.title_passion")}</h1>
+            <h1 className="text-[24px] pb-2">
+              {t("about_page.title_passion")}
+            </h1>
             <p className="text-[#FFFFFF66] text-sm text-center">
               {t("about_page.description_passion")}
             </p>
@@ -114,10 +143,12 @@ function Page() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="group-hover:stroke-blue-600 transition duration-300"
-                  />
+                />
               </svg>
             </div>
-            <h1 className="text-[24px] pb-2">{t("about_page.title_collaboration")}</h1>
+            <h1 className="text-[24px] pb-2">
+              {t("about_page.title_collaboration")}
+            </h1>
             <p className="text-[#FFFFFF66] text-sm text-center">
               {t("about_page.description_collaboration")}
             </p>
@@ -138,10 +169,13 @@ function Page() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="group-hover:stroke-blue-600 transition duration-300"
-                  />
+                />
               </svg>
             </div>
-            <h1 className="text-[24px] pb-2"> {t("about_page.title_quality")}</h1>
+            <h1 className="text-[24px] pb-2">
+              {" "}
+              {t("about_page.title_quality")}
+            </h1>
             <p className="text-[#FFFFFF66] text-sm text-center">
               {t("about_page.description_quality")}
             </p>
@@ -162,10 +196,12 @@ function Page() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="group-hover:stroke-blue-600 transition duration-300"
-                  />
+                />
               </svg>
             </div>
-            <h1 className="text-[24px] pb-2">{t("about_page.title_creativity")}</h1>
+            <h1 className="text-[24px] pb-2">
+              {t("about_page.title_creativity")}
+            </h1>
             <p className="text-[#FFFFFF66] text-sm text-center">
               {t("about_page.description_creativity")}
             </p>
@@ -186,7 +222,7 @@ function Page() {
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="group-hover:stroke-blue-600 transition duration-300"
-                  />
+                />
               </svg>
             </div>
             <h1 className="text-[24px] pb-2">{t("about_page.title_growth")}</h1>
@@ -195,32 +231,55 @@ function Page() {
             </p>
           </div>
         </div>
+        <div className="flex items-center justify-end mt-5 gap-7 buttonSlayderAbout">
+          <button
+            onClick={left}
+            className="text-blue-700 text-5xl transform -translate-y-1/2 rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-colors duration-300"
+          >
+            ‹
+          </button>
+          <button
+            onClick={right}
+            className="text-blue-700 text-5xl transform -translate-y-1/2 rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-colors duration-300"
+          >
+            ›
+          </button>
+        </div>
         <div className="part3-about">
           <div>
             <h1 className="header">
-              {what} {can} <span>{we} {doo}</span>
+              {what} {can}{" "}
+              <span>
+                {we} {doo}
+              </span>
             </h1>
-            <p className="paragraph">
-             {t("about_page.about_ourcompany")}
-            </p>
+            <p className="paragraph">{t("about_page.about_ourcompany")}</p>
             <div className="button-container">
-              <button className="button">{t("services_buttons.more_about_us")}</button>
-              <button className="button">{t("services_buttons.contact_us")}</button>
+              <button className="button">
+                {t("services_buttons.more_about_us")}
+              </button>
+              <button className="button">
+                {t("services_buttons.contact_us")}
+              </button>
             </div>
           </div>
           <div className="card">
-            <Image src={Game1} alt="Img keyboard" className="card-image" width={193} height={129} />
+            <Image
+              src={Game1}
+              alt="Img keyboard"
+              className="card-image"
+              width={193}
+              height={129}
+            />
             <div className="icon">
               <Image src={Game} alt="Icon Game Logo" width={44} height={44} />
             </div>
             <h1 className="card-title">{t("game_development.title")}</h1>
-            <p className="card-text">
-              {t("game_development.description")}
-            </p>
+            <p className="card-text">{t("game_development.description")}</p>
           </div>
         </div>
 
-        <div className="pb-[50px]">
+        <div className="pb-[50px] mt-0">
           <Portfolio />
         </div>
       </div>

@@ -24,12 +24,10 @@
 
 @import "~nprogress/nprogress.css";
 
-
 #nprogress .bar {
   background: #3c82f6; /* Progress bar rangini o'zgartirish */
   height: 4px;
 }
-
 
 body {
   font-family: "Custom Font", sans-serif;
@@ -41,7 +39,8 @@ h1 {
   color: white;
 }
 
-.rfm-initial-child-container, .rfm-marquee{
+.rfm-initial-child-container,
+.rfm-marquee {
   display: flex !important;
   gap: 70px !important;
 }
@@ -121,7 +120,7 @@ h1 {
 }
 
 @media (max-width: 1240px) {
-  .group2{
+  .group2 {
     display: block;
   }
 }
@@ -214,7 +213,8 @@ h1 {
   gap: 1.5rem;
   padding: 0 1rem;
   margin-top: 2.5rem;
-  margin-bottom: 5rem;
+  /* margin-bottom: 5rem; */
+  margin-bottom: 0px !important;
 }
 
 @media (min-width: 1000px) {
@@ -228,7 +228,7 @@ h1 {
 /* Header */
 .header {
   font-weight: bold;
-  font-size:2.875rem;
+  font-size: 2.875rem;
   color: white;
   text-transform: uppercase;
   padding-bottom: 1rem;
@@ -310,12 +310,12 @@ h1 {
     width: 10rem;
   }
 }
-@media(max-width:450px){
+@media (max-width: 450px) {
   .button-container {
     flex-direction: row;
     margin-top: 2rem;
   }
-  .button{
+  .button {
     padding: 10px 20px;
     width: 10rem !important;
   }
@@ -335,7 +335,7 @@ h1 {
   padding: 20px 10px;
   position: relative;
   margin-top: 1.5rem;
-  height:max-content;
+  height: max-content;
 }
 
 @media (max-width: 768px) {
@@ -383,12 +383,12 @@ h1 {
 }
 
 @media (max-width: 768px) {
-  .imgs{
+  .imgs {
     width: 150px;
   }
 }
 @media (max-width: 640px) {
-  .imgs{
+  .imgs {
     width: 190px;
   }
 }
@@ -399,7 +399,7 @@ h1 {
   }
 }
 
-@media ( max-width: 1024px) {
+@media (max-width: 1024px) {
   .card-title {
     font-size: 1.75rem;
   }
@@ -421,11 +421,10 @@ h1 {
 
 @media (max-width: 1024px) {
   .card-text {
-    font-size: .8rem;
+    font-size: 0.8rem;
     max-width: 32.375rem;
   }
 }
-
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -437,15 +436,14 @@ h1 {
   cursor: pointer;
 }
 
-.mountineStyle{
+.mountineStyle {
   width: 100%;
   height: 80%;
-  background-image: url('/icons/Mountainimage.png');
+  background-image: url("/icons/Mountainimage.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-
 
 .hover-text {
   position: absolute;
@@ -466,4 +464,10 @@ h1 {
 
 .relative:hover .hover-text {
   opacity: 1; /* Hover bo'lganda yozuvni ko'rsatish */
+}
+
+@media (min-width: 985px) {
+  .buttonSlayderAbout {
+    display: none;
+  }
 }
