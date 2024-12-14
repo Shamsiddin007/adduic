@@ -17,7 +17,7 @@ export default function School() {
           <p className="text-[#FFFFFF] text-[14px] font-normal leading-[23px] font-sans md:pb-[38px] pb-[28px]">
             {t("praktikum_box.schoolarShip_desc")}
           </p>
-          <button className="md:py-[10px] py-[6px] md:px-[79px] sm:px-[59px] px-[45px] bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">{t("praktikum_box.btn_apply")}</button>
+          <button aria-label="button" className="md:py-[10px] py-[6px] md:px-[79px] sm:px-[59px] px-[45px] bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">{t("praktikum_box.btn_apply")}</button>
         </div>
         <div className="text-white">
             <Image src={coin} alt="CoinImg"/>

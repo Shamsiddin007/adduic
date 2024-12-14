@@ -36,6 +36,7 @@ export default function Story() {
               <article className="flex flex-col md:flex-row gap-4 md:gap-6 pb-16 w-full items-center">
                 <div className="flex items-center gap-4">
                   <button
+                  aria-label="button"
                     className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors"
                     onClick={scrollToContact}
                   >
@@ -43,7 +44,7 @@ export default function Story() {
                   </button>
                 </div>
                 <Link href={`${locale}/about`}>
-                  <button className="py-[10px] px-7 bg-[#1F2022] hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
+                  <button aria-label="button" className="py-[10px] px-7 bg-[#1F2022] hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
                     {t("learn_more_button")}
                   </button>
                 </Link>

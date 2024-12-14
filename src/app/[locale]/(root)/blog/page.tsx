@@ -83,7 +83,8 @@ function AllNews() {
               <div className="loader border-t-4 border-blue-500 rounded-full w-6 h-6 animate-spin"></div>
             </div>
           ) : (
-            <button
+            <button 
+              aria-label="SeeMore"
               onClick={handleSeeMore}
               className="text-white flex items-center gap-2 bg-[#FFFFFF1A] py-[10px] px-[24px] rounded-full m-auto  mb-12"
             >

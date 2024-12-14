@@ -234,11 +234,13 @@ function Page() {
         <div className="flex items-center justify-end mt-5 gap-7 buttonSlayderAbout">
           <button
             onClick={left}
+            aria-label="Left"
             className="text-blue-700 text-5xl transform -translate-y-1/2 rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-colors duration-300"
           >
             ‹
           </button>
           <button
+          aria-label="Right"
             onClick={right}
             className="text-blue-700 text-5xl transform -translate-y-1/2 rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-colors duration-300"
           >
@@ -255,10 +257,10 @@ function Page() {
             </h1>
             <p className="paragraph">{t("about_page.about_ourcompany")}</p>
             <div className="button-container">
-              <button className="button">
+              <button className="button" aria-label="Main">
                 {t("services_buttons.more_about_us")}
               </button>
-              <button className="button">
+              <button className="button" aria-label="Main">
                 {t("services_buttons.contact_us")}
               </button>
             </div>

@@ -176,8 +176,8 @@ export default function Forma() {
               } transition-all duration-300`}
             ></textarea>
 
-            {/* Submit Button */}
             <button
+            aria-label="Send"
               type="submit"
               disabled={hasErrors}
               className={`group flex items-center justify-center gap-2 text-[16px] w-full text-center text-white !border-[1px] ${

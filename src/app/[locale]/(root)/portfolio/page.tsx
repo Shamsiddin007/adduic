@@ -69,7 +69,7 @@ function Page() {
                       width={150}
                       height={200}
                     />
-                    <button className="w-[180px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center ">
+                    <button  aria-label="Main" className=" w-[180px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-100 sm:opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-black to-gray-800 duration-1000 rounded-[140px] flex items-center justify-center ">
                       {t("portfolio_page.single_btn_portfolio")} <Image src={Chevron} alt="Logo" />
                     </button>
                   </div>
@@ -85,6 +85,7 @@ function Page() {
             </div>
           ) : (
             <button
+              aria-label="Main"
               onClick={handleSeeMore}
               className="text-white flex items-center gap-2 bg-[#FFFFFF1A] py-2 px-6 sm:py-[10px] sm:px-[24px] rounded-full m-auto mb-12"
             >

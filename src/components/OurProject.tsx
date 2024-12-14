@@ -75,7 +75,7 @@ function ProjectsPage() {
             {firstTitle}<span className="text-blue-600 ml-4">{secondTitle}</span>
           </h2>
           <Link href={`${locale}/portfolio`} data-aos="fade-right">
-            <button className="flex items-center group justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
+            <button aria-label="Main" className="flex items-center group justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
               {t("all_Project_btn")}
               <Image
                 src={Chevron}
@@ -117,7 +117,7 @@ function ProjectsPage() {
                             className="m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                           />
                         </div>
-                        <button className="text-white px-4 py-2 opacity-100 transition ease-in-out bg-gradient-to-b from-gray-700 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center m-auto">
+                        <button aria-label="Main" className="text-white px-4 py-2 opacity-100 transition ease-in-out bg-gradient-to-b from-gray-700 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center m-auto">
                           {t("learn_more_button")}<Image src={Chevron} alt="Logo" />
                         </button>
                       </div>
@@ -128,12 +128,14 @@ function ProjectsPage() {
             </div>
 
             <button
+              aria-label="Main"
               onClick={handlePrev}
               className="text-blue-700 absolute top-1/2 left-2 sm:left-[50px] text-5xl transform -translate-y-1/2 rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-colors duration-300"
             >
               ‹
             </button>
             <button
+            aria-label="Main"
               onClick={handleNext}
               className="text-blue-700 absolute top-1/2 right-2 sm:right-[50px] text-5xl	 transform -translate-y-1/2 rounded-full w-8 h-8 flex items-center justify-center shadow-lg transition-colors duration-300"
             >
@@ -160,7 +162,7 @@ function ProjectsPage() {
                     layout="intrinsic"
                     className="inset-0 m-auto z-0 opacity-100 group-hover:scale-[1.07] duration-1000"
                   />
-                  <button className="w-[210px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-gray-800 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center">
+                  <button aria-label="Main" className="w-[210px] absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition ease-in-out bg-gradient-to-b from-gray-800 to-blue-800 duration-1000 rounded-[140px] flex items-center justify-center">
                     {t("learn_more_button")} <Image src={Chevron} alt="Logo" />
                   </button>
                 </div>

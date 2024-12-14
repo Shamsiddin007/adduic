@@ -75,6 +75,7 @@ const Navbarlayout = () => {
     >
       <nav className="container mx-auto max-w-screen-xl flex justify-between items-center pt-10 relative">
         <button
+        aria-label="Menu"
           className="lg:hidden p-2"
           onClick={() => setMenuOpen(!isMenuOpen)}
         >
@@ -111,12 +112,12 @@ const Navbarlayout = () => {
         <div className="flex items-center gap-6">
           <div className="hidden lg:flex items-center gap-4">
             <Link href={"https://t.me/UICGames_bot"} target="_blank">
-              <button className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
+              <button aria-label="Join us" className="py-2 px-6 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
                 {t("nav_btn.join_us_btn")}
               </button>
             </Link>
             <Link href={"https://t.me/uicgames"} target="_blank">
-              <button className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
+              <button aria-label="kk" className="py-2 px-6 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
                 {t("nav_btn.contact_btn")}
               </button>
             </Link>
@@ -146,21 +147,21 @@ const Navbarlayout = () => {
             {isActive && (
               <div className="absolute right-0 top-full mt-2 w-20 bg-gray-800 rounded-lg overflow-hidden">
                 {locale !== "uz" && (
-                  <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                  <button aria-label="uz" className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
                     <Link locale="uz" href={usePa} className="block">
                       uz
                     </Link>
                   </button>
                 )}
                 {locale !== "en" && (
-                  <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                  <button aria-label="en" className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
                     <Link locale="en" href={usePa} className="block">
                       en
                     </Link>
                   </button>
                 )}
                 {locale !== "ru" && (
-                  <button className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
+                  <button aria-label="ru" className="w-full text-sm font-medium text-white uppercase hover:bg-gray-700 py-2 px-4 text-left">
                     <Link locale="ru" href={usePa} className="block">
                       ru
                     </Link>
@@ -174,6 +175,7 @@ const Navbarlayout = () => {
           <div className="lg:hidden fixed inset-0 bg-opacity-95 z-50">
             <div className="flex flex-col items-center pt-20 gap-8 h-screen bg-black">
               <button
+                aria-label="Close"
                 className="absolute top-12 left-6"
                 onClick={() => setMenuOpen(false)}
               >
@@ -198,10 +200,10 @@ const Navbarlayout = () => {
               ))}
 
               <div className="flex flex-col gap-4 mt-8">
-                <button className="py-2 px-8 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
+                <button aria-label="Contact" className="py-2 px-8 bg-blue-600 hover:bg-blue-700 rounded-full text-sm text-white transition-colors">
                   {t("nav_btn.contact_btn")}
                 </button>
-                <button className="py-2 px-8 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
+                <button aria-label="Join us" className="py-2 px-8 bg-gray-700 hover:bg-gray-600 rounded-full text-sm text-white transition-colors">
                   {t("nav_btn.join_us_btn")}
                 </button>
               </div>

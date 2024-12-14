@@ -31,7 +31,7 @@ export default function Acceptance() {
                 {t("info_bots.info_bot_desc1")}
               </p>
               <Link href={"https://t.me/UICGames_bot"} target="_blank" className="inline-block">
-                <button className="flex items-center gap-3 mt-[50px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <button aria-label="info_bots.info_bot_btn" className="flex items-center gap-3 mt-[50px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                   {t("info_bots.info_bot_btn")} <Image src={arrowdown} alt="arrowdown" />
                 </button>
               </Link>
@@ -53,7 +53,7 @@ export default function Acceptance() {
                 C# basic / DS&A / Unity basic
               </p>
               <Link href={"https://t.me/UICGames_bot"} target="_blank" className="inline-block">
-                <button className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <button aria-label="info_bots.info_bot_btn" className="flex items-center gap-3 mt-[65px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                   {t("info_bots.info_bot_btn")} <Image src={arrowdown} alt="arrowdown" />
                 </button>
               </Link>
@@ -75,7 +75,7 @@ export default function Acceptance() {
                 {t("info_bots.info_bot_desc4")}
               </p>
               <Link href={"https://t.me/UICGames_bot"} target="_blank" className="inline-block">
-                <button className="flex items-center gap-3 mt-[5px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
+                <button aria-label="info_bots.info_bot_btn" className="flex items-center gap-3 mt-[5px] bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0">
                   {t("info_bots.info_bot_btn")} <Image src={arrowdown} alt="arrowdown" />
                 </button>
               </Link>
@@ -97,7 +97,7 @@ export default function Acceptance() {
                 {t("info_bots.info_bot_desc6")}
               </p>
               <Link href={"https://t.me/UICGames_bot"} target="_blank" className="inline-block">
-                <button className="flex items-center gap-3 mt-6 bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer">
+                <button aria-label="aria" className="flex items-center gap-3 mt-6 bg-white text-black border-[1.5px] border-gray-300 py-2 px-6 rounded-full shadow-md transition-all duration-300 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 cursor-pointer">
                   {t("info_bots.info_bot_btn")} <Image src={arrowdown} alt="arrowdown" />
                 </button>
               </Link>

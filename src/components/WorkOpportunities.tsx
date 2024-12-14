@@ -94,7 +94,7 @@ const Workopportunite = () => {
             ))}
           </div>
           <Link href={`${locale}/workopportunite`}>
-            <button className="flex items-center justify-center gap-2 sm:px-24 sm:py-3 px-16 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-full text-sm transition-colors mt-5 m-auto">More Vacancies</button>
+            <button aria-label="button" className="flex items-center justify-center gap-2 sm:px-24 sm:py-3 px-16 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-full text-sm transition-colors mt-5 m-auto">More Vacancies</button>
           </Link>
         </div>
       </div>

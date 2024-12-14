@@ -65,6 +65,7 @@ const Videolayout = () => {
               <div className="flex flex-wrap gap-3 sm:gap-4">
                 {platforms.map((platform) => (
                   <button
+                  aria-label="button"
                     key={platform.name}
                     className="flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-3 bg-white/10 rounded-lg hover:bg-white/20 active:translate-y-0.5 transition-all duration-200"
                   >
@@ -82,12 +83,12 @@ const Videolayout = () => {
             </div>
             <div className="flex gap-4 sm:gap-6">
             <Link href={`${locale}/portfolio/6`}>
-                <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
+                <button aria-label="button" className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                   {t("about_game")}
                 </button>
             </Link>
             <Link href={"https://mangusarkarda.com/"} target="blank">
-              <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
+              <button aria-label="button" className="px-6 sm:px-8 py-2.5 sm:py-3 bg-white/10 rounded-full hover:bg-[#EB5739] transition-all duration-300 text-sm sm:text-base active:translate-y-0.5">
                 {t("download")}
               </button>
             </Link>
@@ -101,6 +102,7 @@ const Videolayout = () => {
                 className="w-[280px] sm:w-[400px] lg:w-[500px] h-auto"
               />
               <button
+              aria-label="button"
                 onClick={handleVideoOpen}
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 group"
               >

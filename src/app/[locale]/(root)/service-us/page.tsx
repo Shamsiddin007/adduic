@@ -175,12 +175,14 @@ function Page() {
           </div>
 
           <button
+            aria-label="Prew"
             className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white rounded-full w-15 h-15 flex items-center justify-center"
             onClick={handlePrev}
           >
             ‹
           </button>
           <button
+          aria-label="Next"
             className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white rounded-full w-10 h-10 flex items-center justify-end"
             onClick={handleNext}
           >

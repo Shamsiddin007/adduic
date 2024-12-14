@@ -62,6 +62,7 @@ export default function ProjectPage() {
           </p>
           <div className="flex items-center justify-center md:mb-16 mb-10">
           <button
+            aria-label="Show more"
               onClick={() => setShowFullText(prev => !prev)}
               className="text-blue-500 hover:underline"
           >
@@ -87,6 +88,7 @@ export default function ProjectPage() {
           </p>
           <div className="flex items-center justify-center md:mb-16 mb-10">
           <button
+            aria-label="Show more"
               onClick={() => setShowFullText2(prev => !prev)}
               className="text-blue-500 hover:underline"
           >

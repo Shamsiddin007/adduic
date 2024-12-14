@@ -30,7 +30,7 @@ export default function Features() {
               {t("praktikum_box.features_general_desc")}
             </p>
             <div className="flex items-end justify-end">
-              <button className="flex items-center justify-end py-[10px] px-[24px] gap-4 bg-white rounded-full hover:bg-gray-200 transition-transform duration-300">
+              <button aria-label="praktikum_box.btn_apply" className="flex items-center justify-end py-[10px] px-[24px] gap-4 bg-white rounded-full hover:bg-gray-200 transition-transform duration-300">
                 {t("praktikum_box.btn_apply")} <Image src={Arrow} alt="ArrowIcons" />
               </button>
             </div>

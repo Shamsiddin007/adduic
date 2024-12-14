@@ -130,6 +130,7 @@ const JoinUsModal: React.FC<JoinUsModalProps> = ({ onClose }) => {
             />
             <br />
             <button
+            aria-label="Send"
               type="submit"
               disabled={hasErrors}
               className={`group flex items-center justify-center gap-2 text-[16px] w-full text-center text-white ${

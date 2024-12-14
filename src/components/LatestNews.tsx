@@ -49,7 +49,7 @@ export default function LatestNews() {
           {firrstTitle} <span className="text-blue-600">{secondTitle}</span>
         </h2>
         <Link href={`${locale}/blog`}>
-          <button className="flex items-center justify-center gap-2 sm:px-6 sm:py-3 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-full text-sm transition-colors group">
+          <button aria-label="Main" className="flex items-center justify-center gap-2 sm:px-6 sm:py-3 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-full text-sm transition-colors group">
             {t("all_Project_btn")}{" "}
             <Image
               src={Chevron}
