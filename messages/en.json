@@ -103,6 +103,7 @@
       }
     },
     "OurPartnyors": "OUR PARTNERS",
+    "vacansiees": "Vacancies",
     "work_free_title": "Feel free to reach out and join our team",
     "opportunities": "work opportunities",
     "test_Launch": "The site is in test mode",
@@ -164,7 +165,7 @@
   "Navbartitle": {
     "about_us_title": "About us",
     "portfolio_title": "Portfolio",
-    "praktikum_title": "Praktikum",
+    "praktikum_title": "Practice",
     "service_title": "Services",
     "blog_title": "Blogs",
     "nav_btn": {

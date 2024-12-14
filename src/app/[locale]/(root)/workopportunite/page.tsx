@@ -5,6 +5,7 @@ import strelka from "/public/icons/strelka.png";
 import calendar from "/public/icons/calendar.png";
 import Image from "next/image";
 import { Link } from "@/navigation";
+import { useTranslations } from "next-intl";
 
 type Jobs = {
   id: number;
@@ -16,6 +17,7 @@ type Jobs = {
 
 export default function Page() {
   const [trips, setTrips] = useState<Jobs[]>([]);
+  const t = useTranslations("HomePage")
 
   useEffect(() => {
     fetch(
@@ -36,7 +38,7 @@ export default function Page() {
   return (
     <section className="container mb-[500px] mt-[100px]">
       <h1 className="flex justify-center md:text-6xl font-bold text-blue-700/95 md:mb-4 tracking-wide uppercase">
-        Vacancies
+        {t("vacansiees")}
       </h1>
       <div className="flex justify-center">
         <div className="h-1 w-24 bg-blue-500/90 rounded-full md:mb-10 mb-7"></div>
