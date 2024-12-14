@@ -7,6 +7,7 @@ import { useEffect, useState, useRef } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import { useLocale, useTranslations } from "next-intl";
+
 type Project = { id: number; title: string; date: string; imgLogo: string };
 
 function ProjectsPage() {

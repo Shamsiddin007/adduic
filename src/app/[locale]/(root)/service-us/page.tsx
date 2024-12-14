@@ -60,7 +60,7 @@ function Page() {
         </p>
         <div className="pt-[50px] flex flex-col items-center pb-16 text-white text-xs sm:text-sm mt-6 sm:mt-16 sm:mb-16">
           <div className="relative w-4 h-8 sm:w-6 sm:h-12 border-2 border-white rounded-full flex items-center justify-center mb-2">
-            <div className="w-1 h-2 bg-white rounded-full animate-scroll" />
+            <div className="w-1 h-2 bg-white rounded-full animate-ping" />
           </div>
           <p>{t("scroll_anim")}</p>
         </div>

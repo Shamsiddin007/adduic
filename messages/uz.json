@@ -1,4 +1,3 @@
-
 {
   "HomePage": {
     "working_message": "Eng yaxshi natijalarni yaratish uchun kun-u tun ishlaymiz",
@@ -90,7 +89,18 @@
       "workTema_Title": "Jamoada ishlash",
       "workTema_desc": "Jamoada samarali ishlang, muloqot va jamoaviy ishlash ko‘nikmalarini rivojlantiring hamda kengroq auditoriyaga taqdim etilishi mumkin bo‘lgan haqiqiy loyihalarda ishtirok eting.",
       "schoolarShip_title": "Stipendiyalar",
-      "schoolarShip_desc": "Biz iste’dodlarni qo‘llab-quvvatlashga ishonamiz. Ushbu praktikum $14,000 miqdorida grant taklif qiladi, bu mablag‘ tanlangan talabalarga dasturga to‘liq sho‘ng‘ish uchun yordam beradi. Dasturiy ta’minot, loyiha resurslari yoki shaxsiy rivojlanish uchun ajratilgan bu moliyaviy yordam sizning muvaffaqiyatli bo‘lishingizni ta’minlaydi."
+      "schoolarShip_desc": "Biz iste’dodlarni qo‘llab-quvvatlashga ishonamiz. Ushbu praktikum $14,000 miqdorida grant taklif qiladi, bu mablag‘ tanlangan talabalarga dasturga to‘liq sho‘ng‘ish uchun yordam beradi. Dasturiy ta’minot, loyiha resurslari yoki shaxsiy rivojlanish uchun ajratilgan bu moliyaviy yordam sizning muvaffaqiyatli bo‘lishingizni ta’minlaydi.",
+      "acceptance_title": "Qabul shartlari",
+      "info_bots": {
+        "info_bot_title": "Bot orqali ro‘yxatdan o‘tish",
+        "info_bot_desc1": "Quyidagi tugma orqali maxsus Telegram botga o‘tib, ma'lumotlaringizni kiritishingiz va imtihon uchun ro‘yxatdan o‘tishingiz mumkin.",
+        "info_bot_btn": "Botga o‘tish",
+        "info_bot_desc2": "Ro‘yxatdan o‘tganingizdan so‘ng, siz quyidagi yo‘nalishlar bo‘yicha maxsus imtihon topshirasiz:",
+        "info_bot_desc3": "Keyin, imtihondan o‘tgan nomzodlarning ingliz tili darajasini tekshirish uchun intervyu o‘tkaziladi.",
+        "info_bot_desc4": "Intervyu ingliz tilida o‘tkaziladi. Talab qilinadigan minimal daraja - B1.",
+        "info_bot_desc5": "Oxirida, nomzodlar offline intervyu orqali soft skills va hard skills bo‘yicha test qilinadi.",
+        "info_bot_desc6": "Offline intervyu natijalari asosida, amaliyot uchun nomzodlar tanlanadi."
+      }
     },
     "OurPartnyors": "HAMKORLARIMIZ",
     "work_free_title": "Bizning jamoamizga qo‘shilishga va bog‘lanishga xush kelibsiz",

@@ -89,7 +89,18 @@
       "workTema_Title": "Work in Team",
       "workTema_desc": "Collaborate effectively in team environments, developing your communication and teamwork skills while working on real projects that have the potential to be showcased to a broader audience.",
       "schoolarShip_title": "scholarship awards",
-      "schoolarShip_desc": "We believe in supporting talent. This practicum offers a $14,000 grant, distributed  among selected students to help them fully immerse in the experience. Whether  it’s for software, project resources, or personal development, this financial support ensures you have what you need to excel."
+      "schoolarShip_desc": "We believe in supporting talent. This practicum offers a $14,000 grant, distributed  among selected students to help them fully immerse in the experience. Whether  it’s for software, project resources, or personal development, this financial support ensures you have what you need to excel.",
+      "acceptance_title": "Acceptance conditions",
+      "info_bots": {
+        "info_bot_title": "Sign up from the bot",
+        "info_bot_desc1": "You can enter your information and register for the exam by going to a special Telegram bot using the button below",
+        "info_bot_btn": "Go to bot",
+        "info_bot_desc2": "After registration, you will take a special exam in the following areas:",
+        "info_bot_desc3": "Then an interview will be held to check the English language level of the candidates who have passed the exam.",
+        "info_bot_desc4": "The interview will be conducted in English. The minimum required level is B1",
+        "info_bot_desc5": "Finally, candidates are tested on their soft skills and hard skills through an offline interview",
+        "info_bot_desc6": "Based on the results of the offline interview, of the practicum will be selected"
+      }
     },
     "OurPartnyors": "OUR PARTNERS",
     "work_free_title": "Feel free to reach out and join our team",
