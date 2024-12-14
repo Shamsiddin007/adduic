@@ -65,7 +65,7 @@ const Projects = () => {
           <>
             <SwiperSlide className="w-[100px] sm:w-[200px] md:w-[300px] p-2 flex justify-center">
               <div className="relative group duration-1000 p-4 sm:p-8">
-                <div className="w-[150px] h-[80px] !bg-[#1b1a1ac7] group-hover:bg-gradient-to-r from-[#215bcf50] via-transparent to-[#215bcf4e] transition-all duration-1000 sm:w-[181px] sm:h-[112px] rounded-lg flex items-center justify-center">
+                <div className="w-[150px] h-[80px] !bg-[#1b1a1ac7] sm:group-hover:bg-gradient-to-r from-[#215bcf50] via-transparent to-[#215bcf4e] transition-all duration-1000 sm:w-[181px] sm:h-[112px] rounded-lg flex items-center justify-center">
                   <Link href={logo.link} target="_blank">
                     <Image
                       src={logo.logo}
