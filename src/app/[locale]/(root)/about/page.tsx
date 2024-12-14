@@ -231,7 +231,7 @@ function Page() {
             </p>
           </div>
         </div>
-        <div className="flex items-center justify-end mt-5 gap-7 buttonSlayderAbout">
+        <div className="items-center justify-end mt-5 gap-7 buttonSlayderAbout">
           <button
             onClick={left}
             aria-label="Left"

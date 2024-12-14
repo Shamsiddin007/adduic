@@ -27,7 +27,7 @@ const Somestats = () => {
 
   return (
     <div>
-      <div className="group5 w-full h-[110vh] overflow-hidden bg-black relative p-4 mt-[80px]">
+      <div className="group5 w-full h-[110vh] overflow-hidden sm:bg-black relative p-4 mt-[80px]">
         <div className={`${styles.space} w-[100%] h-[100%]`}></div>
 
         <div className="container mx-auto px-4">
@@ -50,7 +50,7 @@ const Somestats = () => {
                     style={{
                       WebkitTextStroke: "4px #FFFFFF76",
                       WebkitTextStrokeWidth: "8px",
-                      WebkitTextFillColor: "white",
+                      WebkitTextFillColor:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              "white",
                     }}
                   >
                     {stat.value}

@@ -30,12 +30,12 @@ const Projects = () => {
 
   return (
     <div className="container mx-auto overflow-hidden">
-      <h1 className="font-bold text-white text-center pb-8 text-2xl md:text-3xl lg:text-6xl">
+      <h1 className="font-bold text-white text-center pb-8 text-3xl md:text-3xl lg:text-6xl">
         {firstTitle} <span className="text-blue-600">{secondTitle}</span>
       </h1>
 
       <Swiper
-        className="m-auto w-[90%] md:w-[90%]"
+        className="m-auto w-[80%] md:w-[80%]"
         loop={true}
         autoplay={{
           delay: 1500,
@@ -49,28 +49,28 @@ const Projects = () => {
           },
           850: {
             slidesPerView: 3,
-            spaceBetween: 16,
+            spaceBetween: 4,
           },
           600: {
             slidesPerView: 2,
-            spaceBetween: 12,
+            spaceBetween: 2,
           },
-          400: {
+          300: {
             slidesPerView: 2,
-            spaceBetween: 8,
+            spaceBetween: 2,
           },
         }}
       >
         {partnyor.map((logo, id) => (
           <>
-            <SwiperSlide className="w-[60px] sm:w-[200px] md:w-[300px] p-2 flex justify-center">
+            <SwiperSlide className="w-[100px] sm:w-[200px] md:w-[300px] p-2 flex justify-center">
               <div className="relative group duration-1000 p-4 sm:p-8">
-                <div className="w-[100px] h-[60px] hover:bg-gradient-to-r from-[#3375F61C] via-transparent to-[#3375F61C] sm:w-[181px] sm:h-[112px] rounded-lg flex items-center justify-center bg-inherit duration-1000">
+                <div className="w-[150px] h-[80px] !bg-[#1b1a1ac7] group-hover:bg-gradient-to-r from-[#215bcf50] via-transparent to-[#215bcf4e] transition-all duration-1000 sm:w-[181px] sm:h-[112px] rounded-lg flex items-center justify-center">
                   <Link href={logo.link} target="_blank">
                     <Image
                       src={logo.logo}
                       alt={`project image ${id + 1}`}
-                      className="p-2 sm:w-[120px] w-[80px]"
+                      className="p-2 sm:w-[120px] w-[110px]"
                       width={150}
                       height={100}
                     />
@@ -100,5 +100,3 @@ const Projects = () => {
 };
 
 export default Projects;
-
-// md:bg-[#FFFFFF0A]

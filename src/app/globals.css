@@ -441,6 +441,10 @@ h1 {
   opacity: 1; /* Hover bo'lganda yozuvni ko'rsatish */
 }
 
+.buttonSlayderAbout{
+  display: flex;
+}
+
 @media (min-width: 985px) {
   .buttonSlayderAbout {
     display: none;

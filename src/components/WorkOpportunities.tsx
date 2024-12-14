@@ -47,7 +47,7 @@ const Workopportunite = () => {
         <p className="text-[18px] text-center font-thin  text-[#FFFFFF66]">
           {t("work_free_title")}
         </p>
-        <h1 className="text-3xl sm:text-5xl lg:text-6xl capitalize mt-8 md:mb-12 text-center sm:flex flex-cols items-center justify-center gap-6">
+        <h1 className="text-[34px] sm:text-5xl lg:text-6xl capitalize mt-8 md:mb-12 text-center sm:flex flex-cols items-center justify-center gap-6">
           {firstTitle} <span className="text-[#3375F6]">{secondTitle}</span>
         </h1>
         </div>

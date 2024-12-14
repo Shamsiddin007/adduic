@@ -23,7 +23,7 @@ export default function Mani() {
         ></div>
       </div>
 
-      <div className="container">
+      <div className="container p-0">
         <div className="relative mb-16">
           <div className={`${styles.solder}`}></div>
           <div className="w-[100%] h-[30%] lg:h-[20%] absolute -z-2 bottom-[25px] bg-custom-radial"></div>
