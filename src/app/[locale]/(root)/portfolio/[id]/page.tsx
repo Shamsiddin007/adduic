@@ -41,7 +41,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="pb-[500px]">
       <div
-        className="w-full h-[100vh] pb-[50px] bg-cover bg-center sm:pt-[300px] pt-[150px]"
+        className="w-full h-[100vh] pb-[50px] bg-cover bg-center lg:pt-[300px] sm:pt-[200px] pt-[150px]"
         style={{
           backgroundImage: `url(${post.backgroundCover})`,
         }}
@@ -54,7 +54,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             width={400}
             height={300}
           />
-          <h1 className="text-4xl font-bold mb-4 mt-6">{post.titlegame}</h1>
+          <h1 className="text-4xl font-bold mb-4 sm:mt-6 mt-3">{post.titlegame}</h1>
           <p className="text-lg px-3 sm:px-8 pb-8 text-[#FFFFFFCC] container">
             {post.description}
           </p>
@@ -62,10 +62,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       </div>
 
       <div className="container px-4 sm:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-8 my-8">
           {/* Available section */}
-          <div className="flex flex-col lg:flex-row lg:items-center gap-4 text-white">
-            <h2 className="text-[16px] whitespace-nowrap">{t("available")}</h2>
+          <div className="block flex-col lg:flex-row lg:items-center gap-4  text-white">
+            <h2 className="text-[16px] whitespace-nowrap mb-4">{t("available")}</h2>
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 px-4 py-2 bg-[#FFFFFF0F] rounded-lg hover:bg-[#FFFFFF0B] cursor-pointer duration-200">
                 <Image src={elementLogo} alt="Steam" width={24} height={24} />
@@ -112,7 +112,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
         </div>
 
         <div className="container pb-20">
-          <h2 className="font-bold text-5xl text-white text-start">
+          <h2 className="font-bold text-3xl sm:text-5xl text-white text-start">
             {firstElement} <span className="text-blue-600">{secondElement}</span>
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 my-8">
