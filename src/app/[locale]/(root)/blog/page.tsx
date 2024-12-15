@@ -53,7 +53,7 @@ function AllNews() {
         <p className="text-[#FFFFFF] text-center text-xl font-sans pb-[12px] opacity-30 md:mt-16 mt-8">
           {t("blog_desc1")}
         </p>
-        <h2 className="font-bold text-center text-5xl text-white uppercase pb-10">
+        <h2 className="font-bold text-center text-3xl sm:text-5xl text-white uppercase pb-10">
           {firstElement} <span className="text-blue-600">{secondElement}</span>
         </h2>
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 w-auto sm:w-full m-auto gap-7 justify-center sm:justify-between sm:mb-16 mb-8">

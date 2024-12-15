@@ -134,7 +134,7 @@ const Videolayout = () => {
               )}
               <button
                 onClick={handleVideoClose}
-                className="absolute -top-1 right-1 z-[11] cursor-pointer text-white font-thin hover:text-blue-500 transition-colors duration-300"
+                className="absolute -top-5 right-1 z-[11] cursor-pointer text-white font-thin hover:text-blue-500 transition-colors duration-300"
                 aria-label="Close video"
               >
                 <Image src={CloseBtn} alt="close btn" width={40} height={40}/>
@@ -151,7 +151,7 @@ const Videolayout = () => {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerPolicy="strict-origin-when-cross-origin"
                   allowFullScreen
-                  className="mt-20"
+                  className="mt-14"
                 ></iframe>
                 </div>
               </div>

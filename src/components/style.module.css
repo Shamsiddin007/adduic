@@ -256,26 +256,26 @@
   }
   .item4 {
     top: 0px;
-    left: 140px;
+    left: 110px;
     &:hover{
       list-style: none;
-      left: 140px;
+      left: 110px;
     }
   }
   .item5 {
     top: 40px;
-    left: 140px;
+    left: 110px;
     &:hover{
       list-style: none;
-      left: 140px;
+      left: 110px;
     }
   }
   .item6 {
     top: 81px;
-    left: 142px;
+    left: 112px;
     &:hover{
       list-style: none;
-      left: 142px;
+      left: 112px;
     }
   }
   .item1{
@@ -317,6 +317,12 @@
   margin: auto;
   top: -400px;
   z-index: 5;
+}
+
+@media (max-width: 400px){
+  .item1, .item2, .item3, .item4, .item5, .item6{
+    font-size: 14px;
+  }
 }
 
 @media(max-width:800px){
